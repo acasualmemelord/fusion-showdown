@@ -2667,4 +2667,112 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return value;
 		},
 	},
+	infinitefusionmod: {
+		effectType: 'Rule',
+		name: "Infinite Fusion Mod",
+		desc: `Pok&eacute;mon can fuse with other Pok&eacute;mon!`,
+		onBegin() {
+			this.add('rule', 'Infinite Fusion Mod: Pok\u00e9mon can fuse with other Pok\u00e9mon!');
+		},
+		onValidateSet(set) {
+			const fuse_id = this.toID(set.fusion);
+			const species = this.dex.species.get(set.species);
+			const fusion = this.dex.species.get(fuse_id);
+			const abilityPool = new Set<string>(Object.values(species.abilities));
+
+			if (fusion.exists && set.fusion) {
+				if (species.tags.includes("Infinite Fusion")) return [`${species.name} can't be fused.`]
+				for (const ability of Object.values(fusion.abilities)) {
+					abilityPool.add(ability);
+				}
+			} else {
+				set.fusion = undefined;
+			}
+
+			const ability = this.dex.abilities.get(set.ability);
+			if (!abilityPool.has(ability.name)) {
+				return [
+					`${species.name}/${fusion.name} only have access to the following abilities: ${Array.from(abilityPool).join(', ')}.`,
+				];
+			}
+		},
+		onModifySpecies(species, target, source, effect) {
+			if (!target) return;
+			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
+
+			const typeChanges: {[key: string]: string[]} = {
+				"magnemite": ["Steel", "Electric"],
+				"magneton": ["Steel", "Electric"],
+				"magnezone": ["Steel", "Electric"],
+				"dewgong": ["Ice", "Water"],
+				"omanyte": ["Water", "Rock"],
+				"omastar": ["Water", "Rock"],
+				"scizor": ["Steel", "Bug"],
+				"empoleon": ["Steel", "Water"],
+				"spiritomb": ["Dark", "Ghost"],
+				"ferrothorn": ["Steel", "Grass"],
+				"celebi": ["Grass", "Psychic"],
+				"bulbasaur": ["Grass"], "ivysaur": ["Grass"],
+				"venusaur": ["Grass"], "charizard": ["Fire"],
+				"geodude": ["Rock"], "graveler": ["Rock"],
+				"golem": ["Rock"], "gastly": ["Ghost"],
+				"haunter": ["Ghost"], "gengar": ["Ghost"],
+				"onix": ["Rock"], "scyther": ["Bug"],
+				"gyarados": ["Water"], "articuno": ["Ice"],
+				"zapdos": ["Electric"], "moltres": ["Fire"],
+				"dragonite": ["Dragon"], "steelix": ["Steel"],
+			};
+
+			const newSpecies = this.dex.deepClone(species);
+
+			const fusionName = target.fusion;
+			if (!fusionName || fusionName === newSpecies.name) return;
+			const fusionSpecies = this.dex.species.get(fusionName);
+			if (!fusionSpecies.exists) return;
+
+			newSpecies.bst = 0;
+			for (const stat in newSpecies.baseStats) {
+				if (stat === 'hp' || stat === 'spa' || stat === 'spd') {
+					newSpecies.baseStats[stat] = Math.floor((species.baseStats[stat] * 2 / 3) + (fusionSpecies.baseStats[stat] * 1 / 3));
+				}
+				if (stat === 'atk' || stat === 'def' || stat === 'spe') {
+					newSpecies.baseStats[stat] = Math.floor((species.baseStats[stat] * 1 / 3) + (fusionSpecies.baseStats[stat] * 2 / 3));
+				}
+				newSpecies.bst += newSpecies.baseStats[stat];
+			}
+
+			if (fusionSpecies.maxHP) newSpecies.maxHP = fusionSpecies.maxHP;
+			newSpecies.weightkg = (fusionSpecies.weightkg + species.weightkg) / 2;
+			newSpecies.weighthg = newSpecies.weightkg * 10;
+
+			const speciesTypes = species.id in typeChanges ? typeChanges[species.id] : species.types;
+			const fusionTypes = fusionSpecies.id in typeChanges ? typeChanges[fusionSpecies.id] : fusionSpecies.types;
+
+			const typesSet = new Set([speciesTypes[0]]);
+			const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
+			if (bonusType.exists) typesSet.add(bonusType.name);
+			if (fusionTypes.length === 2 && typesSet.size === 1) typesSet.add(fusionTypes[0]);
+
+			return {...newSpecies, types: [...typesSet]};
+		},
+	},
+	ifmovelegality: {
+		effectType: 'ValidatorRule',
+		name: 'IF Move Legality',
+		desc: "Allows Pok&eacute;mon to use any move that their fused mon has.",
+		ruleset: ['OM Unobtainable Moves'],
+		checkCanLearn(move, species, setSources, set) {
+			const fuse_id = this.toID(set.fusion);
+			if (this.dex.species.get(fuse_id).exists) {
+				if (!this.checkCanLearn(move, this.dex.species.get(fuse_id), setSources, set)) return null;
+			}
+			return this.checkCanLearn(move, species, setSources, set);
+		},
+	},
+	ignoreevents: {
+		effectType: 'ValidatorRule',
+		name: 'Ignore Events',
+		desc: "Ignore event related move legality checks.",
+		// Hardcoded in team-validator.ts
+	},
 };

@@ -121,6 +121,7 @@ export class Pokemon {
 	maybeDisabled: boolean;
 
 	illusion: Pokemon | null;
+	fusion: string | undefined;
 	transformed: boolean;
 
 	maxhp: number;
@@ -309,7 +310,7 @@ export class Pokemon {
 		}
 		this.speciesState = {id: this.species.id};
 
-		this.name = set.name.substr(0, 20);
+		this.name = set.name.substr(0, 200);
 		this.fullname = this.side.id + ': ' + this.name;
 
 		set.level = this.battle.clampIntRange(set.adjustLevel || set.level || 100, 1, 9999);
@@ -352,7 +353,8 @@ export class Pokemon {
 		let displayedSpeciesName = this.species.name;
 		if (displayedSpeciesName === 'Greninja-Bond') displayedSpeciesName = 'Greninja';
 		this.details = displayedSpeciesName + (this.level === 100 ? '' : ', L' + this.level) +
-			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
+			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
+			(this.battle.format.id.includes('infinitefusion') ? (this.set.fusion ? ', fusion: ' + this.set.fusion : '') : '');
 
 		this.status = '';
 		this.statusState = {};
@@ -411,6 +413,7 @@ export class Pokemon {
 		this.maybeDisabled = false;
 
 		this.illusion = null;
+		this.fusion = this.battle.format.id.includes('infinitefusion') ? this.set.fusion : undefined;
 		this.transformed = false;
 
 		this.fainted = false;
@@ -1212,6 +1215,7 @@ export class Pokemon {
 
 		this.transformed = true;
 		this.weighthg = pokemon.weighthg;
+		this.fusion = pokemon.fusion;
 
 		const types = pokemon.getTypes(true, true);
 		this.setType(pokemon.volatiles['roost'] ? pokemon.volatiles['roost'].typeWas : types, true);
@@ -1336,6 +1340,34 @@ export class Pokemon {
 		}
 		this.speed = this.storedStats.spe;
 		return species;
+	}
+
+	/**
+	 * Changes this Pokemon's fusion to match the given speciesId (or species).
+	 */
+	fusionChange(
+		speciesId: string | Species, source: Effect = this.battle.effect
+	) {
+		const rawSpecies = this.battle.dex.species.get(speciesId);
+		this.fusion = rawSpecies.name;
+		this.set.fusion = rawSpecies.name;
+
+		this.details = this.species.name + (this.level === 100 ? '' : ', L' + this.level) +
+			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
+				(this.set.fusion ? ', fusion: ' + this.set.fusion : '');
+		
+		let details = (this.illusion || this).details;
+		if (this.terastallized) details += `, tera:${this.terastallized}`;
+
+		if (source.effectType === 'Ability') {
+			this.battle.add('-activate', this, `ability: ${source.name}`);
+		}
+
+		// run this for changes to take effect
+		this.setSpecies(this.species, source);
+		this.battle.add('detailschange', this, details);
+
+		return true;
 	}
 
 	/**

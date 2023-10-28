@@ -1,0 +1,1 @@
+export const Conditions: {[k: string]: ModdedConditionData} = require('../gen9infinitefusion/conditions').Conditions;

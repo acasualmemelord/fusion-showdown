@@ -396,6 +396,16 @@ export class TeamValidator {
 				}
 			} else {
 				setProblems = (format.validateSet || this.validateSet).call(this, set, teamHas);
+
+				// if there's a fusion, check it the same way
+				if (set.fusion && setProblems === null) {
+					const fusionSet = this.dex.deepClone(set);
+					if (fusionSet.fusion) {
+						[fusionSet.species, fusionSet.fusion] = [fusionSet.fusion, fusionSet.species];
+						const fusionProblems = (format.validateSet || this.validateSet).call(this, fusionSet, teamHas);
+						if (fusionProblems) setProblems = fusionProblems;
+					}
+				}
 			}
 
 			if (set.species === 'Pikachu-Starter' || set.species === 'Eevee-Starter') {
@@ -464,6 +474,9 @@ export class TeamValidator {
 	getEventOnlyData(species: Species, noRecurse?: boolean): {species: Species, eventData: EventInfo[]} | null {
 		const dex = this.dex;
 		const learnset = dex.species.getLearnsetData(species.id);
+
+		if (this.ruleTable.has('ignoreevents')) return null;
+
 		if (!learnset?.eventOnly) {
 			if (noRecurse) return null;
 			return this.getEventOnlyData(dex.species.get(species.prevo), true);
@@ -539,11 +552,11 @@ export class TeamValidator {
 			if (set.name && set.name.endsWith('-Gmax')) set.name = species.baseSpecies;
 			set.gigantamax = true;
 		}
-		if (set.name && set.name.length > 18) {
+		if (set.name && set.name.length > 200) {
 			if (set.name === set.species) {
 				set.name = species.baseSpecies;
 			} else {
-				problems.push(`Nickname "${set.name}" too long (should be 18 characters or fewer)`);
+				problems.push(`Nickname "${set.name}" is ${set.name.length} characters (should be 200 characters or fewer)`);
 			}
 		}
 		set.name = dex.getName(set.name);
@@ -1004,7 +1017,7 @@ export class TeamValidator {
 			// nickname is the name of a species
 			if (nameSpecies.baseSpecies === species.baseSpecies) {
 				set.name = species.baseSpecies;
-			} else if (nameSpecies.name !== species.name &&
+			} else if (!set.fusion && nameSpecies.name !== species.name &&
 				nameSpecies.name !== species.baseSpecies && ruleTable.has('nicknameclause')) {
 				// nickname species doesn't match actual species
 				// Nickname Clause

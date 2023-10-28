@@ -434,64 +434,93 @@ export const commands: Chat.ChatCommands = {
 		`Alternatively, you can use /ts[gen number] to see a Pok\u00e9mon's stats in that generation.`,
 	],
 
-	fuse: 'franticfusions',
-	fuse1: 'franticfusions',
-	fuse2: 'franticfusions',
-	fuse3: 'franticfusions',
-	fuse4: 'franticfusions',
-	fuse5: 'franticfusions',
-	fuse6: 'franticfusions',
-	fuse7: 'franticfusions',
-	fuse8: 'franticfusions',
-	franticfusions(target, room, user, connection, cmd) {
+	fuse: 'infinitefusion',
+	fuse1: 'infinitefusion',
+	fuse2: 'infinitefusion',
+	fuse3: 'infinitefusion',
+	fuse4: 'infinitefusion',
+	fuse5: 'infinitefusion',
+	fuse6: 'infinitefusion',
+	fuse7: 'infinitefusion',
+	fuse8: 'infinitefusion',
+	fusion: 'infinitefusion',
+	infinitefusion(target, room, user, connection, cmd) {
 		const args = target.split(',');
-		if (!toID(args[0]) && !toID(args[1])) return this.parse('/help franticfusions');
+		if (!toID(args[0]) && !toID(args[1])) return this.parse('/help infinitefusion');
 		const targetGen = parseInt(cmd[cmd.length - 1]);
 		if (targetGen && !args[2]) target = `${target},gen${targetGen}`;
 		const {dex, targets} = this.splitFormat(target, true);
+
 		this.runBroadcast();
-		if (targets.length > 2) return this.parse('/help franticfusions');
+
+		if (targets.length > 2) return this.parse('/help infinitefusion');
 		const species = Utils.deepClone(dex.species.get(targets[0]));
 		const fusion = dex.species.get(targets[1]);
+
 		if (!species.exists || species.gen > dex.gen) {
 			const monName = species.gen > dex.gen ? species.name : args[0].trim();
 			const additionalReason = species.gen > dex.gen ? ` in Generation ${dex.gen}` : ``;
 			throw new Chat.ErrorMessage(`Error: Pok\u00e9mon '${monName}' not found${additionalReason}.`);
 		}
+
 		if (fusion.name.length) {
 			if (!fusion.exists || fusion.gen > dex.gen) {
 				const monName = fusion.gen > dex.gen ? fusion.name : args[1].trim();
 				const additionalReason = fusion.gen > dex.gen ? ` in Generation ${dex.gen}` : ``;
 				throw new Chat.ErrorMessage(`Error: Pok\u00e9mon '${monName}' not found${additionalReason}.`);
 			}
-			if (fusion.name === species.name) {
-				throw new Chat.ErrorMessage('Pok\u00e9mon can\'t fuse with themselves.');
+		}
+
+		const typeChanges: {[key: string]: string[]} = {
+			"magnemite": ["Steel", "Electric"],
+			"magneton": ["Steel", "Electric"],
+			"magnezone": ["Steel", "Electric"],
+			"dewgong": ["Ice", "Water"],
+			"omanyte": ["Water", "Rock"],
+			"omastar": ["Water", "Rock"],
+			"scizor": ["Steel", "Bug"],
+			"empoleon": ["Steel", "Water"],
+			"spiritomb": ["Dark", "Ghost"],
+			"ferrothorn": ["Steel", "Grass"],
+			"celebi": ["Grass", "Psychic"],
+			"bulbasaur": ["Grass"], "ivysaur": ["Grass"],
+			"venusaur": ["Grass"], "charizard": ["Fire"],
+			"geodude": ["Rock"], "graveler": ["Rock"],
+			"golem": ["Rock"], "gastly": ["Ghost"],
+			"haunter": ["Ghost"], "gengar": ["Ghost"],
+			"onix": ["Rock"], "scyther": ["Bug"],
+			"gyarados": ["Water"], "articuno": ["Ice"],
+			"zapdos": ["Electric"], "moltres": ["Fire"],
+			"dragonite": ["Dragon"], "steelix": ["Steel"],
+		};
+
+		const speciesTypes = species.id in typeChanges ? typeChanges[species.id] : species.types;
+		const fusionTypes = fusion.id in typeChanges ? typeChanges[fusion.id] : fusion.types;
+
+		const typesSet = new Set([speciesTypes[0]]);
+		const bonusType = dex.types.get(fusionTypes[fusionTypes.length - 1]);
+		if (bonusType.exists) typesSet.add(bonusType.name);
+		if (fusionTypes.length === 2 && typesSet.size === 1) typesSet.add(fusionTypes[0]);
+
+		species.bst = 0;
+		for (const stat in species.baseStats) {
+			if (stat === 'hp' || stat === 'spa' || stat === 'spd') {
+				species.baseStats[stat] = Math.floor((species.baseStats[stat] * 2 / 3) + (fusion.baseStats[stat] * 1 / 3));
 			}
-		}
-		if (fusion.name.length) {
-			species.bst = species.baseStats.hp;
-		} else {
-			species.bst = 0;
-		}
-		for (const statName in species.baseStats) {
-			if (statName === 'hp') continue;
-			if (!fusion.name.length) {
-				species.baseStats[statName] = Math.floor(species.baseStats[statName as StatID] / 4);
-				species.bst += species.baseStats[statName];
-			} else {
-				const addition = Math.floor(fusion.baseStats[statName as StatID] / 4);
-				species.baseStats[statName] = Utils.clampIntRange(species.baseStats[statName] + addition, 1, 255);
-				species.bst += species.baseStats[statName];
+			if (stat === 'atk' || stat === 'def' || stat === 'spe') {
+				species.baseStats[stat] = Math.floor((species.baseStats[stat] * 1 / 3) + (fusion.baseStats[stat] * 2 / 3));
 			}
+			species.bst += species.baseStats[stat];
 		}
+
 		const abilities = new Set<string>([...Object.values(species.abilities), ...Object.values(fusion.abilities)]);
+
 		let buf = '<div class="message"><ul class="utilichart"><li class="result">';
-		buf += '<span class="col numcol">Fusion</span> ';
-		buf += `<span class="col iconcol"><psicon pokemon="${species.id}"/></span> `;
-		buf += `<span class="col pokemonnamecol" style="white-space:nowrap"><a href="https://${Config.routes.dex}/pokemon/${species.id}" target="_blank">${species.name}</a></span> `;
+		buf += `<span class="col iconcol"><psicon pokemon="${species.id}"/><psicon pokemon="${fusion.id}"/></span> `;
+		buf += `<span class="col pokemonnamecol" style="white-space:nowrap"><a href="https://${Config.routes.dex}/pokemon/${species.id}" target="_blank">${species.name}</a>/<a href="https://${Config.routes.dex}/pokemon/${fusion.id}" target="_blank">${fusion.name}</a></span> `;
 		buf += '<span class="col typecol">';
-		if (species.types && fusion.name.length) {
-			for (const type of species.types) {
+		if (typesSet && fusion.name.length) {
+			for (const type of typesSet) {
 				buf += `<img src="https://${Config.routes.client}/sprites/types/${type}.png" alt="${type}" height="14" width="32">`;
 			}
 		}
@@ -576,7 +605,7 @@ export const commands: Chat.ChatCommands = {
 		buf += '</li><li style="clear:both"></li></ul></div>';
 		this.sendReply(`|raw|${buf}`);
 	},
-	franticfusionshelp: [
+	infinitefusionhelp: [
 		`/fuse <pokemon>, <fusion>[, generation] - Shows the stats and abilities that <pokemon> would get when fused with <fusion>.`,
 		`/fuse <pokemon>[, generation] - Shows the stats and abilities that <pokemon> donates.`,
 		`Alternatively, you can use /fuse[gen number] to see a Pok\u00e9mon's stats in that generation.`,
