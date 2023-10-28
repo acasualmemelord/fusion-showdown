@@ -1,0 +1,1 @@
+export const Learnsets: {[k: string]: ModdedLearnsetData} = require('../gen9infinitefusion/learnsets').Learnsets;
