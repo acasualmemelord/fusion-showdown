@@ -518,9 +518,9 @@ export class DexFormats {
 				throw e;
 			}
 		}
-		let Formats: AnyObject[] = require(`${__dirname}/../config/pokeathlon-formats`).Formats;
+		let Formats: AnyObject[] = require(`${__dirname}/../config/alt-formats`).Formats;
 		if (!Array.isArray(Formats)) {
-			throw new TypeError(`Exported property 'Formats' from "./config/pokeathlon-formats.ts" must be an array`);
+			throw new TypeError(`Exported property 'Formats' from "./config/alt-formats.ts" must be an array`);
 		}
 		if (customFormats) Formats = mergeFormatLists(Formats as any, customFormats);
 
