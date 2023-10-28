@@ -12,7 +12,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 1,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "LC",
 	},
 	ivymelortle: {
@@ -28,7 +27,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 1,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "NFE",
 	},
 	venustoizard: {
@@ -44,7 +42,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 1,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "UU",
 	},
 	totoritaquil: {
@@ -60,7 +57,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "LC",
 	},
 	baylavanaw: {
@@ -76,7 +72,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "NFE",
 	},
 	megaligasion: {
@@ -92,7 +87,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "UU",
 	},
 	torkipcko: {
@@ -108,7 +102,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "LC",
 	},
 	gromarshken: {
@@ -124,7 +117,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "NFE",
 	},
 	swamptiliken: {
@@ -140,7 +132,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "UU",
 	},
 	turcharlup: {
@@ -156,7 +147,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 4,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "LC",
 	},
 	prinfernotle: {
@@ -172,7 +162,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 4,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "NFE",
 	},
 	torterneon: {
@@ -188,7 +177,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 4,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "UU",
 	},
 	zapmolticuno: {
@@ -204,7 +192,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "OU",
 	},
 	enraicune: {
@@ -220,7 +207,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "OU",
 	},
 	kyodonquaza: {
@@ -236,7 +222,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "OU",
 	},
 	paldiatina: {
@@ -252,7 +237,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 4,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "OU",
 	},
 	zekyushiram: {
@@ -268,7 +252,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "OU",
 	},
 	celemewchi: {
@@ -284,7 +267,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "UU",
 	},
 	regitrio: {
@@ -300,7 +282,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "OU",
 	},
 	deosectwo: {
@@ -316,7 +297,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 		tags: ["Infinite Fusion"],
-		isNonstandard: "Custom",
 		tier: "UU",
 	},
 };
