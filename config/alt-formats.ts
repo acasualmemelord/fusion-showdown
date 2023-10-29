@@ -24,10 +24,25 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] Infinite Fusion Dex Doubles",
+
+		mod: 'gen7infinitefusion',
+		gameType: 'doubles',
+		ruleset: ['Standard Doubles', 'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', 'Ignore Events', 'Species Reveal Clause'],
+	},
+	{
 		section: "Infinite Fusion: National Dex",
 	},
 	{
-		name: "[Gen 9] National Dex Infinite Fusion",
+		name: "[Gen 9] NatDex Infinite Fusion AG",
+		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
+
+		mod: 'gen9infinitefusion',
+		ruleset: ['Standard NatDex', 'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', 'Ignore Events', 'Species Reveal Clause'],
+		banlist: [],
+	},
+	{
+		name: "[Gen 9] NatDex Infinite Fusion",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
@@ -40,11 +55,10 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex Infinite Fusion AG",
-		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
+		name: "[Gen 9] Infinite Fusion NatDex Doubles",
 
 		mod: 'gen9infinitefusion',
+		gameType: 'doubles',
 		ruleset: ['Standard NatDex', 'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', 'Ignore Events', 'Species Reveal Clause'],
-		banlist: [],
 	},
 ];
