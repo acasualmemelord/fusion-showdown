@@ -261,7 +261,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		types: ["Psychic", "Grass", "Steel"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
-		abilities: {0: "Syncronize", 1: "Natural Cure", H: "Serene Grace"},
+		abilities: {0: "Synchronize", 1: "Natural Cure", H: "Serene Grace"},
 		heightm: 0.4,
 		weightkg: 3.4,
 		color: "Pink",

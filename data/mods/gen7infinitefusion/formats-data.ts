@@ -37,7 +37,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	weavile: {
 		inherit: true,
-		tier: "OU",
+		tier: "UU",
 	},
 	porygonz: {
 		inherit: true,
@@ -135,4 +135,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "NU",
 	},
+	volcarona: {
+		inherit: true,
+		tier: "Uber",
+	}
 };
