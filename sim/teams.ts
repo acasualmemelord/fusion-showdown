@@ -112,6 +112,7 @@ export interface PokemonSet {
 	 * Fusion
 	 */
 	fusion?: string;
+	altsprite?: string;
 }
 
 export const Teams = new class Teams {
@@ -197,13 +198,14 @@ export const Teams = new class Teams {
 			}
 
 			if (set.pokeball || set.hpType || set.gigantamax ||
-				(set.dynamaxLevel !== undefined && set.dynamaxLevel !== 10) || set.teraType || set.fusion) {
+				(set.dynamaxLevel !== undefined && set.dynamaxLevel !== 10) || set.teraType || set.fusion || set.altsprite) {
 				buf += ',' + (set.hpType || '');
 				buf += ',' + this.packName(set.pokeball || '');
 				buf += ',' + (set.gigantamax ? 'G' : '');
 				buf += ',' + (set.dynamaxLevel !== undefined && set.dynamaxLevel !== 10 ? set.dynamaxLevel : '');
 				buf += ',' + (set.teraType || '');
 				buf += ',' + (set.fusion || '');
+				buf += ',' + (toID(set.altsprite) || '');
 			}
 		}
 
@@ -324,9 +326,9 @@ export const Teams = new class Teams {
 			j = buf.indexOf(']', i);
 			let misc;
 			if (j < 0) {
-				if (i < buf.length) misc = buf.substring(i).split(',', 7);
+				if (i < buf.length) misc = buf.substring(i).split(',', 8);
 			} else {
-				if (i !== j) misc = buf.substring(i, j).split(',', 7);
+				if (i !== j) misc = buf.substring(i, j).split(',', 8);
 			}
 			if (misc) {
 				set.happiness = (misc[0] ? Number(misc[0]) : 255);
@@ -336,6 +338,7 @@ export const Teams = new class Teams {
 				set.dynamaxLevel = (misc[4] ? Number(misc[4]) : 10);
 				set.teraType = misc[5];
 				set.fusion = misc[6];
+				set.altsprite = toID(misc[7]);
 			}
 			if (j < 0) break;
 			i = j + 1;
@@ -416,6 +419,9 @@ export const Teams = new class Teams {
 		}
 		if (set.fusion) {
 			out += `Fusion: ${set.fusion}  \n`;
+		}
+		if (set.altsprite) {
+			out += `Alt: ${toID(set.altsprite)}  \n`;
 		}
 
 		// stats
@@ -504,6 +510,9 @@ export const Teams = new class Teams {
 		} else if (line.startsWith('Fusion: ')) {
 			line = line.slice(8);
 			set.fusion = aggressive ? toID(line) : line;
+		} else if (line.startsWith('Alt: ')) {
+			line = line.charAt(5);
+			set.altsprite = toID(line);
 		} else if (line === 'Gigantamax: Yes') {
 			set.gigantamax = true;
 		} else if (line.startsWith('EVs: ')) {
