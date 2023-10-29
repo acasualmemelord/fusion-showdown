@@ -258,7 +258,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	alakazam: {
 		inherit: true,
-		tier: "OU",
 		num: 10065,
 	},
 	machop: {
@@ -363,7 +362,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	cloyster: {
 		inherit: true,
-		tier: "Uber",
 		num: 10091,
 	},
 	gastly: {
@@ -452,7 +450,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	chansey: {
 		inherit: true,
-		tier: "Uber",
 		num: 10113,
 	},
 	tangela: {
@@ -521,7 +518,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	gyarados: {
 		inherit: true,
-		tier: "UU",
 		num: 10130,
 	},
 	lapras: {
@@ -558,7 +554,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	omastar: {
 		inherit: true,
-		tier: "Uber",
 		num: 10139,
 	},
 	kabuto: {
@@ -599,7 +594,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	dragonite: {
 		inherit: true,
-		tier: "OU",
 		num: 10149,
 	},
 	mewtwo: {
@@ -740,7 +734,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	azumarill: {
 		inherit: true,
-		tier: "Uber",
 		num: 10184,
 	},
 	sudowoodo: {
@@ -785,7 +778,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	quagsire: {
 		inherit: true,
-		tier: "UU",
 		num: 10195,
 	},
 	espeon: {
@@ -858,7 +850,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	shuckle: {
 		inherit: true,
-		tier: "Uber",
 		num: 10213,
 	},
 	heracross: {
@@ -975,7 +966,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	blissey: {
 		inherit: true,
-		tier: "Uber",
 		num: 10242,
 	},
 	raikou: {
@@ -1056,7 +1046,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	weavile: {
 		inherit: true,
-		tier: "OU",
 		num: 10262,
 	},
 	magnezone: {
@@ -1109,7 +1098,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	porygonz: {
 		inherit: true,
-		tier: "OU",
 		num: 10275,
 	},
 	treecko: {
@@ -1166,7 +1154,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	shedinja: {
 		inherit: true,
-		tier: "Uber",
 		num: 10289,
 	},
 	kecleon: {
@@ -1247,7 +1234,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	slaking: {
 		inherit: true,
-		tier: "Uber",
 		num: 10309,
 	},
 	absol: {
@@ -1356,7 +1342,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	salamence: {
 		inherit: true,
-		tier: "UU",
 		num: 10336,
 	},
 	klinklang: {
@@ -1369,7 +1354,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	sylveon: {
 		inherit: true,
-		tier: "OU",
 		num: 10339,
 	},
 	kyogre: {
@@ -1398,7 +1382,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	regigigas: {
 		inherit: true,
-		tier: "Uber",
 		num: 10346,
 	},
 	darkrai: {
@@ -1435,7 +1418,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	breloom: {
 		inherit: true,
-		tier: "UU",
 		num: 10355,
 	},
 	ninjask: {
@@ -1504,12 +1486,10 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	talonflame: {
 		inherit: true,
-		tier: "UU",
 		num: 10372,
 	},
 	mimikyu: {
 		inherit: true,
-		tier: "Uber",
 		num: 10373,
 	},
 	volcarona: {
@@ -1534,7 +1514,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	latios: {
 		inherit: true,
-		tier: "OU",
 		num: 10379,
 	},
 	deoxys: {
