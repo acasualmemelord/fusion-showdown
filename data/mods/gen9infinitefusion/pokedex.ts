@@ -282,7 +282,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
-		tier: "Uber",
+		tier: "OU",
 	},
 	deosectwo: {
 		num: 16020,

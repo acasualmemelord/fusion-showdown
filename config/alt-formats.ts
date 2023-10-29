@@ -18,9 +18,8 @@ export const Formats: FormatList = [
 		ruleset: ['Standard', 'Z-Move Clause', 'Infinite Fusion Mod', 'IF Move Legality', 'Ignore Events', '!Obtainable Abilities', 'Species Reveal Clause'],
 		banlist: [
 			'Mega', 'Uber',
-			'King\'s Rock', 'Quick Claw', 'Razor Fang',
-			'Huge Power', 'Pure Power', 'Disguise', 'Contrary', 'Simple', 'Wonder Guard', 'Arena Trap', 'Power Construct', 'Shadow Tag',
-			'Shell Smash', 'Belly Drum', 'Assist', 'Baton Pass',
+			'King\'s Rock', 'Razor Fang',
+			'Arena Trap', 'Shadow Tag', 'Baton Pass',
 		],
 	},
 	{
