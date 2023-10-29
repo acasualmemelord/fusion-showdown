@@ -3,10 +3,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "OU",
 	},
-	cloyster: {
-		inherit: true,
-		tier: "Uber",
-	},
 	chansey: {
 		inherit: true,
 		tier: "Uber",
@@ -17,7 +13,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	omastar: {
 		inherit: true,
-		tier: "Uber",
+		tier: "(PU)",
 	},
 	dragonite: {
 		inherit: true,

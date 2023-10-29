@@ -19,7 +19,8 @@ export const Formats: FormatList = [
 		banlist: [
 			'Mega', 'Uber',
 			'King\'s Rock', 'Razor Fang',
-			'Arena Trap', 'Shadow Tag', 'Baton Pass',
+			'Arena Trap', 'Shadow Tag', 
+			'Baton Pass', 'Shell Smash', 'Belly Drum',
 		],
 	},
 	{
