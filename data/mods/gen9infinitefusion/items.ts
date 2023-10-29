@@ -19,7 +19,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		num: -3,
 		gen: 6,
-		isNonstandard: null,
 	},
 
 	// IF mods
