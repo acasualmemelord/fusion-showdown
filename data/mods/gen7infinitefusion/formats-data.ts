@@ -83,4 +83,60 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "OU",
 	},
+	entei: {
+		inherit: true,
+		tier: "UU",
+	},
+	heracross: {
+		inherit: true,
+		tier: "RU",
+	},
+	kyurem: {
+		inherit: true,
+		tier: "UU",
+	},
+	reuniclus: {
+		inherit: true,
+		tier: "RU",
+	},
+	venomoth: {
+		inherit: true,
+		tier: "UU",
+	},
+	zoroark: {
+		inherit: true,
+		tier: "UU",
+	},
+	cofagrigus: {
+		inherit: true,
+		tier: "RU",
+	},
+	vileplume: {
+		inherit: true,
+		tier: "NU",
+	},
+	kingdra: {
+		inherit: true,
+		tier: "NU",
+	},
+	charizard: {
+		inherit: true,
+		tier: "NU",
+	},
+	gallade: {
+		inherit: true,
+		tier: "NU",
+	},
+	houndoom: {
+		inherit: true,
+		tier: "PU",
+	},
+	kingler: {
+		inherit: true,
+		tier: "NU",
+	},
+	tauros: {
+		inherit: true,
+		tier: "NU",
+	},
 };
