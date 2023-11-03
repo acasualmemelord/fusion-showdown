@@ -18,7 +18,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard', 'Z-Move Clause', 'Infinite Fusion Mod', 'IF Move Legality', 'Ignore Events', '!Obtainable Abilities', 'Species Reveal Clause'],
 		banlist: [
 			'Mega', 'Uber',
-			'King\'s Rock', 'Razor Fang',
+			'King\'s Rock', 'Razor Fang', 'Light Ball',
 			'Arena Trap', 'Shadow Tag', 
 			'Baton Pass', 'Shell Smash', 'Belly Drum',
 		],
@@ -49,13 +49,13 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Infinite Fusion Mod', 'IF Move Legality', 'Ignore Events', '!Obtainable Abilities', 'Species Reveal Clause'],
 		banlist: [
 			'ND AG', 'ND Uber', 'Mega',
-			'King\'s Rock', 'Quick Claw', 'Razor Fang',
+			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Ball',
 			'Huge Power', 'Pure Power', 'Disguise', 'Moody', 'Contrary', 'Simple', 'Wonder Guard', 'Arena Trap', 'Power Construct', 'Shadow Tag',
 			'Shell Smash', 'Belly Drum', 'Last Respects', 'Population Bomb', 'Rage Fist', 'Assist', 'Baton Pass', 'Shed Tail',
 		],
 	},
 	{
-		name: "[Gen 9] Infinite Fusion NatDex Doubles",
+		name: "[Gen 9] NatDex Infinite Fusion Doubles",
 
 		mod: 'gen9infinitefusion',
 		gameType: 'doubles',

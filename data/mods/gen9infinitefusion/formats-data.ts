@@ -32,4 +32,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "Uber",
 	},
+	volcarona: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
 };
