@@ -1,1 +1,1 @@
-export const Moves: {[k: string]: ModdedMoveData} = require('../gen9infinitefusion/moves').Moves;
+//export const Moves: {[k: string]: ModdedMoveData} = require('../gen9infinitefusion/moves').Moves;
