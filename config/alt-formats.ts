@@ -24,7 +24,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Infinite Fusion Dex Doubles",
+		name: "[Gen 7] Infinite Fusion Dex Doubles",
 
 		mod: 'gen7infinitefusion',
 		gameType: 'doubles',
