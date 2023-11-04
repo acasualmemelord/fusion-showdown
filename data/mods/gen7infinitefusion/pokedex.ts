@@ -1680,5 +1680,5 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		num: 10420,
 	},
-	...require('../gen9infinitefusion/pokedex').Pokedex,
+	...Dex.deepClone(require('../gen9infinitefusion/pokedex').Pokedex),
 };
