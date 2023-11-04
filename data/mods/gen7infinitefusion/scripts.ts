@@ -4,6 +4,7 @@ export const Scripts: ModdedBattleScriptsData = {
 	init () {
 		for (const i in this.data.Pokedex) {
 			if (this.data.Pokedex[i].num <= 10000) {
+				if (i === 'azumarill') {console.log('gen7 broke'); console.log(Date.now());}
 				this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
 			} else {
