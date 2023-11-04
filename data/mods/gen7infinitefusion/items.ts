@@ -1,1 +1,1 @@
-//export const Items: {[k: string]: ModdedItemData} = require('../gen9infinitefusion/items').Items;
+export const Items: {[k: string]: ModdedItemData} = require('../gen9infinitefusion/items').Items;
