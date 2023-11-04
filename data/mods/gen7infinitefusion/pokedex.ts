@@ -1,3 +1,4 @@
+const {Dex} = require('../../../sim/dex');
 export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	// IF Dex tiering
 	bulbasaur: {
