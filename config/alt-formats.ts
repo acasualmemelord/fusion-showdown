@@ -3,7 +3,7 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: Regional Dex",
 	},
 	{
-		name: "[Gen 7] Infinite Fusion Dex",
+		name: "[Gen 7] Infinite Fusion Dex AG",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen7infinitefusion',
@@ -19,7 +19,7 @@ export const Formats: FormatList = [
 		banlist: [
 			'Mega', 'Uber',
 			'King\'s Rock', 'Razor Fang', 'Light Ball',
-			'Arena Trap', 'Shadow Tag', 
+			'Arena Trap', 'Shadow Tag', 'Speed Boost',
 			'Baton Pass', 'Shell Smash', 'Belly Drum',
 		],
 	},
@@ -42,7 +42,7 @@ export const Formats: FormatList = [
 		banlist: [],
 	},
 	{
-		name: "[Gen 9] NatDex Infinite Fusion",
+		name: "[Gen 9] NatDex Infinite Fusion OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
@@ -50,7 +50,7 @@ export const Formats: FormatList = [
 		banlist: [
 			'ND AG', 'ND Uber', 'Mega',
 			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Ball',
-			'Huge Power', 'Pure Power', 'Disguise', 'Moody', 'Contrary', 'Simple', 'Wonder Guard', 'Arena Trap', 'Power Construct', 'Shadow Tag',
+			'Huge Power', 'Pure Power', 'Disguise', 'Moody', 'Contrary', 'Simple', 'Wonder Guard', 'Arena Trap', 'Power Construct', 'Shadow Tag', 'Speed Boost',
 			'Shell Smash', 'Belly Drum', 'Last Respects', 'Population Bomb', 'Rage Fist', 'Assist', 'Baton Pass', 'Shed Tail',
 		],
 	},
