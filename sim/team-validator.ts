@@ -475,8 +475,6 @@ export class TeamValidator {
 		const dex = this.dex;
 		const learnset = dex.species.getLearnsetData(species.id);
 
-		if (this.ruleTable.has('ignoreevents')) return null;
-
 		if (!learnset?.eventOnly) {
 			if (noRecurse) return null;
 			return this.getEventOnlyData(dex.species.get(species.prevo), true);
@@ -1983,6 +1981,7 @@ export class TeamValidator {
 		set: PokemonSet, setSources: PokemonSources, eventData: EventInfo, eventSpecies: Species,
 		because = ``, from = `from an event`
 	) {
+		if (this.ruleTable.has('ignoreevents')) return;
 		const dex = this.dex;
 		let name = set.species;
 		const species = dex.species.get(set.species);

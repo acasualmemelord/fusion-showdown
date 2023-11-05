@@ -40,4 +40,20 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "Uber",
 	},
+	zamazenta: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	sneasler: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	tapulele: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	tapukoko: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
 };
