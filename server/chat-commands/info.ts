@@ -888,6 +888,7 @@ export const commands: Chat.ChatCommands = {
 		const type1 = dex.types.get(targets[0]);
 		const type2 = dex.types.get(targets[1]);
 		const type3 = dex.types.get(targets[2]);
+		const type4 = dex.types.get(targets[3]);
 
 		if (species.exists) {
 			target = species.name;
@@ -900,6 +901,9 @@ export const commands: Chat.ChatCommands = {
 				}
 				if (type3.exists && type3 !== type1 && type3 !== type2) {
 					types.push(type3.name);
+				}
+				if (type4.exists && type4 !== type1 && type4 !== type2 && type4 !== type3) {
+					types.push(type4.name);
 				}
 			}
 
@@ -928,6 +932,9 @@ export const commands: Chat.ChatCommands = {
 				case 3:
 					weaknesses.push(`<b><i>${type}</i></b>`);
 					break;
+				case 4:
+					weaknesses.push(`<u><b><i>${type}</i></b></u>`);
+					break;
 				case -1:
 					resistances.push(type);
 					break;
@@ -936,6 +943,9 @@ export const commands: Chat.ChatCommands = {
 					break;
 				case -3:
 					resistances.push(`<b><i>${type}</i></b>`);
+					break;
+				case -4:
+					resistances.push(`<u><b><i>${type}</i></b></u>`);
 					break;
 				}
 			} else {

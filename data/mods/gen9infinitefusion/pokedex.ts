@@ -192,8 +192,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
-		natDexTier: "UU",
-		tier: "RU",
+		natDexTier: "OU",
+		tier: "UU",
 	},
 	enraicune: {
 		num: 16014,

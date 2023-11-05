@@ -36,4 +36,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "Uber",
 	},
+	alakazam: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
 };

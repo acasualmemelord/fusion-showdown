@@ -1,7 +1,7 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	alakazam: {
 		inherit: true,
-		tier: "OU",
+		tier: "Uber",
 	},
 	chansey: {
 		inherit: true,
@@ -138,5 +138,5 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	volcarona: {
 		inherit: true,
 		tier: "Uber",
-	}
+	},
 };
