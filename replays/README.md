@@ -1,0 +1,1 @@
+This directory holds replays and replays.csv which holds an index of the available replays.

@@ -2066,40 +2066,38 @@ export class GameRoom extends BasicRoom {
 		if (format.team && battle.ended) hideDetails = false;
 
 		const data = this.getLog(hideDetails ? 0 : -1);
-		const datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
+		//const datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
 		let rating = 0;
 		if (battle.ended && this.rated) rating = this.rated;
 		const {id, password} = this.getReplayData();
-
-		// STEP 1: Directly tell the login server that a replay is coming
-		// (also include all the data, including a hash of the replay itself,
-		// so it can't be spoofed.)
-
-		battle.replaySaved = true;
-		const [success] = await LoginServer.request('prepreplay', {
-			id: id,
-			loghash: datahash,
-			p1: battle.p1.name,
-			p2: battle.p2.name,
-			format: format.id,
-			rating,
-			hidden: options === 'forpunishment' || (this as any).unlistReplay ?
-				'2' : this.settings.isPrivate || this.hideReplay ? '1' : '',
-			inputlog: battle.inputLog?.join('\n') || null,
-		});
-		if (success?.errorip) {
-			connection.popup(`This server's request IP ${success.errorip} is not a registered server.`);
+		
+		if (battle.replaySaved) {
+			user.popup(`The replay for this battle was already saved.`);
 			return;
 		}
+		battle.replaySaved = true;
+		
+		let buf = '<!DOCTYPE html>\n';
+		buf += '<meta charset="utf-8" />\n';
+		buf += '<!-- version 1 -->\n';
+		buf += `<title>${Utils.escapeHTML(format.name)} replay: ${Utils.escapeHTML(battle.p1.name)} vs. ${Utils.escapeHTML(battle.p2.name)}</title>\n`;
+		buf += '<div class="wrapper replay-wrapper" style="max-width:1180px;margin:0 auto">\n';
+		buf += '<div class="battle"></div><div class="battle-log"></div><div class="replay-controls"></div><div class="replay-controls-2"></div>\n';
+		buf += `<h1 style="font-weight:normal;text-align:center"><strong>${Utils.escapeHTML(format.name)}</strong><br /><a href="https://pokemonshowdown.com/users/${toID(battle.p1.name)}" class="subtle" target="_blank">${Utils.escapeHTML(battle.p1.name)}</a> vs. <a href="https://pokemonshowdown.com/users/${toID(battle.p2.name)}" class="subtle" target="_blank">${Utils.escapeHTML(battle.p2.name)}</a></h1>\n`;
+		buf += '<script type="text/plain" class="battle-log-data">' + data.replace(/\//g, '\\/') + '</script>\n';
+		buf += '</div>\n';
+		buf += '</div>\n';
+		buf += '<script>\n';
+		buf += `let daily = Math.floor(Date.now()/1000/60/60/24);document.write('<script src="http://play.pokeathlon.com/js/replay-embed.js?version'+daily+'"></'+'script>');\n`;
+		buf += '</script>\n';
+		
+		const replayName = `${toID(battle.p1.name)}-${toID(battle.p2.name)}-${Date.now()}`;
 
-		// STEP 2: Tell the user to upload the replay to the login server
+		FS(`replays/${replayName}.html`).writeSync(buf);
 
-		connection.send('|queryresponse|savereplay|' + JSON.stringify({
-			log: data,
-			id: id,
-			password: password,
-			silent: options === 'forpunishment' || options === 'silent',
-		}));
+		FS('replays/replays.csv').appendSync(`${toID(user.name)},${toID(battle.p1.name)},${toID(battle.p2.name)},${battle.p3 ? toID(battle.p3.name) : ''},${battle.p4 ? toID(battle.p4.name) : ''},${Date.now()},${format.id},${replayName}\n`);
+
+		user.popup(`Replay was saved successfully! You can view it at http://play.pokeathlon.com:8000/replays/${replayName}.html`);
 	}
 
 	getReplayData() {
