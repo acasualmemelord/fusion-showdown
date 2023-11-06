@@ -2066,13 +2066,19 @@ export class GameRoom extends BasicRoom {
 		if (format.team && battle.ended) hideDetails = false;
 
 		const data = this.getLog(hideDetails ? 0 : -1);
-		//const datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
+		const datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
 		let rating = 0;
 		if (battle.ended && this.rated) rating = this.rated;
 		const {id, password} = this.getReplayData();
 		
 		if (battle.replaySaved) {
-			connection.popup(`The replay for this battle was already saved.`);
+			let csv = FS('replays/replays.csv').readSync().split('\n');
+			let location;
+			for (let item of csv) {
+				const info = item.split(',');
+				if (info[8] === datahash) location = info[7];
+			}
+			connection.popup(`The replay for this battle was already saved.` + (location ? ` You can find it at http://play.pokeathlon.com:8000/replays/${location}.html` : ``));
 			return;
 		}
 		battle.replaySaved = true;
@@ -2095,7 +2101,7 @@ export class GameRoom extends BasicRoom {
 
 		FS(`replays/${replayName}.html`).writeSync(buf);
 
-		FS('replays/replays.csv').appendSync(`${toID(user.name)},${toID(battle.p1.name)},${toID(battle.p2.name)},${battle.p3 ? toID(battle.p3.name) : ''},${battle.p4 ? toID(battle.p4.name) : ''},${Date.now()},${format.id},${replayName}\n`);
+		FS('replays/replays.csv').appendSync(`${toID(user.name)},${toID(battle.p1.name)},${toID(battle.p2.name)},${battle.p3 ? toID(battle.p3.name) : ''},${battle.p4 ? toID(battle.p4.name) : ''},${Date.now()},${format.id},${replayName},${datahash}\n`);
 
 		connection.popup(`Replay was saved successfully! You can view it at http://play.pokeathlon.com:8000/replays/${replayName}.html`);
 	}
