@@ -2072,7 +2072,7 @@ export class GameRoom extends BasicRoom {
 		const {id, password} = this.getReplayData();
 		
 		if (battle.replaySaved) {
-			user.popup(`The replay for this battle was already saved.`);
+			connection.popup(`The replay for this battle was already saved.`);
 			return;
 		}
 		battle.replaySaved = true;
@@ -2097,7 +2097,7 @@ export class GameRoom extends BasicRoom {
 
 		FS('replays/replays.csv').appendSync(`${toID(user.name)},${toID(battle.p1.name)},${toID(battle.p2.name)},${battle.p3 ? toID(battle.p3.name) : ''},${battle.p4 ? toID(battle.p4.name) : ''},${Date.now()},${format.id},${replayName}\n`);
 
-		user.popup(`Replay was saved successfully! You can view it at http://play.pokeathlon.com:8000/replays/${replayName}.html`);
+		connection.popup(`Replay was saved successfully! You can view it at http://play.pokeathlon.com:8000/replays/${replayName}.html`);
 	}
 
 	getReplayData() {
