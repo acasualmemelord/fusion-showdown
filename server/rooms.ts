@@ -2100,7 +2100,7 @@ export class GameRoom extends BasicRoom {
 
 		FS(`replays/${replayName}.html`).writeSync(buf);
 
-		FS('replays/replays.csv').appendSync(`${toID(user.name)},${toID(battle.p1.name)},${toID(battle.p2.name)},${battle.p3 ? toID(battle.p3.name) : ''},${battle.p4 ? toID(battle.p4.name) : ''},${Date.now()},${format.id},${replayName},${datahash}\n`);
+		FS('replays/replays.csv').appendSync(`${user.name},${battle.p1.name},${battle.p2.name},${battle.p3 ? battle.p3.name : ''},${battle.p4 ? battle.p4.name : ''},${Date.now()},${format.name},${replayName},${datahash}\n`);
 
 		connection.popup(`Replay was saved successfully! You can view it at http://play.pokeathlon.com:8000/replays/${replayName}.html`);
 	}
