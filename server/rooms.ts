@@ -2078,7 +2078,7 @@ export class GameRoom extends BasicRoom {
 				const info = item.split(',');
 				if (info[8] === datahash) location = info[7];
 			}
-			connection.popup(`The replay for this battle was already saved.` + (location ? ` You can find it at http://play.pokeathlon.com:8000/replays/${location}.html` : ``));
+			connection.popup(`The replay for this battle was already saved.` + (location ? ` You can find it at http://replay.pokeathlon.com/#${location}` : ``));
 			return;
 		}
 		battle.replaySaved = true;
@@ -2102,7 +2102,7 @@ export class GameRoom extends BasicRoom {
 
 		FS('replays/replays.csv').appendSync(`${user.name},${battle.p1.name},${battle.p2.name},${battle.p3 ? battle.p3.name : ''},${battle.p4 ? battle.p4.name : ''},${Date.now()},${format.name},${replayName},${datahash}\n`);
 
-		connection.popup(`Replay was saved successfully! You can view it at http://play.pokeathlon.com:8000/replays/${replayName}.html`);
+		connection.popup(`Replay was saved successfully! You can view it at http://replay.pokeathlon.com/#${replayName}`);
 	}
 
 	getReplayData() {
