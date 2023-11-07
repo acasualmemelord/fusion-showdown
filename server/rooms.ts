@@ -2087,7 +2087,7 @@ export class GameRoom extends BasicRoom {
 		buf += '<meta charset="utf-8" />\n';
 		buf += '<!-- version 1 -->\n';
 		buf += `<title>${Utils.escapeHTML(format.name)} replay: ${Utils.escapeHTML(battle.p1.name)} vs. ${Utils.escapeHTML(battle.p2.name)}</title>\n`;
-		buf += '<div class="wrapper replay-wrapper" style="max-width:1180px;margin:0 auto">\n';
+		buf += '<div class="wrapper replay-wrapper" style="max-width:1000px;margin:0 auto">\n';
 		buf += '<div class="battle" style="top: 0px;"></div><div class="battle-log" style="top: 0px;"></div><div class="replay-controls"></div><div class="replay-controls-2"></div>\n';
 		buf += '<script type="text/plain" class="battle-log-data">' + data.replace(/\//g, '\\/') + '</script>\n';
 		buf += '</div>\n';
