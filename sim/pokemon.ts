@@ -1217,7 +1217,6 @@ export class Pokemon {
 
 		this.transformed = true;
 		this.weighthg = pokemon.weighthg;
-		this.fusion = pokemon.fusion;
 
 		const types = pokemon.getTypes(true, true);
 		this.setType(pokemon.volatiles['roost'] ? pokemon.volatiles['roost'].typeWas : types, true);
