@@ -2778,10 +2778,4 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return this.checkCanLearn(move, species, setSources, set);
 		},
 	},
-	ignoreevents: {
-		effectType: 'ValidatorRule',
-		name: 'Ignore Events',
-		desc: "Ignore event related move legality checks.",
-		// Hardcoded in team-validator.ts
-	},
 };

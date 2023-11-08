@@ -7,7 +7,10 @@ export const Formats: FormatList = [
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen7infinitefusion',
-		ruleset: ['Standard', 'Z-Move Clause', 'Infinite Fusion Mod', 'IF Move Legality', 'Ignore Events', '!Obtainable Abilities', 'Species Reveal Clause'],
+		ruleset: [
+			'Standard', 'Z-Move Clause', 
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
+		],
 		banlist: ['Mega'],
 	},
 	{
@@ -15,7 +18,10 @@ export const Formats: FormatList = [
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen7infinitefusion',
-		ruleset: ['Standard', 'Z-Move Clause', 'Infinite Fusion Mod', 'IF Move Legality', 'Ignore Events', '!Obtainable Abilities', 'Species Reveal Clause'],
+		ruleset: [
+			'Standard', 'Z-Move Clause', 
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
+		],
 		banlist: [
 			'Mega', 'Uber',
 			'King\'s Rock', 'Razor Fang', 'Light Ball',
@@ -28,7 +34,10 @@ export const Formats: FormatList = [
 
 		mod: 'gen7infinitefusion',
 		gameType: 'doubles',
-		ruleset: ['Standard Doubles', 'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', 'Ignore Events', 'Species Reveal Clause'],
+		ruleset: [
+			'Standard Doubles', 
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+		],
 	},
 	{
 		section: "Infinite Fusion: National Dex",
@@ -38,7 +47,10 @@ export const Formats: FormatList = [
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
-		ruleset: ['Standard NatDex', 'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', 'Ignore Events', 'Species Reveal Clause'],
+		ruleset: [
+			'Standard NatDex', 
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+		],
 		banlist: [],
 	},
 	{
@@ -46,7 +58,10 @@ export const Formats: FormatList = [
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Infinite Fusion Mod', 'IF Move Legality', 'Ignore Events', '!Obtainable Abilities', 'Species Reveal Clause'],
+		ruleset: [
+			'Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Terastal Clause',
+		],
 		banlist: [
 			'ND AG', 'ND Uber', 'Mega',
 			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Ball',
@@ -59,6 +74,9 @@ export const Formats: FormatList = [
 
 		mod: 'gen9infinitefusion',
 		gameType: 'doubles',
-		ruleset: ['Standard NatDex', 'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', 'Ignore Events', 'Species Reveal Clause'],
+		ruleset: [
+			'Standard NatDex', 
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+		],
 	},
 ];

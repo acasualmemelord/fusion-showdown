@@ -1981,7 +1981,6 @@ export class TeamValidator {
 		set: PokemonSet, setSources: PokemonSources, eventData: EventInfo, eventSpecies: Species,
 		because = ``, from = `from an event`
 	) {
-		if (this.ruleTable.has('ignoreevents')) return;
 		const dex = this.dex;
 		let name = set.species;
 		const species = dex.species.get(set.species);
