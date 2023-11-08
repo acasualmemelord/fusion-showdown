@@ -1334,7 +1334,7 @@ export class TeamValidator {
 				isHidden: !!this.dex.mod('gen5').species.get(species.id).abilities['H'],
 			};
 		} else if (source.charAt(1) === 'E') {
-			if (set.fusion || this.findEggMoveFathers(source, species, setSources)) {
+			if (this.findEggMoveFathers(source, species, setSources)) {
 				return undefined;
 			}
 			if (because) throw new Error(`Wrong place to get an egg incompatibility message`);
