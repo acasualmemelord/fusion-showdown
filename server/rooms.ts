@@ -2093,7 +2093,7 @@ export class GameRoom extends BasicRoom {
 		buf += '</div>\n';
 		buf += '</div>\n';
 		buf += '<script>\n';
-		buf += `let daily = Math.floor(Date.now()/1000/60/60/24);document.write('<script src="http://play.pokeathlon.com/js/replay-embed.js?version'+daily+'"></'+'script>');\n`;
+		buf += `let daily = Math.floor(Date.now()/1000/60/60/24);document.write('<script src="https://play.pokeathlon.com/js/replay-embed.js?version'+daily+'"></'+'script>');\n`;
 		buf += '</script>\n';
 		
 		const replayName = `${toID(battle.p1.name)}-${toID(battle.p2.name)}${battle.p3 ? '-' + toID(battle.p3.name) : ''}${battle.p4 ? '-' + toID(battle.p4.name) : ''}-${Date.now()}`;
