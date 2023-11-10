@@ -174,8 +174,8 @@ export const Formats: FormatList = [
 		banlist: [
 			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Giratina', 'Giratina-Origin',
 			'Groudon', 'Iron Bundle', 'Koraidon', 'Kyogre', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza',
-			'Shaymin-Sky', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Moody', 'Shadow Tag', 'Booster Energy', 'Damp Rock', 'Focus Band',
-			'King\'s Rock', 'Razor Fang', 'Quick Claw', 'Acupressure', 'Baton Pass', 'Last Respects',
+			'Shaymin-Sky', 'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Moody', 'Shadow Tag', 'Booster Energy', 'Damp Rock',
+			'Focus Band', 'King\'s Rock', 'Razor Fang', 'Quick Claw', 'Acupressure', 'Baton Pass', 'Last Respects',
 		],
 	},
 	{
@@ -241,7 +241,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9',
 		ruleset: ['[Gen 9] PU'],
-		banlist: ['PU'],
+		banlist: ['PU', 'Crabominable', 'Raichu-Base', 'Zangoose'],
 	},
 	{
 		name: "[Gen 9] LC UU",
@@ -634,6 +634,7 @@ export const Formats: FormatList = [
 			'Razor Fang', 'Baton Pass', 'Extreme Speed',
 		],
 		unbanlist: ['Arceus-Bug', 'Arceus-Dragon', 'Arceus-Fire', 'Arceus-Ice', 'Arceus-Psychic'],
+		restricted: [],
 		onValidateRule() {
 			if (this.format.gameType !== 'singles') {
 				throw new Error(`Shared Power currently does not support ${this.format.gameType} battles.`);
@@ -642,6 +643,7 @@ export const Formats: FormatList = [
 		getSharedPower(pokemon) {
 			const sharedPower = new Set<string>();
 			for (const ally of pokemon.side.pokemon) {
+				if (pokemon.battle.ruleTable.isRestricted(`ability:${ally.baseAbility}`)) continue;
 				if (ally.previouslySwitchedIn > 0) {
 					if (pokemon.battle.dex.currentMod !== 'sharedpower' && ['trace', 'mirrorarmor'].includes(ally.baseAbility)) {
 						sharedPower.add('noability');
@@ -705,10 +707,10 @@ export const Formats: FormatList = [
 		banlist: [
 			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Cresselia', 'Dialga', 'Dialga-Origin', 'Dondozo', 'Dragapult', 'Enamorus-Base', 'Espathra', 'Eternatus',
 			'Flittle', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon', 'Hoopa-Unbound', 'Iron Bundle', 'Koraidon', 'Kyogre', 'Magearna', 'Mewtwo',
-			'Miraidon', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Sableye', 'Samurott-Hisui', 'Shaymin-Sky', 'Slaking', 'Spectrier', 'Torkoal',
-			'Ursaluna-Base', 'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Arena Trap', 'Huge Power', 'Imposter', 'Magnet Pull',
-			'Moody', 'Poison Heal', 'Pure Power', 'Shadow Tag', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Fillet Away', 'Last Respects', 'Rage Fist',
-			'Shed Tail', 'Shell Smash',
+			'Miraidon', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Sableye', 'Samurott-Hisui', 'Scream Tail', 'Shaymin-Sky', 'Slaking', 'Spectrier',
+			'Torkoal', 'Ursaluna-Base', 'Urshifu-Base', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Arena Trap', 'Huge Power', 'Imposter',
+			'Magnet Pull', 'Moody', 'Poison Heal', 'Pure Power', 'Shadow Tag', 'Stakeout', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Fillet Away',
+			'Last Respects', 'Rage Fist', 'Shed Tail', 'Shell Smash',
 		],
 		getEvoFamily(speciesid) {
 			let species = Dex.species.get(speciesid);
@@ -775,7 +777,8 @@ export const Formats: FormatList = [
 
 				set.species = donorSpecies.name;
 				set.name = donorSpecies.baseSpecies;
-				if (species.name === "Iron Leaves" || species.name === "Walking Wake") {
+				if (["Iron Leaves", "Walking Wake"].includes(donorSpecies.name) ||
+					["Iron Leaves", "Walking Wake"].includes(species.name)) {
 					set.hpType = "Dark";
 				}
 				const problems = this.validateSet(set, teamHas);
@@ -951,9 +954,9 @@ export const Formats: FormatList = [
 			'Bright Powder', 'Focus Band', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Shed Tail',
 		],
 		restricted: [
-			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Giratina', 'Giratina-Origin', 'Groudon', 'Iron Bundle', 'Kingambit', 'Koraidon',
-			'Kyogre', 'Magearna', 'Mewtwo', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Shaymin-Sky', 'Toxapex', 'Ursaluna',
-			'Ursaluna-Bloodmoon', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned',
+			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Giratina', 'Giratina-Origin', 'Groudon', 'Iron Bundle', 'Kingambit',
+			'Koraidon', 'Kyogre', 'Magearna', 'Mewtwo', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Shaymin-Sky', 'Toxapex',
+			'Ursaluna', 'Ursaluna-Bloodmoon', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned',
 		],
 	},
 	{
@@ -971,8 +974,9 @@ export const Formats: FormatList = [
 			'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite', 'Baton Pass', 'Shed Tail',
 		],
 		restricted: [
-			'Arceus', 'Basculegion-Base', 'Calyrex-Ice', 'Dialga', 'Dragapult', 'Flutter Mane', 'Gengar', 'Gholdengo', 'Giratina', 'Groudon', 'Iron Bundle',
-			'Kilowattrel', 'Manaphy', 'Mewtwo', 'Palkia', 'Rayquaza', 'Slaking', 'Sneasler', 'Ursaluna-Bloodmoon', 'Urshifu', 'Urshifu-Rapid-Strike', 'Zacian',
+			'Arceus', 'Basculegion-Base', 'Calyrex-Ice', 'Dialga', 'Dragapult', 'Enamorus-Base', 'Flutter Mane', 'Gengar', 'Gholdengo', 'Giratina', 'Groudon',
+			'Iron Bundle', 'Jolteon', 'Kilowattrel', 'Manaphy', 'Mewtwo', 'Palkia', 'Rayquaza', 'Slaking', 'Sneasler', 'Ursaluna-Bloodmoon', 'Urshifu',
+			'Urshifu-Rapid-Strike', 'Zacian',
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
@@ -1041,9 +1045,9 @@ export const Formats: FormatList = [
 			'Arceus', 'Azumarill', 'Basculegion', 'Basculegion-F', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Cloyster',
 			'Darkrai', 'Dialga', 'Dialga-Origin', 'Dragapult', 'Dragonite', 'Enamorus-Base', 'Eternatus', 'Flutter Mane', 'Garchomp', 'Giratina',
 			'Giratina-Origin', 'Groudon', 'Iron Bundle', 'Komala', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Lilligant-Hisui', 'Magearna', 'Mewtwo',
-			'Miraidon', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Shaymin-Sky', 'Spectrier', 'Ursaluna-Base', 'Urshifu-Base', 'Walking Wake',
-			'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zoroark-Hisui', 'Arena Trap', 'Moody', 'Shadow Tag', 'Damp Rock', 'King\'s Rock',
-			'Razor Fang', 'Baton Pass', 'Shed Tail',
+			'Miraidon', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Shaymin-Sky', 'Spectrier', 'Ursaluna', 'Ursaluna-Bloodmoon', 'Urshifu-Base',
+			'Walking Wake', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zoroark-Hisui', 'Arena Trap', 'Moody', 'Shadow Tag',
+			'Damp Rock', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Shed Tail',
 		],
 		restricted: [
 			'Acupressure', 'Astral Barrage', 'Belly Drum', 'Clangorous Soul', 'Dire Claw', 'Extreme Speed', 'Fillet Away', 'Gigaton Hammer', 'Last Respects',
