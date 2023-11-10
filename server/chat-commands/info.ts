@@ -1843,7 +1843,7 @@ export const commands: Chat.ChatCommands = {
 							let fusion = dex.species.get(toID(value));
 							if (fusion.exists) {
 								set.fusion = fusion.name;
-								if (!format.ruleTable?.has('infinitefusionmod')) format = Dex.formats.get('gen9natdexinfinitefusionag');
+								if (!format.ruleTable?.has('infinitefusionmod')) format = Dex.formats.get('gen9ifnatdexag');
 							} else this.errorReply(`Invalid fusion species on ${species}.`);
 							break;
 						case 'tera':

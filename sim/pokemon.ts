@@ -354,8 +354,7 @@ export class Pokemon {
 		if (displayedSpeciesName === 'Greninja-Bond') displayedSpeciesName = 'Greninja';
 		this.details = displayedSpeciesName + (this.level === 100 ? '' : ', L' + this.level) +
 			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
-			(this.battle.format.id.includes('infinitefusion') ? (this.set.fusion ? ', fusion: ' + this.set.fusion : '') + 
-			(this.set.altsprite ? ', alt: ' + this.set.altsprite : '') : '');
+			(this.set.fusion ? ', fusion: ' + this.set.fusion : '') + (this.set.altsprite ? ', alt: ' + this.set.altsprite : '');
 
 		this.status = '';
 		this.statusState = {};
@@ -414,7 +413,7 @@ export class Pokemon {
 		this.maybeDisabled = false;
 
 		this.illusion = null;
-		this.fusion = this.battle.format.id.includes('infinitefusion') ? this.set.fusion : undefined;
+		this.fusion = this.set.fusion;
 		this.transformed = false;
 
 		this.fainted = false;
