@@ -2233,6 +2233,10 @@ export const Rooms = {
 			room.game = new BestOfGame(room, options);
 		}
 
+		for (const player of players) {
+			FS('config/chat-plugins/usage.txt').appendSync(`${Date.now()},${options.format},${options.challengeType},${options.rated}:${player.battleSettings.team}\n`);
+		}
+
 		for (const p of players) {
 			if (p) {
 				p.joinRoom(room);
