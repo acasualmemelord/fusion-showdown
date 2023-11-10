@@ -2778,4 +2778,23 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return this.checkCanLearn(move, species, setSources, set);
 		},
 	},
+	fusionspeciesclause: {
+		effectType: 'ValidatorRule',
+		name: 'Fusion Species Clause',
+		desc: "Prevents teams from having more than one fusion with the same Pok&eacute;mon",
+		onBegin() {
+			this.add('rule', 'Fusion Species Clause: Limit one of each Fusion combo');
+		},
+		onValidateTeam(team, format) {
+			const speciesTable = new Set<string>();
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				const fusion = this.dex.species.get(set.fusion);
+				if (speciesTable.has(`${species.num}.${fusion.num}`)) {
+					return [`You are limited to one of each fusion combo by Fusion Species Clause.`, `(You have more than one ${species.baseSpecies}/${fusion.baseSpecies})`];
+				}
+				speciesTable.add(`${species.num}.${fusion.num}`);
+			}
+		},
+	},
 };
