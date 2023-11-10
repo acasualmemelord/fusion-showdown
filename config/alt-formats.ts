@@ -3,7 +3,7 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: Regional Dex",
 	},
 	{
-		name: "[Gen 7] Infinite Fusion Dex AG",
+		name: "[Gen 7] IF Dex AG",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen7infinitefusion',
@@ -14,7 +14,7 @@ export const Formats: FormatList = [
 		banlist: ['Mega'],
 	},
 	{
-		name: "[Gen 7] Infinite Fusion Dex OU",
+		name: "[Gen 7] IF Dex OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen7infinitefusion',
@@ -30,7 +30,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 7] Infinite Fusion Dex Doubles",
+		name: "[Gen 7] IF Dex Doubles",
 
 		mod: 'gen7infinitefusion',
 		gameType: 'doubles',
@@ -44,7 +44,7 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: National Dex",
 	},
 	{
-		name: "[Gen 9] NatDex Infinite Fusion AG",
+		name: "[Gen 9] IF NatDex AG",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
@@ -55,7 +55,7 @@ export const Formats: FormatList = [
 		banlist: [],
 	},
 	{
-		name: "[Gen 9] NatDex Infinite Fusion OU",
+		name: "[Gen 9] IF NatDex OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
@@ -71,7 +71,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] NatDex Infinite Fusion Doubles",
+		name: "[Gen 9] IF NatDex Doubles",
 
 		mod: 'gen9infinitefusion',
 		gameType: 'doubles',
@@ -85,7 +85,7 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: Extra",
 	},
 	{
-		name: "[Gen 9] Infinite Fusion FFA",
+		name: "[Gen 9] IF Free-for-all",
 
 		mod: 'gen9infinitefusion',
 		gameType: 'freeforall',
@@ -96,7 +96,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Infinite Fusion Custom Game",
+		name: "[Gen 9] IF Custom Game",
 
 		mod: 'gen9infinitefusion',
 		searchShow: false,
@@ -106,7 +106,7 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100', 'Infinite Fusion Mod'],
 	},
 	{
-		name: "[Gen 7] Infinite Fusion Custom Game",
+		name: "[Gen 7] IF Custom Game",
 
 		mod: 'gen7infinitefusion',
 		searchShow: false,
