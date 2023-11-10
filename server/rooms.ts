@@ -2078,7 +2078,7 @@ export class GameRoom extends BasicRoom {
 				const info = item.split(',');
 				if (info[8] === datahash) location = info[7];
 			}
-			connection.popup(`The replay for this battle was already saved.` + (location ? ` You can find it at https://replay.pokeathlon.com/#replay=${location}` : ``));
+			connection.popup(`The replay for this battle was already saved.` + (location ? ` You can find it at https://replay.pokeathlon.com/#replay=${location}` : `You can find it at https://replay.pokeathlon.com/`));
 			return;
 		}
 		battle.replaySaved = true;
