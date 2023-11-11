@@ -2689,7 +2689,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const fusion = this.dex.species.get(fuse_id);
 			const abilityPool = new Set<string>(Object.values(species.abilities));
 
-			if (fusion.exists && set.fusion) {
+			if (fuse_id && !fusion.exists) return [`The fusion is an invalid Pokémon.`];
+			if (set.fusion) {
 				if (species.tags.includes("Infinite Fusion")) return [`${species.name} can't be fused.`]
 				for (const ability of Object.values(fusion.abilities)) {
 					abilityPool.add(ability);
