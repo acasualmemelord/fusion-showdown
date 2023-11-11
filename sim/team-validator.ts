@@ -2769,4 +2769,8 @@ export class TeamValidator {
 	static get(format: string | Format) {
 		return new TeamValidator(format);
 	}
+
+	// getFusedTypes(set: Partial<PokemonSet>) {
+		
+	// }
 }

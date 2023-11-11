@@ -1,6 +1,5 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen7',
-	gen: 7,
 	init () {
 		const IFDex: {[k: string]: number} = {
 			"bulbmantle": 1001,
