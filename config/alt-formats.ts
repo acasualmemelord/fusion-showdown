@@ -8,7 +8,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen7infinitefusion',
 		ruleset: [
-			'Standard', 'Z-Move Clause', 
+			'Standard', 'Z-Move Clause',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
 		],
 		banlist: ['Mega'],
@@ -60,7 +60,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9infinitefusion',
 		ruleset: [
-			'Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', '!Species Clause',
+			'Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', '!Species Clause', 'Z-Move Clause',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Terastal Clause', 'Fusion Species Clause',
 		],
 		banlist: [

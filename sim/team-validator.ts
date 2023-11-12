@@ -398,12 +398,26 @@ export class TeamValidator {
 				setProblems = (format.validateSet || this.validateSet).call(this, set, teamHas);
 
 				// if there's a fusion, check it the same way
-				if (set.fusion && setProblems === null) {
+				if (set.fusion) {
 					const fusionSet = this.dex.deepClone(set);
 					if (fusionSet.fusion) {
 						[fusionSet.species, fusionSet.fusion] = [fusionSet.fusion, fusionSet.species];
 						const fusionProblems = (format.validateSet || this.validateSet).call(this, fusionSet, teamHas);
-						if (fusionProblems) setProblems = fusionProblems;
+						if (fusionProblems) {
+							let finalFusionProblems: string[] | null = [];
+							for (let fusionProblem of fusionProblems) {
+								if (!fusionProblem.includes(`can't learn`) &&
+									!fusionProblem.includes(`did you forget to EV it?`) &&
+									!fusionProblem.includes(`has no moves`)) {
+									finalFusionProblems.push(fusionProblem);
+								}
+							}
+							if (setProblems) {
+								setProblems = setProblems.concat(finalFusionProblems);
+							} else {
+								setProblems = finalFusionProblems;
+							}
+						}
 					}
 				}
 			}

@@ -2702,36 +2702,13 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const ability = this.dex.abilities.get(set.ability);
 			if (!abilityPool.has(ability.name)) {
 				return [
-					`${species.name}/${fusion.name} only have access to the following abilities: ${Array.from(abilityPool).join(', ')}.`,
+					`${species.name}/${fusion.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`,
 				];
 			}
 		},
 		onModifySpecies(species, target, source, effect) {
 			if (!target) return;
 			if (effect && ['imposter', 'transform'].includes(effect.id)) return;
-
-			const typeChanges: {[key: string]: string[]} = {
-				"magnemite": ["Steel", "Electric"],
-				"magneton": ["Steel", "Electric"],
-				"magnezone": ["Steel", "Electric"],
-				"dewgong": ["Ice", "Water"],
-				"omanyte": ["Water", "Rock"],
-				"omastar": ["Water", "Rock"],
-				"scizor": ["Steel", "Bug"],
-				"empoleon": ["Steel", "Water"],
-				"spiritomb": ["Dark", "Ghost"],
-				"ferrothorn": ["Steel", "Grass"],
-				"celebi": ["Grass", "Psychic"],
-				"bulbasaur": ["Grass"], "ivysaur": ["Grass"],
-				"venusaur": ["Grass"], "charizard": ["Fire"],
-				"geodude": ["Rock"], "graveler": ["Rock"],
-				"golem": ["Rock"], "gastly": ["Ghost"],
-				"haunter": ["Ghost"], "gengar": ["Ghost"],
-				"onix": ["Rock"], "scyther": ["Bug"],
-				"gyarados": ["Water"], "articuno": ["Ice"],
-				"zapdos": ["Electric"], "moltres": ["Fire"],
-				"dragonite": ["Dragon"], "steelix": ["Steel"],
-			};
 
 			const newSpecies = this.dex.deepClone(species);
 
@@ -2772,11 +2749,46 @@ export const Rulesets: {[k: string]: FormatData} = {
 		desc: "Allows Pok&eacute;mon to use any move that their fused mon has.",
 		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, setSources, set) {
-			const fuse_id = this.toID(set.fusion);
-			if (this.dex.species.get(fuse_id).exists) {
-				if (!this.checkCanLearn(move, this.dex.species.get(fuse_id), setSources, set)) return null;
+			const fusion = this.dex.species.get(set.fusion);
+			const baseCanLearn = this.checkCanLearn(move, species, setSources, set);
+
+			if (fusion.exists && species.exists) {
+
+				if (!this.checkCanLearn(move, fusion, setSources, set) || !baseCanLearn) return null;
+
+				if (move.id in fusionMoves) {
+					// fusion-based move additions
+					const speciesTypes = species.id in typeChanges ? typeChanges[species.id] : species.types;
+					const fusionTypes = fusion.id in typeChanges ? typeChanges[fusion.id] : fusion.types;
+
+					const typesSet = new Set([speciesTypes[0]]);
+					const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
+					if (bonusType.exists) typesSet.add(bonusType.name);
+					if (fusionTypes.length === 2 && typesSet.size === 1) typesSet.add(fusionTypes[0]);
+					
+					const data = fusionMoves[move.id];
+					for (let possibleSource of data) {
+						let canLearn = true;
+						if ("fusion" in possibleSource) {
+							if (!possibleSource["fusion"].includes(species.id) && !possibleSource["fusion"].includes(fusion.id)) canLearn = false;
+						}
+						if ("type" in possibleSource) {
+							for (let type of possibleSource["type"]) {
+								if (!typesSet.has(type)) canLearn = false;
+							}
+						}
+						if ("learns" in possibleSource) {
+							let canLearnReqMove = false;
+							for (let reqMove of possibleSource["learns"]) {
+								if (!this.checkCanLearn(this.dex.moves.get(reqMove), species, this.allSources(species), set) || !this.checkCanLearn(this.dex.moves.get(reqMove), fusion, this.allSources(fusion), set)) canLearnReqMove = true;
+							}
+							if (!canLearnReqMove) canLearn = false;
+						}
+						if (canLearn) return null;
+					}
+				}
 			}
-			return this.checkCanLearn(move, species, setSources, set);
+			return baseCanLearn;
 		},
 	},
 	fusionspeciesclause: {
@@ -2799,3 +2811,107 @@ export const Rulesets: {[k: string]: FormatData} = {
 		},
 	},
 };
+
+// For Infinite Fusion
+const typeChanges: {[key: string]: string[]} = {
+	"magnemite": ["Steel", "Electric"],
+	"magneton": ["Steel", "Electric"],
+	"magnezone": ["Steel", "Electric"],
+	"dewgong": ["Ice", "Water"],
+	"omanyte": ["Water", "Rock"],
+	"omastar": ["Water", "Rock"],
+	"scizor": ["Steel", "Bug"],
+	"empoleon": ["Steel", "Water"],
+	"spiritomb": ["Dark", "Ghost"],
+	"ferrothorn": ["Steel", "Grass"],
+	"celebi": ["Grass", "Psychic"],
+	"bulbasaur": ["Grass"], "ivysaur": ["Grass"],
+	"venusaur": ["Grass"], "charizard": ["Fire"],
+	"geodude": ["Rock"], "graveler": ["Rock"],
+	"golem": ["Rock"], "gastly": ["Ghost"],
+	"haunter": ["Ghost"], "gengar": ["Ghost"],
+	"onix": ["Rock"], "scyther": ["Bug"],
+	"gyarados": ["Water"], "articuno": ["Ice"],
+	"zapdos": ["Electric"], "moltres": ["Fire"],
+	"dragonite": ["Dragon"], "steelix": ["Steel"],
+};
+
+const fusionMoves: {[key: string]: {[key: string]: string[]}[]} = {
+	"attackorder": [{"fusion": ["beedrill"]}],
+	"firstimpression": [{"fusion": ["scyther", "scizor", "pinsir", "farfetchd", "trapinch", "vibrava", "flygon", "kabutops", "armaldo"]}],
+	"pollenpuff": [{"fusion": ["butterfree", "celebi", "parasect", "vileplume", "breloom"]}],
+	"lunge": [{"fusion": ["spinarak", "ariados", "joltik", "galvantula", "venomoth", "volcarona", "pinsir", "parasect", "ledian", "doduo", "dodrio", "stantler"]}],
+	"defendorder": [{"fusion": ["beedrill"]}],
+	"healorder": [{"fusion": ["beedrill"]}],
+	"powder": [{"fusion": ["butterfree", "venomoth", "volcarona", "parasect", "breloom"]}],
+	"tailglow": [{"fusion": ["mareep", "flaaffy", "ampharos", "lanturn", "zekrom", "reshiram"]}],
+	"darkestlariat": [{"fusion": ["snorlax", "regigigas", "poliwrath", "machamp", "electivire", "dusknoir", "swampert", "krookodile", "golurk"]}],
+	"partingshot": [{"fusion": ["meowth", "persian", "sandile", "krokorok", "krookodile", "umbreon"]}],
+	"topsyturvy": [{"fusion": ["hitmontop", "wobbuffet"]}],
+	"clangingscales": [{"fusion": ["ekans", "arbok", "garchomp", "flygon", "haxorus"]}],
+	"zingzap": [{"fusion": ["pichu", "pikachu", "raichu", "voltorb", "electrode"]}, {"fusion": ["sandslash", "golem"], "type": ["Electric"]}],
+	"paraboliccharge": [{"fusion": ["pichu", "pikachu", "raichu", "magnemite", "magneton", "magnezone", "mareep", "flaaffy", "ampharos", "elekid", "electabuzz", "electivire", "zapdos", "chinchou", "lanturn", "raikou", "klink", "klang", "klinklang", "rotom", "stunfisk"]}],
+	"electrify": [{"fusion": ["klink", "klang", "klinklang"]}, {"type": ["Electric"]}],
+	"aromaticmist": [{"fusion": ["weezing", "bulbasaur", "ivysaur", "venusaur", "chikorita", "bayleef", "meganium", "gloom", "vileplume", "bellossom", "roselia", "roserade"]}],
+	"floralhealing": [{"fusion": ["sunflora", "bellossom", "roselia", "roserade"]}],
+	"flyingpress": [{"fusion": ["torchic", "combusken", "blaziken", "farfetchd", "heracross"]}, {"type": ["Flying", "Fighting"]}],
+	"secretsword": [{"fusion": ["honedge", "doublade", "aegislash", "gallade", "farfetchd", "absol", "bisharp", "kingambit"]}],
+	"matblock": [{"fusion": ["machop", "machoke", "machamp", "tyrogue", "hitmonlee", "hitmonchan", "hitmontop"]}],
+	"mindblown": [{"fusion": ["voltorb", "electrode", "exeggutor"]}],
+	"shelltrap": [{"fusion": ["magcargo", "forretress"]}],
+	"heatcrash": [{"fusion": ["blaziken", "reshiram", "groudon", "charizard", "golurk", "regigigas", "rhydon", "rhyperior", "snorlax"]}],
+	"shadowbone": [{"fusion": ["marowak"], "type": ["Ghost"]}],
+	"spiritshackle": [{"fusion": ["banette", "spiritomb", "dusknoir", "shedinja", "cofagrigus"]}],
+	"trickortreat": [{"fusion": ["gastly", "haunter", "gengar", "mimikyu", "zorua", "zoroark"]}, {"type": ["Grass", "Ghost"]}],
+	"tropkick": [{"fusion": ["hitmonlee", "hitmontop", "roserade"]}, {"type": ["Grass", "Fighting"]}],
+	"needlearm": [{"fusion": ["ferrothorn"]}],
+	"forestscurse": [{"type": ["Grass", "Ghost"]}],
+	"spikyshield": [{"fusion": ["ferroseed", "ferrothorn"]}, {"fusion": ["sandslash", "jolteon", "cloyster"], "type": ["Grass"]}],
+	"strengthsap": [{"fusion": ["oddish", "gloom", "vileplume", "bellossom", "hoppip", "skiploom", "jumpluff", "bellsprout", "weepinbell", "victreebel", "paras", "parasect", "drifblim", "breloom"]}],
+	"shoreup": [{"fusion": ["muk", "grimer"], "type": ["Ground"]}],
+	"icehammer": [{"type": ["Ice"], "learns": ["crabhammer", "woodhammer"]}],
+	"multiattack": [{"fusion": ["arceus", "mew", "genesect"]}],
+	"revelationdance": [{"fusion": ["kecleon", "bellossom", "cleffa", "clefairy", "clefable"]}],
+	"banefulbunker": [{"fusion": ["tentacool", "tentacruel", "nidorina", "nidorino", "nidoqueen", "nidoking", "grimer", "muk", "qwilfish"]}],
+	"instruct": [{"fusion": ["chimchar", "monferno", "infernape", "kadabra", "alakazam", "slowking"]}],
+	"psychicterrain": [{"type": ["Psychic"]}],
+	"grassyterrain": [{"type": ["Grass"]}],
+	"mistyterrain": [{"type": ["Fairy"]}],
+	"speedswap": [{"fusion": ["pikachu", "raichu", "abra", "kadabra", "alakazam", "porygon", "porygon2", "porygonz", "mewtwo", "mew", "joltik", "galvantula"]}],
+	"accelerock": [{"fusion": ["aerodactyl", "kabutops", "anorith", "armaldo"]}],
+	"anchorshot": [{"fusion": ["empoleon", "steelix", "beldum", "metang", "metagross", "klink", "klang", "klinklang", "aron", "lairon", "aggron"], "type": ["water"]}, {"fusion": ["lapras", "wailord", "kyogre"], "type": ["steel"]}],
+	"sparklingaria": [{"fusion": ["jynx", "jigglypuff", "wigglytuff"], "type": ["Water"]}, {"fusion": ["lapras"]}],
+	"watershuriken": [{"fusion": ["ninjask", "lucario", "zoroark", "bisharp", "kingambit"], "type": ["Water"]}],
+	
+	// second tutor
+	"hyperspacefury": [{"fusion": ["giratina", "palkia", "dialga", "arceus"]}],
+	"coreenforcer": [{"fusion": ["giratina", "palkia", "dialga", "rayquaza"]}],
+	"plasmafists": [{"fusion": ["electabuzz", "electivire", "zekrom"]}, {"fusion": ["rotom"], "learns": ["thunderpunch"]}],
+	"lightofruin": [{"fusion": ["arceus", "mew", "celebi", "jirachi"]}],
+	"fleurcannon": [{"fusion": ["gardevoir", "gallade", "sylveon", "wigglytuff"]}],
+	"naturesmadness": [{"fusion": ["celebi", "kyogre", "groudon", "absol"]}],
+	"geomancy": [{"fusion": ["celebi"]}],
+	"vcreate": [{"fusion": ["entei", "hooh", "typhlosion"]}],
+	"magmastorm": [{"fusion": ["magcargo", "typhlosion", "magmortar", "magmar", "entei", "groudon"]}, {"learns": ["eruption"]}],
+	"searingshot": [{"fusion": ["magmortar"]}],
+	"oblivionwing": [{"fusion": ["murkrow", "honchkrow"]}, {"type": ["Dark", "Flying"]}],
+	"moongeistbeam": [{"fusion": ["cleffa", "clefairy", "clefable"], "type": ["Dark"]}, {"fusion": ["darkrai", "misdreavus", "mismagius"]}],
+	"spectralthief": [{"fusion": ["haunter", "gengar", "banette", "giratina", "honedge", "doublade", "aegislash"]}],
+	"seedflare": [{"fusion": ["jumpluff", "sunflora"]}],
+	"landswrath": [{"fusion": ["groudon"]}],
+	"thousandarrows": [{"fusion": ["sandslash", "jolteon", "ferrothorn"], "type": ["Ground"]}],
+	"thousandwaves": [{"fusion": ["stunfisk", "quagsire", "swampert"]}],
+	"freezeshock": [{"fusion": ["kyurem", "articuno"], "type": ["Electric"]}],
+	"iceburn": [{"fusion": ["kyurem", "articuno"], "type": ["Fire"]}],
+	"relicsong": [{"fusion": ["jynx", "lapras", "jigglypuff", "wigglytuff", "misdreavus", "mismagius"]}],
+	"happyhour": [{"fusion": ["meowth", "jirachi", "delibird", "munchlax", "snorlax", "pikachu", "raichu"]}],
+	"holdhands": [{"fusion": ["charmander", "bulbasaur", "squirtle", "pikachu", "togepi"]}],
+	"prismaticlaser": [{"fusion": ["lanturn", "ampharos", "hooh", "deoxys", "mewtwo", "mew"], "type": ["Psychic"]}],
+	"photongeyser": [{"fusion": ["lanturn", "ampharos", "hooh", "deoxys", "mewtwo", "mew"], "type": ["Psychic"]}],
+	"lunardance": [{"fusion": ["clefairy", "clefable", "staryu", "starmie"]}],
+	"diamondstorm": [{"type": ["Fairy", "Rock"]}, {"type": ["Steel", "Rock"]}, {"fusion": ["dialga", "steelix"]}],
+	"sunsteelstrike": [{"fusion": ["charizard", "volcarona", "flareon", "ninetales", "entei", "hooh", "rapidash"], "type": ["Steel"]}],
+	"doubleironbash": [{"type": ["Steel"], "learns": ["doubleslap"]}],
+	"steameruption": [{"type": ["Water"], "learns": ["eruption"]}],
+}
+
