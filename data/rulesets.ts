@@ -2732,8 +2732,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 			newSpecies.weightkg = (fusionSpecies.weightkg + species.weightkg) / 2;
 			newSpecies.weighthg = newSpecies.weightkg * 10;
 
-			const speciesTypes = species.id in typeChanges ? typeChanges[species.id] : species.types;
-			const fusionTypes = fusionSpecies.id in typeChanges ? typeChanges[fusionSpecies.id] : fusionSpecies.types;
+			let speciesTypes = species.types;
+			let fusionTypes = fusionSpecies.types;
+
+			if (speciesTypes.length === 2 && speciesTypes.includes('Flying') && speciesTypes.includes('Normal')) speciesTypes = ['Flying'];
+			if (fusionTypes.length === 2 && fusionTypes.includes('Flying') && fusionTypes.includes('Normal')) fusionTypes = ['Flying'];
 
 			const typesSet = new Set([speciesTypes[0]]);
 			const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
@@ -2758,8 +2761,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 				if (move.id in fusionMoves) {
 					// fusion-based move additions
-					const speciesTypes = species.id in typeChanges ? typeChanges[species.id] : species.types;
-					const fusionTypes = fusion.id in typeChanges ? typeChanges[fusion.id] : fusion.types;
+					let speciesTypes = species.types;
+					let fusionTypes = fusion.types;
+
+					if (speciesTypes.length === 2 && speciesTypes.includes('Flying') && speciesTypes.includes('Normal')) speciesTypes = ['Flying'];
+					if (fusionTypes.length === 2 && fusionTypes.includes('Flying') && fusionTypes.includes('Normal')) fusionTypes = ['Flying'];
 
 					const typesSet = new Set([speciesTypes[0]]);
 					const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
@@ -2810,30 +2816,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 		},
 	},
-};
-
-// For Infinite Fusion
-const typeChanges: {[key: string]: string[]} = {
-	"magnemite": ["Steel", "Electric"],
-	"magneton": ["Steel", "Electric"],
-	"magnezone": ["Steel", "Electric"],
-	"dewgong": ["Ice", "Water"],
-	"omanyte": ["Water", "Rock"],
-	"omastar": ["Water", "Rock"],
-	"scizor": ["Steel", "Bug"],
-	"empoleon": ["Steel", "Water"],
-	"spiritomb": ["Dark", "Ghost"],
-	"ferrothorn": ["Steel", "Grass"],
-	"celebi": ["Grass", "Psychic"],
-	"bulbasaur": ["Grass"], "ivysaur": ["Grass"],
-	"venusaur": ["Grass"], "charizard": ["Fire"],
-	"geodude": ["Rock"], "graveler": ["Rock"],
-	"golem": ["Rock"], "gastly": ["Ghost"],
-	"haunter": ["Ghost"], "gengar": ["Ghost"],
-	"onix": ["Rock"], "scyther": ["Bug"],
-	"gyarados": ["Water"], "articuno": ["Ice"],
-	"zapdos": ["Electric"], "moltres": ["Fire"],
-	"dragonite": ["Dragon"], "steelix": ["Steel"],
 };
 
 const fusionMoves: {[key: string]: {[key: string]: string[]}[]} = {
@@ -2913,5 +2895,5 @@ const fusionMoves: {[key: string]: {[key: string]: string[]}[]} = {
 	"sunsteelstrike": [{"fusion": ["charizard", "volcarona", "flareon", "ninetales", "entei", "hooh", "rapidash"], "type": ["Steel"]}],
 	"doubleironbash": [{"type": ["Steel"], "learns": ["doubleslap"]}],
 	"steameruption": [{"type": ["Water"], "learns": ["eruption"]}],
-}
+};
 
