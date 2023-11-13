@@ -24,7 +24,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Mega', 'Uber',
-			'King\'s Rock', 'Razor Fang', 'Light Ball',
+			'item:kingsrock', 'item:quickclaw', 'item:razorfang',
 			'Arena Trap', 'Shadow Tag', 'Speed Boost',
 			'Baton Pass', 'Shell Smash', 'Belly Drum',
 		],
@@ -65,7 +65,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'ND AG', 'ND Uber', 'Mega',
-			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Light Ball',
+			'item:kingsrock', 'item:quickclaw', 'item:razorfang', 'item:lightball',
 			'Huge Power', 'Pure Power', 'Disguise', 'Moody', 'Contrary', 'Simple', 'Wonder Guard', 'Arena Trap', 'Power Construct', 'Shadow Tag', 'Speed Boost',
 			'Shell Smash', 'Belly Drum', 'Last Respects', 'Population Bomb', 'Rage Fist', 'Assist', 'Baton Pass', 'Shed Tail',
 		],
