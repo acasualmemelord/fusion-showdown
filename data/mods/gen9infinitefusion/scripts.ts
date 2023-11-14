@@ -9,26 +9,26 @@ export const Scripts: ModdedBattleScriptsData = {
 				(this.terastallized || pokemon.terastallized))) {
 				return false;
 			}
-	
+
 			if (this.battle.dex.currentMod === 'gen1stadium' && (
 				species.name === 'Ditto' ||
 				(this.species.name === 'Ditto' && pokemon.moves.includes('transform'))
 			)) {
 				return false;
 			}
-			
+
 			this.fusion = pokemon.fusion;
 			if (!this.setSpecies(species, effect, true)) return false;
-	
+
 			this.transformed = true;
 			this.weighthg = pokemon.weighthg;
-	
+
 			const types = pokemon.getTypes(true, true);
 			this.setType(pokemon.volatiles['roost'] ? pokemon.volatiles['roost'].typeWas : types, true);
 			this.addedType = pokemon.addedType;
 			this.knownType = this.isAlly(pokemon) && pokemon.knownType;
 			this.apparentType = pokemon.apparentType;
-	
+
 			let statName: StatIDExceptHP;
 			let statTable = (pokemon.ability === 'Stance Change' && pokemon.fusion) ? pokemon.baseStoredStats : pokemon.storedStats;
 			for (statName in this.storedStats) {
@@ -80,7 +80,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.apparentType = this.terastallized;
 			}
 			if (this.battle.gen > 2) this.setAbility(pokemon.ability, this, true, true);
-	
+
 			// Change formes based on held items (for Transform)
 			// Only ever relevant in Generation 4 since Generation 3 didn't have item-based forme changes
 			if (this.battle.gen === 4) {
@@ -101,7 +101,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					}
 				}
 			}
-	
+
 			// Pokemon transformed into Ogerpon cannot Terastallize
 			// restoring their ability to tera after they untransform is handled ELSEWHERE
 			if (this.species.baseSpecies === 'Ogerpon' && this.canTerastallize) this.canTerastallize = false;
@@ -110,12 +110,12 @@ export const Scripts: ModdedBattleScriptsData = {
 		},
 		formeChange(speciesId, source, isPermanent, message) {
 			const rawSpecies = this.battle.dex.species.get(speciesId);
-	
+
 			const species = this.setSpecies(rawSpecies, source);
 			if (!species) return false;
-	
+
 			if (this.battle.gen <= 2) return true;
-	
+
 			// The species the opponent sees
 			const apparentSpecies =
 				this.illusion ? this.illusion.species.name : species.baseSpecies;

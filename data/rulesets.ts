@@ -2771,7 +2771,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 					const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
 					if (bonusType.exists) typesSet.add(bonusType.name);
 					if (fusionTypes.length === 2 && typesSet.size === 1) typesSet.add(fusionTypes[0]);
-					
+
 					const data = fusionMoves[move.id];
 					for (let possibleSource of data) {
 						let canLearn = true;
@@ -2864,7 +2864,7 @@ const fusionMoves: {[key: string]: {[key: string]: string[]}[]} = {
 	"anchorshot": [{"fusion": ["empoleon", "steelix", "beldum", "metang", "metagross", "klink", "klang", "klinklang", "aron", "lairon", "aggron"], "type": ["water"]}, {"fusion": ["lapras", "wailord", "kyogre"], "type": ["steel"]}],
 	"sparklingaria": [{"fusion": ["jynx", "jigglypuff", "wigglytuff"], "type": ["Water"]}, {"fusion": ["lapras"]}],
 	"watershuriken": [{"fusion": ["ninjask", "lucario", "zoroark", "bisharp", "kingambit"], "type": ["Water"]}],
-	
+
 	// second tutor
 	"hyperspacefury": [{"fusion": ["giratina", "palkia", "dialga", "arceus"]}],
 	"coreenforcer": [{"fusion": ["giratina", "palkia", "dialga", "rayquaza"]}],
@@ -2896,4 +2896,3 @@ const fusionMoves: {[key: string]: {[key: string]: string[]}[]} = {
 	"doubleironbash": [{"type": ["Steel"], "learns": ["doubleslap"]}],
 	"steameruption": [{"type": ["Water"], "learns": ["eruption"]}],
 };
-

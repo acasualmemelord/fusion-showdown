@@ -196,7 +196,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.effectState.busted = false;
 					pokemon.fusionChange('Eiscue', this.effect);
 				}
-			} 
+			}
 		},
 		onDamagePriority: 1,
 		onDamage(damage, target, source, effect) {
@@ -248,7 +248,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.effectState.busted = false;
 					pokemon.fusionChange('Eiscue', this.effect);
 				}
-			} 
+			}
 		},
 	},
 	powerconstruct: {
@@ -256,7 +256,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Zygarde' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'zygardecomplete' || pokemon.fusion === 'Zygarde-Complete' || pokemon.hp > pokemon.maxhp / 2) return;
-			
+
 			if (pokemon.baseSpecies.baseSpecies === 'Zygarde') {
 				this.add('-activate', pokemon, 'ability: Power Construct');
 				pokemon.formeChange('Zygarde-Complete', this.effect, true);
@@ -490,7 +490,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					source.trySetStatus('par', target, move);
 				}
 				target.fusionChange('cramorant', move);
-			} 
+			}
 		},
 		// The Dive part of this mechanic is implemented in Dive's `onTryMove` in moves.ts
 		onSourceTryPrimaryHit(target, source, effect) {
@@ -503,7 +503,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				} else if (source.fusion === 'Cramorant') {
 					source.fusionChange(forme, effect);
 				}
-			} 
+			}
 		},
 		isPermanent: true,
 		name: "Gulp Missile",

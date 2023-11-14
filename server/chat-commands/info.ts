@@ -1771,7 +1771,7 @@ export const commands: Chat.ChatCommands = {
 			format = Dex.formats.get('gen9ou');
 			mod = 'gen9';
 		}
-		
+
 		const dex = Dex.mod(mod);
 
 		if (args.length - startIndex < 3) return this.errorReply('Not enough arguments!');
@@ -1784,7 +1784,7 @@ export const commands: Chat.ChatCommands = {
 		let p2species = dex.species.get(toID(p2info[0]));
 
 		if (!p1species.exists || !p2species.exists) return this.errorReply('One of the Pokemon is invalid!');
-		
+
 		let move = Utils.deepClone(dex.moves.get(toID(moveinfo)));
 		if (!move.exists || move.category === 'Status') return this.errorReply('Invalid move given!');
 		if (move.willCrit === undefined) move.willCrit = false;
@@ -1990,7 +1990,7 @@ export const commands: Chat.ChatCommands = {
 
 			battle.makeChoices('team 1|1', 'team 1|1');
 
-			let [attacker, defender] = [battle.p1.active[0], battle.p2.active[0]];	
+			let [attacker, defender] = [battle.p1.active[0], battle.p2.active[0]];
 
 			oldmax = defender.maxhp;
 			[defender.maxhp, defender.hp, attacker.maxhp, attacker.hp] = Array(4).fill(1000000);

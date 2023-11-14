@@ -35,7 +35,7 @@ export const Formats: FormatList = [
 		mod: 'gen7infinitefusion',
 		gameType: 'doubles',
 		ruleset: [
-			'Standard Doubles', 
+			'Standard Doubles',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
 		],
 	},
@@ -49,7 +49,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9infinitefusion',
 		ruleset: [
-			'Standard NatDex', 
+			'Standard NatDex',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
 		],
 		banlist: [],
@@ -76,11 +76,11 @@ export const Formats: FormatList = [
 		mod: 'gen9infinitefusion',
 		gameType: 'doubles',
 		ruleset: [
-			'Standard NatDex', 
+			'Standard NatDex',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
 		],
 	},
-	
+
 	{
 		section: "Infinite Fusion: Extra",
 	},

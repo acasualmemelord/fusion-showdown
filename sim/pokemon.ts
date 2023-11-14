@@ -1355,7 +1355,7 @@ export class Pokemon {
 		this.details = this.species.name + (this.level === 100 ? '' : ', L' + this.level) +
 			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
 				(this.set.fusion ? ', fusion: ' + this.set.fusion : '');
-		
+
 		let details = (this.illusion || this).details;
 		if (this.terastallized) details += `, tera:${this.terastallized}`;
 

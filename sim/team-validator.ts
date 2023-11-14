@@ -1023,7 +1023,7 @@ export class TeamValidator {
 			// nickname is the name of a species
 			if (nameSpecies.baseSpecies === species.baseSpecies) {
 				set.name = species.baseSpecies;
-			} else if (!set.fusion && nameSpecies.name !== species.name &&
+			} else if (nameSpecies.name !== species.name &&
 				nameSpecies.name !== species.baseSpecies && ruleTable.has('nicknameclause')) {
 				// nickname species doesn't match actual species
 				// Nickname Clause
@@ -2777,8 +2777,4 @@ export class TeamValidator {
 	static get(format: string | Format) {
 		return new TeamValidator(format);
 	}
-
-	// getFusedTypes(set: Partial<PokemonSet>) {
-		
-	// }
 }

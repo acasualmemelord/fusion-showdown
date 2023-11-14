@@ -1,5 +1,5 @@
 export const Items: {[k: string]: ModdedItemData} = {
-	
+
 	// IF Additions
 	mankeyspaw: {
 		name: "Mankey\u2019s Paw",

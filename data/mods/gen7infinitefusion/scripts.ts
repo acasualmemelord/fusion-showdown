@@ -509,26 +509,26 @@ export const Scripts: ModdedBattleScriptsData = {
 				(this.terastallized || pokemon.terastallized))) {
 				return false;
 			}
-	
+
 			if (this.battle.dex.currentMod === 'gen1stadium' && (
 				species.name === 'Ditto' ||
 				(this.species.name === 'Ditto' && pokemon.moves.includes('transform'))
 			)) {
 				return false;
 			}
-	
+
 			if (!this.setSpecies(species, effect, true)) return false;
-	
+
 			this.transformed = true;
 			this.weighthg = pokemon.weighthg;
 			this.fusion = pokemon.fusion;
-	
+
 			const types = pokemon.getTypes(true, true);
 			this.setType(pokemon.volatiles['roost'] ? pokemon.volatiles['roost'].typeWas : types, true);
 			this.addedType = pokemon.addedType;
 			this.knownType = this.isAlly(pokemon) && pokemon.knownType;
 			this.apparentType = pokemon.apparentType;
-	
+
 			let statName: StatIDExceptHP;
 			let statTable = (pokemon.ability === 'Stance Change' && pokemon.fusion) ? pokemon.baseStoredStats : pokemon.storedStats;
 			for (statName in this.storedStats) {
@@ -601,11 +601,11 @@ export const Scripts: ModdedBattleScriptsData = {
 					}
 				}
 			}
-	
+
 			// Pokemon transformed into Ogerpon cannot Terastallize
 			// restoring their ability to tera after they untransform is handled ELSEWHERE
 			if (this.species.baseSpecies === 'Ogerpon' && this.canTerastallize) this.canTerastallize = false;
-	
+
 			return true;
 		},
 	},

@@ -2070,7 +2070,7 @@ export class GameRoom extends BasicRoom {
 		let rating = 0;
 		if (battle.ended && this.rated) rating = this.rated;
 		const {id, password} = this.getReplayData();
-		
+
 		if (battle.replaySaved) {
 			let csv = FS('replays/replays.csv').readSync().split('\n');
 			let location;
@@ -2082,7 +2082,7 @@ export class GameRoom extends BasicRoom {
 			return;
 		}
 		battle.replaySaved = true;
-		
+
 		let buf = '<!DOCTYPE html>\n';
 		buf += '<meta charset="utf-8" />\n';
 		buf += '<!-- version 1 -->\n';
@@ -2095,7 +2095,7 @@ export class GameRoom extends BasicRoom {
 		buf += '<script>\n';
 		buf += `let daily = Math.floor(Date.now()/1000/60/60/24);document.write('<script src="https://play.pokeathlon.com/js/replay-embed.js?version'+daily+'"></'+'script>');\n`;
 		buf += '</script>\n';
-		
+
 		const replayName = `${toID(battle.p1.name)}-${toID(battle.p2.name)}${battle.p3 ? '-' + toID(battle.p3.name) : ''}${battle.p4 ? '-' + toID(battle.p4.name) : ''}-${Date.now()}`;
 
 		FS(`replays/${replayName}.html`).writeSync(buf);
