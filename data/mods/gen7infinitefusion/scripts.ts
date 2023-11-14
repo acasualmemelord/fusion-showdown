@@ -580,7 +580,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.apparentType = this.terastallized;
 			}
 			if (this.battle.gen > 2) this.setAbility(pokemon.ability, this, true, true);
-	
+
 			// Change formes based on held items (for Transform)
 			// Only ever relevant in Generation 4 since Generation 3 didn't have item-based forme changes
 			if (this.battle.gen === 4) {
