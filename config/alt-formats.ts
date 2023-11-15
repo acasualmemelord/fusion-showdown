@@ -24,7 +24,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'Mega', 'Uber',
-			'item:kingsrock', 'item:quickclaw', 'item:razorfang',
+			'item:kingsrock', 'item:quickclaw', 'item:razorfang', 'item:lightball',
 			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost',
 			'move:batonpass', 'move:shellsmash', 'move:bellydrum',
 		],
