@@ -488,14 +488,13 @@ export const Scripts: ModdedBattleScriptsData = {
 			"rockruff": 463,
 			"lycanroc": 464,
 			"lycanrocmidnight": 465,
-
 		};
 		for (const i in this.data.Pokedex) {
 			if (i in IFDex) {
 				this.data.Pokedex[i].num = IFDex[i as string];
 				this.data.Pokedex[i].isNonstandard = null;
 			} else {
-				this.data.Pokedex[i].num *= -1;
+				this.data.Pokedex[i].num = 0;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
 			}
 		}
