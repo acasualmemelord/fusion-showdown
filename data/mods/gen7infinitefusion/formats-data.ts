@@ -7,6 +7,22 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "Uber",
 	},
+	smeargle: {
+		inherit: true,
+		tier: "Uber",
+	},
+	blaziken: {
+		inherit: true,
+		tier: "OU",
+	},
+	scolipede: {
+		inherit: true,
+		tier: "UU",
+	},
+	sharpedo: {
+		inherit: true,
+		tier: "RU",
+	},
 	gyarados: {
 		inherit: true,
 		tier: "UU",

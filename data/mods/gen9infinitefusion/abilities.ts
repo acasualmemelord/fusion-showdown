@@ -510,4 +510,21 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 2.5,
 		num: 241,
 	},
+	illusion: {
+		inherit: true,
+		onEnd(pokemon) {
+			if (pokemon.illusion) {
+				this.debug('illusion cleared');
+				pokemon.illusion = null;
+				const details = pokemon.species.name + (pokemon.level === 100 ? '' : ', L' + pokemon.level) +
+					(pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '') +
+					(pokemon.set.fusion ? ', fusion: ' + pokemon.set.fusion : '') + (pokemon.set.altsprite ? ', alt: ' + pokemon.set.altsprite : '');
+				this.add('replace', pokemon, details);
+				this.add('-end', pokemon, 'Illusion');
+				if (this.ruleTable.has('illusionlevelmod')) {
+					this.hint("Illusion Level Mod is active, so this Pok\u00e9mon's true level was hidden.", true);
+				}
+			}
+		},
+	},
 };

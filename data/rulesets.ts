@@ -2728,7 +2728,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				newSpecies.bst += newSpecies.baseStats[stat];
 			}
 
-			if (fusionSpecies.maxHP) newSpecies.maxHP = fusionSpecies.maxHP;
+			if (target.baseAbility === 'wonderguard') newSpecies.maxHP = 1;
 			newSpecies.weightkg = (fusionSpecies.weightkg + species.weightkg) / 2;
 			newSpecies.weighthg = newSpecies.weightkg * 10;
 

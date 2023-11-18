@@ -9,7 +9,7 @@ export const Formats: FormatList = [
 		mod: 'gen7infinitefusion',
 		ruleset: [
 			'Standard', 'Z-Move Clause',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', '!Nickname Clause',
 		],
 		banlist: ['Mega'],
 	},
@@ -20,11 +20,11 @@ export const Formats: FormatList = [
 		mod: 'gen7infinitefusion',
 		ruleset: [
 			'Standard', 'Z-Move Clause', '!Species Clause',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Fusion Species Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Fusion Species Clause', '!Nickname Clause',
 		],
 		banlist: [
 			'Mega', 'Uber',
-			'item:kingsrock', 'item:quickclaw', 'item:razorfang', 'item:lightball',
+			'item:kingsrock', 'item:razorfang', 'item:lightball', 'item:thickclub',
 			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost',
 			'move:batonpass', 'move:shellsmash', 'move:bellydrum',
 		],
@@ -36,7 +36,7 @@ export const Formats: FormatList = [
 		gameType: 'doubles',
 		ruleset: [
 			'Standard Doubles',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 	},
 
@@ -50,7 +50,7 @@ export const Formats: FormatList = [
 		mod: 'gen9infinitefusion',
 		ruleset: [
 			'Standard NatDex',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 		banlist: [],
 	},
@@ -61,11 +61,11 @@ export const Formats: FormatList = [
 		mod: 'gen9infinitefusion',
 		ruleset: [
 			'Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', '!Species Clause', 'Z-Move Clause',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Terastal Clause', 'Fusion Species Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Terastal Clause', 'Fusion Species Clause', '!Nickname Clause',
 		],
 		banlist: [
 			'ND AG', 'ND Uber', 'Mega',
-			'item:kingsrock', 'item:quickclaw', 'item:razorfang', 'item:lightball',
+			'item:kingsrock', 'item:quickclaw', 'item:razorfang', 'item:lightball', 'item:thickclub',
 			'ability:hugepower', 'ability:purepower', 'ability:disguise', 'ability:moody', 'ability:contrary', 'ability:simple', 'ability:wonderguard', 'ability:arenatrap', 'ability:powerconstruct', 'ability:shadowtag', 'ability:speedboost',
 			'move:shellsmash', 'move:bellydrum', 'move:lastrespects', 'move:populationbomb', 'move:ragefist', 'move:assist', 'move:batonpass', 'move:shedtail',
 		],
@@ -77,7 +77,7 @@ export const Formats: FormatList = [
 		gameType: 'doubles',
 		ruleset: [
 			'Standard NatDex',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 	},
 
@@ -91,8 +91,8 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		ruleset: [
-			'Obtainable', 'HP Percentage Mod', 'Cancel Mod',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Fusion Species Clause',
+			'Standard NatDex',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 	},
 	{
