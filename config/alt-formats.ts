@@ -8,8 +8,8 @@ export const Formats: FormatList = [
 
 		mod: 'gen7infinitefusion',
 		ruleset: [
-			'Standard', 'Z-Move Clause',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', '!Nickname Clause',
+			'Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Z-Move Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
 		],
 		banlist: ['Mega'],
 	},

@@ -515,7 +515,8 @@ export class Pokemon {
 			let displayedSpeciesName = this.illusion.species.name;
 			if (displayedSpeciesName === 'Greninja-Bond') displayedSpeciesName = 'Greninja';
 			const illusionDetails = displayedSpeciesName + (level === 100 ? '' : ', L' + level) +
-				(this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.shiny ? ', shiny' : '');
+				(this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.shiny ? ', shiny' : '') +
+				(this.illusion.set.fusion ? ', fusion: ' + this.illusion.set.fusion : '') + (this.illusion.set.altsprite ? ', alt: ' + this.illusion.set.altsprite : '');
 			details = illusionDetails;
 		}
 		if (this.terastallized) details += `, tera:${this.terastallized}`;
