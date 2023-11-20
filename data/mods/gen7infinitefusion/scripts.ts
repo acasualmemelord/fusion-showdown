@@ -477,7 +477,6 @@ export const Scripts: ModdedBattleScriptsData = {
 			"regice": 448,
 			"registeel": 449,
 			"necrozma": 450,
-			"necrozmaultra": 450,
 			"stufful": 451,
 			"bewear": 452,
 			"dhelmise": 453,
