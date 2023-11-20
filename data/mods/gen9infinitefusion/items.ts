@@ -8,8 +8,9 @@ export const Items: {[k: string]: ModdedItemData} = {
 		fling: {
 			basePower: 10,
 		},
-		onAnyAccuracy(accuracy, target, source, move) {
-			return accuracy * this.random(2);
+		onSourceAccuracy(accuracy, target, source, move) {
+			if (source.ability === 'noguard') return 50;
+			return this.chainModify(0.5);
 		},
 		onModifyCritRatio(critRatio) {
 			return critRatio + 3;

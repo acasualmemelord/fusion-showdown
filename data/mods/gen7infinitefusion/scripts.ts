@@ -2,6 +2,10 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen7',
 	gen: 7,
 	init () {
+		if (this.gen !== 7) {
+			this.gen = 7;
+			console.log(Date.now());
+		}
 		const IFDex: {[k: string]: number} = {
 			"bulbmantle": 1001,
 			"ivymelortle": 1002,
