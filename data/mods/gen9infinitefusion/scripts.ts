@@ -130,7 +130,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				if (!source) {
 					// Tera forme
 					// Ogerpon text goes here
-				} if (source.effectType === 'Item') {
+				} else if (source.effectType === 'Item') {
 					this.canTerastallize = null; // National Dex behavior
 					if (source.zMove) {
 						this.battle.add('-burst', this, apparentSpecies, species.requiredItem);
@@ -164,7 +164,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				// Ogerpon's forme change doesn't override permanent abilities
 				if (source || !this.getAbility().isPermanent) this.setAbility(species.abilities['0'], null, true);
 				// However, its ability does reset upon switching out
-				this.baseAbility = toID(species.abilities['0']);
+				this.baseAbility = Dex.toID(species.abilities['0']);
 			}
 			if (this.terastallized) {
 				this.knownType = true;
