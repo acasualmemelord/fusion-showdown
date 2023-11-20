@@ -2694,8 +2694,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (set.fusion && !fusion.exists) return [`The fusion is an invalid Pokémon.`];
 
 			if (fusion.exists) {
-				if (species.tags.includes("Infinite Fusion")) return [`${species.name} can't be fused.`];
-				
+				if (species.tags.includes("Infinite Fusion") || fusion.tags.includes("Infinite Fusion")) return [`${species.name} can't be fused.`];
+
 				let reverse_set = Dex.deepClone(set);
 				[reverse_set.species, reverse_set.fusion] = [reverse_set.fusion, reverse_set.species];
 				const [outOfBattleSpecies, tierSpecies] = this.getValidationSpecies(reverse_set);
