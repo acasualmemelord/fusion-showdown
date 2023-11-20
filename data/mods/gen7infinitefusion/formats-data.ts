@@ -87,10 +87,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "UU",
 	},
-	mimikyu: {
-		inherit: true,
-		tier: "Uber",
-	},
 	latios: {
 		inherit: true,
 		tier: "OU",

@@ -19,14 +19,14 @@ export const Formats: FormatList = [
 
 		mod: 'gen7infinitefusion',
 		ruleset: [
-			'Standard', 'Z-Move Clause', '!Species Clause',
+			'Standard', 'Evasion Abilities Clause', 'Z-Move Clause', '!Species Clause',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause', 'Fusion Species Clause', '!Nickname Clause',
 		],
 		banlist: [
 			'Mega', 'Uber',
 			'item:kingsrock', 'item:razorfang', 'item:lightball', 'item:thickclub',
-			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost',
-			'move:batonpass', 'move:shellsmash', 'move:bellydrum',
+			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost', 'ability:disguise',
+			'move:batonpass', 'move:shellsmash', 'move:bellydrum', 'move:geomancy', 'move:doubleironbash',
 		],
 	},
 	{
@@ -67,7 +67,7 @@ export const Formats: FormatList = [
 			'ND AG', 'ND Uber', 'Mega',
 			'item:kingsrock', 'item:quickclaw', 'item:razorfang', 'item:lightball', 'item:thickclub',
 			'ability:hugepower', 'ability:purepower', 'ability:disguise', 'ability:moody', 'ability:contrary', 'ability:simple', 'ability:wonderguard', 'ability:arenatrap', 'ability:powerconstruct', 'ability:shadowtag', 'ability:speedboost',
-			'move:shellsmash', 'move:bellydrum', 'move:lastrespects', 'move:populationbomb', 'move:ragefist', 'move:assist', 'move:batonpass', 'move:shedtail',
+			'move:shellsmash', 'move:bellydrum', 'move:lastrespects', 'move:populationbomb', 'move:ragefist', 'move:assist', 'move:batonpass', 'move:shedtail', 'move:geomancy', 'move:doubleironbash',
 		],
 	},
 	{

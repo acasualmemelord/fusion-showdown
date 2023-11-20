@@ -8,11 +8,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		fling: {
 			basePower: 10,
 		},
-		onSourceModifyAccuracyPriority: -2,
-		onSourceModifyAccuracy(accuracy) {
-			if (typeof accuracy === 'number') {
-				return this.chainModify([2048, 4096]);
-			}
+		onAnyAccuracy(accuracy, target, source, move) {
+			return accuracy * this.random(2);
 		},
 		onModifyCritRatio(critRatio) {
 			return critRatio + 3;
@@ -43,20 +40,12 @@ export const Items: {[k: string]: ModdedItemData} = {
 	eviolite: {
 		inherit: true,
 		onModifyDef(def, pokemon) {
-			if (pokemon.set.fusion) {
-				const boost = 1 + (Number(pokemon.baseSpecies.nfe) + Number(this.dex.species.get(pokemon.set.fusion).nfe)) / 4;
-				return this.chainModify(boost);
-			}
-			if (pokemon.baseSpecies.nfe || pokemon.baseSpecies.id === 'dipplin') {
+			if (pokemon.baseSpecies.nfe || this.dex.species.get(pokemon.fusion).nfe || pokemon.baseSpecies.id === 'dipplin') {
 				return this.chainModify(1.5);
 			}
 		},
 		onModifySpD(spd, pokemon) {
-			if (pokemon.set.fusion) {
-				const boost = 1 + (Number(pokemon.baseSpecies.nfe) + Number(this.dex.species.get(pokemon.set.fusion).nfe)) / 4;
-				return this.chainModify(boost);
-			}
-			if (pokemon.baseSpecies.nfe || pokemon.baseSpecies.id === 'dipplin') {
+			if (pokemon.baseSpecies.nfe || this.dex.species.get(pokemon.fusion).nfe || pokemon.baseSpecies.id === 'dipplin') {
 				return this.chainModify(1.5);
 			}
 		},

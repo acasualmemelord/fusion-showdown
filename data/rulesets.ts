@@ -2684,27 +2684,36 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', 'Infinite Fusion Mod: Pok\u00e9mon can fuse with other Pok\u00e9mon!');
 		},
 		onValidateSet(set) {
-			const fuse_id = this.toID(set.fusion);
+			let problems: string[] = [];
+			const setHas: {[k: string]: true} = {};
+
 			const species = this.dex.species.get(set.species);
-			const fusion = this.dex.species.get(fuse_id);
+			const fusion = this.dex.species.get(set.fusion);
 			const abilityPool = new Set<string>(Object.values(species.abilities));
 
-			if (fuse_id && !fusion.exists) return [`The fusion is an invalid Pokémon.`];
-			if (set.fusion) {
-				if (species.tags.includes("Infinite Fusion")) return [`${species.name} can't be fused.`]
+			if (set.fusion && !fusion.exists) return [`The fusion is an invalid Pokémon.`];
+
+			if (fusion.exists) {
+				if (species.tags.includes("Infinite Fusion")) return [`${species.name} can't be fused.`];
+				
+				let reverse_set = Dex.deepClone(set);
+				[reverse_set.species, reverse_set.fusion] = [reverse_set.fusion, reverse_set.species];
+				const [outOfBattleSpecies, tierSpecies] = this.getValidationSpecies(reverse_set);
+				problems.push(...this.validateForme(reverse_set));
+				let problem = this.checkSpecies(reverse_set, fusion, tierSpecies, setHas);
+				if (problem) problems.push(problem);
+
 				for (const ability of Object.values(fusion.abilities)) {
 					abilityPool.add(ability);
 				}
-			} else {
-				set.fusion = undefined;
 			}
 
 			const ability = this.dex.abilities.get(set.ability);
 			if (!abilityPool.has(ability.name)) {
-				return [
-					`${species.name}/${fusion.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`,
-				];
+				problems.push(`${species.name}/${fusion.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`);
 			}
+
+			return problems;
 		},
 		onModifySpecies(species, target, source, effect) {
 			if (!target) return;
@@ -2753,11 +2762,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, setSources, set) {
 			const fusion = this.dex.species.get(set.fusion);
-			const baseCanLearn = this.checkCanLearn(move, species, setSources, set);
+			const baseCanLearn = this.checkCanLearn(move, species, this.allSources(species), set);
 
 			if (fusion.exists && species.exists) {
 
-				if (!this.checkCanLearn(move, fusion, setSources, set) || !baseCanLearn) return null;
+				if (!this.checkCanLearn(move, fusion, this.allSources(fusion), set) || !baseCanLearn) return null;
 
 				if (move.id in fusionMoves) {
 					// fusion-based move additions
