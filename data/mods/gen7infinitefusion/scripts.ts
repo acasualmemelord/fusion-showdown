@@ -2,7 +2,6 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen7',
 	gen: 7,
 	init () {
-		console.log(this.data.Learnsets.megaligasion.learnset);
 		const IFDex: {[k: string]: number} = {
 			"bulbmantle": 1001,
 			"ivymelortle": 1002,
