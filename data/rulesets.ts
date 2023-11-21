@@ -2769,37 +2769,59 @@ export const Rulesets: {[k: string]: FormatData} = {
 				if (!this.checkCanLearn(move, fusion, this.allSources(fusion), set) || !baseCanLearn) return null;
 
 				if (move.id in fusionMoves) {
-					// fusion-based move additions
-					let speciesTypes = species.types;
-					let fusionTypes = fusion.types;
 
-					if (speciesTypes.length === 2 && speciesTypes.includes('Flying') && speciesTypes.includes('Normal')) speciesTypes = ['Flying'];
-					if (fusionTypes.length === 2 && fusionTypes.includes('Flying') && fusionTypes.includes('Normal')) fusionTypes = ['Flying'];
+					let allCombinations: string[][] = [];
+					let fusionLine: string[] = [fusion.name];
+					let speciesLine: string[] = [species.name];
 
-					const typesSet = new Set([speciesTypes[0]]);
-					const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
-					if (bonusType.exists) typesSet.add(bonusType.name);
-					if (fusionTypes.length === 2 && typesSet.size === 1) typesSet.add(fusionTypes[0]);
+					if (fusion.prevo) fusionLine.push(fusion.prevo);
+					if (this.dex.species.get(fusion.prevo).prevo) fusionLine.push(this.dex.species.get(fusion.prevo).prevo);
+					
+					if (species.prevo) speciesLine.push(species.prevo);
+					if (this.dex.species.get(species.prevo).prevo) fusionLine.push(this.dex.species.get(species.prevo).prevo);
 
-					const data = fusionMoves[move.id];
-					for (let possibleSource of data) {
-						let canLearn = true;
-						if ("fusion" in possibleSource) {
-							if (!possibleSource["fusion"].includes(species.id) && !possibleSource["fusion"].includes(fusion.id)) canLearn = false;
+					for (let head of fusionLine) {
+						for (let body of speciesLine) {
+							allCombinations.push(...[[head, body], [body, head]]);
 						}
-						if ("type" in possibleSource) {
-							for (let type of possibleSource["type"]) {
-								if (!typesSet.has(type)) canLearn = false;
+					}
+
+					for (const combination of allCombinations) {
+						const combination_head = this.dex.species.get(combination[0]);
+						const combination_body = this.dex.species.get(combination[1]);
+						
+						// fusion-based move additions
+						let speciesTypes = combination_head.types;
+						let fusionTypes = combination_body.types;
+
+						if (speciesTypes.length === 2 && speciesTypes.includes('Flying') && speciesTypes.includes('Normal')) speciesTypes = ['Flying'];
+						if (fusionTypes.length === 2 && fusionTypes.includes('Flying') && fusionTypes.includes('Normal')) fusionTypes = ['Flying'];
+
+						const typesSet = new Set([speciesTypes[0]]);
+						const bonusType = this.dex.types.get(fusionTypes[fusionTypes.length - 1]);
+						if (bonusType.exists) typesSet.add(bonusType.name);
+						if (fusionTypes.length === 2 && typesSet.size === 1) typesSet.add(fusionTypes[0]);
+
+						const data = fusionMoves[move.id];
+						for (let possibleSource of data) {
+							let canLearn = true;
+							if ("fusion" in possibleSource) {
+								if (!possibleSource["fusion"].includes(combination_head.id) && !possibleSource["fusion"].includes(combination_body.id)) canLearn = false;
 							}
-						}
-						if ("learns" in possibleSource) {
-							let canLearnReqMove = false;
-							for (let reqMove of possibleSource["learns"]) {
-								if (!this.checkCanLearn(this.dex.moves.get(reqMove), species, this.allSources(species), set) || !this.checkCanLearn(this.dex.moves.get(reqMove), fusion, this.allSources(fusion), set)) canLearnReqMove = true;
+							if ("type" in possibleSource) {
+								for (let type of possibleSource["type"]) {
+									if (!typesSet.has(type)) canLearn = false;
+								}
 							}
-							if (!canLearnReqMove) canLearn = false;
+							if ("learns" in possibleSource) {
+								let canLearnReqMove = false;
+								for (let reqMove of possibleSource["learns"]) {
+									if (!this.checkCanLearn(this.dex.moves.get(reqMove), combination_head, this.allSources(combination_head), set) || !this.checkCanLearn(this.dex.moves.get(reqMove), combination_body, this.allSources(combination_body), set)) canLearnReqMove = true;
+								}
+								if (!canLearnReqMove) canLearn = false;
+							}
+							if (canLearn) return null;
 						}
-						if (canLearn) return null;
 					}
 				}
 			}
