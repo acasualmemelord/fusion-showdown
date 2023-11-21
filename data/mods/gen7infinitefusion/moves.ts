@@ -20,5 +20,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	thousandwaves: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	...Dex.deepClone(require('../gen9infinitefusion/moves').Moves),
 };
