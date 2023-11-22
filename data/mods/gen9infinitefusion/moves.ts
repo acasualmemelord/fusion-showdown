@@ -41,20 +41,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	hyperspacefury: {
 		inherit: true,
-		onTry(source) {
-			if ([source.species.name, source.fusion].includes('Hoopa-Unbound')) {
-				return;
-			}
-			this.hint("Only a Pokemon whose form or fusion is Hoopa Unbound can use this move.");
-			if (source.species.name === 'Hoopa') {
-				this.attrLastMove('[still]');
-				this.add('-fail', source, 'move: Hyperspace Fury', '[forme]');
-				return null;
-			}
-			this.attrLastMove('[still]');
-			this.add('-fail', source, 'move: Hyperspace Fury');
-			return null;
-		},
+		onTry(source) {},
 	},
 	ivycudgel: {
 		inherit: true,
