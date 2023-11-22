@@ -9,7 +9,7 @@ function combineLearnsets(...learnsets: ModdedLearnsetData[]) {
 		if (events) finalLearnset.eventData = finalLearnset.eventData?.concat(events);
 		
 		for (const move in moves) {
-			if (!(move in finalLearnset)) {
+			if (!(move in finalLearnset.learnset)) {
 				finalLearnset.learnset[move] = learnset.learnset[move];
 			} else {
 				for (const source of learnset.learnset[move]) {
