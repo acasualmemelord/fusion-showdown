@@ -2,10 +2,6 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen7',
 	gen: 7,
 	init () {
-		if (this.gen !== 7) {
-			this.gen = 7;
-			console.log(Date.now());
-		}
 		const IFDex: {[k: string]: number} = {
 			"bulbmantle": 1001,
 			"ivymelortle": 1002,
@@ -524,7 +520,6 @@ export const Scripts: ModdedBattleScriptsData = {
 
 			this.transformed = true;
 			this.weighthg = pokemon.weighthg;
-			this.fusion = pokemon.fusion;
 
 			const types = pokemon.getTypes(true, true);
 			this.setType(pokemon.volatiles['roost'] ? pokemon.volatiles['roost'].typeWas : types, true);

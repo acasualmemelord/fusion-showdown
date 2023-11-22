@@ -17,7 +17,6 @@ export const Scripts: ModdedBattleScriptsData = {
 				return false;
 			}
 
-			this.fusion = pokemon.fusion;
 			if (!this.setSpecies(species, effect, true)) return false;
 
 			this.transformed = true;
