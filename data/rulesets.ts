@@ -2831,19 +2831,20 @@ export const Rulesets: {[k: string]: FormatData} = {
 	fusionspeciesclause: {
 		effectType: 'ValidatorRule',
 		name: 'Fusion Species Clause',
-		desc: "Prevents teams from having more than one fusion with the same Pok&eacute;mon",
+		desc: "Prevents teams from having more than one Pok&eacute;mon; accounts for fusions.",
 		onBegin() {
-			this.add('rule', 'Fusion Species Clause: Limit one of each Fusion combo');
+			this.add('rule', 'Fusion Species Clause: Limit one of each Pok&eacute;mon total.');
 		},
 		onValidateTeam(team, format) {
-			const speciesTable = new Set<string>();
+			const speciesTable = new Set<number>();
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
 				const fusion = this.dex.species.get(set.fusion);
-				if (speciesTable.has(`${species.num}.${fusion.num}`)) {
-					return [`You are limited to one of each fusion combo by Fusion Species Clause.`, `(You have more than one ${species.baseSpecies}/${fusion.baseSpecies})`];
+				if (speciesTable.has(fusion.num) || speciesTable.has(species.num)) {
+					return [`You are limited to only one of each Pok&eacute;mon by Fusion Species Clause.`, `(You have more than one ${speciesTable.has(species.num) ? species.baseSpecies : fusion.baseSpecies})`];
 				}
-				speciesTable.add(`${species.num}.${fusion.num}`);
+				speciesTable.add(species.num);
+				speciesTable.add(fusion.num);
 			}
 		},
 	},
