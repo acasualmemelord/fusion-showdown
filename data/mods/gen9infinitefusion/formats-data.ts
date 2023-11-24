@@ -56,4 +56,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "Uber",
 	},
+	annihilape: {
+		inherit: true,
+		natDexTier: "OU",
+	}
 };
