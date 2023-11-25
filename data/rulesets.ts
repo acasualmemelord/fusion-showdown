@@ -2841,7 +2841,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				const species = this.dex.species.get(set.species);
 				const fusion = this.dex.species.get(set.fusion);
 				if (speciesTable.has(fusion.num) || speciesTable.has(species.num)) {
-					return [`You are limited to only one of each Pok&eacute;mon by Fusion Species Clause.`, `(You have more than one ${speciesTable.has(species.num) ? species.baseSpecies : fusion.baseSpecies})`];
+					return [`You are limited to only one of each Pokémon by Fusion Species Clause.`, `(You have more than one ${speciesTable.has(species.num) ? species.baseSpecies : fusion.baseSpecies})`];
 				}
 				speciesTable.add(species.num);
 				speciesTable.add(fusion.num);
