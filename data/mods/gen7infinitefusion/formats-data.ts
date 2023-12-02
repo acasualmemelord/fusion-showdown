@@ -35,10 +35,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "OU",
 	},
-	azumarill: {
-		inherit: true,
-		tier: "Uber",
-	},
 	quagsire: {
 		inherit: true,
 		tier: "UU",

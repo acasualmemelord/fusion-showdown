@@ -2833,7 +2833,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Fusion Species Clause',
 		desc: "Prevents teams from having more than one Pok&eacute;mon; accounts for fusions.",
 		onBegin() {
-			this.add('rule', 'Fusion Species Clause: Limit one of each Pok&eacute;mon total.');
+			this.add('rule', 'Fusion Species Clause: Limit one of each Pokémon total.');
 		},
 		onValidateTeam(team, format) {
 			const speciesTable = new Set<number>();
@@ -2844,7 +2844,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 					return [`You are limited to only one of each Pokémon by Fusion Species Clause.`, `(You have more than one ${speciesTable.has(species.num) ? species.baseSpecies : fusion.baseSpecies})`];
 				}
 				speciesTable.add(species.num);
-				speciesTable.add(fusion.num);
+				if (fusion.num) speciesTable.add(fusion.num);
 			}
 		},
 	},

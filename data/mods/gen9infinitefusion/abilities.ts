@@ -63,6 +63,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 209,
 	},
 	stancechange: {
+		onBeforeSwitchIn() {
+			this.effectState.forme = 'shield';
+		},
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker, defender) {
 			if (attacker.transformed) return;
