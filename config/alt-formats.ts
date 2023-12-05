@@ -3,17 +3,6 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: Regional Dex",
 	},
 	{
-		name: "[Gen 7] IF Dex AG",
-		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
-
-		mod: 'gen7infinitefusion',
-		ruleset: [
-			'Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Z-Move Clause',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
-		],
-		banlist: ['Mega'],
-	},
-	{
 		name: "[Gen 7] IF Dex OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
@@ -30,6 +19,17 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 7] IF Dex AG",
+		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
+
+		mod: 'gen7infinitefusion',
+		ruleset: [
+			'Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Z-Move Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
+		],
+		banlist: ['Mega'],
+	},
+	{
 		name: "[Gen 7] IF Dex Doubles",
 
 		mod: 'gen7infinitefusion',
@@ -42,17 +42,6 @@ export const Formats: FormatList = [
 
 	{
 		section: "Infinite Fusion: National Dex",
-	},
-	{
-		name: "[Gen 9] IF National Dex AG",
-		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
-
-		mod: 'gen9infinitefusion',
-		ruleset: [
-			'Standard NatDex',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
-		],
-		banlist: [],
 	},
 	{
 		name: "[Gen 9] IF National Dex OU",
@@ -69,6 +58,17 @@ export const Formats: FormatList = [
 			'ability:hugepower', 'ability:purepower', 'ability:disguise', 'ability:moody', 'ability:contrary', 'ability:simple', 'ability:wonderguard', 'ability:arenatrap', 'ability:powerconstruct', 'ability:shadowtag', 'ability:speedboost', 'ability:imposter', 'ability:comatose',
 			'move:shellsmash', 'move:bellydrum', 'move:lastrespects', 'move:populationbomb', 'move:ragefist', 'move:assist', 'move:batonpass', 'move:shedtail', 'move:geomancy', 'move:doubleironbash', 'move:spore',
 		],
+	},
+	{
+		name: "[Gen 9] IF National Dex AG",
+		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
+
+		mod: 'gen9infinitefusion',
+		ruleset: [
+			'Standard NatDex',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+		],
+		banlist: [],
 	},
 	{
 		name: "[Gen 9] IF NatDex Doubles AG",
