@@ -42,6 +42,7 @@ import {Roomlogs} from './roomlogs';
 import * as crypto from 'crypto';
 import {RoomAuth} from './user-groups';
 import {PartialModlogEntry, mainModlog} from './modlog';
+import {Replays} from './replays';
 
 /*********************************************************
  * the Room object.
@@ -2270,4 +2271,6 @@ export const Rooms = {
 	RoomBattlePlayer,
 	RoomBattleTimer,
 	PM: RoomBattlePM,
+
+	Replays,
 };
