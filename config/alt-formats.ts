@@ -44,7 +44,7 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: National Dex",
 	},
 	{
-		name: "[Gen 9] IF NatDex AG",
+		name: "[Gen 9] IF National Dex AG",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
@@ -55,7 +55,7 @@ export const Formats: FormatList = [
 		banlist: [],
 	},
 	{
-		name: "[Gen 9] IF NatDex OU",
+		name: "[Gen 9] IF National Dex OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
 		mod: 'gen9infinitefusion',
@@ -71,7 +71,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] IF NatDex Doubles",
+		name: "[Gen 9] IF NatDex Doubles AG",
 
 		mod: 'gen9infinitefusion',
 		gameType: 'doubles',

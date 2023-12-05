@@ -485,9 +485,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					source.trySetStatus('par', target, move);
 				}
 				target.formeChange('cramorant', move);
-			} else if (['cramorantgulping', 'cramorantgorging'].includes(this.dex.toID(target.fusion))) {
+			} else if (['cramorantgulping', 'cramorantgorging'].includes(this.dex.species.get(target.fusion).id)) {
 				this.damage(source.baseMaxhp / 4, source, target);
-				if (this.dex.toID(target.fusion) === 'cramorantgulping') {
+				if (this.dex.species.get(target.fusion).id === 'cramorantgulping') {
 					this.boost({def: -1}, source, target, null, true);
 				} else {
 					source.trySetStatus('par', target, move);
