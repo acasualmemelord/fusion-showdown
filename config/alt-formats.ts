@@ -30,13 +30,26 @@ export const Formats: FormatList = [
 		banlist: ['Mega'],
 	},
 	{
-		name: "[Gen 7] IF Dex Doubles",
+		name: "[Gen 7] IF Dex Doubles OU",
 
 		mod: 'gen7infinitefusion',
 		gameType: 'doubles',
 		ruleset: [
-			'Standard Doubles',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Evasion Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+		],
+		banlist: [
+			'DUber',
+		],
+	},
+	{
+		name: "[Gen 7] IF Dex Doubles AG",
+
+		mod: 'gen7infinitefusion',
+		gameType: 'doubles',
+		ruleset: [
+			'Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
 		],
 	},
 
