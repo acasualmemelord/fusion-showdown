@@ -59,5 +59,5 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	annihilape: {
 		inherit: true,
 		natDexTier: "OU",
-	}
+	},
 };

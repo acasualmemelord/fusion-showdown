@@ -14,7 +14,7 @@ export const Formats: FormatList = [
 		banlist: [
 			'Mega', 'Uber',
 			'item:kingsrock', 'item:razorfang', 'item:lightball', 'item:thickclub',
-			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost', 'ability:disguise', 'ability:imposter', 'ability:hugepower',
+			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost', 'ability:disguise', 'ability:imposter', 'ability:hugepower', 'ability:wonderguard',
 			'move:batonpass', 'move:shellsmash', 'move:bellydrum', 'move:geomancy', 'move:doubleironbash', 'move:spore',
 		],
 	},
@@ -40,6 +40,8 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			'DUber',
+			'move:afteryou',
+			'ability:simple', 'ability:wonderguard',
 		],
 	},
 	{
@@ -83,6 +85,21 @@ export const Formats: FormatList = [
 		],
 		banlist: [],
 	},
+	// {
+	// 	name: "[Gen 9] IF NatDex Doubles OU",
+
+	// 	mod: 'gen9infinitefusion',
+	// 	gameType: 'doubles',
+	// 	ruleset: [
+	// 		'Standard NatDex', 'Sleep Clause Mod', 'Evasion Clause',
+	// 		'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+	// 	],
+	// 	banlist: [
+	// 		'DUber',
+	// 		'ability:hugepower', 'ability:purepower', 'ability:commander', 'ability:swordofruin', 'ability:beadsofruin', 'ability:contrary', 'ability:wonderguard', 'ability:grimneigh', 'ability:powerconstruct', 'ability:simple', 'ability:speedboost',
+	// 		'move:geomancy', 'move:afteryou', 'move:clangoroussoul', 'move:lastrespects', 'move:bellydrum', 'move:shellsmash', 'move:hiddenpower',
+	// 	],
+	// },
 	{
 		name: "[Gen 9] IF NatDex Doubles AG",
 

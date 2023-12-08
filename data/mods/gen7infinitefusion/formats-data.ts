@@ -2,14 +2,51 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	alakazam: {
 		inherit: true,
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	chansey: {
 		inherit: true,
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	smeargle: {
 		inherit: true,
 		tier: "Uber",
+		doublesTier: "DUber",
+	},
+	volcarona: {
+		inherit: true,
+		tier: "Uber",
+		doublesTier: "DUber",
+	},
+	shuckle: {
+		inherit: true,
+		tier: "Uber",
+		doublesTier: "DUber",
+	},
+	blissey: {
+		inherit: true,
+		tier: "Uber",
+		doublesTier: "DUber",
+	},
+	slaking: {
+		inherit: true,
+		tier: "Uber",
+		doublesTier: "DUber",
+	},
+	regigigas: {
+		inherit: true,
+		tier: "Uber",
+		doublesTier: "DUber",
+	},
+	kyurem: {
+		inherit: true,
+		tier: "UU",
+		doublesTier: "DUber",
+	},
+	necrozma: {
+		inherit: true,
+		doublesTier: "DUber",
 	},
 	blaziken: {
 		inherit: true,
@@ -39,14 +76,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "UU",
 	},
-	shuckle: {
-		inherit: true,
-		tier: "Uber",
-	},
-	blissey: {
-		inherit: true,
-		tier: "Uber",
-	},
 	weavile: {
 		inherit: true,
 		tier: "UU",
@@ -55,14 +84,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		tier: "OU",
 	},
-	shedinja: {
-		inherit: true,
-		tier: "Uber",
-	},
-	slaking: {
-		inherit: true,
-		tier: "Uber",
-	},
 	salamence: {
 		inherit: true,
 		tier: "UU",
@@ -70,10 +91,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	sylveon: {
 		inherit: true,
 		tier: "OU",
-	},
-	regigigas: {
-		inherit: true,
-		tier: "Uber",
 	},
 	breloom: {
 		inherit: true,
@@ -94,10 +111,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	heracross: {
 		inherit: true,
 		tier: "RU",
-	},
-	kyurem: {
-		inherit: true,
-		tier: "UU",
 	},
 	reuniclus: {
 		inherit: true,
@@ -142,9 +155,5 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	tauros: {
 		inherit: true,
 		tier: "NU",
-	},
-	volcarona: {
-		inherit: true,
-		tier: "Uber",
 	},
 };
