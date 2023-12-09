@@ -18,9 +18,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		const pokemon: RandomTeamsTypes.RandomSet[] = [];
 		let pool = Object.keys(this.randomSets);
 
-		let loops = 6
-
-		for (let i=0; i<loops;i++) {
+		while (pokemon.length < 6) {
 			const curSpecies = this.sampleNoReplace(pool);
 			const curSet: Partial<RandomTeamsTypes.RandomSet> = this.sample(this.randomSets[curSpecies]);
 			
@@ -83,7 +81,6 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				});
 			} else {
-				loops += 1;
 				console.log(curSet);
 			}
 		}
