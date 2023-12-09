@@ -548,6 +548,8 @@ namespace RandomTeamsTypes {
 		gigantamax?: boolean;
 		teraType?: string;
 		role?: Role;
+		fusion?: string;
+		alt?: string;
 	}
 	export interface RandomFactorySet {
 		name: string;

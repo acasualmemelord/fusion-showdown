@@ -3,6 +3,20 @@ export const Formats: FormatList = [
 		section: "Infinite Fusion: Regional Dex",
 	},
 	{
+		name: "[Gen 7] IF Random Battle",
+		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3712619/">Random Battle Suggestions</a>`,
+		],
+
+		mod: 'gen7infinitefusion',
+		team: 'random',
+		ruleset: [
+			'Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod',
+			'Infinite Fusion Mod',
+		],
+	},
+	{
 		name: "[Gen 7] IF Dex OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
