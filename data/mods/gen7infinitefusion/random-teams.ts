@@ -18,7 +18,9 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		const pokemon: RandomTeamsTypes.RandomSet[] = [];
 		let pool = Object.keys(this.randomSets);
 
-		for (let i=0; i<this.maxTeamSize;i++) {
+		let loops = 6
+
+		for (let i=0; i<loops;i++) {
 			const curSpecies = this.sampleNoReplace(pool);
 			const curSet: Partial<RandomTeamsTypes.RandomSet> = this.sample(this.randomSets[curSpecies]);
 			
@@ -80,11 +82,13 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 					ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				});
+			} else {
+				loops += 1;
+				console.log(curSet);
 			}
 		}
 
 		if (pokemon.length < this.maxTeamSize && pokemon.length < 12) {
-			console.log(pokemon);
 			throw new Error(`Could not build a random team for ${this.format} (seed=${seed}) (pls report this!)`);
 		}
 		return pokemon;
