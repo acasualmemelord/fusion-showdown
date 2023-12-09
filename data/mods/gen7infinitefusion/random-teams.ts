@@ -18,7 +18,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		const pokemon: RandomTeamsTypes.RandomSet[] = [];
 		let pool = Object.keys(this.randomSets);
 
-		while (pokemon.length < 6) {
+		while (pokemon.length < this.maxTeamSize) {
 			const curSpecies = this.sampleNoReplace(pool);
 			const curSet: Partial<RandomTeamsTypes.RandomSet> = this.sample(this.randomSets[curSpecies]);
 			
@@ -65,7 +65,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 				}
 			}
 
-			if (curSet.name && curSet.species && curSet.moves && curSet.ability && curSet.item) {
+			if ((curSet.name === "" || curSet.name) && curSet.species && curSet.moves && curSet.ability && curSet.item) {
 				pokemon.push({
 					name: curSet.name,
 					species: this.dex.species.get(curSet.species).name,
