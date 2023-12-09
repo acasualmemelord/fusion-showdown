@@ -84,6 +84,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		}
 
 		if (pokemon.length < this.maxTeamSize && pokemon.length < 12) {
+			console.log(pokemon);
 			throw new Error(`Could not build a random team for ${this.format} (seed=${seed}) (pls report this!)`);
 		}
 		return pokemon;
