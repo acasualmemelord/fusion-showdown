@@ -45,35 +45,6 @@ export const Formats: FormatList = [
 	},
 
 	{
-		section: "Infinite Fusion: RegDex Doubles",
-	},
-	{
-		name: "[Gen 7] IF Dex Doubles OU",
-
-		mod: 'gen7infinitefusion',
-		gameType: 'doubles',
-		ruleset: [
-			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Evasion Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
-		],
-		banlist: [
-			'DUber',
-			'move:afteryou',
-			'ability:simple', 'ability:wonderguard',
-		],
-	},
-	{
-		name: "[Gen 7] IF Dex Doubles AG",
-
-		mod: 'gen7infinitefusion',
-		gameType: 'doubles',
-		ruleset: [
-			'Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
-		],
-	},
-
-	{
 		section: "Infinite Fusion: National Dex",
 	},
 	{
@@ -102,6 +73,35 @@ export const Formats: FormatList = [
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 		banlist: [],
+	},
+
+	{
+		section: "Infinite Fusion: Doubles",
+	},
+	{
+		name: "[Gen 7] IF Dex Doubles OU",
+
+		mod: 'gen7infinitefusion',
+		gameType: 'doubles',
+		ruleset: [
+			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Evasion Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+		],
+		banlist: [
+			'DUber',
+			'move:afteryou',
+			'ability:simple', 'ability:wonderguard',
+		],
+	},
+	{
+		name: "[Gen 7] IF Dex Doubles AG",
+
+		mod: 'gen7infinitefusion',
+		gameType: 'doubles',
+		ruleset: [
+			'Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
+		],
 	},
 	// {
 	// 	name: "[Gen 9] IF NatDex Doubles OU",
