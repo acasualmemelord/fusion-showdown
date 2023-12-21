@@ -1,6 +1,7 @@
 // Note: These are the rules that formats use
 
 import {Utils} from "../lib";
+import type {Learnset} from "../sim/dex-species";
 import {Pokemon} from "../sim/pokemon";
 
 // The list of formats is stored in config/formats.js
@@ -479,6 +480,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 				(type.name === 'Fairy' && this.dex.gen < 6)
 			) {
 				throw new Error(`Invalid type "${type.name}" in Generation ${this.dex.gen}`);
+			}
+			if (type.name === 'Stellar') {
+				throw new Error(`There are no Stellar-type Pok\u00e9mon.`);
 			}
 		},
 		onValidateSet(set) {
@@ -1061,7 +1065,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				'steadfast', 'steelwing', 'stockpile', 'stormdrain', 'swordsdance', 'tailglow', 'weakarmor', 'withdraw', 'workup',
 			];
 			for (const set of team) {
-				if (!set.moves.includes('Baton Pass')) continue;
+				if (!set.moves.map(this.toID).includes('batonpass' as ID)) continue;
 				let passableBoosts = false;
 				const item = this.toID(set.item);
 				const ability = this.toID(set.ability);
@@ -1073,6 +1077,39 @@ export const Rulesets: {[k: string]: FormatData} = {
 				if (passableBoosts) {
 					return [
 						`${set.name || set.species} has Baton Pass and a way to boost its stats, which is banned by Baton Pass Stat Clause.`,
+					];
+				}
+			}
+		},
+	},
+	batonpassstattrapclause: {
+		effectType: 'ValidatorRule',
+		name: 'Baton Pass Stat Trap Clause',
+		desc: "Stops teams from having a Pok&eacute;mon with Baton Pass that has any way to boost its stats or trap Pok&eacute;mon.",
+		onBegin() {
+			this.add('rule', 'Baton Pass Stat Trap Clause: No Baton Passer may have a way to boost stats or trap Pok\u00e9mon');
+		},
+		onValidateTeam(team) {
+			const statBoostOrTrapping = [
+				'Acid Armor', 'Acupressure', 'Agility', 'Amnesia', 'Ancient Power', 'Assist', 'Barrier', 'Belly Drum', 'Block', 'Bulk Up', 'Calm Mind', 'Charge',
+				'Charge Beam', 'Cosmic Power', 'Curse', 'Defend Order', 'Defense Curl', 'Dragon Dance', 'Growth', 'Guard Swap', 'Harden', 'Heart Swap', 'Howl',
+				'Iron Defense', 'Ingrain', 'Mean Look', 'Meteor Mash', 'Meditate', 'Metal Claw', 'Nasty Plot', 'Ominous Wind', 'Power Trick', 'Psych Up', 'Rage',
+				'Rock Polish', 'Sharpen', 'Silver Wind', 'Skull Bash', 'Spider Web', 'Steel Wing', 'Stockpile', 'Swords Dance', 'Tail Glow', 'Withdraw', 'Speed Boost',
+				'Apicot Berry', 'Ganlon Berry', 'Liechi Berry', 'Petaya Berry', 'Salac Berry', 'Starf Berry',
+			].map(this.toID);
+			for (const set of team) {
+				if (!set.moves.map(this.toID).includes('batonpass' as ID)) continue;
+				let passableBoosts = false;
+				const item = this.toID(set.item);
+				const ability = this.toID(set.ability);
+				for (const move of set.moves) {
+					if (statBoostOrTrapping.includes(this.toID(move))) passableBoosts = true;
+				}
+				if (statBoostOrTrapping.includes(item)) passableBoosts = true;
+				if (statBoostOrTrapping.includes(ability)) passableBoosts = true;
+				if (passableBoosts) {
+					return [
+						`${set.name || set.species} has Baton Pass and a way to boost its stats or pass trapping, which is banned by Baton Pass Stat Trap Clause.`,
 					];
 				}
 			}
@@ -1749,27 +1786,21 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', 'Event Moves Clause: Event-only moves are banned');
 		},
 		onValidateSet(set) {
+			if (!set.moves) return;
+			const moveSources: NonNullable<Learnset['learnset']> = Object.fromEntries(
+				set.moves.map(move => [this.toID(move), []])
+			);
+
 			const species = this.dex.species.get(set.species);
-			const learnsetData = {...(this.dex.data.Learnsets[species.id]?.learnset || {})};
-			let prevo = species.prevo;
-			while (prevo) {
-				const prevoSpecies = this.dex.species.get(prevo);
-				const prevoLsetData = this.dex.data.Learnsets[prevoSpecies.id]?.learnset || {};
-				for (const moveid in prevoLsetData) {
-					if (!(moveid in learnsetData)) {
-						learnsetData[moveid] = prevoLsetData[moveid];
-					} else {
-						learnsetData[moveid].push(...prevoLsetData[moveid]);
-					}
+			for (const {learnset} of this.dex.species.getFullLearnset(species.id)) {
+				for (const moveid in moveSources) {
+					moveSources[moveid].push(...(learnset[moveid] || []));
 				}
-				prevo = prevoSpecies.prevo;
 			}
 			const problems = [];
-			if (set.moves?.length) {
-				for (const move of set.moves) {
-					if (learnsetData[this.toID(move)] && !learnsetData[this.toID(move)].filter(v => !v.includes('S')).length) {
-						problems.push(`${species.name}'s move ${move} is obtainable only through events.`);
-					}
+			for (const move of set.moves) {
+				if (moveSources[this.toID(move)]?.every(learned => learned.includes('S'))) {
+					problems.push(`${species.name}'s move ${move} is obtainable only through events.`);
 				}
 			}
 			if (problems.length) problems.push(`(Event-only moves are banned.)`);
@@ -2679,6 +2710,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', "Illusion Level Mod: Illusion disguises the Pok\u00e9mon's true level");
 		},
 		// Implemented in Pokemon#getDetails
+	},
+	uselessmovesclause: {
+		effectType: 'ValidatorRule',
+		name: 'Useless Moves Clause',
+		// implemented in /mods/moderngen1/rulesets.ts
 	},
 	infinitefusionmod: {
 		effectType: 'Rule',

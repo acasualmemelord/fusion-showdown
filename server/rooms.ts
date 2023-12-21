@@ -39,7 +39,6 @@ import {
 import {RoomGame, SimpleRoomGame, RoomGamePlayer} from './room-game';
 import {MinorActivity, MinorActivityData} from './room-minor-activity';
 import {Roomlogs} from './roomlogs';
-import * as crypto from 'crypto';
 import {RoomAuth} from './user-groups';
 import {PartialModlogEntry, mainModlog} from './modlog';
 import {Replays} from './replays';
