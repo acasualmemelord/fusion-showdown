@@ -66,7 +66,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	omastar: {
 		inherit: true,
-		tier: "(PU)",
+		tier: "ZU",
 	},
 	dragonite: {
 		inherit: true,

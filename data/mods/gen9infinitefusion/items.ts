@@ -61,6 +61,14 @@ export const Items: {[k: string]: ModdedItemData} = {
 			}
 		},
 	},
+	stick: {
+		inherit: true,
+		onModifyCritRatio(critRatio, user) {
+			if (this.toID(user.baseSpecies.baseSpecies) === 'farfetchd' || this.toID(this.dex.species.get(user.fusion).baseSpecies) === 'farfetchd') {
+				return critRatio + 2;
+			}
+		},
+	},
 	lightball: {
 		inherit: true,
 		onModifyAtk(atk, pokemon) {
