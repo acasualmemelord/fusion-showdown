@@ -2066,19 +2066,13 @@ export class GameRoom extends BasicRoom {
 		if (format.team && battle.ended) hideDetails = false;
 
 		const data = this.getLog(hideDetails ? 0 : -1);
-		const datahash = crypto.createHash('md5').update(data.replace(/[^(\x20-\x7F)]+/g, '')).digest('hex');
+
 		let rating = 0;
 		if (battle.ended && this.rated) rating = this.rated;
 		const {id, password} = this.getReplayData();
 
 		if (battle.replaySaved) {
-			let csv = FS('replays/replays.csv').readSync().split('\n');
-			let location;
-			for (let item of csv) {
-				const info = item.split(',');
-				if (info[8] === datahash) location = info[7];
-			}
-			connection.popup(`The replay for this battle was already saved.` + (location ? ` You can find it at https://replay.pokeathlon.com/#replay=${location}` : `You can find it at https://replay.pokeathlon.com/`));
+			connection.popup(`The replay for this battle was already saved. You can find it at https://replay.pokeathlon.com/`);
 			return;
 		}
 		battle.replaySaved = true;
@@ -2100,9 +2094,13 @@ export class GameRoom extends BasicRoom {
 
 		FS(`replays/${replayName}.html`).writeSync(buf);
 
-		FS('replays/replays.csv').appendSync(`${user.name},${battle.p1.name},${battle.p2.name},${battle.p3 ? battle.p3.name : ''},${battle.p4 ? battle.p4.name : ''},${Date.now()},${format.name},${replayName},${datahash}\n`);
+		FS('replays/replays.csv').appendSync(`${user.name},${battle.p1.name},${battle.p2.name},${battle.p3 ? battle.p3.name : ''},${battle.p4 ? battle.p4.name : ''},${Date.now()},${format.name},${replayName},\n`);
 
-		connection.popup(`Replay was saved successfully! You can view it at https://replay.pokeathlon.com/#replay=${replayName}`);
+		connection.popup(
+			`|html|<p>Your replay has been uploaded! It's available at:</p><p> ` +
+			`<a class="no-panel-intercept" href="https://replay.pokeathlon.com/#replay=${replayName}" target="_blank">https://replay.pokeathlon.com/#replay=${replayName}</a> ` +
+			`<copytext value="https://replay.pokeathlon.com/#replay=${replayName}">Copy</copytext>`
+		);
 	}
 
 	getReplayData() {
