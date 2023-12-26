@@ -60,4 +60,16 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "OU",
 	},
+	kingambit: {
+		inherit: true,
+		natDexTier: "OU",
+	},
+	espathra: {
+		inherit: true,
+		natDexTier: "OU",
+	},
+	melmetal: {
+		inherit: true,
+		natDexTier: "OU",
+	},
 };
