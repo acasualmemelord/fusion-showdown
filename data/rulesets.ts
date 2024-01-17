@@ -2743,6 +2743,24 @@ export const Rulesets: {[k: string]: FormatData} = {
 				let problem = this.checkSpecies(reverse_set, fusion, tierSpecies, setHas);
 				if (problem) problems.push(problem);
 
+				// NatDex check
+				if (this.format.ruleset.includes('Standard NatDex')) {
+					if (fusion.natDexTier === 'Illegal') {
+						if (this.ruleTable.has(`+pokemon:${species.id}`)) return;
+						return [`${fusion.name} does not exist in the National Dex.`];
+					}
+					const requireObtainable = this.ruleTable.has('obtainable');
+					if (requireObtainable) {
+						if (fusion.natDexTier === "Unreleased") {
+							const basePokemon = this.toID(fusion.baseSpecies);
+							if (this.ruleTable.has(`+pokemon:${fusion.id}`) || this.ruleTable.has(`+basepokemon:${basePokemon}`)) {
+								return;
+							}
+							return [`${fusion.name} does not exist in the National Dex.`];
+						}
+					}
+				}
+
 				for (const ability of Object.values(fusion.abilities)) {
 					abilityPool.add(ability);
 				}
