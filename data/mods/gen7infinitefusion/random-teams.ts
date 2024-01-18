@@ -17,6 +17,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		const ruleTable = this.dex.formats.getRuleTable(this.format);
 		const pokemon: RandomTeamsTypes.RandomSet[] = [];
 		let pool = Object.keys(this.randomSets);
+		let usedSpecies: string[] = [];
 
 		while (pokemon.length < this.maxTeamSize) {
 			const curSpecies = this.sampleNoReplace(pool);
@@ -65,11 +66,12 @@ export class RandomGen7Teams extends RandomGen8Teams {
 				}
 			}
 
-			if ((curSet.name === "" || curSet.name) && curSet.species && curSet.moves && curSet.ability && curSet.item) {
+			if ((curSet.name === "" || curSet.name) && curSet.species && curSet.fusion && curSet.moves && curSet.ability && curSet.item && !usedSpecies.includes(curSet.species) && !usedSpecies.includes(curSet.fusion)) {
 				pokemon.push({
 					name: curSet.name,
 					species: this.dex.species.get(curSet.species).name,
 					fusion: this.dex.species.get(curSet.fusion).name,
+					happiness: curSet.moves.includes('frustration') ? 0 : 255,
 					alt: curSet.alt,
 					shiny: this.randomChance(1, 1024),
 					level: level,
@@ -80,6 +82,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 					ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				});
+				usedSpecies.push(...[curSet.species, curSet.fusion])
 			} else {
 				console.log(curSet);
 			}
