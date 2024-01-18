@@ -1,4 +1,20 @@
 export const Pokedex: {[k: string]: ModdedSpeciesData} = {
+	magnemite: {
+		inherit: true,
+		types: ["Steel", "Electric"],
+	},
+	magneton: {
+		inherit: true,
+		types: ["Steel", "Electric"],
+	},
+	spiritomb: {
+		inherit: true,
+		types: ["Dark", "Ghost"],
+	},
+	trevenant: {
+		inherit: true,
+		types: ["Grass", "Ghost"],
+	},
 	bulbmantle: {
 		num: 16001,
 		name: "Bulbmantle",
