@@ -83,8 +83,6 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				});
 				usedSpecies.push(...[curSet.species, curSet.fusion])
-			} else {
-				console.log(curSet);
 			}
 		}
 
