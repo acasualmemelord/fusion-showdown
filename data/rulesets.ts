@@ -2806,7 +2806,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (set.fusion && !fusion.exists) return [`The fusion is an invalid Pokémon.`];
 
 			if (fusion.exists) {
-				if (this.format.id.includes("customgame") && (species.tags.includes("Infinite Fusion") || fusion.tags.includes("Infinite Fusion"))) return [`You cannot fuse with triple fusions.`];
+				if (!this.format.id.includes("customgame") && (species.tags.includes("Infinite Fusion") || fusion.tags.includes("Infinite Fusion"))) return [`You cannot fuse with triple fusions.`];
 
 				let reverse_set = Dex.deepClone(set);
 				[reverse_set.species, reverse_set.fusion] = [reverse_set.fusion, reverse_set.species];
@@ -2839,7 +2839,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 
 			const ability = this.dex.abilities.get(set.ability);
-			if (this.format.id.includes("customgame") && !abilityPool.has(ability.name)) {
+			if (!this.format.id.includes("customgame") && !abilityPool.has(ability.name)) {
 				problems.push(`${species.name}/${fusion.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`);
 			}
 
