@@ -56,8 +56,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.effectState.fusionBusted = false;
 			}
 		},
-		isBreakable: true,
-		isPermanent: true,
+		flags: {
+			failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
+			breakable: 1, notransform: 1,
+		},
 		name: "Disguise",
 		rating: 3.5,
 		num: 209,
@@ -91,7 +93,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
-		isPermanent: true,
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
 		name: "Stance Change",
 		rating: 4,
 		num: 176,
@@ -508,7 +510,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
-		isPermanent: true,
+		flags: {cantsuppress: 1, notransform: 1},
 		name: "Gulp Missile",
 		rating: 2.5,
 		num: 241,
@@ -540,6 +542,16 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return true;
 			}
 			return accuracy;
+		},
+	},
+	poisonpuppeteer: {
+		inherit: true,
+		onAnyAfterSetStatus(status, target, source, effect) {
+			if (source.baseSpecies.name !== "Pecharunt" && source.fusion !== "Pecharunt") return;
+			if (source !== this.effectState.target || target === source || effect.effectType !== 'Move') return;
+			if (status.id === 'psn' || status.id === 'tox') {
+				target.addVolatile('confusion');
+			}
 		},
 	},
 };

@@ -473,7 +473,7 @@ export const commands: Chat.ChatCommands = {
 			}
 			species.bst += species.baseStats[stat];
 		}
-		
+
 		// TYPES
 		let speciesTypes = species.types;
 		let fusionTypes = fusion.types;

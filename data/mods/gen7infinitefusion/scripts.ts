@@ -1,7 +1,7 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen7',
 	gen: 7,
-	init () {
+	init() {
 		const IFDex: {[k: string]: number} = {
 			"bulbmantle": 1001,
 			"ivymelortle": 1002,
@@ -491,7 +491,7 @@ export const Scripts: ModdedBattleScriptsData = {
 		};
 		for (const i in this.data.Pokedex) {
 			if (i in IFDex) {
-				this.data.Pokedex[i].num = IFDex[i as string];
+				this.data.Pokedex[i].num = IFDex[i];
 				this.data.Pokedex[i].isNonstandard = null;
 			} else {
 				this.data.Pokedex[i].num = 0;
@@ -504,8 +504,8 @@ export const Scripts: ModdedBattleScriptsData = {
 			const species = pokemon.species;
 			if (pokemon.fainted || this.illusion || pokemon.illusion || (pokemon.volatiles['substitute'] && this.battle.gen >= 5) ||
 				(pokemon.transformed && this.battle.gen >= 2) || (this.transformed && this.battle.gen >= 5) ||
-				species.name === 'Eternatus-Eternamax' || (species.baseSpecies === 'Ogerpon' &&
-				(this.terastallized || pokemon.terastallized))) {
+				species.name === 'Eternatus-Eternamax' || (['Ogerpon', 'Terapagos'].includes(species.baseSpecies) &&
+				(this.terastallized || pokemon.terastallized)) || this.terastallized === 'Stellar') {
 				return false;
 			}
 
@@ -528,7 +528,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			this.apparentType = pokemon.apparentType;
 
 			let statName: StatIDExceptHP;
-			let statTable = (pokemon.ability === 'Stance Change' && pokemon.fusion) ? pokemon.baseStoredStats : pokemon.storedStats;
+			const statTable = (pokemon.ability === 'Stance Change' && pokemon.fusion) ? pokemon.baseStoredStats : pokemon.storedStats;
 			for (statName in this.storedStats) {
 				this.storedStats[statName] = statTable[statName];
 				if (this.modifiedStats) this.modifiedStats[statName] = pokemon.modifiedStats![statName]; // Gen 1: Copy modified stats.
@@ -558,7 +558,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.boosts[boostName] = pokemon.boosts[boostName];
 			}
 			if (this.battle.gen >= 6) {
-				const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+				const volatilesToCopy = ['dragoncheer', 'focusenergy', 'gmaxchistrike', 'laserfocus'];
 				for (const volatile of volatilesToCopy) {
 					if (pokemon.volatiles[volatile]) {
 						this.addVolatile(volatile);
@@ -603,6 +603,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			// Pokemon transformed into Ogerpon cannot Terastallize
 			// restoring their ability to tera after they untransform is handled ELSEWHERE
 			if (this.species.baseSpecies === 'Ogerpon' && this.canTerastallize) this.canTerastallize = false;
+			if (this.species.baseSpecies === 'Terapagos' && this.canTerastallize) this.canTerastallize = false;
 
 			return true;
 		},

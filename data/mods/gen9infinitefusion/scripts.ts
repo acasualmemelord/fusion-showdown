@@ -5,8 +5,8 @@ export const Scripts: ModdedBattleScriptsData = {
 			const species = pokemon.species;
 			if (pokemon.fainted || this.illusion || pokemon.illusion || (pokemon.volatiles['substitute'] && this.battle.gen >= 5) ||
 				(pokemon.transformed && this.battle.gen >= 2) || (this.transformed && this.battle.gen >= 5) ||
-				species.name === 'Eternatus-Eternamax' || (species.baseSpecies === 'Ogerpon' &&
-				(this.terastallized || pokemon.terastallized))) {
+				species.name === 'Eternatus-Eternamax' || (['Ogerpon', 'Terapagos'].includes(species.baseSpecies) &&
+				(this.terastallized || pokemon.terastallized)) || this.terastallized === 'Stellar') {
 				return false;
 			}
 
@@ -29,7 +29,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			this.apparentType = pokemon.apparentType;
 
 			let statName: StatIDExceptHP;
-			let statTable = (pokemon.ability === 'Stance Change' && pokemon.fusion) ? pokemon.baseStoredStats : pokemon.storedStats;
+			const statTable = (pokemon.ability === 'Stance Change' && pokemon.fusion) ? pokemon.baseStoredStats : pokemon.storedStats;
 			for (statName in this.storedStats) {
 				this.storedStats[statName] = statTable[statName];
 				if (this.modifiedStats) this.modifiedStats[statName] = pokemon.modifiedStats![statName]; // Gen 1: Copy modified stats.
@@ -59,7 +59,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.boosts[boostName] = pokemon.boosts[boostName];
 			}
 			if (this.battle.gen >= 6) {
-				const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+				const volatilesToCopy = ['dragoncheer', 'focusenergy', 'gmaxchistrike', 'laserfocus'];
 				for (const volatile of volatilesToCopy) {
 					if (pokemon.volatiles[volatile]) {
 						this.addVolatile(volatile);
@@ -104,6 +104,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			// Pokemon transformed into Ogerpon cannot Terastallize
 			// restoring their ability to tera after they untransform is handled ELSEWHERE
 			if (this.species.baseSpecies === 'Ogerpon' && this.canTerastallize) this.canTerastallize = false;
+			if (this.species.baseSpecies === 'Terapagos' && this.canTerastallize) this.canTerastallize = false;
 
 			return true;
 		},
@@ -128,7 +129,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.battle.add('detailschange', this, details);
 				if (!source) {
 					// Tera forme
-					// Ogerpon text goes here
+					// Ogerpon/Terapagos text goes here
 				} else if (source.effectType === 'Item') {
 					this.canTerastallize = null; // National Dex behavior
 					if (source.zMove) {
@@ -161,7 +162,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					this.ability = ''; // Don't allow Illusion to wear off
 				}
 				// Ogerpon's forme change doesn't override permanent abilities
-				if (source || !this.getAbility().isPermanent) this.setAbility(species.abilities['0'], null, true);
+				if (source || !this.getAbility().flags['cantsuppress']) this.setAbility(species.abilities['0'], null, true);
 				// However, its ability does reset upon switching out
 				this.baseAbility = Dex.toID(species.abilities['0']);
 			}
@@ -170,6 +171,6 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.apparentType = this.terastallized;
 			}
 			return true;
-		}
+		},
 	},
 };

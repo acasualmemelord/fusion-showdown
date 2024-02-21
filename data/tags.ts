@@ -54,6 +54,10 @@ export const Tags: {[id: string]: TagData} = {
 		name: "Infinite Fusion",
 		speciesFilter: species => species.tags.includes("Infinite Fusion"),
 	},
+	pokeathlon: {
+		name: "Pokeathlon",
+		speciesFilter: species => species.tags.includes("Pokeathlon"),
+	},
 
 	// Move tags
 	// ---------

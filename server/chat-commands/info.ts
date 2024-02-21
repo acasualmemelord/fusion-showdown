@@ -13,7 +13,6 @@ import {YouTube, Twitch} from '../chat-plugins/youtube';
 import {Net, Utils} from '../../lib';
 import {RoomSections} from './room-settings';
 import {Battle} from '../../sim/battle';
-import { Items } from '../../data/items';
 
 const ONLINE_SYMBOL = ` \u25C9 `;
 const OFFLINE_SYMBOL = ` \u25CC `;
@@ -1756,273 +1755,34 @@ export const commands: Chat.ChatCommands = {
 	randbatscalc: 'calc',
 	rcalc: 'calc',
 	calc(target, room, user, connection, cmd) {
+		if (cmd === 'calc' && target) return this.run('calculate');
 		if (!this.runBroadcast()) return;
-		let start = Date.now();
-		const args = target.toLowerCase().replace(/\s/g, "").split(',');
-
-		let mod;
-		let startIndex = 0;
-		let format = Dex.formats.get(args[0]);
-		if (format.exists) {
-			mod = format.mod;
-			this.sendReplyBox('selected mod: ' + mod);
-			startIndex = 1;
-		} else {
-			format = Dex.formats.get('gen9ou');
-			mod = 'gen9';
-		}
-
-		const dex = Dex.mod(mod);
-
-		if (args.length - startIndex < 3) return this.errorReply('Not enough arguments!');
-
-		let p1info = args[startIndex].split('(');
-		let moveinfo = args[startIndex + 1];
-		let p2info = args[startIndex + 2].split('(');
-
-		let p1species = dex.species.get(toID(p1info[0]));
-		let p2species = dex.species.get(toID(p2info[0]));
-
-		if (!p1species.exists || !p2species.exists) return this.errorReply('One of the Pokemon is invalid!');
-
-		let move = Utils.deepClone(dex.moves.get(toID(moveinfo)));
-		if (!move.exists || move.category === 'Status') return this.errorReply('Invalid move given!');
-		if (move.willCrit === undefined) move.willCrit = false;
-
-		let sets: PokemonSet[] = [];
-		let extras: boolean[] = [];
-
-		const paramTypes = [
-			'item', 'ability', 'fusion', 'role', 'evs',
-			'ivs', 'nature', 'tera', 'level', 'gender'
+		const DEFAULT_CALC_COMMANDS = ['honkalculator', 'honkocalc'];
+		const RANDOMS_CALC_COMMANDS = ['randomscalc', 'randbatscalc', 'rcalc'];
+		const BATTLESPOT_CALC_COMMANDS = ['bsscalc', 'cantsaycalc'];
+		const SUPPORTED_BATTLESPOT_FORMATS = [
+			'gen5gbusingles', 'gen5gbudoubles', 'gen6battlespotsingles', 'gen6battlespotdoubles', 'gen6battlespottriples', 'gen7battlespotsingles', 'gen7battlespotdoubles', 'gen7bssfactory',
 		];
-
-		for (let info of [p1info, p2info]) {
-			var set: PokemonSet = {
-				name: '',
-				species: toID(info[0]),
-				item: '',
-				ability: 'No Ability',
-				moves: [move.name, 'Trick Room'],
-				nature: 'Serious',
-				gender: 'N',
-				evs: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
-				ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
-				level: 100,
-				happiness: 255,
-				shiny: false,
-				fusion: '',
-				teraType: 'Normal',
-			};
-			var extra = false;
-
-			if (!info[1][0]) continue;
-			let params = info[1].replace(')', '').split('+');
-			let species = toID(info[0]);
-
-			for (let param of params) {
-				if (!param.length) continue;
-				let [paramType, value] = param.split('=');
-				if (paramTypes.includes(paramType)) {
-					switch (paramType) {
-						case 'item':
-							let item = dex.items.get(toID(value));
-							if (item.exists) {
-								set.item = item.name;
-							} else this.errorReply(`Invalid item on ${species}.`);
-							break;
-						case 'ability':
-							let ability = dex.abilities.get(toID(value));
-							if (ability.exists) {
-								set.ability = ability.name;
-							} else {
-								this.errorReply(`Invalid ability on ${species}.`);
-							}
-							break;
-						case 'fusion':
-							let fusion = dex.species.get(toID(value));
-							if (fusion.exists) {
-								set.fusion = fusion.name;
-								if (!format.ruleTable?.has('infinitefusionmod')) format = Dex.formats.get('gen9ifnatdexag');
-							} else this.errorReply(`Invalid fusion species on ${species}.`);
-							break;
-						case 'tera':
-							let tera = dex.types.get(toID(value));
-							if (tera.exists) {
-								set.teraType = tera.name;
-								extra = true;
-							} else this.errorReply(`Invalid tera type on ${species}.`);
-							break;
-						case 'level':
-							if (typeof parseInt(value) === 'number' && 0 < parseInt(value) && parseInt(value) <= 100) {
-								set.level = parseInt(value);
-							} else this.errorReply(`Invalid level on ${species}.`);
-							break;
-						case 'gender':
-							let male = ['male', 'm', 'boy', 'man'];
-							let female = ['female', 'f', 'fem', 'girl', 'woman'];
-							if (male.concat(female).includes(toID(value))) {
-								set.gender = male.includes(toID(value)) ? 'M' : 'F';
-							} else this.errorReply(`Invalid gender on ${species}.`);
-							this.sendReplyBox('gender: ' + value);
-							break;
-						case 'role':
-							let maxoffense = ['adamant', 'modest', 'fulloffense', 'maxatk', 'maxspatk', 'maxoffense', 'bulkyoffense', 'maxattack', 'maxspecialattack'];
-							let maxhp = ['hp', 'fullhp', 'maxhp'];
-							let maxdefense = ['maxdefense', 'maxspexialdefense', 'maxdef', 'maxspdef', 'physdef', 'spdef', 'def', 'bold', 'calm', 'careful', 'impish', 'bulky', 'maxbulk'];
-							let offense = ['atk', 'timid', 'jolly', 'spatk', 'sweeper', 'offensive'];
-
-							if (maxoffense.includes(toID(value))) {
-								switch(value) {
-									case 'adamant':
-									case 'maxatk':
-									case 'maxattack':
-										set.nature = 'Adamant';
-										break;
-									case 'modest':
-									case 'maxspatk':
-									case 'maxspecialattack':
-										set.nature = 'Modest';
-										break;
-									default:
-										set.nature = move.category === 'Physical' ? 'Adamant' : 'Modest';
-								}
-								set.evs.atk = 252;
-								set.evs.spa = 252;
-
-							} else if (maxhp.includes(toID(value))) {
-								set.evs.hp = 252;
-							} else if (maxdefense.includes(toID(value))) {
-								set.evs.hp = 252;
-								switch(value) {
-									case 'maxdefense':
-									case 'maxdef':
-									case 'physdef':
-									case 'def':
-									case 'bold':
-									case 'impish':
-										set.evs.def = 252;
-										set.nature = 'Bold';
-										break;
-									case 'maxspecialdefense':
-									case 'maxspdef':
-									case 'spdef':
-									case 'calm':
-									case 'careful':
-										set.evs.spd = 252;
-										set.nature = 'Calm';
-										break;
-									default:
-										if (!move.overrideDefensiveStat) {
-											if (move.category === 'Physical') {
-												set.evs.def = 252;
-												set.nature = 'Bold';
-											} else if (move.category === 'Special') {
-												set.evs.spd = 252;
-												set.nature = 'Calm';
-											}
-										} else {
-											if (move.overrideDefensiveStat === 'def') {
-												set.evs.def = 252;
-												set.nature = 'Bold';
-											} else if (move.overrideDefensiveStat === 'spd') {
-												set.evs.spd = 252;
-												set.nature = 'Calm';
-											}
-										}
-								}
-							} else if (offense.includes(toID(value))) {
-								switch(value) {
-									case 'atk':
-									case 'jolly':
-										set.evs.atk = 252;
-										break;
-									case 'spatk':
-									case 'timid':
-										set.evs.spa = 252;
-										break;
-									default:
-										if (move.category === 'Physical') {
-											set.evs.atk = 252;
-										} else if (move.category === 'Special') {
-											set.evs.spa = 252;
-										}
-								}
-							} else {
-								this.errorReply(`Invalid role on ${species}.`);
-							}
-							break;
-						case 'evs':
-							this.sendReplyBox('evs: ' + value);
-							break;
-						case 'ivs':
-							this.sendReplyBox('ivs: ' + value);
-							break;
-						case 'nature':
-							let nature = dex.natures.get(toID(value));
-							if (nature.exists) {
-								set.nature = nature.name;
-							} else this.errorReply(`Invalid nature on ${species}.`);
-							break;
-					}
-				} else {
-					this.errorReply(`Invalid parameter type on ${info[0]}: ${paramType}`);
-				}
-			}
-			sets.push(set);
-			extras.push(extra);
+		const isRandomBattle = room?.battle?.format.endsWith('randombattle');
+		const isBattleSpotBattle = (room?.battle && (SUPPORTED_BATTLESPOT_FORMATS.includes(room.battle.format) ||
+			room.battle.format.includes("battlespotspecial")));
+		if (RANDOMS_CALC_COMMANDS.includes(cmd) ||
+			(isRandomBattle && !DEFAULT_CALC_COMMANDS.includes(cmd) && !BATTLESPOT_CALC_COMMANDS.includes(cmd))) {
+			return this.sendReplyBox(
+				`Random Battles damage calculator. (Courtesy of Austin)<br />` +
+				`- <a href="https://calc.pokemonshowdown.com/randoms.html">Random Battles Damage Calculator</a>`
+			);
 		}
-
-		const options = {
-			format: format,
-			formatid: format.id,
-			p1: {team: [sets[0]]},
-			p2: {team: [sets[1]]},
-			debug: true,
-			forceRandomChance: true,
-		};
-
-		let damage = [];
-		let oldmax;
-		for (let roll of [15, 0]) {
-			let battle = new Battle(options);
-			battle.randomizer = dmg => battle.trunc(battle.trunc(dmg * (100 - roll)) / 100)
-
-			battle.makeChoices('team 1|1', 'team 1|1');
-
-			let [attacker, defender] = [battle.p1.active[0], battle.p2.active[0]];
-
-			oldmax = defender.maxhp;
-			[defender.maxhp, defender.hp, attacker.maxhp, attacker.hp] = Array(4).fill(1000000);
-
-			battle.actions.useMove(move, attacker, defender);
-
-			damage.push(defender.maxhp - defender.hp);
-
-			battle.destroy();
+		if (BATTLESPOT_CALC_COMMANDS.includes(cmd) || (isBattleSpotBattle && !DEFAULT_CALC_COMMANDS.includes(cmd))) {
+			return this.sendReplyBox(
+				`Battle Spot damage calculator. (Courtesy of cant say &amp; LegoFigure11)<br />` +
+				`- <a href="https://cantsay.github.io/">Battle Spot Damage Calculator</a>`
+			);
 		}
-
-		if (typeof damage[0] === 'number' && typeof damage[1] === 'number' && oldmax) {
-			let attackerStr = (move.category === 'Physical' ? `${sets[0].evs.atk} Atk `: `${sets[0].evs.atk} SpA `) +`${p1species.name} ${move.name} vs. `;
-			let relevantDefense;
-			if (!move.overrideDefensiveStat) {
-				if (move.category === 'Physical') {
-					relevantDefense = `${sets[1].evs.def} Def `;
-				} else if (move.category === 'Special') {
-					relevantDefense = `${sets[1].evs.spd} SpD `;
-				}
-			} else {
-				if (move.overrideDefensiveStat === 'def') {
-					relevantDefense = `${sets[1].evs.def} Def `;
-				} else if (move.overrideDefensiveStat === 'spd') {
-					relevantDefense = `${sets[1].evs.spd} SpD `;
-				}
-			}
-			let defenderStr = `${sets[1].evs.hp} HP / ${relevantDefense} ${p2species.name}: `;
-			let damageStr = `${damage[0]} - ${damage[1]} (${Math.floor((damage[0] / oldmax) * 1000) / 10} - ${Math.floor((damage[1] / oldmax) * 1000) / 10}%)`;
-			this.sendReplyBox(attackerStr + defenderStr + damageStr);
-		}
-		console.log(Date.now() - start);
+		this.sendReplyBox(
+			`Pok&eacute;mon Showdown! damage calculator. (Courtesy of Honko, Austin, &amp; Kris)<br />` +
+			`- <a href="https://calc.pokemonshowdown.com/index.html">Damage Calculator</a>`
+		);
 	},
 	calchelp: [
 		`/calc - Provides a link to a damage calculator`,

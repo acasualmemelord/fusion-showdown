@@ -16,7 +16,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		types: ["Grass", "Ghost"],
 	},
 	bulbmantle: {
-		num: 16001,
+		num: 6001,
 		name: "Bulbmantle",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -31,7 +31,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "LC",
 	},
 	ivymelortle: {
-		num: 16002,
+		num: 6002,
 		name: "Ivymelortle",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -46,7 +46,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "NFE",
 	},
 	venustoizard: {
-		num: 16003,
+		num: 6003,
 		name: "Venustoizard",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -61,7 +61,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "UU",
 	},
 	totoritaquil: {
-		num: 16004,
+		num: 6004,
 		name: "Totoritaquil",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -76,7 +76,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "LC",
 	},
 	baylavanaw: {
-		num: 16005,
+		num: 6005,
 		name: "Baylavanaw",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -91,7 +91,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "NFE",
 	},
 	megaligasion: {
-		num: 16006,
+		num: 6006,
 		name: "Megaligasion",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -106,7 +106,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "RU",
 	},
 	torkipcko: {
-		num: 16007,
+		num: 6007,
 		name: "Torkipcko",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -121,7 +121,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "LC",
 	},
 	gromarshken: {
-		num: 16008,
+		num: 6008,
 		name: "Gromarshken",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -136,7 +136,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "NFE",
 	},
 	swamptiliken: {
-		num: 16009,
+		num: 6009,
 		name: "Swamptiliken",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -151,7 +151,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "UU",
 	},
 	turcharlup: {
-		num: 16010,
+		num: 6010,
 		name: "Turcharlup",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -166,7 +166,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "LC",
 	},
 	prinfernotle: {
-		num: 16011,
+		num: 6011,
 		name: "Prinfernotle",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -181,7 +181,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "NFE",
 	},
 	torterneon: {
-		num: 16012,
+		num: 6012,
 		name: "Torterneon",
 		types: ["Fire", "Water", "Grass"],
 		gender: "N",
@@ -196,7 +196,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "UU",
 	},
 	zapmolticuno: {
-		num: 16013,
+		num: 6013,
 		name: "Zapmolticuno",
 		types: ["Flying", "Ice", "Fire", "Electric"],
 		gender: "N",
@@ -212,7 +212,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "UU",
 	},
 	enraicune: {
-		num: 16014,
+		num: 6014,
 		name: "Enraicune",
 		types: ["Fire", "Water", "Electric"],
 		gender: "N",
@@ -227,7 +227,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "OU",
 	},
 	kyodonquaza: {
-		num: 16015,
+		num: 6015,
 		name: "Kyodonquaza",
 		types: ["Water", "Ground", "Flying"],
 		gender: "N",
@@ -242,7 +242,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "Uber",
 	},
 	paldiatina: {
-		num: 16016,
+		num: 6016,
 		name: "Paldiatina",
 		types: ["Dragon", "Ghost", "Steel", "Water"],
 		gender: "N",
@@ -257,7 +257,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "Uber",
 	},
 	zekyushiram: {
-		num: 16017,
+		num: 6017,
 		name: "Zekyushiram",
 		types: ["Dragon", "Ice", "Fire", "Electric"],
 		gender: "N",
@@ -272,7 +272,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "Uber",
 	},
 	celemewchi: {
-		num: 16018,
+		num: 6018,
 		name: "Celemewchi",
 		types: ["Psychic", "Grass", "Steel"],
 		gender: "N",
@@ -287,7 +287,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "OU",
 	},
 	regitrio: {
-		num: 16019,
+		num: 6019,
 		name: "Regitrio",
 		types: ["Ice", "Rock", "Steel"],
 		gender: "N",
@@ -302,7 +302,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tier: "OU",
 	},
 	deosectwo: {
-		num: 16020,
+		num: 6020,
 		name: "Deosectwo",
 		types: ["Bug", "Steel", "Psychic"],
 		gender: "N",

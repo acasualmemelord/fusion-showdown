@@ -1997,7 +1997,7 @@ export class GameRoom extends BasicRoom {
 	 * That's why this function requires a connection. For details, see the top
 	 * comment inside this function.
 	 */
-	async uploadReplay(user: User, connection: Connection, options?: 'forpunishment' | 'silent') {
+	async uploadReplay(user?: User, connection?: Connection, options?: 'forpunishment' | 'silent') {
 		// The reason we don't upload directly to the loginserver, unlike every
 		// other interaction with the loginserver, is because it takes so much
 		// bandwidth that it can get identified as a DoS attack by PHP, Apache, or
@@ -2032,7 +2032,7 @@ export class GameRoom extends BasicRoom {
 		const {id, password} = this.getReplayData();
 
 		if (battle.replaySaved) {
-			connection.popup(`The replay for this battle was already saved. You can find it at https://replay.pokeathlon.com/`);
+			connection?.popup(`The replay for this battle was already saved. You can find it at https://replay.pokeathlon.com/`);
 			return;
 		}
 		battle.replaySaved = true;
@@ -2054,9 +2054,9 @@ export class GameRoom extends BasicRoom {
 
 		FS(`replays/${replayName}.html`).writeSync(buf);
 
-		FS('replays/replays.csv').appendSync(`${user.name},${battle.p1.name},${battle.p2.name},${battle.p3 ? battle.p3.name : ''},${battle.p4 ? battle.p4.name : ''},${Date.now()},${format.name},${replayName},\n`);
+		FS('replays/replays.csv').appendSync(`${user?.name},${battle.p1.name},${battle.p2.name},${battle.p3 ? battle.p3.name : ''},${battle.p4 ? battle.p4.name : ''},${Date.now()},${format.name},${replayName},\n`);
 
-		connection.popup(
+		connection?.popup(
 			`|html|<p>Your replay has been uploaded! It's available at:</p><p> ` +
 			`<a class="no-panel-intercept" href="https://replay.pokeathlon.com/#replay=${replayName}" target="_blank">https://replay.pokeathlon.com/#replay=${replayName}</a> ` +
 			`<copytext value="https://replay.pokeathlon.com/#replay=${replayName}">Copy</copytext>`
