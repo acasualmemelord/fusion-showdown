@@ -48,7 +48,7 @@ const MOVE_PAIRS = [
 
 /** Pokemon who always want priority STAB, and are fine with it as its only STAB move of that type */
 const PRIORITY_POKEMON = [
-	'bisharp', 'breloom', 'cacturne', 'dusknoir', 'honchkrow', 'scizor', 'shedinja',
+	'bisharp', 'breloom', 'cacturne', 'dusknoir', 'honchkrow', 'scizor', 'shedinja', 'shiftry',
 ];
 
 export class RandomGen5Teams extends RandomGen6Teams {
@@ -198,6 +198,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 			[['bodyslam', 'return'], ['bodyslam', 'doubleedge']],
 			[['gigadrain', 'leafstorm'], ['leafstorm', 'petaldance', 'powerwhip']],
 			[['drainpunch', 'focusblast'], ['closecombat', 'highjumpkick', 'superpower']],
+			['payback', 'pursuit'],
 
 			// Assorted hardcodes go here:
 			// Zebstrika
@@ -532,7 +533,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		case 'Synchronize':
 			return (counter.get('Status') < 2 || !!counter.get('recoil'));
 		case 'Regenerator':
-			return ((species.id === 'mienshao' && role !== 'Wallbreaker') || species.id === 'reuniclus');
+			return ((species.id === 'mienshao' && role !== 'Fast Attacker') || species.id === 'reuniclus');
 		case 'Reckless': case 'Rock Head':
 			return !counter.get('recoil');
 		case 'Sand Force': case 'Sand Rush':
@@ -597,7 +598,6 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		if (species.id === 'ninetales') return 'Drought';
 		if (species.id === 'gligar') return 'Immunity';
 		if (species.id === 'arcanine') return 'Intimidate';
-		if (species.id === 'rampardos' && role === 'Bulky Attacker') return 'Mold Breaker';
 		if (species.id === 'altaria') return 'Natural Cure';
 		if (species.id === 'mandibuzz') return 'Overcoat';
 		// If Ambipom doesn't qualify for Technician, Skill Link is useless on it
@@ -697,6 +697,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		if (ability === 'Magic Guard' && role !== 'Bulky Support') {
 			return moves.has('counter') ? 'Focus Sash' : 'Life Orb';
 		}
+		if (species.id === 'rampardos' && role === 'Fast Attacker') return 'Choice Scarf';
 		if (ability === 'Sheer Force' && counter.get('sheerforce')) return 'Life Orb';
 		if (moves.has('acrobatics')) return 'Flying Gem';
 		if (species.id === 'hitmonlee' && ability === 'Unburden') return moves.has('fakeout') ? 'Normal Gem' : 'Fighting Gem';
@@ -798,15 +799,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		isLead = false
 	): RandomTeamsTypes.RandomSet {
 		species = this.dex.species.get(species);
-		let forme = species.name;
-
-		if (typeof species.battleOnly === 'string') {
-			// Only change the forme. The species has custom moves, and may have different typing and requirements.
-			forme = species.battleOnly;
-		}
-		if (species.cosmeticFormes) {
-			forme = this.sample([species.name].concat(species.cosmeticFormes));
-		}
+		const forme = this.getForme(species);
 		const sets = this.randomSets[species.id]["sets"];
 		const possibleSets = [];
 		// Check if the Pokemon has a Spinner set
@@ -954,12 +947,7 @@ export class RandomGen5Teams extends RandomGen6Teams {
 		const [pokemonPool, baseSpeciesPool] = this.getPokemonPool(type, pokemon, isMonotype, pokemonList);
 		while (baseSpeciesPool.length && pokemon.length < this.maxTeamSize) {
 			const baseSpecies = this.sampleNoReplace(baseSpeciesPool);
-			const currentSpeciesPool: Species[] = [];
-			for (const poke of pokemonPool) {
-				const species = this.dex.species.get(poke);
-				if (species.baseSpecies === baseSpecies) currentSpeciesPool.push(species);
-			}
-			const species = this.sample(currentSpeciesPool);
+			const species = this.dex.species.get(this.sample(pokemonPool[baseSpecies]));
 			if (!species.exists) continue;
 
 			// Limit to one of each species (Species Clause)

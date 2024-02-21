@@ -324,7 +324,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 			[SETUP, HAZARDS],
 			[SETUP, badWithSetup],
 			[PHYSICAL_SETUP, PHYSICAL_SETUP],
-			[SPEED_SETUP, ['quickattack', 'suckerpunch']],
+			[SPEED_SETUP, 'quickattack'],
 			['defog', HAZARDS],
 			[['fakeout', 'uturn'], ['switcheroo', 'trick']],
 			['substitute', PIVOT_MOVES],
@@ -857,7 +857,6 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		if (species.id === 'arcanine') return 'Intimidate';
 		if (species.id === 'lucariomega') return 'Justified';
 		if (species.id === 'toucannon' && !counter.get('sheerforce') && !counter.get('skilllink')) return 'Keen Eye';
-		if (species.id === 'rampardos' && role === 'Bulky Attacker') return 'Mold Breaker';
 		if (species.baseSpecies === 'Altaria') return 'Natural Cure';
 		// If Ambipom doesn't qualify for Technician, Skill Link is useless on it
 		if (species.id === 'ambipom' && !counter.get('technician')) return 'Pickup';
@@ -1004,6 +1003,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		if (ability === 'Magic Guard' && role !== 'Bulky Support') {
 			return moves.has('counter') ? 'Focus Sash' : 'Life Orb';
 		}
+		if (species.id === 'rampardos' && role === 'Fast Attacker') return 'Choice Scarf';
 		if (ability === 'Sheer Force' && counter.get('sheerforce')) return 'Life Orb';
 		if (ability === 'Unburden') return moves.has('closecombat') ? 'White Herb' : 'Sitrus Berry';
 		if (moves.has('acrobatics')) return '';
@@ -1140,15 +1140,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 		isLead = false
 	): RandomTeamsTypes.RandomSet {
 		species = this.dex.species.get(species);
-		let forme = species.name;
-
-		if (typeof species.battleOnly === 'string') {
-			// Only change the forme. The species has custom moves, and may have different typing and requirements.
-			forme = species.battleOnly;
-		}
-		if (species.cosmeticFormes) {
-			forme = this.sample([species.name].concat(species.cosmeticFormes));
-		}
+		const forme = this.getForme(species);
 		const sets = this.randomSets[species.id]["sets"];
 		const possibleSets = [];
 		// Check if the Pokemon has a Z-Move user set
@@ -1329,19 +1321,17 @@ export class RandomGen7Teams extends RandomGen8Teams {
 				const currentSpeciesPool: Species[] = [];
 				// Check if the base species has a mega forme available
 				let canMega = false;
-				for (const poke of pokemonPool) {
+				for (const poke of pokemonPool[baseSpecies]) {
 					const species = this.dex.species.get(poke);
-					if (!hasMega && species.baseSpecies === baseSpecies && species.isMega) canMega = true;
+					if (!hasMega && species.isMega) canMega = true;
 				}
-				for (const poke of pokemonPool) {
+				for (const poke of pokemonPool[baseSpecies]) {
 					const species = this.dex.species.get(poke);
-					if (species.baseSpecies === baseSpecies) {
-						// Prevent multiple megas
-						if (hasMega && species.isMega) continue;
-						// Prevent base forme, if a mega is available
-						if (canMega && !species.isMega) continue;
-						currentSpeciesPool.push(species);
-					}
+					// Prevent multiple megas
+					if (hasMega && species.isMega) continue;
+					// Prevent base forme, if a mega is available
+					if (canMega && !species.isMega) continue;
+					currentSpeciesPool.push(species);
 				}
 				const species = this.sample(currentSpeciesPool);
 
