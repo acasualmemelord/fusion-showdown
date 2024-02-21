@@ -1,9 +1,4 @@
 export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
-	alakazam: {
-		inherit: true,
-		tier: "Uber",
-		doublesTier: "DUber",
-	},
 	chansey: {
 		inherit: true,
 		tier: "Uber",
@@ -15,11 +10,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUber",
 	},
 	volcarona: {
-		inherit: true,
-		tier: "Uber",
-		doublesTier: "DUber",
-	},
-	shuckle: {
 		inherit: true,
 		tier: "Uber",
 		doublesTier: "DUber",
@@ -47,6 +37,18 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	necrozma: {
 		inherit: true,
 		doublesTier: "DUber",
+	},
+	aegislash: {
+		inherit: true,
+		tier: "OU",
+	},
+	alakazam: {
+		inherit: true,
+		tier: "OU",
+	},
+	shuckle: {
+		inherit: true,
+		tier: "OU",
 	},
 	blaziken: {
 		inherit: true,
