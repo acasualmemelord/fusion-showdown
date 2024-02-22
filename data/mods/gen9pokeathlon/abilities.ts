@@ -278,11 +278,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
 						pokemon.removeVolatile(innate);
 					}
-					pokemon.addVolatile("ability:" + this.effectState.treasureAbility.id, pokemon);
-					this.add('-ability', pokemon, this.effectState.treasureAbility, '[from] ability: Sacred Treasures', '[of] ' + pokemon);
 					if (pokemon.species.id === 'lunachi') {
 						pokemon.formeChange('lunachibestowed');
 					}
+					pokemon.addVolatile("ability:" + this.effectState.treasureAbility.id, pokemon);
+					this.add('-ability', pokemon, this.effectState.treasureAbility, '[from] ability: Sacred Treasures', '[of] ' + pokemon);
 				}
 			} else {
 				if (pokemon.species.id === 'lunachibestowed') {
@@ -290,7 +290,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
 						pokemon.removeVolatile(innate);
 					}
-					this.add('-ability', pokemon, 'sacredtreasures', '[from] ability: Sacred Treasures', '[of] ' + pokemon);
+					this.add('-ability', pokemon, 'Sacred Treasures', '[from] ability: Sacred Treasures', '[of] ' + pokemon);
 				}
 			}
 		},

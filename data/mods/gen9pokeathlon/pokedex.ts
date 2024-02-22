@@ -298,7 +298,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		name: "Mosster",
 		types: ["Rock", "Grass"],
 		baseStats: {hp: 120, atk: 90, def: 120, spa: 50, spd: 100, spe: 30},
-		abilities: {0: "Phototroph", 1: "Water Absorb", H: "Inertia"},
+		abilities: {0: "Water Absorb", H: "Inertia"},
 		heightm: 0.6,
 		weightkg: 90,
 		color: "Purple",
