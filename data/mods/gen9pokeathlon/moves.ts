@@ -45,9 +45,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onSwap(target) {
 				if (!target.fainted) {
 					this.boost({atk: 1}, target, null, this.effect);
+					target.addVolatile('focusenergy');
 					target.addType('Fighting');
 					this.add('-start', target, 'typeadd', 'Fighting', '[from] move: Fibre Graft');
-					target.addVolatile('focusenergy');
 					target.side.removeSlotCondition(target, 'fibregraft');
 				}
 			},

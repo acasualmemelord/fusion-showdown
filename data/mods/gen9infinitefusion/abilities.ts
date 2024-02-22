@@ -460,9 +460,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return;
 			}
 
-			if (!pokemon.getVolatile('commanding')) {
+			if (!pokemon.getVolatile('commanding') && !ally.getVolatile('commanding')) {
 				// If Dondozo already was commanded this fails
-				if (ally.getVolatile('commanded')) return;
+				if (ally.getVolatile('commanded') || pokemon.getVolatile('commanded')) return;
 				// Cancel all actions this turn for pokemon if applicable
 				this.queue.cancelAction(pokemon);
 				// Add volatiles to both pokemon
