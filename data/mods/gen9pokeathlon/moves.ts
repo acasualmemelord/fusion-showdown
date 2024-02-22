@@ -5,6 +5,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Runtime Exception",
+		desc: "The user randomly uses Flare Blitz, Iron Head, Psychic, or Wild Charge.",
+		shortDesc: "Randomly executes one of 4 powerful moves.",
 		pp: 10,
 		priority: 0,
 		flags: {failencore: 1, nosleeptalk: 1, noassist: 1, failcopycat: 1, failmimic: 1, failinstruct: 1},
@@ -25,6 +27,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Fibre Graft",
+		desc: "The user faints, and the Pokemon brought out receives the Fighting type, a +1 atk boost, and the effect of Focus Energy. The replacement is sent out at the end of the turn, and the healing happens before hazards take effect.",
+		shortDesc: "User faints. Switch-in has boost + Fighting type.",
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, metronome: 1},
@@ -45,7 +49,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					this.add('-start', target, 'typeadd', 'Fighting', '[from] move: Fibre Graft');
 					target.addVolatile('focusenergy');
 					target.side.removeSlotCondition(target, 'fibregraft');
-
 				}
 			},
 		},
@@ -65,6 +68,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		category: "Special",
 		name: "Bloom's Day",
+		desc: "Power is equal to (user's current HP * 150 / user's maximum HP), rounded down, but not less than 1.",
+		shortDesc: "Less power as user's HP decreases. Hits foe(s).",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
@@ -79,6 +84,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 80,
 		category: "Special",
 		name: "Desert Tempest",
+		shortDesc: "Summons sandstorm. 1.2x damage if user is holding a Smooth Rock.",
 		pp: 15,
 		priority: 0,
 		onBasePower(basePower, pokemon, target) {
@@ -101,6 +107,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Bulwark",
+		shortDesc: "Sets the effects of Light Screen and Reflect.",
 		pp: 5,
 		priority: -1,
 		flags: {protect: 1, mirror: 1},
