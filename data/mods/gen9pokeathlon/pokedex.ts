@@ -11,6 +11,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	imitotion: {
 		num: 6002,
@@ -26,6 +27,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Amorphous"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	aviotion: {
 		num: 6003,
@@ -42,6 +44,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Amorphous"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	dracotion: {
 		num: 6004,
@@ -56,6 +59,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Amorphous"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	bunnor: {
 		num: 6005,
@@ -70,6 +74,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	rabbicicle: {
 		num: 6006,
@@ -84,6 +89,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	enchantobra: {
 		num: 6007,
@@ -98,6 +104,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	eyespy: {
 		num: 6008,
@@ -113,6 +120,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	icyall: {
 		num: 6009,
@@ -128,6 +136,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	ironeverlasting: {
 		num: 6010,
@@ -142,6 +151,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Paradox", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	golisopodshogun: {
 		num: 768,
@@ -158,6 +168,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Bug", "Water 3"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	tinkatonrhinian: {
 		num: 959,
@@ -174,6 +185,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Fairy"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	regimyo: {
 		num: 6011,
@@ -188,6 +200,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Sub-Legendary", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	jovianshk: {
 		num: 6012,
@@ -201,6 +214,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	lunachi: {
 		num: 6013,
@@ -217,6 +231,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		otherFormes: ["Lunachi-Bestowed"],
 		formeOrder: ["Lunachi", "Lunachi-Bestowed"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	lunachibestowed: {
 		num: 6013,
@@ -233,6 +248,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		battleOnly: "Lunachi",
 		tier: "Illegal",
+		natDexTier: "Illegal",
 	},
 	ockthane: {
 		num: 6014,
@@ -246,6 +262,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	incineroarolulian: {
 		num: 727,
@@ -261,6 +278,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	raikousupra: {
 		num: 243,
@@ -277,6 +295,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Sub-Legendary", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	heatransupra: {
 		num: 485,
@@ -292,6 +311,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Sub-Legendary", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	mosster: {
 		num: 6015,
@@ -305,6 +325,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	barrimander: {
 		num: 6016,
@@ -318,6 +339,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 	meditao: {
 		num: 6017,
@@ -333,5 +355,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
 		tier: "OU",
+		natDexTier: "OU",
 	},
 };
