@@ -164,20 +164,70 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100', 'Infinite Fusion Mod'],
 	},
 	{
-		section: "Pokéathlon",
+		section: "Pokéathlon: Regional Dex",
 		column: 2,
-	},
-	{
-		name: "[Gen 9] PoA NatDex AG",
-
-		mod: 'gen9pokeathlon',
-		ruleset: ['Standard NatDex'],
 	},
 	{
 		name: "[Gen 9] PoA Dex AG",
 
 		mod: 'gen9pokeathlon',
 		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+	},
+	{
+		name: "[Gen 9] PoA Dex Doubles AG",
+
+		mod: 'gen9pokeathlon',
+		gameType: 'doubles',
+		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+	},
+	{
+		section: "Pokéathlon: National Dex",
+		column: 2,
+	},
+	{
+		name: "[Gen 9] PoA National Dex OU",
+
+		mod: 'gen9pokeathlon',
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
+		banlist: [
+			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
+		],
+	},
+	{
+		name: "[Gen 9] PoA National Dex AG",
+
+		mod: 'gen9pokeathlon',
+		ruleset: ['Standard NatDex'],
+	},
+	{
+		name: "[Gen 9] PoA NatDex Doubles AG",
+
+		mod: 'gen9pokeathlon',
+		gameType: 'doubles',
+		ruleset: ['Standard NatDex'],
+	},
+	{
+		section: "Pokéathlon: Extras",
+		column: 2,
+	},
+	{
+		name: "[Gen 9] PoA Fusions Dex AG",
+
+		mod: 'gen9pokeathlon',
+		ruleset: [
+			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
+		],
+	},
+	{
+		name: "[Gen 9] PoA Fusions NatDex AG",
+
+		mod: 'gen9pokeathlon',
+		ruleset: [
+			'Standard NatDex',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+		],
 	},
 	{
 		name: "[Gen 9] PoA Custom Game",
@@ -189,4 +239,5 @@ export const Formats: FormatList = [
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
+
 ];
