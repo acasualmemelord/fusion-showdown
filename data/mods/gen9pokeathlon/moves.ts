@@ -1,4 +1,13 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
+	// Mods
+	leechseed: {
+		inherit: true,
+		onTryImmunity(target) {
+			return !target.hasType('Grass') || !target.hasAbility('Ivy Wall');
+		},
+	},
+
+	// Additions
 	boxin: {
 		num: 0,
 		accuracy: 100,
@@ -138,5 +147,52 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "self",
 		type: "Psychic",
 		contestType: "Clever",
+	},
+	pixietrick: {
+		num: 0,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Pixie Trick",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, failmefirst: 1, noassist: 1, failcopycat: 1},
+		onBasePower(basePower, pokemon, target, move) {
+			if (!target.getItem().exists) return this.chainModify([1, 2]);
+		},
+		onAfterHit(target, source, move) {
+			const yourItem = target.takeItem(source);
+			const myItem = source.takeItem();
+			if (target.item || source.item || (!yourItem && !myItem)) {
+				if (yourItem) target.item = yourItem.id;
+				if (myItem) source.item = myItem.id;
+				return false;
+			}
+			if (
+				(myItem && !this.singleEvent('TakeItem', myItem, source.itemState, target, source, move, myItem)) ||
+				(yourItem && !this.singleEvent('TakeItem', yourItem, target.itemState, source, target, move, yourItem))
+			) {
+				if (yourItem) target.item = yourItem.id;
+				if (myItem) source.item = myItem.id;
+				return false;
+			}
+			this.add('-activate', source, 'move: Pixie Trick', '[of] ' + target);
+			if (myItem) {
+				target.setItem(myItem);
+				this.add('-item', target, myItem, '[from] move: Pixie Trick');
+			} else {
+				this.add('-enditem', target, yourItem, '[silent]', '[from] move: Pixie Trick');
+			}
+			if (yourItem) {
+				source.setItem(yourItem);
+				this.add('-item', source, yourItem, '[from] move: Pixie Trick');
+			} else {
+				this.add('-enditem', source, myItem, '[silent]', '[from] move: Pixie Trick');
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Tough",
 	},
 };

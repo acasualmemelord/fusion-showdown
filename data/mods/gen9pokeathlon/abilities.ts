@@ -198,6 +198,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	slowlight: {
 		onStart(source) {
+			this.add('-activate', source, 'ability: Slow Light');
 			this.field.addPseudoWeather('gravity');
 		},
 		flags: {},
@@ -264,6 +265,70 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		flags: {},
 		name: "Sacred Treasures",
 		shortDesc: "This Pokemon's ability depends on its item.",
+		rating: 4.5,
+		num: 0,
+	},
+	ivywall: {
+		onImmunity(type, pokemon) {
+			if (type === 'powder') return false;
+		},
+		onTryHitPriority: 1,
+		onTryHit(target, source, move) {
+			if (move.flags['powder'] && target !== source && this.dex.getImmunity('powder', target)) {
+				this.add('-immune', target, '[from] ability: Ivy Wall');
+				return null;
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.type === 'Grass' || move.type === 'Water' || move.type === 'Electric' || move.type === 'Ground') {
+				this.debug('Ivy Wall weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {breakable: 1},
+		name: "Ivy Wall",
+		shortDesc: "This Pokémon takes on the resistances and immunities of the Grass type.",
+		rating: 3,
+		num: 0,
+	},
+	kablooey: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Electric';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onResidualOrder: 28,
+		onResidualSubOrder: 2,
+		onResidual(pokemon) {
+			if (pokemon.volatiles["mustrecharge"]) {
+				pokemon.removeVolatile("mustrecharge");
+				this.add("cant", pokemon, "recharge");
+				return;
+			}
+			else {
+				this.actions.useMove("Self-Destruct", pokemon);
+			}
+		},
+		flags: {},
+		name: "Kablooey",
+		shortDesc: "This Pokemon attempts to Self-Destruct at the end of each turn.",
+		rating: 3,
+		num: 0,
+	},
+	sanctuary: {
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Sanctuary');
+			pokemon.side.addSideCondition('safeguard');
+		},
+		flags: {},
+		name: "Sanctuary",
+		shortDesc: "This Pokemon's summons Safeguard on switch-in.",
 		rating: 4.5,
 		num: 0,
 	},
