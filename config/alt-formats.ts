@@ -171,7 +171,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PoA Dex AG",
 
 		mod: 'gen9pokeathlon',
-		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+Past'],
 	},
 	{
 		name: "[Gen 9] PoA Dex Doubles AG",
@@ -216,7 +216,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9pokeathlon',
 		ruleset: [
-			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+Past',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
 		],
 	},

@@ -1487,7 +1487,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			thunderwave: ["9M"],
 			trick: ["9M"],
 			uturn: ["9M"],
-			wilowisp: ["9M"],
+			willowisp: ["9M"],
 		},
 	},
 	eidolburgh: {
@@ -1539,7 +1539,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			heavyslam: ["9M"],
 			imprison: ["9M"],
 			infestation: ["9M"],
-			irondefence: ["9M"],
+			irondefense: ["9M"],
 			leechlife: ["9M"],
 			lockon: ["9M"],
 			lunge: ["9M"],
