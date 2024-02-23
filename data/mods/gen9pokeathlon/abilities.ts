@@ -1,97 +1,7 @@
-const treasures: {[k: string]: string} = {
-	abilityshield: 'klutz',
-	absorbbulb: 'waterabsorb',
-	adrenalineorb: 'defiant',
-	airballoon: 'windrider',
-	amuletcoin: 'goodasgold',
-	assaultvest: 'bulletproof',
-	bigroot: 'sapsipper',
-	bindingband: 'suctioncups',
-	blackbelt: 'unseenfist',
-	blackglasses: 'darkaura',
-	blacksludge: 'liquidooze',
-	blunderpolicy: 'hustle',
-	brightpowder: 'dazzling',
-	cellbattery: 'lightningrod',
-	charcoal: 'drought',
-	choiceband: 'toughclaws',
-	choicescarf: 'bushido',
-	choicespecs: 'tintedlens',
-	clearamulet: 'unaware',
-	covertcloak: 'magicguard',
-	damprock: 'swiftswim',
-	destinyknot: 'perishbody',
-	dragonfang: 'dragonsmaw',
-	ejectbutton: 'regenerator',
-	ejectpack: 'clearbody',
-	electricseed: 'electricsurge',
-	eviolite: 'imposter',
-	expertbelt: 'neuroforce',
-	flameorb: 'flareboost',
-	floatstone: 'levitate',
-	focusband: 'stamina',
-	focussash: 'angershell',
-	grassyseed: 'grassysurge',
-	gripclaw: 'persistent',
-	heatrock: 'chlorophyll',
-	heavydutyboots: 'mountaineer',
-	icyrock: 'slushrush',
-	ironball: 'slowlight',
-	kingsrock: 'stench',
-	laggingtail: 'stall',
-	leftovers: 'harvest',
-	lifeorb: 'sheerforce',
-	lightclay: 'filter',
-	loadeddice: 'superluck',
-	luminousmoss: 'stormdrain',
-	magnet: 'magnetpull',
-	mail: 'consumerexchange',
-	mentalherb: 'oblivious',
-	metalcoat: 'filter',
-	metronome: 'skilllink',
-	miracleseed: 'overcoat',
-	mirrorherb: 'opportunist',
-	mistyseed: 'mistysurge',
-	mysticwater: 'drizzle',
-	nevermeltice: 'snowwarning',
-	poisonbarb: 'poisontouch',
-	powerherb: 'soulheart',
-	protectivepads: 'rockhead',
-	psychicseed: 'pyschicsurge',
-	punchingglove: 'ironfist',
-	quickclaw: 'quickdraw',
-	razorclaw: 'sharpness',
-	redcard: 'fairylaw',
-	ringtarget: 'moldbreaker',
-	rockyhelmet: 'ironbarbs',
-	roomservice: 'inertia',
-	safetygoggles: 'keeneye',
-	scopelens: 'sniper',
-	sharpbeak: 'galewings',
-	shedshell: 'shedskin',
-	shellbell: 'healer',
-	silkscarf: 'adaptability',
-	silverpowder: 'swarm',
-	smoothrock: 'sandrush',
-	softsand: 'sandstream',
-	spelltag: 'cursedbody',
-	stickybarb: 'fluffy',
-	terrainextender: 'neutralizinggas',
-	throatspray: 'punkrock',
-	toxicorb: 'poisonheal',
-	twistedspoon: 'analytic',
-	utilityumbrella: 'cloudnine',
-	weaknesspolicy: 'weakarmor',
-	whiteherb: 'unburden',
-	widelens: 'compoundeyes',
-	wiseglasses: 'innerfocus',
-	zoomlens: 'sniper',
-};
-
 export const Abilities: {[k: string]: ModdedAbilityData} = {
 	consumerexchange: {
 		onSourceDamagingHit(damage, target, source, move) {
-			if (this.effectState.exchange) {
+			if (this.effectState.exchange !== false) {
 				const yourItem = target.takeItem(source);
 				const myItem = source.takeItem();
 
@@ -125,7 +35,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.effectState.exchange = false;
 			}
 		},
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			this.effectState.exchange = true;
 		},
 		flags: {},
@@ -149,25 +59,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	fairylaw: {
-		condition: {
-			noCopy: true,
-			onStart(target) {
-				this.add('-start', target, 'move: Imprison');
-			},
-			onFoeDisableMove(pokemon) {
-				for (const moveSlot of this.effectState.source.moveSlots) {
-					if (moveSlot.id === 'struggle') continue;
-					pokemon.disableMove(moveSlot.id, 'hidden');
-				}
-				pokemon.maybeDisabled = true;
-			},
-			onFoeBeforeMovePriority: 4,
-			onFoeBeforeMove(attacker, defender, move) {
-				if (move.id !== 'struggle' && this.effectState.source.hasMove(move.id) && !move.isZ && !move.isMax) {
-					this.add('cant', attacker, 'move: Imprison', move);
-					return false;
-				}
-			},
+		onStart(target) {
+			this.add('-activate', target, 'ability: Fairy Law');
+			target.addVolatile('imprison');
 		},
 		flags: {},
 		name: "Fairy Law",
@@ -267,33 +161,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	sacredtreasures: {
-		onUpdate(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== "Lunachi") return;
-			const curItem = pokemon.getItem();
-			if (curItem.id in treasures) {
-				this.effectState.treasureAbility = this.dex.abilities.get(treasures[curItem.id]);
-				if ('ability:' + this.effectState.treasureAbility.id in pokemon.volatiles) {
-					return;
-				} else {
-					for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
-						pokemon.removeVolatile(innate);
-					}
-					if (pokemon.species.id === 'lunachi') {
-						pokemon.formeChange('lunachibestowed');
-					}
-					pokemon.addVolatile("ability:" + this.effectState.treasureAbility.id, pokemon);
-					this.add('-ability', pokemon, this.effectState.treasureAbility, '[from] ability: Sacred Treasures', '[of] ' + pokemon);
-				}
-			} else {
-				if (pokemon.species.id === 'lunachibestowed') {
-					pokemon.formeChange('lunachi');
-					for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
-						pokemon.removeVolatile(innate);
-					}
-					this.add('-ability', pokemon, 'Sacred Treasures', '[from] ability: Sacred Treasures', '[of] ' + pokemon);
-				}
-			}
-		},
 		flags: {},
 		name: "Sacred Treasures",
 		shortDesc: "This Pokemon's ability depends on its item.",
