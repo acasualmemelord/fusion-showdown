@@ -24,6 +24,10 @@ export const Scripts: ModdedBattleScriptsData = {
 			"mosster": 6020,
 			"barrimander": 6021,
 			"meditao": 6022,
+			"electrodemega": 6023,
+			"florgesmega": 6024,
+			"bewitwing": 6025,
+			"eidolburgh": 6026
 		};
 		for (const i in this.data.Pokedex) {
 			if (i in PoADex) {
