@@ -240,4 +240,79 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Clever",
 	},
+	heal: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Heal",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, distance: 1, heal: 1, allyanim: 1, metronome: 1},
+		onHit(target, source) {
+			let success = false;
+			success = !!this.heal(20);
+			if (!success) {
+				this.add('-fail', target, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+	},
+	hyperheal: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hyper Heal",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, distance: 1, heal: 1, allyanim: 1, metronome: 1},
+		onHit(target, source) {
+			let success = false;
+			success = !!this.heal(200);
+			if (!success) {
+				this.add('-fail', target, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+	},
+	fullheal: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Full Heal",
+		pp: 1,
+		noPPBoosts: true,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, distance: 1, heal: 1, allyanim: 1, metronome: 1},
+		onHit(target, source) {
+			let success = false;
+			success = !!this.heal(target.maxhp);
+			if (!success) {
+				this.add('-fail', target, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "adjacentAllyOrSelf",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+	},
 };

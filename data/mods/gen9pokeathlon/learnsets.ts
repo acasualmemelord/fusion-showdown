@@ -1,6 +1,6 @@
 const baseLearnsets = require('../../learnsets').Learnsets;
 
-function flattenLearnset(learnset: ModdedLearnsetData, removals: string[] = [], additions: string[] = []) {
+function flattenLearnset(learnset: ModdedLearnsetData,removals: string[] = [],additions: string[] = []) {
 	let finalLearnset: ModdedLearnsetData = {learnset: {}};
 	let moves = learnset.learnset;
 	if (finalLearnset.learnset) {
@@ -21,7 +21,7 @@ function flattenLearnset(learnset: ModdedLearnsetData, removals: string[] = [], 
 export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	// Modded
 	florges: flattenLearnset(baseLearnsets.florges),
-	electrode: flattenLearnset(baseLearnsets.florges, ['gigaimpact']),
+	electrode: flattenLearnset(baseLearnsets.florges,['gigaimpact']),
 
 	// Additions
 	soulply: {
@@ -34,7 +34,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			comeuppance: ["9M"],
 			boxin: ["9M"],
 			curse: ["9M"],
-			eggbomb: ["9M"],
 			firstimpression: ["9M"],
 			uturn: ["9M"],
 			workup: ["9M"],
@@ -54,7 +53,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			payback: ["9M"],
 			swordsdance: ["9M"],
 			swagger: ["9M"],
-			surf: ["9M"],
 			sunnyday: ["9M"],
 			suckerpunch: ["9M"],
 			substitute: ["9M"],
@@ -69,8 +67,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			fakeout: ["9M"],
 			destinybond: ["9M"],
 			metronome: ["9M"],
-			dragonclaw: ["9M"],
-			playrough: ["9M"],
 			poltergeist : ["9M"],
 			shadowpunch: ["9M"],
 			leer: ["9M"],
@@ -101,10 +97,17 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			round: ["9M"],
 			sleeptalk: ["9M"],
 			confide: ["9M"],
+			shadowball: ["9M"],
+			ominouswind: ["9M"],
+			darkpulse: ["9M"],
+			psychic: ["9M"],
+			psychicnoise: ["9M"],
+			psywave: ["9M"],
 		},
 	},
 	imitotion: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -154,6 +157,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	aviotion: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -213,6 +217,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	dracotion: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -275,7 +280,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			tailwind: ["9M"],
 			takedown: ["9M"],
 			thunder: ["9M"],
-			thunderbolt: ["9M"], 
+			thunderbolt: ["9M"],
 			toxic: ["9M"],
 			twister: ["9M"],
 			uproar: ["9M"],
@@ -285,6 +290,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	bunnor: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -337,6 +343,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	rabbicicle: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -355,7 +362,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			beatup: ["9M"],
 			bellydrum: ["9M"],
 			bite: ["9M"],
-			blazekick: ["9M"],
 			bulkup: ["9M"],
 			chipaway: ["9M"],
 			copycat: ["9M"],
@@ -365,7 +371,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			covet: ["9M"],
 			crunch: ["9M"],
 			cut: ["9M"],
-			extremespeed: ["9M"],
 			fakeout: ["9M"],
 			faketears: ["9M"],
 			falseswipe: ["9M"],
@@ -373,13 +378,11 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			feintattack: ["9M"],
 			furycutter: ["9M"],
 			furyswipes: ["9M"],
-			grassyglide: ["9M"],
 			growl: ["9M"],
 			guillotine: ["9M"],
 			hail: ["9M"],
 			headbutt: ["9M"],
 			headcharge: ["9M"],
-			highhorsepower: ["9M"],
 			highjumpkick: ["9M"],
 			hyperbeam: ["9M"],
 			hyperfang: ["9M"],
@@ -408,13 +411,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			superfang: ["9M"],
 			thunderfang: ["9M"],
 			trailblaze: ["9M"],
-			triplekick: ["9M"],
 			zenheadbutt: ["9M"],
-			noretreat: ["9M"],
 		},
 	},
 	enchantobra: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -430,7 +432,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			confide: ["9M"],
 			absorb: ["9M"],
 			babydolleyes: ["9M"],
-			beatup: ["9M"],
 			bind: ["9M"],
 			bite: ["9M"],
 			charm: ["9M"],
@@ -438,7 +439,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			crunch: ["9M"],
 			dazzlinggleam: ["9M"],
 			dig: ["9M"],
-			dragonbreath: ["9M"],
 			dragontail: ["9M"],
 			faketears: ["9M"],
 			fireblast: ["9M"],
@@ -456,7 +456,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			hypervoice: ["9M"],
 			incinerate: ["9M"],
 			irontail: ["9M"],
-			leechlife: ["9M"],
 			lick: ["9M"],
 			lockon: ["9M"],
 			megadrain: ["9M"],
@@ -481,6 +480,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	eyespy: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -522,10 +522,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			partingshot: ["9M"],
 			darkpulse: ["9M"],
 			terrainpulse: ["9M"],
+			psychocut: ["9M"],
 		},
 	},
 	icyall: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -572,10 +574,13 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			partingshot: ["9M"],
 			darkpulse: ["9M"],
 			terrainpulse: ["9M"],
+			zenheadbutt: ["9M"],
+			psychocut: ["9M"],
 		},
 	},
 	ironeverlasting: {
 		learnset: {
+			hiddenpower: ["9M"],
 			autotomize: ["9M"],
 			brickbreak: ["9M"],
 			captivate: ["9M"],
@@ -633,6 +638,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	golisopodshogun: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -696,7 +702,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			spite: ["9M"],
 			stealthrock: ["9M"],
 			steelbeam: ["9M"],
-			strugglebug: ["9M"],  
+			strugglebug: ["9M"],
 			suckerpunch: ["9M"],
 			superpower: ["9M"],
 			swift: ["9M"],
@@ -712,6 +718,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	tinkatonrhinian: {
 		learnset: {
+			hiddenpower: ["9M"],
 			afteryou: ["9M"],
 			allyswitch: ["9M"],
 			attract: ["9M"],
@@ -733,7 +740,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			faketears: ["9M"],
 			foulplay: ["9M"],
 			gigatonhammer: ["9M"],
-			grudge: ["9M"],
 			healblock: ["9M"],
 			helpinghand: ["9M"],
 			icehammer: ["9M"],
@@ -777,6 +783,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	regimyo: {
 		learnset: {
+			hiddenpower: ["9M"],
 			ancientpower: ["9M"],
 			armthrust: ["9M"],
 			attract: ["9M"],
@@ -839,6 +846,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	jovianshk: {
 		learnset: {
+			hiddenpower: ["9M"],
 			agility: ["9M"],
 			amnesia: ["9M"],
 			assurance: ["9M"],
@@ -909,6 +917,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	lunachi: {
 		learnset: {
+			hiddenpower: ["9M"],
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
 			agility: ["9M"],
@@ -967,6 +976,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	ockthane: {
 		learnset: {
+			hiddenpower: ["9M"],
 			amnesia: ["9M"],
 			attract: ["9M"],
 			auroraveil: ["9M"],
@@ -984,14 +994,12 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			electroball: ["9M"],
 			endure: ["9M"],
 			facade: ["9M"],
-			fly: ["9M"],
 			focusblast: ["9M"],
 			followme: ["9M"],
 			gust: ["9M"],
 			icebeam: ["9M"],
 			icespinner: ["9M"],
 			icywind: ["9M"],
-			iondeluge: ["9M"],
 			lightscreen: ["9M"],
 			magnetrise: ["9M"],
 			mudshot: ["9M"],
@@ -1006,7 +1014,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			sleeptalk: ["9M"],
 			snarl: ["9M"],
 			snowscape: ["9M"],
-			soak: ["9M"],
 			spark: ["9M"],
 			substitute: ["9M"],
 			swagger: ["9M"],
@@ -1028,6 +1035,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	raikousupra: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -1062,7 +1070,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			agility: ["9M"],
 			calmmind: ["9M"],
 			extremespeed: ["9M"],
-			scald: ["9M"],
 			quickattack: ["9M"],
 			accelerock: ["9M"],
 			bite: ["9M"],
@@ -1073,36 +1080,35 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			reflect: ["9M"],
 			ironhead: ["9M"],
 			focusblast: ["9M"],
-			closecombat: ["9M"],
-			dazzlinggleam: ["9M"],  
-			aurasphere: ["9M"],  
-			bodyslam: ["9M"],  
-			bulldoze: ["9M"],   
-			flashcannon: ["9M"],   
-			dig: ["9M"],   
+			brickbreak: ["9M"],
+			aurasphere: ["9M"],
+			bodyslam: ["9M"],
+			bulldoze: ["9M"],
+			flashcannon: ["9M"],
+			dig: ["9M"],
 			flareblitz: ["9M"],
-			endure: ["9M"],  
-			flash: ["9M"],  
-			gigaimpact: ["9M"],  
-			helpinghand: ["9M"],  
-			hiddenpower: ["9M"],  
+			endure: ["9M"],
+			flash: ["9M"],
+			gigaimpact: ["9M"],
+			helpinghand: ["9M"],
 			hyperbeam: ["9M"],
-			irontail: ["9M"],  
-			lightscreen: ["9M"],  
-			psychup: ["9M"],   
-			rockclimb: ["9M"],  
-			rocksmash: ["9M"],  
-			shadowball: ["9M"],  
-			shockwave: ["9M"],  
-			snarl: ["9M"],  
-			snore: ["9M"],  
-			strength: ["9M"],  
-			swift: ["9M"],  
+			irontail: ["9M"],
+			lightscreen: ["9M"],
+			psychup: ["9M"],
+			rockclimb: ["9M"],
+			rocksmash: ["9M"],
+			shadowball: ["9M"],
+			shockwave: ["9M"],
+			snarl: ["9M"],
+			snore: ["9M"],
+			strength: ["9M"],
+			swift: ["9M"],
 			throatchop: ["9M"],
 		},
 	},
 	heatransupra: {
 		learnset: {
+			hiddenpower: ["9M"],
 			bloomsday: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
@@ -1127,7 +1133,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			flamethrower: ["9M"],
 			flareblitz: ["9M"],
 			forestscurse: ["9M"],
-			foulplay: ["9M"],
 			gigadrain: ["9M"],
 			growth: ["9M"],
 			headbutt: ["9M"],
@@ -1149,6 +1154,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	mosster: {
 		learnset: {
+			hiddenpower: ["9M"],
 			ancientpower: ["9M"],
 			attract: ["9M"],
 			bide: ["9M"],
@@ -1212,6 +1218,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	barrimander: {
 		learnset: {
+			hiddenpower: ["9M"],
 			terablast: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
@@ -1259,7 +1266,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			gunkshot: ["9M"],
 			healblock: ["9M"],
 			helpinghand: ["9M"],
-			hiddenpower: ["9M"],
 			hyperbeam: ["9M"],
 			hypnosis: ["9M"],
 			knockoff: ["9M"],
@@ -1308,9 +1314,10 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			yawn: ["9M"],
 		},
 	},
-	meditao: flattenLearnset(baseLearnsets.medicham, [], ['snatch', 'darkpulse']),
+	meditao: flattenLearnset(baseLearnsets.medicham,[],['snatch','darkpulse']),
 	bewitwing: {
 		learnset: {
+			hiddenpower: ["9M"],
 			acrobatics: ["9M"],
 			airslash: ["9M"],
 			allyswitch: ["9M"],
@@ -1375,6 +1382,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	eidolburgh: {
 		learnset: {
+			hiddenpower: ["9M"],
 			aircutter: ["9M"],
 			airslash: ["9M"],
 			amnesia: ["9M"],
@@ -1464,6 +1472,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	snorlaxfrost: {
 		learnset: {
+			hiddenpower: ["9M"],
 			ancientpower: ["9M"],
 			armthrust: ["9M"],
 			attract: ["9M"],
@@ -1544,6 +1553,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	},
 	heracrosssubarctic: {
 		learnset: {
+			hiddenpower: ["9M"],
 			agility: ["9M"],
 			ancientpower: ["9M"],
 			attract: ["9M"],
