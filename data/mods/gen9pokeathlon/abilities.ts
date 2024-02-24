@@ -165,7 +165,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onStart(pokemon) {
 			if (this.effectState.muscleStats) {
-				this.add('-activate', pokemon, 'ability: Muscle Memory');
 				this.boost(this.effectState.muscleStats, pokemon, pokemon);
 			}
 		},
