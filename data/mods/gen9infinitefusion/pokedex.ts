@@ -29,6 +29,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 1,
 		tags: ["Infinite Fusion"],
 		tier: "LC",
+		natDexTier: "LC",
 	},
 	ivymelortle: {
 		num: 6002,
@@ -44,6 +45,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 1,
 		tags: ["Infinite Fusion"],
 		tier: "NFE",
+		natDexTier: "NFE",
 	},
 	venustoizard: {
 		num: 6003,
@@ -59,6 +61,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 1,
 		tags: ["Infinite Fusion"],
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	totoritaquil: {
 		num: 6004,
@@ -74,6 +77,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 2,
 		tags: ["Infinite Fusion"],
 		tier: "LC",
+		natDexTier: "LC",
 	},
 	baylavanaw: {
 		num: 6005,
@@ -89,6 +93,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 2,
 		tags: ["Infinite Fusion"],
 		tier: "NFE",
+		natDexTier: "NFE",
 	},
 	megaligasion: {
 		num: 6006,
@@ -104,6 +109,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 2,
 		tags: ["Infinite Fusion"],
 		tier: "RU",
+		natDexTier: "RU",
 	},
 	torkipcko: {
 		num: 6007,
@@ -119,6 +125,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 3,
 		tags: ["Infinite Fusion"],
 		tier: "LC",
+		natDexTier: "LC",
 	},
 	gromarshken: {
 		num: 6008,
@@ -134,6 +141,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 3,
 		tags: ["Infinite Fusion"],
 		tier: "NFE",
+		natDexTier: "NFE",
 	},
 	swamptiliken: {
 		num: 6009,
@@ -149,6 +157,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 3,
 		tags: ["Infinite Fusion"],
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	turcharlup: {
 		num: 6010,
@@ -164,6 +173,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 4,
 		tags: ["Infinite Fusion"],
 		tier: "LC",
+		natDexTier: "LC",
 	},
 	prinfernotle: {
 		num: 6011,
@@ -179,6 +189,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 4,
 		tags: ["Infinite Fusion"],
 		tier: "NFE",
+		natDexTier: "NFE",
 	},
 	torterneon: {
 		num: 6012,
@@ -194,6 +205,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		gen: 4,
 		tags: ["Infinite Fusion"],
 		tier: "UU",
+		natDexTier: "UU",
 	},
 	zapmolticuno: {
 		num: 6013,
@@ -224,6 +236,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 2,
 		tags: ["Infinite Fusion"],
+		natDexTier: "OU",
 		tier: "OU",
 	},
 	kyodonquaza: {
@@ -239,6 +252,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
+		natDexTier: "Uber",
 		tier: "Uber",
 	},
 	paldiatina: {
@@ -254,6 +268,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 4,
 		tags: ["Infinite Fusion"],
+		natDexTier: "Uber",
 		tier: "Uber",
 	},
 	zekyushiram: {
@@ -269,6 +284,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 		tags: ["Infinite Fusion"],
+		natDexTier: "Uber",
 		tier: "Uber",
 	},
 	celemewchi: {
@@ -284,6 +300,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
+		natDexTier: "OU",
 		tier: "OU",
 	},
 	regitrio: {
@@ -299,6 +316,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 3,
 		tags: ["Infinite Fusion"],
+		natDexTier: "OU",
 		tier: "OU",
 	},
 	deosectwo: {
@@ -314,6 +332,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		gen: 5,
 		tags: ["Infinite Fusion"],
+		natDexTier: "Uber",
 		tier: "Uber",
 	},
 };

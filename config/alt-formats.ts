@@ -171,14 +171,14 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PoA Dex AG",
 
 		mod: 'gen9pokeathlon',
-		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+CAP'],
 	},
 	{
 		name: "[Gen 9] PoA Dex Doubles AG",
 
 		mod: 'gen9pokeathlon',
 		gameType: 'doubles',
-		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+CAP'],
 	},
 	{
 		section: "Pokéathlon: National Dex",
@@ -188,7 +188,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PoA National Dex OU",
 
 		mod: 'gen9pokeathlon',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', '+CAP'],
 		banlist: [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
@@ -198,14 +198,14 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PoA National Dex AG",
 
 		mod: 'gen9pokeathlon',
-		ruleset: ['Standard NatDex'],
+		ruleset: ['Standard NatDex', '+CAP'],
 	},
 	{
 		name: "[Gen 9] PoA NatDex Doubles AG",
 
 		mod: 'gen9pokeathlon',
 		gameType: 'doubles',
-		ruleset: ['Standard NatDex'],
+		ruleset: ['Standard NatDex', '+CAP'],
 	},
 	{
 		section: "Pokéathlon: Extras",
@@ -216,7 +216,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9pokeathlon',
 		ruleset: [
-			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+CAP',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
 		],
 	},
@@ -225,7 +225,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9pokeathlon',
 		ruleset: [
-			'Standard NatDex',
+			'Standard NatDex', '+CAP',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 	},
