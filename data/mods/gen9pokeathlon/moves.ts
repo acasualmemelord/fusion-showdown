@@ -154,6 +154,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 70,
 		category: "Physical",
 		name: "Pixie Trick",
+		shortDesc: "0.5x damage if foe isn't holding an item. Swaps items.",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, failmefirst: 1, noassist: 1, failcopycat: 1},
@@ -194,5 +195,49 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Tough",
+	},
+	mudslide: {
+		num: 0,
+		accuracy: 95,
+		basePower: 95,
+		category: "Physical",
+		name: "Mudslide",
+		desc: "Has a 50% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "50% chance to lower the target's Speed by 1.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, metronome: 1},
+		secondary: {
+			chance: 50,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Ground",
+		contestType: "Tough",
+	},
+	packin: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Pack In",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up. Defense is boost by +1 if Hail or Snow is active.",
+		shortDesc: "User heals 50% of its max HP. +1 Def in Hail/Snow.",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1, heal: 1, metronome: 1},
+		heal: [1, 2],
+		onAfterMove(source, target, move) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				this.boost({def: 1}, source, source);
+			}
+		},
+		secondary: null,
+		target: "self",
+		type: "Ice",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Clever",
 	},
 };

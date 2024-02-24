@@ -7,11 +7,11 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			const curItem = pokemon.getItem();
 			if (curItem.id in treasures) {
 				if (pokemon.species.id === 'lunachi') {
-					pokemon.formeChange('lunachibestowed');
+					pokemon.formeChange('lunachibestowed', this.effect, true);
 				}
 			} else {
 				if (pokemon.species.id === 'lunachibestowed') {
-					pokemon.formeChange('lunachi');
+					pokemon.formeChange('lunachi', this.effect, true);
 					pokemon.ability = 'sacredtreasures' as ID;
 					this.add('-ability', pokemon, 'Sacred Treasures');
 				}
@@ -19,7 +19,7 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		},
 		onTakeItem(item, pokemon, source, move) {
 			if (pokemon.species.id === 'lunachibestowed') {
-				pokemon.formeChange('lunachi');
+				pokemon.formeChange('lunachi', this.effect, true);
 				pokemon.ability = 'sacredtreasures' as ID;
 				this.add('-ability', pokemon, 'Sacred Treasures');
 			}
