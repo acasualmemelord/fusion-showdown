@@ -442,8 +442,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	enchantobra: {
 		learnset: {
 			terablast: ["9M"],
-			achillesheel: ["9M"],
-			custommove: ["9M"],
 			rest: ["9M"],
 			protect: ["9M"],
 			endure: ["9M"],
@@ -1407,7 +1405,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			airslash: ["9M"],
 			amnesia: ["9M"],
 			ancientpower: ["9M"],
-			ancientroar: ["9M"],
 			attract: ["9M"],
 			barrage: ["9M"],
 			bind: ["9M"],
@@ -1544,7 +1541,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			powdersnow: ["9M"],
 			poweruppunch: ["9M"],
 			protect: ["9M"],
-			psychicfang: ["9M"],
+			psychicfangs: ["9M"],
 			rest: ["9M"],
 			return: ["9M"],
 			revenge: ["9M"],
