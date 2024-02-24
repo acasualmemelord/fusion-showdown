@@ -369,7 +369,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		num: 6017,
 		name: "Meditao",
 		types: ["Psychic", "Fighting"],
-		baseStats: {hp: 60, atk: 65, def: 65, spa: 65, spd: 65, spe: 90},
+		baseStats: {hp: 80, atk: 55, def: 75, spa: 55, spd: 75, spe: 70},
 		abilities: {0: "Inner Focus", H: "Muscle Memory"},
 		heightm: 1.3,
 		weightkg: 31.5,
@@ -379,7 +379,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
 		tier: "RU",
-		natDexTier: "RU",
+		natDexTier: "UU",
 		doublesTier: "(DUU)",
 	},
 	electrodemega: {

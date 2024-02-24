@@ -1314,7 +1314,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			yawn: ["9M"],
 		},
 	},
-	meditao: flattenLearnset(baseLearnsets.medicham,[],['snatch','darkpulse']),
+	meditao: flattenLearnset(baseLearnsets.medicham,[],['snatch', 'darkpulse', 'cosmicpower']),
 	bewitwing: {
 		learnset: {
 			hiddenpower: ["9M"],
