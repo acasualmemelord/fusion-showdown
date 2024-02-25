@@ -352,7 +352,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	necromancy: {
 		onStart(target) {
 			let zombie;
-			for (let line of this.log.reverse()) {
+			let log = this.dex.deepClone(this.log);
+			log.reverse();
+			for (let line of log) {
+				if (zombie) break;
 				if (line.includes('|faint|')) {
 					let faintName = line.slice(12);
 					let player = line.slice(7, 9);
@@ -365,25 +368,39 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 			if (zombie) {
+				let newSpecies: Species = this.dex.deepClone(zombie.species);
+
 				let species = zombie.species;
 				let moves = zombie.moveSlots;
 				
 				this.add('-activate', target, 'ability: Necromancy');
 
-				for (let type of species.types) {
-					if (!target.addType(type)) continue;
-					this.add('-start', target, 'typeadd', type);
+				let newType: string[] = [];
+
+				for (let type of [...target.types, ...species.types]) {
+					if (!newType.includes(type)) {
+						newType.push(type);
+					}
 				}
 
-				for (let i = 0; i < (4 - target.moveSlots.length); i++) {
-					if (moves[i]) target.moveSlots.push(moves[i]);
+				while (target.moveSlots.length < 4 && moves[target.moveSlots.length]) {
+					target.moveSlots.push(moves[target.moveSlots.length]);
 				}
+
+				newSpecies.baseStats['atk'] += target.species.baseStats['atk'];
+				newSpecies.baseStats['def'] += target.species.baseStats['def'];
+				newSpecies.baseStats['spa'] += target.species.baseStats['spa'];
+				newSpecies.baseStats['spd'] += target.species.baseStats['spd'];
+				newSpecies.baseStats['spe'] += target.species.baseStats['spe'];
+
+				target.setSpecies({...newSpecies, types: [...newType]});
+				this.add('-start', target, 'typechange', target.types.join('/'));
 			}
 		},
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
 			breakable: 1, notransform: 1,},
 		name: "Necromancy",
-		shortDesc: "This Pokemon is immune to all entry hazards.",
+		shortDesc: "This Pokemon can control the body of the last Pokemon who fainted.",
 		rating: 4,
 		num: 0,
 	},

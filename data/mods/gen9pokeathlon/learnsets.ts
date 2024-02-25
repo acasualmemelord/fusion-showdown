@@ -21,7 +21,7 @@ function flattenLearnset(learnset: ModdedLearnsetData,removals: string[] = [],ad
 export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	// Modded
 	florges: flattenLearnset(baseLearnsets.florges),
-	electrode: flattenLearnset(baseLearnsets.florges,['gigaimpact']),
+	electrode: flattenLearnset(baseLearnsets.electrode,['gigaimpact']),
 
 	// Additions
 	soulply: {

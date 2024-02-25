@@ -454,8 +454,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	snorlaxfrost: {
 		num: 143,
 		name: "Snorlax-Frost",
-		baseSpecies: "Snorlax",
-		forme: "Frost",
 		types: ["Ground", "Ice"],
 		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
 		abilities: {0: "Thick Fat", 1: "Cursed Body", H: "Refrigerate"},
