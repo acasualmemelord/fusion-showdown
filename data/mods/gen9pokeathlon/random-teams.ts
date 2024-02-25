@@ -64,7 +64,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					moves: curSet.moves,
 					ability: curSet.ability,
 					item: curSet.item,
-					teraType: curSet.teraType,
+					teraType: this.dex.types.get(curSet.teraType).name,
 					evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 					ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				});
