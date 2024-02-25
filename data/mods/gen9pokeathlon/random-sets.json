@@ -681,6 +681,50 @@
                 "shadowclaw"
             ],
             "teraType": "ice"
+        },
+        {
+            "ability": "refrigerate",
+            "item": "frostysnorlaxite",
+            "moves": [
+                "icefang",
+                "firefang",
+                "psychicfangs",
+                "thunderfang"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "thickfat",
+            "item": "frostysnorlaxite",
+            "moves": [
+                "mudslide",
+                "iciclecrash",
+                "bulkup",
+                "rest"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "refrigerate",
+            "item": "frostysnorlaxite",
+            "moves": [
+                "iciclecrash",
+                "mudslide",
+                "rockslide",
+                "bulkup"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "thickfat",
+            "item": "frostysnorlaxite",
+            "moves": [
+                "sleeptalk",
+                "rest",
+                "iciclecrash",
+                "mudslide"
+            ],
+            "teraType": "ground"
         }
     ],
     "soulply": [
@@ -707,7 +751,7 @@
             "teraType": "steel"
         },
         {
-            "ability": "stickyhold",
+            "ability": "consumerexchange",
             "item": "ringtarget",
             "moves": [
                 "fakeout",
@@ -889,6 +933,39 @@
                 "glare"
             ],
             "teraType": "fairy"
+        },
+        {
+            "ability": "magicguard",
+            "item": "choicespecs",
+            "moves": [
+                "moonblast",
+                "fireblast",
+                "overheat",
+                "gigadrain"
+            ],
+            "teraType": "fire"
+        },
+        {
+            "ability": "magicguard",
+            "item": "focussash",
+            "moves": [
+                "faketears",
+                "fireblast",
+                "moonblast",
+                "gigadrain"
+            ],
+            "teraType": "grass"
+        },
+        {
+            "ability": "magicguard",
+            "item": "leftovers",
+            "moves": [
+                "substitute",
+                "fireblast",
+                "moonblast",
+                "terablast"
+            ],
+            "teraType": "water"
         }
     ],
     "jovianshk": [
@@ -1554,6 +1631,35 @@
                 "icepunch"
             ],
             "teraType": "fighting"
+        }
+    ],
+    "maggony": [
+        {
+            "ability": "necromancy",
+            "item": "focussash",
+            "moves": [
+                "leechlife",
+                "pursuit",
+                "shadowsneak"
+            ],
+            "teraType": "dark"
+        },
+        {
+            "ability": "necromancy",
+            "item": "lifeorb",
+            "moves": [
+                "leechlife"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "necromancy",
+            "item": "heavydutyboots",
+            "moves": [
+                "disable",
+                "leechlife"
+            ],
+            "teraType": "water"
         }
     ]
 }
