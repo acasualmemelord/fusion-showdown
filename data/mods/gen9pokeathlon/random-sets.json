@@ -8,7 +8,8 @@
                 "bugbuzz",
                 "fireblast",
                 "uturn"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "windywall",
@@ -18,7 +19,8 @@
                 "roost",
                 "dracometeor",
                 "fireblast"
-            ]
+            ],
+            "teraType": "fire"
         },
         {
             "ability": "intimidate",
@@ -28,7 +30,8 @@
                 "uturn",
                 "dracometeor",
                 "earthpower"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "windywall",
@@ -38,7 +41,8 @@
                 "bugbuzz",
                 "earthpower",
                 "uturn"
-            ]
+            ],
+            "teraType": "dragon"
         },
         {
             "ability": "windywall",
@@ -48,7 +52,8 @@
                 "dragonclaw",
                 "skittersmack",
                 "firefang"
-            ]
+            ],
+            "teraType": "bug"
         },
         {
             "ability": "windywall",
@@ -58,7 +63,8 @@
                 "toxic",
                 "roost",
                 "uturn"
-            ]
+            ],
+            "teraType": "steel"
         }
     ],
     "electrodemega": [
@@ -70,7 +76,8 @@
                 "protect",
                 "suckerpunch",
                 "teleport"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "kablooey",
@@ -80,7 +87,8 @@
                 "protect",
                 "doubleedge",
                 "thief"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "kablooey",
@@ -90,7 +98,8 @@
                 "protect",
                 "teleport",
                 "thief"
-            ]
+            ],
+            "teraType": "electric"
         }
     ],
     "florgesmega": [
@@ -102,7 +111,8 @@
                 "aromatherapy",
                 "synthesis",
                 "moonblast"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "ivywall",
@@ -112,7 +122,8 @@
                 "drainingkiss",
                 "aromatherapy",
                 "hiddenpowerfire"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "ivywall",
@@ -122,7 +133,8 @@
                 "wish",
                 "protect",
                 "moonblast"
-            ]
+            ],
+            "teraType": "fairy"
         }
     ],
     "golisopodshogun": [
@@ -134,7 +146,8 @@
                 "bulletpunch",
                 "firstimpression",
                 "uturn"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "bushido",
@@ -144,7 +157,8 @@
                 "firstimpression",
                 "uturn",
                 "closecombat"
-            ]
+            ],
+            "teraType": "fighting"
         },
         {
             "ability": "bushido",
@@ -154,7 +168,8 @@
                 "leechlife",
                 "uturn",
                 "bulletpunch"
-            ]
+            ],
+            "teraType": "water"
         },
         {
             "ability": "bushido",
@@ -164,7 +179,8 @@
                 "bulletpunch",
                 "firstimpression",
                 "suckerpunch"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "bushido",
@@ -174,7 +190,8 @@
                 "leechlife",
                 "closecombat",
                 "bulletpunch"
-            ]
+            ],
+            "teraType": "fighting"
         },
         {
             "ability": "bushido",
@@ -184,7 +201,8 @@
                 "bulletpunch",
                 "pursuit",
                 "leechlife"
-            ]
+            ],
+            "teraType": "bug"
         },
         {
             "ability": "bushido",
@@ -194,7 +212,8 @@
                 "spikes",
                 "bulletpunch",
                 "uturn"
-            ]
+            ],
+            "teraType": "water"
         },
         {
             "ability": "sharpness",
@@ -204,7 +223,8 @@
                 "furycutter",
                 "ironhead",
                 "nightslash"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "bushido",
@@ -214,7 +234,8 @@
                 "trailblaze",
                 "leechlife",
                 "ironhead"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "bushido",
@@ -224,7 +245,8 @@
                 "ironhead",
                 "leechlife",
                 "uturn"
-            ]
+            ],
+            "teraType": "fighting"
         }
     ],
     "heatransupra": [
@@ -236,7 +258,8 @@
                 "gigadrain",
                 "earthpower",
                 "substitute"
-            ]
+            ],
+            "teraType": "fire"
         },
         {
             "ability": "dancer",
@@ -246,7 +269,8 @@
                 "fierydance",
                 "earthpower",
                 "gigadrain"
-            ]
+            ],
+            "teraType": "grass"
         },
         {
             "ability": "chlorophyll",
@@ -256,7 +280,8 @@
                 "fireblast",
                 "gigadrain",
                 "earthpower"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "dancer",
@@ -266,7 +291,8 @@
                 "fierydance",
                 "gigadrain",
                 "substitute"
-            ]
+            ],
+            "teraType": "fire"
         },
         {
             "ability": "chlorophyll",
@@ -276,7 +302,8 @@
                 "gigadrain",
                 "earthpower",
                 "bloomsday"
-            ]
+            ],
+            "teraType": "fire"
         }
     ],
     "heracrosssubarctic": [
@@ -288,7 +315,8 @@
                 "freezedry",
                 "bugbuzz",
                 "earthpower"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "compoundeyes",
@@ -298,7 +326,8 @@
                 "bugbuzz",
                 "focusblast",
                 "shadowball"
-            ]
+            ],
+            "teraType": "ice"
         },
         {
             "ability": "slushrush",
@@ -308,7 +337,8 @@
                 "blizzard",
                 "gigadrain",
                 "bugbuzz"
-            ]
+            ],
+            "teraType": "grass"
         },
         {
             "ability": "compoundeyes",
@@ -318,7 +348,8 @@
                 "blizzard",
                 "bugbuzz",
                 "focusblast"
-            ]
+            ],
+            "teraType": "fighting"
         },
         {
             "ability": "quickfeet",
@@ -328,7 +359,8 @@
                 "shadowball",
                 "earthpower",
                 "vacuumwave"
-            ]
+            ],
+            "teraType": "ice"
         }
     ],
     "icyall": [
@@ -340,7 +372,8 @@
                 "psyshock",
                 "chargebeam",
                 "darkpulse"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "multishot",
@@ -350,7 +383,8 @@
                 "darkpulse",
                 "moonblast",
                 "thunderbolt"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "multishot",
@@ -360,7 +394,8 @@
                 "darkpulse",
                 "moonblast",
                 "partingshot"
-            ]
+            ],
+            "teraType": "psychic"
         },
         {
             "ability": "multishot",
@@ -370,7 +405,8 @@
                 "darkpulse",
                 "icebeam",
                 "psychic"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "multishot",
@@ -380,7 +416,8 @@
                 "darkpulse",
                 "focusblast",
                 "trick"
-            ]
+            ],
+            "teraType": "psychic"
         },
         {
             "ability": "multishot",
@@ -390,7 +427,8 @@
                 "chargebeam",
                 "psychic",
                 "focusblast"
-            ]
+            ],
+            "teraType": "fighting"
         }
     ],
     "mosster": [
@@ -402,7 +440,8 @@
                 "toxic",
                 "whirlpool",
                 "synthesis"
-            ]
+            ],
+            "teraType": "poison"
         },
         {
             "ability": "inertia",
@@ -412,7 +451,8 @@
                 "woodhammer",
                 "headsmash",
                 "synthesis"
-            ]
+            ],
+            "teraType": "rock"
         },
         {
             "ability": "inertia",
@@ -422,7 +462,8 @@
                 "irondefense",
                 "bodypress",
                 "synthesis"
-            ]
+            ],
+            "teraType": "fighting"
         },
         {
             "ability": "inertia",
@@ -432,7 +473,8 @@
                 "earthquake",
                 "stoneedge",
                 "seedbomb"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "inertia",
@@ -442,7 +484,8 @@
                 "headsmash",
                 "earthquake",
                 "bodypress"
-            ]
+            ],
+            "teraType": "rock"
         },
         {
             "ability": "waterabsorb",
@@ -452,7 +495,8 @@
                 "synthesis",
                 "toxic",
                 "earthquake"
-            ]
+            ],
+            "teraType": "poison"
         }
     ],
     "ockthane": [
@@ -464,7 +508,8 @@
                 "thunderbolt",
                 "darkpulse",
                 "voltswitch"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "supremeoverlord",
@@ -474,7 +519,8 @@
                 "thunderbolt",
                 "darkpulse",
                 "voltswitch"
-            ]
+            ],
+            "teraType": "ice"
         },
         {
             "ability": "psychicsurge",
@@ -484,7 +530,8 @@
                 "psychic",
                 "icebeam",
                 "thunderbolt"
-            ]
+            ],
+            "teraType": "psychic"
         }
     ],
     "raikousupra": [
@@ -496,7 +543,8 @@
                 "substitute",
                 "deserttempest",
                 "aurasphere"
-            ]
+            ],
+            "teraType": "rock"
         },
         {
             "ability": "adaptability",
@@ -506,7 +554,8 @@
                 "earthpower",
                 "deserttempest",
                 "aurasphere"
-            ]
+            ],
+            "teraType": "rock"
         },
         {
             "ability": "sandstream",
@@ -516,7 +565,8 @@
                 "voltswitch",
                 "thunderwave",
                 "powergem"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "adaptability",
@@ -526,7 +576,8 @@
                 "aurasphere",
                 "terablast",
                 "voltswitch"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "sandydefense",
@@ -536,7 +587,8 @@
                 "voltswitch",
                 "flashcannon",
                 "heatwave"
-            ]
+            ],
+            "teraType": "fire"
         }
     ],
     "regimyo": [
@@ -548,7 +600,8 @@
                 "drainpunch",
                 "poweruppunch",
                 "thunderpunch"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "musclememory",
@@ -558,7 +611,8 @@
                 "drainpunch",
                 "poweruppunch",
                 "machpunch"
-            ]
+            ],
+            "teraType": "fighting"
         },
         {
             "ability": "clearbody",
@@ -568,7 +622,8 @@
                 "circlethrow",
                 "machpunch",
                 "thunderpunch"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "musclememory",
@@ -578,7 +633,8 @@
                 "machpunch",
                 "drainpunch",
                 "terablast"
-            ]
+            ],
+            "teraType": "ghost"
         }
     ],
     "snorlaxfrost": [
@@ -590,7 +646,8 @@
                 "stealthrock",
                 "earthquake",
                 "icespinner"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "refrigerate",
@@ -600,7 +657,8 @@
                 "mudslide",
                 "closecombat",
                 "rest"
-            ]
+            ],
+            "teraType": "ice"
         },
         {
             "ability": "thickfat",
@@ -610,7 +668,8 @@
                 "iciclecrash",
                 "headlongrush",
                 "rest"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "refrigerate",
@@ -620,7 +679,8 @@
                 "facade",
                 "headlongrush",
                 "shadowclaw"
-            ]
+            ],
+            "teraType": "ice"
         }
     ],
     "soulply": [
@@ -632,7 +692,8 @@
                 "poltergeist",
                 "uturn",
                 "slackoff"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "consumerexchange",
@@ -642,7 +703,8 @@
                 "knockoff",
                 "slackoff",
                 "toxic"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "stickyhold",
@@ -652,7 +714,8 @@
                 "poltergeist",
                 "uturn",
                 "slackoff"
-            ]
+            ],
+            "teraType": "dark"
         }
     ],
     "barrimander": [
@@ -664,7 +727,8 @@
                 "futuresight",
                 "thunderwave",
                 "sludgebomb"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "prankster",
@@ -674,7 +738,8 @@
                 "bulwark",
                 "partingshot",
                 "futuresight"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "prankster",
@@ -684,7 +749,8 @@
                 "venoshock",
                 "partingshot",
                 "dragontail"
-            ]
+            ],
+            "teraType": "poison"
         },
         {
             "ability": "prankster",
@@ -694,7 +760,8 @@
                 "bulwark",
                 "foulplay",
                 "thunderwave"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "prankster",
@@ -704,7 +771,8 @@
                 "yawn",
                 "knockoff",
                 "gunkshot"
-            ]
+            ],
+            "teraType": "poison"
         },
         {
             "ability": "owntempo",
@@ -714,7 +782,8 @@
                 "bulwark",
                 "partingshot",
                 "foulplay"
-            ]
+            ],
+            "teraType": "dark"
         }
     ],
     "bewitwing": [
@@ -726,7 +795,8 @@
                 "shadowball",
                 "airslash",
                 "pixietrick"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "prankster",
@@ -736,7 +806,8 @@
                 "willowisp",
                 "playrough",
                 "shadowsneak"
-            ]
+            ],
+            "teraType": "ghost"
         },
         {
             "ability": "prankster",
@@ -746,7 +817,8 @@
                 "thunderwave",
                 "foulplay",
                 "uturn"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "serenegrace",
@@ -756,7 +828,8 @@
                 "shadowball",
                 "airslash",
                 "uturn"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "prankster",
@@ -766,7 +839,8 @@
                 "swordsdance",
                 "shadowsneak",
                 "playrough"
-            ]
+            ],
+            "teraType": "ghost"
         }
     ],
     "eidolburgh": [
@@ -778,7 +852,8 @@
                 "whirlwind",
                 "moonblast",
                 "earthpower"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "sanctuary",
@@ -788,7 +863,8 @@
                 "moonlight",
                 "perishsong",
                 "roost"
-            ]
+            ],
+            "teraType": "stellar"
         },
         {
             "ability": "sanctuary",
@@ -798,7 +874,8 @@
                 "moonblast",
                 "bugbuzz",
                 "roost"
-            ]
+            ],
+            "teraType": "fairy"
         }
     ],
     "enchantobra": [
@@ -810,49 +887,8 @@
                 "fireblast",
                 "gigadrain",
                 "glare"
-            ]
-        }
-    ],
-    "incineroarolulian": [
-        {
-            "ability": "steelworker",
-            "item": "assaultvest",
-            "moves": [
-                "ironhead",
-                "closecombat",
-                "fakeout",
-                "uturn"
-            ]
-        },
-        {
-            "ability": "steelworker",
-            "item": "ironplate",
-            "moves": [
-                "ironhead",
-                "closecombat",
-                "knockoff",
-                "uturn"
-            ]
-        },
-        {
-            "ability": "steelworker",
-            "item": "leftovers",
-            "moves": [
-                "partingshot",
-                "knockoff",
-                "closecombat",
-                "ironhead"
-            ]
-        },
-        {
-            "ability": "ironfist",
-            "item": "leftovers",
-            "moves": [
-                "bulkup",
-                "drainpunch",
-                "ironhead",
-                "earthquake"
-            ]
+            ],
+            "teraType": "fairy"
         }
     ],
     "jovianshk": [
@@ -864,7 +900,8 @@
                 "dracometeor",
                 "psyshock",
                 "darkpulse"
-            ]
+            ],
+            "teraType": "electric"
         },
         {
             "ability": "slowlight",
@@ -874,7 +911,8 @@
                 "dracometeor",
                 "psychic",
                 "terablast"
-            ]
+            ],
+            "teraType": "fire"
         }
     ],
     "rabbicicle": [
@@ -886,7 +924,8 @@
                 "iceshard",
                 "facade",
                 "blazekick"
-            ]
+            ],
+            "teraType": "ice"
         },
         {
             "ability": "fluffy",
@@ -896,7 +935,8 @@
                 "facade",
                 "iceshard",
                 "blazekick"
-            ]
+            ],
+            "teraType": "ghost"
         }
     ],
     "tinkatonrhinian": [
@@ -908,7 +948,8 @@
                 "playrough",
                 "stealthrock",
                 "partingshot"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "fairylaw",
@@ -918,7 +959,8 @@
                 "playrough",
                 "facade",
                 "knockoff"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "fairylaw",
@@ -928,7 +970,8 @@
                 "knockoff",
                 "playrough",
                 "bodyslam"
-            ]
+            ],
+            "teraType": "fairy"
         }
     ],
     "meditao": [
@@ -940,7 +983,8 @@
                 "calmmind",
                 "recover",
                 "storedpower"
-            ]
+            ],
+            "teraType": "psychic"
         },
         {
             "ability": "musclememory",
@@ -950,7 +994,8 @@
                 "recover",
                 "closecombat",
                 "bulletpunch"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "musclememory",
@@ -960,7 +1005,8 @@
                 "drainpunch",
                 "zenheadbutt",
                 "bodyslam"
-            ]
+            ],
+            "teraType": "fighting"
         },
         {
             "ability": "musclememory",
@@ -970,7 +1016,8 @@
                 "aurasphere",
                 "calmmind",
                 "recover"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "musclememory",
@@ -980,7 +1027,8 @@
                 "poweruppunch",
                 "drainpunch",
                 "zenheadbutt"
-            ]
+            ],
+            "teraType": "normal"
         }
     ],
     "lunachi": [
@@ -992,7 +1040,8 @@
                 "darkestlariat",
                 "playrough",
                 "acrobatics"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "sacredtreasures",
@@ -1002,7 +1051,8 @@
                 "suckerpunch",
                 "playrough",
                 "moonlight"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "sacredtreasures",
@@ -1012,7 +1062,8 @@
                 "playrough",
                 "acrobatics",
                 "facade"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "sacredtreasures",
@@ -1022,7 +1073,8 @@
                 "darkpulse",
                 "terablast",
                 "memento"
-            ]
+            ],
+            "teraType": "fire"
         },
         {
             "ability": "sacredtreasures",
@@ -1032,7 +1084,8 @@
                 "playrough",
                 "suckerpunch",
                 "facade"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "sacredtreasures",
@@ -1042,7 +1095,8 @@
                 "moonblast",
                 "terablast",
                 "trick"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "sacredtreasures",
@@ -1052,7 +1106,8 @@
                 "darkpulse",
                 "earthpower",
                 "icebeam"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "sacredtreasures",
@@ -1062,7 +1117,8 @@
                 "moonlight",
                 "moonblast",
                 "storedpower"
-            ]
+            ],
+            "teraType": "psychic"
         },
         {
             "ability": "sacredtreasures",
@@ -1072,7 +1128,8 @@
                 "spiritbreak",
                 "darkpulse",
                 "icebeam"
-            ]
+            ],
+            "teraType": "water"
         },
         {
             "ability": "sacredtreasures",
@@ -1082,7 +1139,8 @@
                 "moonblast",
                 "icebeam",
                 "terablast"
-            ]
+            ],
+            "teraType": "water"
         },
         {
             "ability": "sacredtreasures",
@@ -1092,7 +1150,8 @@
                 "moonblast",
                 "darkpulse",
                 "moonlight"
-            ]
+            ],
+            "teraType": "dragon"
         },
         {
             "ability": "sacredtreasures",
@@ -1102,7 +1161,8 @@
                 "moonlight",
                 "moonblast",
                 "darkpulse"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "sacredtreasures",
@@ -1112,7 +1172,8 @@
                 "darkpulse",
                 "earthpower",
                 "icebeam"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "sacredtreasures",
@@ -1122,7 +1183,8 @@
                 "moonblast",
                 "darkpulse",
                 "moonlight"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "sacredtreasures",
@@ -1132,7 +1194,8 @@
                 "moonlight",
                 "storedpower",
                 "moonblast"
-            ]
+            ],
+            "teraType": "psychic"
         },
         {
             "ability": "sacredtreasures",
@@ -1142,7 +1205,8 @@
                 "darkpulse",
                 "moonlight",
                 "earthpower"
-            ]
+            ],
+            "teraType": "ground"
         },
         {
             "ability": "sacredtreasures",
@@ -1152,7 +1216,8 @@
                 "darkpulse",
                 "earthpower",
                 "icebeam"
-            ]
+            ],
+            "teraType": "fairy"
         },
         {
             "ability": "sacredtreasures",
@@ -1162,7 +1227,8 @@
                 "playrough",
                 "suckerpunch",
                 "icebeam"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "sacredtreasures",
@@ -1172,7 +1238,8 @@
                 "darkpulse",
                 "moonblast",
                 "memento"
-            ]
+            ],
+            "teraType": "ice"
         },
         {
             "ability": "sacredtreasures",
@@ -1182,7 +1249,8 @@
                 "playrough",
                 "beatup",
                 "terablast"
-            ]
+            ],
+            "teraType": "poison"
         },
         {
             "ability": "sacredtreasures",
@@ -1192,7 +1260,8 @@
                 "endeavor",
                 "playrough",
                 "suckerpunch"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "sacredtreasures",
@@ -1202,7 +1271,8 @@
                 "healbell",
                 "moonlight",
                 "foulplay"
-            ]
+            ],
+            "teraType": "steel"
         },
         {
             "ability": "sacredtreasures",
@@ -1212,7 +1282,8 @@
                 "moonlight",
                 "darkestlariat",
                 "spiritbreak"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "sacredtreasures",
@@ -1222,7 +1293,8 @@
                 "moonblast",
                 "shadowball",
                 "nightslash"
-            ]
+            ],
+            "teraType": "dark"
         },
         {
             "ability": "sacredtreasures",
@@ -1232,7 +1304,8 @@
                 "nightslash",
                 "playrough",
                 "moonlight"
-            ]
+            ],
+            "teraType": "flying"
         },
         {
             "ability": "sacredtreasures",
@@ -1242,7 +1315,8 @@
                 "quickattack",
                 "moonblast",
                 "darkpulse"
-            ]
+            ],
+            "teraType": "normal"
         },
         {
             "ability": "sacredtreasures",
@@ -1252,7 +1326,234 @@
                 "moonlight",
                 "facade",
                 "darkestlariat"
-            ]
+            ],
+            "teraType": "normal"
+        }
+    ],
+    "sirentom": [
+        {
+            "ability": "comatose",
+            "item": "leftovers",
+            "moves": [
+                "toxic",
+                "slackoff",
+                "nightshade",
+                "chillingwater"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "comatose",
+            "item": "aguavberry",
+            "moves": [
+                "calmmind",
+                "slackoff",
+                "shadowball",
+                "surf"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "undeterred",
+            "item": "leftovers",
+            "moves": [
+                "rapidspin",
+                "slackoff",
+                "toxic",
+                "hex"
+            ],
+            "teraType": "ghost"
+        },
+        {
+            "ability": "undeterred",
+            "item": "leftovers",
+            "moves": [
+                "rapidspin",
+                "whirlpool",
+                "perishsong",
+                "slackoff"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "comatose",
+            "item": "assaultvest",
+            "moves": [
+                "rapidspin",
+                "shadowball",
+                "surf",
+                "earthpower"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "comatose",
+            "item": "rockyhelmet",
+            "moves": [
+                "rapidspin",
+                "toxicspikes",
+                "slackoff",
+                "hex"
+            ],
+            "teraType": "normal"
+        }
+    ],
+    "braskeptic": [
+        {
+            "ability": "steamengine",
+            "item": "weaknesspolicy",
+            "moves": [
+                "geargrind",
+                "earthquake",
+                "scald",
+                "voltswitch"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "counterclockwise",
+            "item": "focussash",
+            "moves": [
+                "shiftgear",
+                "flashcannon",
+                "fireblast",
+                "scald"
+            ],
+            "teraType": "fire"
+        },
+        {
+            "ability": "steamengine",
+            "item": "leftovers",
+            "moves": [
+                "stealthrock",
+                "thunderwave",
+                "geargrind",
+                "voltswitch"
+            ],
+            "teraType": "flying"
+        },
+        {
+            "ability": "lightmetal",
+            "item": "sitrusberry",
+            "moves": [
+                "shedtail",
+                "ironhead",
+                "facade",
+                "foulplay"
+            ],
+            "teraType": "ghost"
+        },
+        {
+            "ability": "counterclockwise",
+            "item": "leftovers",
+            "moves": [
+                "calmmind",
+                "geargrind",
+                "earthquake",
+                "crunch"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "lightmetal",
+            "item": "aguavberry",
+            "moves": [
+                "rapidspin",
+                "thunderwave",
+                "flashcannon",
+                "voltswitch"
+            ],
+            "teraType": "ghost"
+        },
+        {
+            "ability": "lightmetal",
+            "item": "sitrusberry",
+            "moves": [
+                "rapidspin",
+                "shedtail",
+                "geargrind",
+                "foulplay"
+            ],
+            "teraType": "flying"
+        },
+        {
+            "ability": "steamengine",
+            "item": "lifeorb",
+            "moves": [
+                "shiftgear",
+                "geargrind",
+                "earthquake",
+                "crunch"
+            ],
+            "teraType": "ground"
+        }
+    ],
+    "incineroarolulian": [
+        {
+            "ability": "steelworker",
+            "item": "ironplate",
+            "moves": [
+                "swordsdance",
+                "bulletpunch",
+                "meteormash",
+                "drainpunch"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "ironfist",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "drainpunch",
+                "bulletpunch",
+                "headlongrush"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "ironfist",
+            "item": "assaultvest",
+            "moves": [
+                "drainpunch",
+                "headlongrush",
+                "foulstrike",
+                "suckerpunch"
+            ],
+            "teraType": "fighting"
+        },
+        {
+            "ability": "ironfist",
+            "item": "choicescarf",
+            "moves": [
+                "meteormash",
+                "drainpunch",
+                "thunderpunch",
+                "partingshot"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "steelworker",
+            "item": "lifeorb",
+            "moves": [
+                "meteormash",
+                "bulletpunch",
+                "drainpunch",
+                "headlongrush"
+            ],
+            "teraType": "steel"
+        },
+        {
+            "ability": "ironfist",
+            "item": "choiceband",
+            "moves": [
+                "machpunch",
+                "foulstrike",
+                "headlongrush",
+                "icepunch"
+            ],
+            "teraType": "fighting"
         }
     ]
 }

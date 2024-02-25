@@ -53,7 +53,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 				}
 			}
 
-			if (curSet.moves && curSet.ability && curSet.item) {
+			if (curSet.moves && curSet.ability && curSet.item && curSet.teraType) {
 				pokemon.push({
 					name: this.dex.species.get(curSpecies).name,
 					species: this.dex.species.get(curSpecies).name,
@@ -64,6 +64,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					moves: curSet.moves,
 					ability: curSet.ability,
 					item: curSet.item,
+					teraType: curSet.teraType,
 					evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 					ivs: {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31},
 				});
