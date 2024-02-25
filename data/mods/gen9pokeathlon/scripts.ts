@@ -107,6 +107,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			"heracrosssubarctic": 214,
 			"sirentom": 6020,
 			"braskeptic": 6021,
+			"maggony": 6022,
 		};
 		for (const i in this.data.Pokedex) {
 			if (i in PoADex) {
