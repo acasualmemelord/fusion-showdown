@@ -534,4 +534,18 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		natDexTier: "RU",
 		doublesTier: "DUU",
 	},
+	maggony: {
+		num: 6022,
+		name: "Maggony",
+		types: ["Bug"],
+		baseStats: {hp: 35, atk: 11, def: 12, spa: 11, spd: 12, spe: 9},
+		abilities: {0: "Necromancy"},
+		heightm: 0.3,
+		weightkg: 2.4,
+		color: "Black",
+		eggGroups: ["Bug"],
+		tier: "UU",
+		natDexTier: "RU",
+		doublesTier: "DUU",
+	},
 };

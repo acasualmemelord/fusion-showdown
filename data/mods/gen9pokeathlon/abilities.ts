@@ -349,4 +349,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 4,
 		num: 0,
 	},
+	necromancy: {
+		onStart(target) {
+			console.log(this.log);
+		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
+			breakable: 1, notransform: 1,},
+		name: "Necromancy",
+		shortDesc: "This Pokemon is immune to all entry hazards.",
+		rating: 4,
+		num: 0,
+	},
 };
