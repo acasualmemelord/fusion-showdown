@@ -543,6 +543,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		heightm: 0.3,
 		weightkg: 2.4,
 		color: "Black",
+		tags: ["Pokeathlon"],
 		eggGroups: ["Bug"],
 		tier: "UU",
 		natDexTier: "RU",

@@ -351,7 +351,34 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	necromancy: {
 		onStart(target) {
-			console.log(this.log);
+			let zombie;
+			for (let line of this.log.reverse()) {
+				if (line.includes('|faint|')) {
+					let faintName = line.slice(12);
+					let player = line.slice(7, 9);
+					const side = player === 'p1' ? this.p1 : player === 'p2' ? this.p2 : player === 'p3' ? this.p3 : this.p4;
+					if (side) {
+						for (let mon of side.pokemon) {
+							if (mon.name === faintName) zombie = mon;
+						}
+					}
+				}
+			}
+			if (zombie) {
+				let species = zombie.species;
+				let moves = zombie.moveSlots;
+				
+				this.add('-activate', target, 'ability: Necromancy');
+
+				for (let type of species.types) {
+					if (!target.addType(type)) continue;
+					this.add('-start', target, 'typeadd', type);
+				}
+
+				for (let i = 0; i < (4 - target.moveSlots.length); i++) {
+					if (moves[i]) target.moveSlots.push(moves[i]);
+				}
+			}
 		},
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
 			breakable: 1, notransform: 1,},
