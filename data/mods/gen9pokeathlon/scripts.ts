@@ -103,6 +103,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			"bewitwing": 6018,
 			"eidolburgh": 6019,
 			"snorlaxfrost": 143,
+			"snorlaxfrostmega": 143,
 			"heracrosssubarctic": 214,
 			"sirentom": 6020,
 			"braskeptic": 6021,

@@ -23,4 +23,16 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		num: 0,
 	},
+	frostysnorlaxite: {
+		name: "Frosty Snorlaxite",
+		spritenum: 623,
+		megaStone: "Snorlax-Frost-Mega",
+		megaEvolves: "Snorlax-Frost",
+		itemUser: ["Snorlax-Frost"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 0,
+	},
 };
