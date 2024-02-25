@@ -374,6 +374,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				let moves = zombie.moveSlots;
 				
 				this.add('-activate', target, 'ability: Necromancy');
+				this.add('-message', `${target.name} has gained control over the body of ${zombie.name}!`);
 
 				let newType: string[] = [];
 

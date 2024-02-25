@@ -1,5 +1,4 @@
 export const Pokedex: {[k: string]: ModdedSpeciesData} = {
-	
 	// Resubmissions
 	soulply: {
 		num: 6001,
@@ -97,7 +96,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
-		doublesTier: "DUU",
+		doublesTier: "(DUU)",
 	},
 	enchantobra: {
 		num: 6007,
@@ -108,10 +107,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		heightm: 1.3,
 		weightkg: 31.5,
 		color: "Red",
-		evoLevel: 37,
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
-		tier: "UU",
+		tier: "OU",
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
@@ -146,8 +144,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
-		natDexTier: "OU",
-		doublesTier: "DOU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	ironeverlasting: {
 		num: 6010,
@@ -161,9 +159,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Gray",
 		tags: ["Paradox", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
-		tier: "UU",
-		natDexTier: "UU",
-		doublesTier: "DUU",
+		tier: "RU",
+		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	golisopodshogun: {
 		num: 768,
@@ -180,8 +178,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Bug", "Water 3"],
 		tier: "OU",
-		natDexTier: "OU",
-		doublesTier: "DOU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	tinkatonrhinian: {
 		num: 959,
@@ -213,7 +211,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Red",
 		tags: ["Sub-Legendary", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
-		tier: "Uber",
+		tier: "OU",
 		natDexTier: "OU",
 		doublesTier: "DOU",
 	},
@@ -229,7 +227,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
-		natDexTier: "UU",
+		natDexTier: "RU",
 		doublesTier: "DUU",
 	},
 	lunachi: {
@@ -248,7 +246,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		formeOrder: ["Lunachi", "Lunachi-Bestowed"],
 		tier: "OU",
 		natDexTier: "UU",
-		doublesTier: "DOU",
+		doublesTier: "DUU",
 	},
 	lunachibestowed: {
 		num: 6013,
@@ -296,8 +294,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Pink",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
-		tier: "UU",
-		natDexTier: "RU",
+		tier: "OU",
+		natDexTier: "UU",
 		doublesTier: "(DUU)",
 	},
 	raikousupra: {
@@ -314,9 +312,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Yellow",
 		tags: ["Sub-Legendary", "Pokeathlon"],
 		eggGroups: ["Undiscovered"],
-		tier: "OU",
+		tier: "UU",
 		natDexTier: "UU",
-		doublesTier: "DOU",
+		doublesTier: "DUU",
 	},
 	heatransupra: {
 		num: 485,
@@ -347,8 +345,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
-		natDexTier: "OU",
-		doublesTier: "DUU",
+		natDexTier: "UU",
+		doublesTier: "DOU",
 	},
 	barrimander: {
 		num: 6016,
@@ -378,8 +376,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evoLevel: 37,
 		tags: ["Pokeathlon"],
 		eggGroups: ["Human-Like"],
-		tier: "RU",
-		natDexTier: "UU",
+		tier: "UU",
+		natDexTier: "RU",
 		doublesTier: "(DUU)",
 	},
 	electrodemega: {
@@ -448,8 +446,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
-		natDexTier: "RU",
-		doublesTier: "(DUU)",
+		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	snorlaxfrost: {
 		num: 143,
@@ -462,9 +460,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Brown",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Monster"],
-		tier: "OU",
+		tier: "UU",
 		natDexTier: "UU",
-		doublesTier: "DOU",
+		doublesTier: "DUU",
 	},
 	snorlaxfrostmega: {
 		num: 143,
@@ -497,9 +495,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Red",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Bug"],
-		tier: "OU",
-		natDexTier: "UU",
-		doublesTier: "DUU",
+		tier: "UU",
+		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	sirentom: {
 		num: 6020,
@@ -514,7 +512,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Pokeathlon"],
 		eggGroups: ["Amorphous", "Water1"],
 		tier: "OU",
-		natDexTier: "UU",
+		natDexTier: "OU",
 		doublesTier: "DUU",
 	},
 	braskeptic: {
@@ -530,7 +528,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Field"],
 		tier: "UU",
 		natDexTier: "RU",
-		doublesTier: "DUU",
+		doublesTier: "(DUU)",
 	},
 	maggony: {
 		num: 6022,
@@ -543,8 +541,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Black",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Bug"],
-		tier: "UU",
-		natDexTier: "RU",
+		tier: "OU",
+		natDexTier: "OU",
 		doublesTier: "DUU",
 	},
 };

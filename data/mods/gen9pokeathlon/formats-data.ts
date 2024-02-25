@@ -12,7 +12,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	revenankh: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	embirch: {
 		inherit: true,
@@ -27,7 +27,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	pyroak: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	breezi: {
 		inherit: true,
@@ -52,7 +52,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	stratagem: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	privatyke: {
 		inherit: true,
@@ -72,7 +72,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	kitsunoh: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	monohm: {
 		inherit: true,
@@ -87,7 +87,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	cyclohm: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	dorsoil: {
 		inherit: true,
@@ -97,7 +97,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	colossoil: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	protowatt: {
 		inherit: true,
@@ -107,7 +107,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	krilowatt: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	voodoll: {
 		inherit: true,
@@ -117,7 +117,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	voodoom: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	scratchet: {
 		inherit: true,
@@ -127,7 +127,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	tomohawk: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	necturine: {
 		inherit: true,
@@ -142,7 +142,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	mollux: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	cupra: {
 		inherit: true,
@@ -167,7 +167,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	malaconda: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	cawdet: {
 		inherit: true,
@@ -177,7 +177,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	cawmodore: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	volkritter: {
 		inherit: true,
@@ -197,7 +197,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	plasmanta: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	floatoy: {
 		inherit: true,
@@ -212,12 +212,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	naviathan: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	crucibelle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	crucibellemega: {
 		inherit: true,
@@ -232,12 +232,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	kerfluffle: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	pajantom: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	mumbao: {
 		inherit: true,
@@ -262,7 +262,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	caribolt: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	smogecko: {
 		inherit: true,
@@ -277,7 +277,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	smokomodo: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	swirlpool: {
 		inherit: true,
@@ -312,7 +312,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	astrolotl: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	miasmite: {
 		inherit: true,
@@ -322,12 +322,12 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	miasmaw: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	chromera: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "RU",
 	},
 	venomicon: {
 		inherit: true,
@@ -347,7 +347,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	saharaja: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	ababo: {
 		inherit: true,
@@ -362,7 +362,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	hemogoblin: {
 		inherit: true,
 		isNonstandard: null,
-		tier: "OU",
+		tier: "UU",
 	},
 	cresceidon: {
 		inherit: true,

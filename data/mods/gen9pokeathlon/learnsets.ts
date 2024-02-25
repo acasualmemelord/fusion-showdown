@@ -1020,6 +1020,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			taunt: ["9M"],
 			terablast: ["9M"],
 			thunder: ["9M"],
+			thunderclap: ["9M"],
 			thunderbolt: ["9M"],
 			thundershock: ["9M"],
 			thunderwave: ["9M"],
