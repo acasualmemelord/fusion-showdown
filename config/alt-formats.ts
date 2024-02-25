@@ -163,6 +163,7 @@ export const Formats: FormatList = [
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100', 'Infinite Fusion Mod'],
 	},
+
 	{
 		section: "Pokéathlon: Regional Dex",
 		column: 2,
@@ -178,18 +179,19 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] PoA Dex OU",
+
+		mod: 'gen9pokeathlon',
+		ruleset: ['Standard', 'Sleep Moves Clause', '!Sleep Clause Mod'],
+		banlist: ['Uber', 'AG', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Shed Tail'],
+	},
+	{
 		name: "[Gen 9] PoA Dex AG",
 
 		mod: 'gen9pokeathlon',
-		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+CAP'],
+		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
 	},
-	{
-		name: "[Gen 9] PoA Dex Doubles AG",
 
-		mod: 'gen9pokeathlon',
-		gameType: 'doubles',
-		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+CAP'],
-	},
 	{
 		section: "Pokéathlon: National Dex",
 		column: 2,
@@ -210,6 +212,18 @@ export const Formats: FormatList = [
 		mod: 'gen9pokeathlon',
 		ruleset: ['Standard NatDex', '+CAP'],
 	},
+
+	{
+		section: "Pokéathlon: Doubles",
+		column: 2,
+	},
+	{
+		name: "[Gen 9] PoA Dex Doubles AG",
+
+		mod: 'gen9pokeathlon',
+		gameType: 'doubles',
+		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
+	},
 	{
 		name: "[Gen 9] PoA NatDex Doubles AG",
 
@@ -217,6 +231,7 @@ export const Formats: FormatList = [
 		gameType: 'doubles',
 		ruleset: ['Standard NatDex', '+CAP'],
 	},
+
 	{
 		section: "Pokéathlon: Extras",
 		column: 2,
@@ -226,7 +241,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen9pokeathlon',
 		ruleset: [
-			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', '+CAP',
+			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
 		],
 	},

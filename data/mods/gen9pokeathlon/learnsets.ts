@@ -1778,7 +1778,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	braskeptic: {
 		learnset: {
 			attract: ["9M"],
-			automotize: ["9M"],
+			autotomize: ["9M"],
 			bite: ["9M"],
 			bodypress: ["9M"],
 			bulldoze: ["9M"],
