@@ -1,0 +1,1258 @@
+{
+    "dracotion": [
+        {
+            "ability": "intimidate",
+            "item": "assaultvest",
+            "moves": [
+                "dracometeor",
+                "bugbuzz",
+                "fireblast",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "windywall",
+            "item": "leftovers",
+            "moves": [
+                "quiverdance",
+                "roost",
+                "dracometeor",
+                "fireblast"
+            ]
+        },
+        {
+            "ability": "intimidate",
+            "item": "heavydutyboots",
+            "moves": [
+                "toxic",
+                "uturn",
+                "dracometeor",
+                "earthpower"
+            ]
+        },
+        {
+            "ability": "windywall",
+            "item": "choicescarf",
+            "moves": [
+                "dracometeor",
+                "bugbuzz",
+                "earthpower",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "windywall",
+            "item": "leftovers",
+            "moves": [
+                "dragondance",
+                "dragonclaw",
+                "skittersmack",
+                "firefang"
+            ]
+        },
+        {
+            "ability": "windywall",
+            "item": "heavydutyboots",
+            "moves": [
+                "superfang",
+                "toxic",
+                "roost",
+                "uturn"
+            ]
+        }
+    ],
+    "electrodemega": [
+        {
+            "ability": "kablooey",
+            "item": "electrodite",
+            "moves": [
+                "hyperbeam",
+                "protect",
+                "suckerpunch",
+                "teleport"
+            ]
+        },
+        {
+            "ability": "kablooey",
+            "item": "electrodite",
+            "moves": [
+                "voltswitch",
+                "protect",
+                "doubleedge",
+                "thief"
+            ]
+        },
+        {
+            "ability": "kablooey",
+            "item": "electrodite",
+            "moves": [
+                "charge",
+                "protect",
+                "teleport",
+                "thief"
+            ]
+        }
+    ],
+    "florgesmega": [
+        {
+            "ability": "ivywall",
+            "item": "florgesite",
+            "moves": [
+                "calmmind",
+                "aromatherapy",
+                "synthesis",
+                "moonblast"
+            ]
+        },
+        {
+            "ability": "ivywall",
+            "item": "florgesite",
+            "moves": [
+                "calmmind",
+                "drainingkiss",
+                "aromatherapy",
+                "hiddenpowerfire"
+            ]
+        },
+        {
+            "ability": "ivywall",
+            "item": "florgesite",
+            "moves": [
+                "toxic",
+                "wish",
+                "protect",
+                "moonblast"
+            ]
+        }
+    ],
+    "golisopodshogun": [
+        {
+            "ability": "bushido",
+            "item": "choiceband",
+            "moves": [
+                "suckerpunch",
+                "bulletpunch",
+                "firstimpression",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "assaultvest",
+            "moves": [
+                "bulletpunch",
+                "firstimpression",
+                "uturn",
+                "closecombat"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "leftovers",
+            "moves": [
+                "spikes",
+                "leechlife",
+                "uturn",
+                "bulletpunch"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "lumberry",
+            "moves": [
+                "swordsdance",
+                "bulletpunch",
+                "firstimpression",
+                "suckerpunch"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "leechlife",
+                "closecombat",
+                "bulletpunch"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "lifeorb",
+            "moves": [
+                "swordsdance",
+                "bulletpunch",
+                "pursuit",
+                "leechlife"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "leftovers",
+            "moves": [
+                "stealthrock",
+                "spikes",
+                "bulletpunch",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "sharpness",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "furycutter",
+                "ironhead",
+                "nightslash"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "trailblaze",
+                "leechlife",
+                "ironhead"
+            ]
+        },
+        {
+            "ability": "bushido",
+            "item": "assaultvest",
+            "moves": [
+                "closecombat",
+                "ironhead",
+                "leechlife",
+                "uturn"
+            ]
+        }
+    ],
+    "heatransupra": [
+        {
+            "ability": "dancer",
+            "item": "leftovers",
+            "moves": [
+                "fierydance",
+                "gigadrain",
+                "earthpower",
+                "substitute"
+            ]
+        },
+        {
+            "ability": "dancer",
+            "item": "choicescarf",
+            "moves": [
+                "bloomsday",
+                "fierydance",
+                "earthpower",
+                "gigadrain"
+            ]
+        },
+        {
+            "ability": "chlorophyll",
+            "item": "heavydutyboots",
+            "moves": [
+                "growth",
+                "fireblast",
+                "gigadrain",
+                "earthpower"
+            ]
+        },
+        {
+            "ability": "dancer",
+            "item": "leftovers",
+            "moves": [
+                "forestscurse",
+                "fierydance",
+                "gigadrain",
+                "substitute"
+            ]
+        },
+        {
+            "ability": "chlorophyll",
+            "item": "choicespecs",
+            "moves": [
+                "fierydance",
+                "gigadrain",
+                "earthpower",
+                "bloomsday"
+            ]
+        }
+    ],
+    "heracrosssubarctic": [
+        {
+            "ability": "quickfeet",
+            "item": "flameorb",
+            "moves": [
+                "packin",
+                "freezedry",
+                "bugbuzz",
+                "earthpower"
+            ]
+        },
+        {
+            "ability": "compoundeyes",
+            "item": "choicescarf",
+            "moves": [
+                "blizzard",
+                "bugbuzz",
+                "focusblast",
+                "shadowball"
+            ]
+        },
+        {
+            "ability": "slushrush",
+            "item": "heavydutyboots",
+            "moves": [
+                "packin",
+                "blizzard",
+                "gigadrain",
+                "bugbuzz"
+            ]
+        },
+        {
+            "ability": "compoundeyes",
+            "item": "focussash",
+            "moves": [
+                "agility",
+                "blizzard",
+                "bugbuzz",
+                "focusblast"
+            ]
+        },
+        {
+            "ability": "quickfeet",
+            "item": "heavydutyboots",
+            "moves": [
+                "freezedry",
+                "shadowball",
+                "earthpower",
+                "vacuumwave"
+            ]
+        }
+    ],
+    "icyall": [
+        {
+            "ability": "multishot",
+            "item": "loadeddice",
+            "moves": [
+                "agility",
+                "psyshock",
+                "chargebeam",
+                "darkpulse"
+            ]
+        },
+        {
+            "ability": "multishot",
+            "item": "choicespecs",
+            "moves": [
+                "psychic",
+                "darkpulse",
+                "moonblast",
+                "thunderbolt"
+            ]
+        },
+        {
+            "ability": "multishot",
+            "item": "choicescarf",
+            "moves": [
+                "psychic",
+                "darkpulse",
+                "moonblast",
+                "partingshot"
+            ]
+        },
+        {
+            "ability": "multishot",
+            "item": "loadeddice",
+            "moves": [
+                "chargebeam",
+                "darkpulse",
+                "icebeam",
+                "psychic"
+            ]
+        },
+        {
+            "ability": "multishot",
+            "item": "choicespecs",
+            "moves": [
+                "psychic",
+                "darkpulse",
+                "focusblast",
+                "trick"
+            ]
+        },
+        {
+            "ability": "multishot",
+            "item": "widelens",
+            "moves": [
+                "hypnosis",
+                "chargebeam",
+                "psychic",
+                "focusblast"
+            ]
+        }
+    ],
+    "mosster": [
+        {
+            "ability": "waterabsorb",
+            "item": "leftovers",
+            "moves": [
+                "stealthrock",
+                "toxic",
+                "whirlpool",
+                "synthesis"
+            ]
+        },
+        {
+            "ability": "inertia",
+            "item": "leftovers",
+            "moves": [
+                "honeclaws",
+                "woodhammer",
+                "headsmash",
+                "synthesis"
+            ]
+        },
+        {
+            "ability": "inertia",
+            "item": "leftovers",
+            "moves": [
+                "toxic",
+                "irondefense",
+                "bodypress",
+                "synthesis"
+            ]
+        },
+        {
+            "ability": "inertia",
+            "item": "leftovers",
+            "moves": [
+                "curse",
+                "earthquake",
+                "stoneedge",
+                "seedbomb"
+            ]
+        },
+        {
+            "ability": "inertia",
+            "item": "choiceband",
+            "moves": [
+                "woodhammer",
+                "headsmash",
+                "earthquake",
+                "bodypress"
+            ]
+        },
+        {
+            "ability": "waterabsorb",
+            "item": "leftovers",
+            "moves": [
+                "gastroacid",
+                "synthesis",
+                "toxic",
+                "earthquake"
+            ]
+        }
+    ],
+    "ockthane": [
+        {
+            "ability": "supremeoverlord",
+            "item": "choicescarf",
+            "moves": [
+                "icebeam",
+                "thunderbolt",
+                "darkpulse",
+                "voltswitch"
+            ]
+        },
+        {
+            "ability": "supremeoverlord",
+            "item": "choicespecs",
+            "moves": [
+                "icebeam",
+                "thunderbolt",
+                "darkpulse",
+                "voltswitch"
+            ]
+        },
+        {
+            "ability": "psychicsurge",
+            "item": "terrainextender",
+            "moves": [
+                "voltswitch",
+                "psychic",
+                "icebeam",
+                "thunderbolt"
+            ]
+        }
+    ],
+    "raikousupra": [
+        {
+            "ability": "sandydefense",
+            "item": "lucarionite",
+            "moves": [
+                "calmmind",
+                "substitute",
+                "deserttempest",
+                "aurasphere"
+            ]
+        },
+        {
+            "ability": "adaptability",
+            "item": "powerherb",
+            "moves": [
+                "meteorbeam",
+                "earthpower",
+                "deserttempest",
+                "aurasphere"
+            ]
+        },
+        {
+            "ability": "sandstream",
+            "item": "leftovers",
+            "moves": [
+                "stealthrock",
+                "voltswitch",
+                "thunderwave",
+                "powergem"
+            ]
+        },
+        {
+            "ability": "adaptability",
+            "item": "choicespecs",
+            "moves": [
+                "powergem",
+                "aurasphere",
+                "terablast",
+                "voltswitch"
+            ]
+        },
+        {
+            "ability": "sandydefense",
+            "item": "leftovers",
+            "moves": [
+                "deserttempest",
+                "voltswitch",
+                "flashcannon",
+                "heatwave"
+            ]
+        }
+    ],
+    "regimyo": [
+        {
+            "ability": "musclememory",
+            "item": "leftovers",
+            "moves": [
+                "machpunch",
+                "drainpunch",
+                "poweruppunch",
+                "thunderpunch"
+            ]
+        },
+        {
+            "ability": "musclememory",
+            "item": "assaultvest",
+            "moves": [
+                "circlethrow",
+                "drainpunch",
+                "poweruppunch",
+                "machpunch"
+            ]
+        },
+        {
+            "ability": "clearbody",
+            "item": "leftovers",
+            "moves": [
+                "fibregraft",
+                "circlethrow",
+                "machpunch",
+                "thunderpunch"
+            ]
+        },
+        {
+            "ability": "musclememory",
+            "item": "lifeorb",
+            "moves": [
+                "poweruppunch",
+                "machpunch",
+                "drainpunch",
+                "terablast"
+            ]
+        }
+    ],
+    "snorlaxfrost": [
+        {
+            "ability": "thickfat",
+            "item": "leftovers",
+            "moves": [
+                "spikes",
+                "stealthrock",
+                "earthquake",
+                "icespinner"
+            ]
+        },
+        {
+            "ability": "refrigerate",
+            "item": "chestoberry",
+            "moves": [
+                "facade",
+                "mudslide",
+                "closecombat",
+                "rest"
+            ]
+        },
+        {
+            "ability": "thickfat",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "iciclecrash",
+                "headlongrush",
+                "rest"
+            ]
+        },
+        {
+            "ability": "refrigerate",
+            "item": "choiceband",
+            "moves": [
+                "explosion",
+                "facade",
+                "headlongrush",
+                "shadowclaw"
+            ]
+        }
+    ],
+    "soulply": [
+        {
+            "ability": "consumerexchange",
+            "item": "laggingtail",
+            "moves": [
+                "fakeout",
+                "poltergeist",
+                "uturn",
+                "slackoff"
+            ]
+        },
+        {
+            "ability": "consumerexchange",
+            "item": "assaultvest",
+            "moves": [
+                "shadowsneak",
+                "knockoff",
+                "slackoff",
+                "toxic"
+            ]
+        },
+        {
+            "ability": "stickyhold",
+            "item": "ringtarget",
+            "moves": [
+                "fakeout",
+                "poltergeist",
+                "uturn",
+                "slackoff"
+            ]
+        }
+    ],
+    "barrimander": [
+        {
+            "ability": "prankster",
+            "item": "focussash",
+            "moves": [
+                "partingshot",
+                "futuresight",
+                "thunderwave",
+                "sludgebomb"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "lightclay",
+            "moves": [
+                "thunderwave",
+                "bulwark",
+                "partingshot",
+                "futuresight"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "focussash",
+            "moves": [
+                "toxicspikes",
+                "venoshock",
+                "partingshot",
+                "dragontail"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "lightclay",
+            "moves": [
+                "fakeout",
+                "bulwark",
+                "foulplay",
+                "thunderwave"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "focussash",
+            "moves": [
+                "topsyturvy",
+                "yawn",
+                "knockoff",
+                "gunkshot"
+            ]
+        },
+        {
+            "ability": "owntempo",
+            "item": "blacksludge",
+            "moves": [
+                "switcheroo",
+                "bulwark",
+                "partingshot",
+                "foulplay"
+            ]
+        }
+    ],
+    "bewitwing": [
+        {
+            "ability": "serenegrace",
+            "item": "choicescarf",
+            "moves": [
+                "moonblast",
+                "shadowball",
+                "airslash",
+                "pixietrick"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "focussash",
+            "moves": [
+                "destinybond",
+                "willowisp",
+                "playrough",
+                "shadowsneak"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "focussash",
+            "moves": [
+                "tailwind",
+                "thunderwave",
+                "foulplay",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "serenegrace",
+            "item": "choicescarf",
+            "moves": [
+                "moonblast",
+                "shadowball",
+                "airslash",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "prankster",
+            "item": "focussash",
+            "moves": [
+                "destinybond",
+                "swordsdance",
+                "shadowsneak",
+                "playrough"
+            ]
+        }
+    ],
+    "eidolburgh": [
+        {
+            "ability": "sanctuary",
+            "item": "leftovers",
+            "moves": [
+                "stealthrock",
+                "whirlwind",
+                "moonblast",
+                "earthpower"
+            ]
+        },
+        {
+            "ability": "sanctuary",
+            "item": "leftovers",
+            "moves": [
+                "infestation",
+                "moonlight",
+                "perishsong",
+                "roost"
+            ]
+        },
+        {
+            "ability": "sanctuary",
+            "item": "leftovers",
+            "moves": [
+                "calmmind",
+                "moonblast",
+                "bugbuzz",
+                "roost"
+            ]
+        }
+    ],
+    "enchantobra": [
+        {
+            "ability": "magicguard",
+            "item": "lifeorb",
+            "moves": [
+                "moonblast",
+                "fireblast",
+                "gigadrain",
+                "glare"
+            ]
+        }
+    ],
+    "incineroarolulian": [
+        {
+            "ability": "steelworker",
+            "item": "assaultvest",
+            "moves": [
+                "ironhead",
+                "closecombat",
+                "fakeout",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "steelworker",
+            "item": "ironplate",
+            "moves": [
+                "ironhead",
+                "closecombat",
+                "knockoff",
+                "uturn"
+            ]
+        },
+        {
+            "ability": "steelworker",
+            "item": "leftovers",
+            "moves": [
+                "partingshot",
+                "knockoff",
+                "closecombat",
+                "ironhead"
+            ]
+        },
+        {
+            "ability": "ironfist",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "drainpunch",
+                "ironhead",
+                "earthquake"
+            ]
+        }
+    ],
+    "jovianshk": [
+        {
+            "ability": "levitate",
+            "item": "leftovers",
+            "moves": [
+                "glare",
+                "dracometeor",
+                "psyshock",
+                "darkpulse"
+            ]
+        },
+        {
+            "ability": "slowlight",
+            "item": "choicespecs",
+            "moves": [
+                "zapcannon",
+                "dracometeor",
+                "psychic",
+                "terablast"
+            ]
+        }
+    ],
+    "rabbicicle": [
+        {
+            "ability": "fluffy",
+            "item": "sitrusberry",
+            "moves": [
+                "bellydrum",
+                "iceshard",
+                "facade",
+                "blazekick"
+            ]
+        },
+        {
+            "ability": "fluffy",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "facade",
+                "iceshard",
+                "blazekick"
+            ]
+        }
+    ],
+    "tinkatonrhinian": [
+        {
+            "ability": "fairylaw",
+            "item": "leftovers",
+            "moves": [
+                "knockoff",
+                "playrough",
+                "stealthrock",
+                "partingshot"
+            ]
+        },
+        {
+            "ability": "fairylaw",
+            "item": "assaultvest",
+            "moves": [
+                "gigatonhammer",
+                "playrough",
+                "facade",
+                "knockoff"
+            ]
+        },
+        {
+            "ability": "fairylaw",
+            "item": "leftovers",
+            "moves": [
+                "slackoff",
+                "knockoff",
+                "playrough",
+                "bodyslam"
+            ]
+        }
+    ],
+    "meditao": [
+        {
+            "ability": "musclememory",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "calmmind",
+                "recover",
+                "storedpower"
+            ]
+        },
+        {
+            "ability": "musclememory",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "recover",
+                "closecombat",
+                "bulletpunch"
+            ]
+        },
+        {
+            "ability": "musclememory",
+            "item": "leftovers",
+            "moves": [
+                "poweruppunch",
+                "drainpunch",
+                "zenheadbutt",
+                "bodyslam"
+            ]
+        },
+        {
+            "ability": "musclememory",
+            "item": "leftovers",
+            "moves": [
+                "psychic",
+                "aurasphere",
+                "calmmind",
+                "recover"
+            ]
+        },
+        {
+            "ability": "musclememory",
+            "item": "leftovers",
+            "moves": [
+                "trailblaze",
+                "poweruppunch",
+                "drainpunch",
+                "zenheadbutt"
+            ]
+        }
+    ],
+    "lunachi": [
+        {
+            "ability": "sacredtreasures",
+            "item": "adrenalineorb",
+            "moves": [
+                "bulkup",
+                "darkestlariat",
+                "playrough",
+                "acrobatics"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "blackglasses",
+            "moves": [
+                "darkestlariat",
+                "suckerpunch",
+                "playrough",
+                "moonlight"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "blunderpolicy",
+            "moves": [
+                "darkestlariat",
+                "playrough",
+                "acrobatics",
+                "facade"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "charcoal",
+            "moves": [
+                "moonblast",
+                "darkpulse",
+                "terablast",
+                "memento"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "choiceband",
+            "moves": [
+                "darkestlariat",
+                "playrough",
+                "suckerpunch",
+                "facade"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "choicescarf",
+            "moves": [
+                "darkpulse",
+                "moonblast",
+                "terablast",
+                "trick"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "choicespecs",
+            "moves": [
+                "moonblast",
+                "darkpulse",
+                "earthpower",
+                "icebeam"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "clearamulet",
+            "moves": [
+                "calmmind",
+                "moonlight",
+                "moonblast",
+                "storedpower"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "covertcloak",
+            "moves": [
+                "healbell",
+                "spiritbreak",
+                "darkpulse",
+                "icebeam"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "mysticwater",
+            "moves": [
+                "darkpulse",
+                "moonblast",
+                "icebeam",
+                "terablast"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "dragonfang",
+            "moves": [
+                "terablast",
+                "moonblast",
+                "darkpulse",
+                "moonlight"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "eviolite",
+            "moves": [
+                "trick",
+                "moonlight",
+                "moonblast",
+                "darkpulse"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "expertbelt",
+            "moves": [
+                "moonblast",
+                "darkpulse",
+                "earthpower",
+                "icebeam"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "flameorb",
+            "moves": [
+                "agility",
+                "moonblast",
+                "darkpulse",
+                "moonlight"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "focusband",
+            "moves": [
+                "calmmind",
+                "moonlight",
+                "storedpower",
+                "moonblast"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "focussash",
+            "moves": [
+                "moonblast",
+                "darkpulse",
+                "moonlight",
+                "earthpower"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "lifeorb",
+            "moves": [
+                "moonblast",
+                "darkpulse",
+                "earthpower",
+                "icebeam"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "mirrorherb",
+            "moves": [
+                "darkestlariat",
+                "playrough",
+                "suckerpunch",
+                "icebeam"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "nevermeltice",
+            "moves": [
+                "icebeam",
+                "darkpulse",
+                "moonblast",
+                "memento"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "poisonbarb",
+            "moves": [
+                "darkestlariat",
+                "playrough",
+                "beatup",
+                "terablast"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "quickclaw",
+            "moves": [
+                "foulplay",
+                "endeavor",
+                "playrough",
+                "suckerpunch"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "metalcoat",
+            "moves": [
+                "terablast",
+                "healbell",
+                "moonlight",
+                "foulplay"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "rockyhelmet",
+            "moves": [
+                "bulkup",
+                "moonlight",
+                "darkestlariat",
+                "spiritbreak"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "scopelens",
+            "moves": [
+                "pursuit",
+                "moonblast",
+                "shadowball",
+                "nightslash"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "sharpbeak",
+            "moves": [
+                "terablast",
+                "nightslash",
+                "playrough",
+                "moonlight"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "silkscarf",
+            "moves": [
+                "doubleedge",
+                "quickattack",
+                "moonblast",
+                "darkpulse"
+            ]
+        },
+        {
+            "ability": "sacredtreasures",
+            "item": "toxicorb",
+            "moves": [
+                "bulkup",
+                "moonlight",
+                "facade",
+                "darkestlariat"
+            ]
+        }
+    ]
+}

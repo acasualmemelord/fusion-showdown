@@ -168,6 +168,16 @@ export const Formats: FormatList = [
 		column: 2,
 	},
 	{
+		name: "[Gen 9] PoA Random Battle",
+		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
+
+		mod: 'gen9pokeathlon',
+		team: 'random',
+		ruleset: [
+			'Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod',
+		],
+	},
+	{
 		name: "[Gen 9] PoA Dex AG",
 
 		mod: 'gen9pokeathlon',

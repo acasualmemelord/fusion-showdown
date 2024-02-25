@@ -331,4 +331,22 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 4.5,
 		num: 0,
 	},
+	counterclockwise: {
+		onChangeBoost(boost, target, source, effect) {
+			if (effect && effect.id === 'zpower') return;
+			[boost.atk, boost.spa] = [boost.spa, boost.atk];
+		},
+		flags: {},
+		name: "Counterclockwise",
+		shortDesc: "This Pokemon's SpA boosts are swapped with its Atk boosts.",
+		rating: 4,
+		num: 0,
+	},
+	undeterred: {
+		flags: {},
+		name: "Undeterred",
+		shortDesc: "This Pokemon is immune to all entry hazards.",
+		rating: 4,
+		num: 0,
+	},
 };
