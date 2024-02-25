@@ -67,9 +67,9 @@
             "teraType": "steel"
         }
     ],
-    "electrodemega": [
+    "electrode": [
         {
-            "ability": "kablooey",
+            "ability": "static",
             "item": "electrodite",
             "moves": [
                 "hyperbeam",
@@ -80,7 +80,7 @@
             "teraType": "electric"
         },
         {
-            "ability": "kablooey",
+            "ability": "static",
             "item": "electrodite",
             "moves": [
                 "voltswitch",
@@ -91,7 +91,7 @@
             "teraType": "electric"
         },
         {
-            "ability": "kablooey",
+            "ability": "static",
             "item": "electrodite",
             "moves": [
                 "charge",
@@ -102,9 +102,9 @@
             "teraType": "electric"
         }
     ],
-    "florgesmega": [
+    "florges": [
         {
-            "ability": "ivywall",
+            "ability": "flowerveil",
             "item": "florgesite",
             "moves": [
                 "calmmind",
@@ -115,7 +115,7 @@
             "teraType": "fairy"
         },
         {
-            "ability": "ivywall",
+            "ability": "flowerveil",
             "item": "florgesite",
             "moves": [
                 "calmmind",
@@ -126,7 +126,7 @@
             "teraType": "fairy"
         },
         {
-            "ability": "ivywall",
+            "ability": "flowerveil",
             "item": "florgesite",
             "moves": [
                 "toxic",
@@ -537,7 +537,7 @@
     "raikousupra": [
         {
             "ability": "sandydefense",
-            "item": "lucarionite",
+            "item": "leftovers",
             "moves": [
                 "calmmind",
                 "substitute",
@@ -775,7 +775,7 @@
             "teraType": "poison"
         },
         {
-            "ability": "owntempo",
+            "ability": "prankster",
             "item": "blacksludge",
             "moves": [
                 "switcheroo",
@@ -864,7 +864,7 @@
                 "perishsong",
                 "roost"
             ],
-            "teraType": "stellar"
+            "teraType": "steel"
         },
         {
             "ability": "sanctuary",
@@ -1524,7 +1524,7 @@
         },
         {
             "ability": "ironfist",
-            "item": "choicescarf",
+            "item": "sitrusberry",
             "moves": [
                 "meteormash",
                 "drainpunch",
