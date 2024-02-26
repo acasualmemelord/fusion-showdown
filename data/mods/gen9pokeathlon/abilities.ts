@@ -368,9 +368,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 			if (zombie) {
-				let newSpecies: Species = this.dex.deepClone(zombie.species);
+				const species = this.runEvent('ModifySpecies', this, null, this.effect, zombie.species);
+				let newSpecies: Species = this.dex.deepClone(species);
 
-				let species = zombie.species;
 				let moves = zombie.moveSlots;
 				
 				this.add('-activate', target, 'ability: Necromancy');
@@ -378,7 +378,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 
 				let newType: string[] = [];
 
-				for (let type of [...target.types, ...species.types]) {
+				for (let type of [...target.getTypes(), ...zombie.getTypes()]) {
 					if (!newType.includes(type)) {
 						newType.push(type);
 					}

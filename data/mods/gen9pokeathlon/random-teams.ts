@@ -59,7 +59,7 @@ export class RandomGen7Teams extends RandomGen8Teams {
 					species: this.dex.species.get(curSpecies).name,
 					happiness: curSet.moves.includes('frustration') ? 0 : 255,
 					shiny: this.randomChance(1, 1024),
-					level: level,
+					level: curSet.ability === 'necromancy' ? 70 : level,
 					gender: this.dex.species.get(curSpecies).gender,
 					moves: curSet.moves,
 					ability: curSet.ability,
