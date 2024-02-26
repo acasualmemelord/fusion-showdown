@@ -511,7 +511,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evoLevel: 44,
 		tags: ["Pokeathlon"],
 		eggGroups: ["Amorphous", "Water1"],
-		tier: "OU",
+		tier: "Uber",
 		natDexTier: "OU",
 		doublesTier: "DUU",
 	},
