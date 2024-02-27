@@ -119,7 +119,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 		}
 		for (const i in this.data.Moves) {
-			if (this.data.Moves[i].isNonstandard === 'Past') {
+			if (this.data.Moves[i].isNonstandard === 'Past' || this.data.Moves[i].isNonstandard === 'Unobtainable') {
 				delete this.data.Moves[i].isNonstandard;
 			}
 		}
