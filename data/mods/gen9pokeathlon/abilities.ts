@@ -238,7 +238,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	multishot: {
 		onModifyMove(move, pokemon, target) {
-			if (move.category !== "Special") return;
+			if (move.category !== "Special" && move.basePower) return;
 			move.multihit = [2, 5];
 		},
 		onBasePower(basePower, pokemon, target, move) {
