@@ -116,7 +116,6 @@ export const Scripts: ModdedBattleScriptsData = {
 			} else {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
-				this.data.Pokedex[i] = {...this.data.Pokedex[i], tier: "Illegal", natDexTier: "Illegal", doublesTier: "Illegal"};
 			}
 		}
 		for (const i in this.data.Moves) {
