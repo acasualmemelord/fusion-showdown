@@ -112,14 +112,13 @@ export const Scripts: ModdedBattleScriptsData = {
 		for (const i in this.data.Pokedex) {
 			if (i in PoADex) {
 				this.data.Pokedex[i].num = PoADex[i];
-				this.data.Pokedex[i].isNonstandard = null;
+				delete this.data.Pokedex[i].isNonstandard;
 			} else {
-				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
-				this.data.Pokedex[i].isNonstandard = "Unobtainable";
+				delete this.data.Pokedex[i];
 			}
 		}
 		for (const i in this.data.Moves) {
-			if (this.data.Moves[i].isNonstandard === 'Past') {
+			if (this.data.Moves[i].isNonstandard === 'Past' || this.data.Moves[i].isNonstandard === 'Unobtainable') {
 				delete this.data.Moves[i].isNonstandard;
 			}
 		}
