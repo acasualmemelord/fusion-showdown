@@ -8,8 +8,8 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen9',
 	init() {
 		for (const i in this.data.Pokedex) {
-			const species = this.species.get(i);
-			const baseSpecies = this.species.get(species.baseSpecies);
+			const species = this.mod(this.parentMod).species.get(i);
+			const baseSpecies = this.mod(this.parentMod).species.get(species.baseSpecies);
 			let finalTier: TierTypes.Other | TierTypes.Doubles | undefined = "(DUU)";
 			if ((!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") && species.natDexTier !== "Illegal") {
 				if (doublesTiers["DUber"].includes(i) || baseSpecies.tags?.includes('Mythical') || baseSpecies.tags?.includes('Restricted Legendary')) {
