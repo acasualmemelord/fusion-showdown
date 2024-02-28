@@ -104,21 +104,21 @@ export const Formats: FormatList = [
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause',
 		],
 	},
-	// {
-	// 	name: "[Gen 9] IF NatDex Doubles OU",
+	{
+		name: "[Gen 9] IF NatDex Doubles OU",
 
-	// 	mod: 'gen9infinitefusion',
-	// 	gameType: 'doubles',
-	// 	ruleset: [
-	// 		'Standard NatDex', 'Sleep Clause Mod', 'Evasion Clause',
-	// 		'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
-	// 	],
-	// 	banlist: [
-	// 		'DUber',
-	// 		'ability:hugepower', 'ability:purepower', 'ability:commander', 'ability:swordofruin', 'ability:beadsofruin', 'ability:contrary', 'ability:wonderguard', 'ability:grimneigh', 'ability:powerconstruct', 'ability:simple',
-	// 		'move:geomancy', 'move:afteryou', 'move:clangoroussoul', 'move:lastrespects', 'move:bellydrum', 'move:shellsmash', 'move:clangoroussoul',
-	// 	],
-	// },
+		mod: 'gen9infinitefusion',
+		gameType: 'doubles',
+		ruleset: [
+			'Standard NatDex', 'Sleep Clause Mod', 'Evasion Clause',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+		],
+		banlist: [
+			'DUber',
+			'ability:hugepower', 'ability:purepower', 'ability:commander', 'ability:swordofruin', 'ability:beadsofruin', 'ability:contrary', 'ability:wonderguard', 'ability:grimneigh', 'ability:powerconstruct', 'ability:simple',
+			'move:geomancy', 'move:afteryou', 'move:clangoroussoul', 'move:lastrespects', 'move:bellydrum', 'move:shellsmash', 'move:clangoroussoul',
+		],
+	},
 	{
 		name: "[Gen 9] IF NatDex Doubles AG",
 
@@ -252,6 +252,17 @@ export const Formats: FormatList = [
 		mod: 'gen9pokeathlon',
 		ruleset: [
 			'Standard NatDex', '+CAP',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+		],
+	},
+	{
+		name: "[Gen 9] PoA Free-for-all",
+
+		mod: 'gen9pokeathlon',
+		gameType: 'freeforall',
+		rated: false,
+		ruleset: [
+			'Standard NatDex',
 			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 	},
