@@ -9,7 +9,7 @@ export const Scripts: ModdedBattleScriptsData = {
 	init() {
 		for (const i in this.data.Pokedex) {
 			const species = this.mod(this.parentMod).species.get(i);
-			if (!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") {
+			// if (!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") {
 				if (i in doublesTiers["DUber"] || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
 					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "DUber"};
 				} else if (i in doublesTiers["DOU"]) {
@@ -24,7 +24,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "(DUU)"};
 				}
 			}
-		}
+		// }
 	},
 	pokemon: {
 		transformInto(pokemon, effect) {
