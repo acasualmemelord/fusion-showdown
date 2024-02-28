@@ -8,7 +8,7 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen9',
 	init() {
 		for (const i in this.data.Pokedex) {
-			const species = this.species.get(i);
+			const species = this.mod(this.parentMod).species.get(i);
 			if (!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") {
 				if (i in doublesTiers["DUber"] || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
 					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "DUber"};
