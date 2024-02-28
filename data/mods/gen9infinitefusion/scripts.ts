@@ -1,5 +1,30 @@
+const doublesTiers = {
+	"DUber": ["fluttermane", "xurkitree", "smeargle", "slaking", "blissey"], // Mythical, Restricted Legendary
+	"DOU": ["amoonguss", "archaludon", "chienpao", "chiyu", "cresselia", "diancie", "dragonite", "excadrill", "farigiraf", "gholdengo", "glimmora", "gougingfire", "grimmsnarl", "incineroar", "indeedeef", "ironhands", "kingambit", "landorusi", "landorust", "ogerponhearthflame", "ogerponwellspring", "pelipper", "ragingbolt", "rillaboom", "sinistcha", "torkoal", "tornadus", "tyranitar", "ursaluna", "walkingwake", "whimsicott", "porygon2", "dusclops", "sableye", "arcanine", "arcaninehisui", "armarouge", "bastiodon", "baxcalibur", "brutebonnet", "ceruledge", "chandelure", "clefairy", "dragapult", "enamorus", "entei", "garganacl", "gastrodon", "hatterene", "hitmontop", "ironboulder", "ironbundle", "ninetalesalola", "palafin", "porygonz", "thundurus", "ursalunabloodmoon", "heatran", "regieleki", "goodrahisui", "ironvaliant", "lilligant", "lilliganthisui"],
+	"DUU": ["pecharunt", "volcanion", "abomasnow", "alcremie", "araquanid", "blastoise", "cobalion", "comfey", "conkeldurr", "empoleon", "feraligatr", "flygon", "galvantula", "garchomp", "gliscor", "golurk", "greattusk", "greninja", "gyarados", "hariyama", "hitmonlee", "hydrapple", "indeedeem", "kleavor", "kingdra", "meowstic", "metagross", "murkrow", "ogerponcornerstone", "politoed", "ninetales", "rampardos", "raikou", "registeel", "reuniclus", "roaringmoon", "samurotthisui", "suicune", "sylveon", "zapdos", "ambipom", "arboliva", "barraskweda", "breloom", "bronzong", "tsareena", "cetitan", "cinderace", "clodsire", "coalossal", "corviknight", "daschbun", "dondozo", "dudunsparce", "eiscue", "enamorustherian", "espathra", "espeon", "falinks", "frosmoth", "gallade", "gardevoir", "gengar", "goodra", "haxorus", "heracross", "hydreigon", "klawf", "klefki", "lokix", "lucario", "ludicolo", "luxray", "lycanroc", "magnezone", "noivern", "orthworm", "screamtail", "sneasler", "talonflame", "tinglu", "wochien", "toxapex", "umbreon", "uxie", "vaporeon", "volcarona", "weavile", "weezing", "weezinggalar", "zoroarkhisui"],
+};
+
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen9',
+	init() {
+		for (const i in this.data.Pokedex) {
+			if (!this.data.Pokedex[i].isNonstandard || this.data.Pokedex[i].isNonstandard === "Past" || this.data.Pokedex[i].isNonstandard === "Unobtainable") {
+				if (i in doublesTiers["DUber"] || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
+					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "DUber"};
+				} else if (i in doublesTiers["DOU"]) {
+					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "DOU"};
+				} else if (i in doublesTiers["DUU"]) {
+					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "DUU"};
+				} else if (this.data.Pokedex[i].nfe && this.data.Pokedex[i].prevo) {
+					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "NFE"};
+				} else if (this.data.Pokedex[i].nfe && !this.data.Pokedex[i].prevo) {
+					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "LC"};
+				} else {
+					this.data.Pokedex[i] = {...this.data.Pokedex[i], doublesTier: "(DUU)"};
+				}
+			}
+		}
+	},
 	pokemon: {
 		transformInto(pokemon, effect) {
 			const species = pokemon.species;
