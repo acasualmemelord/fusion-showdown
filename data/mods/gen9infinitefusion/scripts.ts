@@ -9,19 +9,23 @@ export const Scripts: ModdedBattleScriptsData = {
 	init() {
 		for (const i in this.data.Pokedex) {
 			const species = this.mod(this.parentMod).species.get(i);
-			if ((!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") && this.data.FormatsData[i] && species.natDexTier !== "Illegal") {
+			let finalTier: TierTypes.Other | TierTypes.Doubles | undefined = "(DUU)";
+			if ((!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") && species.natDexTier !== "Illegal") {
 				if (i in doublesTiers["DUber"] || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
-					this.data.FormatsData[i].doublesTier = "DUber";
+					finalTier = "DUber";
 				} else if (i in doublesTiers["DOU"]) {
-					this.data.FormatsData[i].doublesTier = "DOU";
+					finalTier = "DOU";
 				} else if (i in doublesTiers["DUU"]) {
-					this.data.FormatsData[i].doublesTier = "DUU";
+					finalTier = "DUU";
 				} else if (this.data.Pokedex[i].nfe && this.data.Pokedex[i].prevo) {
-					this.data.FormatsData[i].doublesTier = "NFE";
+					finalTier = "NFE";
 				} else if (this.data.Pokedex[i].nfe && !this.data.Pokedex[i].prevo) {
-					this.data.FormatsData[i].doublesTier = "LC";
+					finalTier = "LC";
+				}
+				if (this.data.FormatsData[i]) {
+					this.data.FormatsData[i].doublesTier = finalTier;
 				} else {
-					this.data.FormatsData[i].doublesTier = "(DUU)";
+					this.data.FormatsData[i] = {doublesTier: finalTier};
 				}
 			}
 		}
