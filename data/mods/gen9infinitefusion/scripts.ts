@@ -25,6 +25,8 @@ export const Scripts: ModdedBattleScriptsData = {
 				}
 				if (this.data.FormatsData[i]) {
 					this.data.FormatsData[i].doublesTier = finalTier;
+				} else if (!this.data.FormatsData[baseSpecies.id]) {
+					this.data.FormatsData[i] = {doublesTier: finalTier};
 				}
 			}
 		}
