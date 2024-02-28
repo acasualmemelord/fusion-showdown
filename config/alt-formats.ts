@@ -116,7 +116,7 @@ export const Formats: FormatList = [
 		banlist: [
 			'DUber',
 			'ability:hugepower', 'ability:purepower', 'ability:commander', 'ability:swordofruin', 'ability:beadsofruin', 'ability:contrary', 'ability:wonderguard', 'ability:grimneigh', 'ability:powerconstruct', 'ability:simple',
-			'move:geomancy', 'move:afteryou', 'move:clangoroussoul', 'move:lastrespects', 'move:bellydrum', 'move:shellsmash', 'move:clangoroussoul',
+			'move:geomancy', 'move:afteryou', 'move:clangoroussoul', 'move:lastrespects', 'move:bellydrum', 'move:shellsmash',
 		],
 	},
 	{
