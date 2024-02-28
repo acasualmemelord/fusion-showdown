@@ -9,7 +9,7 @@ export const Scripts: ModdedBattleScriptsData = {
 	init() {
 		for (const i in this.data.Pokedex) {
 			const species = this.mod(this.parentMod).species.get(i);
-			if (!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") {
+			if ((!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") && this.data.FormatsData[i] && species.natDexTier !== "Illegal") {
 				if (i in doublesTiers["DUber"] || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
 					this.data.FormatsData[i].doublesTier = "DUber";
 				} else if (i in doublesTiers["DOU"]) {
