@@ -11,11 +11,11 @@ export const Scripts: ModdedBattleScriptsData = {
 			const species = this.mod(this.parentMod).species.get(i);
 			let finalTier: TierTypes.Other | TierTypes.Doubles | undefined = "(DUU)";
 			if ((!species.isNonstandard || species.isNonstandard === "Past" || species.isNonstandard === "Unobtainable") && species.natDexTier !== "Illegal") {
-				if (i in doublesTiers["DUber"] || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
+				if (doublesTiers["DUber"].includes(i) || this.data.Pokedex[i].tags?.includes('Mythical') || this.data.Pokedex[i].tags?.includes('Restricted Legendary')) {
 					finalTier = "DUber";
-				} else if (i in doublesTiers["DOU"]) {
+				} else if (doublesTiers["DOU"].includes(i)) {
 					finalTier = "DOU";
-				} else if (i in doublesTiers["DUU"]) {
+				} else if (doublesTiers["DUU"].includes(i)) {
 					finalTier = "DUU";
 				} else if (this.data.Pokedex[i].nfe && this.data.Pokedex[i].prevo) {
 					finalTier = "NFE";
