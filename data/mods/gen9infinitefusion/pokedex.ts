@@ -62,6 +62,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "(DUU)",
 	},
 	totoritaquil: {
 		num: 6004,
@@ -110,6 +111,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	torkipcko: {
 		num: 6007,
@@ -158,6 +160,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "(DUU)",
 	},
 	turcharlup: {
 		num: 6010,
@@ -206,6 +209,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "(DUU)",
 	},
 	zapmolticuno: {
 		num: 6013,
@@ -222,6 +226,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "OU",
 		tier: "UU",
+		doublesTier: "(DUU)",
 	},
 	enraicune: {
 		num: 6014,
@@ -238,6 +243,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "OU",
 		tier: "OU",
+		doublesTier: "DUU",
 	},
 	kyodonquaza: {
 		num: 6015,
@@ -254,6 +260,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "Uber",
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	paldiatina: {
 		num: 6016,
@@ -270,6 +277,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "Uber",
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	zekyushiram: {
 		num: 6017,
@@ -286,6 +294,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "Uber",
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 	celemewchi: {
 		num: 6018,
@@ -302,6 +311,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "OU",
 		tier: "OU",
+		doublesTier: "(DUU)",
 	},
 	regitrio: {
 		num: 6019,
@@ -318,6 +328,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "OU",
 		tier: "OU",
+		doublesTier: "DUU",
 	},
 	deosectwo: {
 		num: 6020,
@@ -334,5 +345,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Infinite Fusion"],
 		natDexTier: "Uber",
 		tier: "Uber",
+		doublesTier: "DUber",
 	},
 };

@@ -108,7 +108,7 @@ const PoADex: {[k: string]: number} = {
 };
 
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'gen9',
+	inherit: 'basefusion',
 	init() {
 		for (const i in this.data.Pokedex) {
 			if (i in PoADex) {
