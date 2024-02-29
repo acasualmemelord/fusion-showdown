@@ -145,6 +145,21 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] IF NDBH",
+
+		mod: 'gen9infinitefusion',
+		ruleset: [
+			'-Nonexistent', 'Standard NatDex', 'Forme Clause', 'Sleep Moves Clause', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Dynamax Clause', 'CFZ Clause', '!Obtainable',
+			'Infinite Fusion Mod', 'Species Reveal Clause', '!Nickname Clause'
+		],
+		banlist: [
+			'Cramorant-Gorging', 'Calyrex-Shadow', 'Darmanitan-Galar-Zen', 'Eternatus-Eternamax', 'Groudon-Primal', 'Rayquaza-Mega', 'Shedinja',
+			'item:gengarite', 'item:mawilite', 'item:medichamite', 'item:thickclub', 'item:lightball', 'item:berserkgene',
+			'ability:arenatrap', 'ability:shadowtag', 'ability:speedboost', 'ability:disguise', 'ability:hugepower', 'ability:purepower', 'ability:wonderguard', 'ability:neutralizinggas', 'ability:stakeout', 'ability:illusion', 'ability:innardsout', 'ability:waterbubble', 'ability:contrary', 'ability:gorillatactics',
+			'move:ragefist', 'move:shellsmash', 'move:bellydrum', 'move:lastrespects', 'move:revivalblessing', 'move:octolock', 'move:doubleironbash', 'move:shedtail', 'move:electrify', 'Comatose + Sleep Talk', 'Imprison + Transform',
+		],
+	},
+	{
 		name: "[Gen 9] IF Custom Game",
 
 		mod: 'gen9infinitefusion',
