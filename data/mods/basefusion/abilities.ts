@@ -2,7 +2,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	disguise: {
 		inherit: true,
 		onDamage(damage, target, source, effect) {
-			if (effect?.effectType === 'Move' && (['mimikyu', 'mimikyutotem'].includes(target.species.id) || ['mimikyu', 'mimikyutotem'].includes(toID(target.fusion)))) {
+			if (effect?.effectType === 'Move' && (['mimikyu', 'mimikyutotem'].includes(target.species.id) || ['mimikyu', 'mimikyutotem'].includes(this.dex.toID(target.fusion)))) {
 				this.add('-activate', target, 'ability: Disguise');
 				this.effectState.busted = true;
 				return 0;
@@ -10,7 +10,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onCriticalHit(target, source, move) {
 			if (!target) return;
-			if (!['mimikyu', 'mimikyutotem'].includes(target.species.id) && ['mimikyu', 'mimikyutotem'].includes(toID(target.fusion))) {
+			if (!['mimikyu', 'mimikyutotem'].includes(target.species.id) && ['mimikyu', 'mimikyutotem'].includes(this.dex.toID(target.fusion))) {
 				return;
 			}
 			const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
@@ -21,7 +21,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onEffectiveness(typeMod, target, type, move) {
 			if (!target || move.category === 'Status') return;
-			if (!['mimikyu', 'mimikyutotem'].includes(target.species.id) && ['mimikyu', 'mimikyutotem'].includes(toID(target.fusion))) {
+			if (!['mimikyu', 'mimikyutotem'].includes(target.species.id) && ['mimikyu', 'mimikyutotem'].includes(this.dex.toID(target.fusion))) {
 				return;
 			}
 
@@ -33,14 +33,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onUpdate(pokemon) {
 			if (this.effectState.busted) {
+				let valid = false;
 				if (['mimikyu', 'mimikyutotem'].includes(pokemon.species.id)) {
 					const speciesid = pokemon.species.id === 'mimikyutotem' ? 'Mimikyu-Busted-Totem' : 'Mimikyu-Busted';
 					pokemon.formeChange(speciesid, this.effect, true);
-				} if (['mimikyu', 'mimikyutotem'].includes(toID(pokemon.fusion))) {
-					const fusionid = toID(pokemon.fusion) === 'mimikyutotem' ? 'Mimikyu-Busted-Totem' : 'Mimikyu-Busted';
+					valid = true;
+				} if (['mimikyu', 'mimikyutotem'].includes(this.dex.toID(pokemon.fusion))) {
+					const fusionid = this.dex.toID(pokemon.fusion) === 'mimikyutotem' ? 'Mimikyu-Busted-Totem' : 'Mimikyu-Busted';
 					pokemon.fusionChange(fusionid, this.effect);
+					valid = true;
+				} if (valid) {
+					this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon);
 				}
-				this.damage(pokemon.baseMaxhp / 8, pokemon, pokemon);
 			}
 		},
 	},
