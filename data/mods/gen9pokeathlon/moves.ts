@@ -3,7 +3,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	leechseed: {
 		inherit: true,
 		onTryImmunity(target) {
-			return !target.hasType('Grass') || !target.hasAbility('Ivy Wall');
+			return !target.hasType('Grass') && !target.hasAbility('Ivy Wall');
 		},
 	},
 	gmaxsteelsurge: {
