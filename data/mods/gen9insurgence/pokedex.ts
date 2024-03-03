@@ -1,6 +1,6 @@
 export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	poliwrathmega: {
-		num: 0,
+		num: 62,
 		name: "Poliwrath-Mega",
 		baseSpecies: "Poliwrath",
 		forme: "Mega",
@@ -14,7 +14,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Poliwrathite",
 	},
 	machamppokkn: {
-		num: 0,
+		num: 68,
 		name: "Machamp-Pokkén",
 		baseSpecies: "Machamp",
 		forme: "Pokkén",
@@ -27,7 +27,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	marowakmega: {
-		num: 0,
+		num: 105,
 		name: "Marowak-Mega",
 		baseSpecies: "Marowak",
 		forme: "Mega",
@@ -41,7 +41,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Marowakite",
 	},
 	eeveemega: {
-		num: 0,
+		num: 133,
 		name: "Eevee-Mega",
 		baseSpecies: "Eevee",
 		forme: "Mega",
@@ -55,7 +55,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Eevite",
 	},
 	mewtwoshadow: {
-		num: 0,
+		num: 150,
 		name: "Mewtwo-Shadow",
 		baseSpecies: "Mewtwo",
 		forme: "Shadow",
@@ -69,7 +69,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Mewtwonite X",
 	},
 	mewspace: {
-		num: 0,
+		num: 151,
 		name: "Mew-Space",
 		baseSpecies: "Mew",
 		forme: "Space",
@@ -82,7 +82,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	meganiummega: {
-		num: 0,
+		num: 154,
 		name: "Meganium-Mega",
 		baseSpecies: "Meganium",
 		forme: "Mega",
@@ -96,7 +96,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Meganiumite",
 	},
 	typhlosionmega: {
-		num: 0,
+		num: 157,
 		name: "Typhlosion-Mega",
 		baseSpecies: "Typhlosion",
 		forme: "Mega",
@@ -110,7 +110,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Typhlosionite",
 	},
 	feraligatrmega: {
-		num: 0,
+		num: 160,
 		name: "Feraligatr-Mega",
 		baseSpecies: "Feraligatr",
 		forme: "Mega",
@@ -124,7 +124,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Feraligatite",
 	},
 	sudowoodomega: {
-		num: 0,
+		num: 185,
 		name: "Sudowoodo-Mega",
 		baseSpecies: "Sudowoodo",
 		forme: "Mega",
@@ -138,7 +138,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Sudowoodite",
 	},
 	politoedmega: {
-		num: 0,
+		num: 186,
 		name: "Politoed-Mega",
 		baseSpecies: "Politoed",
 		forme: "Mega",
@@ -152,7 +152,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Politoedite",
 	},
 	malesunfloramega: {
-		num: 0,
+		num: 192,
 		name: "(Male)-Sunflora-Mega",
 		baseSpecies: "Sunflora",
 		forme: "(Male)-Mega",
@@ -166,7 +166,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Sunflorite",
 	},
 	girafarigmega: {
-		num: 0,
+		num: 203,
 		name: "Girafarig-Mega",
 		baseSpecies: "Girafarig",
 		forme: "Mega",
@@ -180,7 +180,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Etigirafarigite",
 	},
 	magcargomega: {
-		num: 0,
+		num: 219,
 		name: "Magcargo-Mega",
 		baseSpecies: "Magcargo",
 		forme: "Mega",
@@ -194,7 +194,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Magcargonite",
 	},
 	donphanmega: {
-		num: 0,
+		num: 232,
 		name: "Donphan-Mega",
 		baseSpecies: "Donphan",
 		forme: "Mega",
@@ -208,7 +208,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Donphanite",
 	},
 	miltankmega: {
-		num: 0,
+		num: 241,
 		name: "Miltank-Mega",
 		baseSpecies: "Miltank",
 		forme: "Mega",
@@ -222,7 +222,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Miltankite",
 	},
 	shiftrymega: {
-		num: 0,
+		num: 275,
 		name: "Shiftry-Mega",
 		baseSpecies: "Shiftry",
 		forme: "Mega",
@@ -236,7 +236,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Shiftrite",
 	},
 	flygonarmored: {
-		num: 0,
+		num: 330,
 		name: "Flygon-Armored",
 		baseSpecies: "Flygon",
 		forme: "Armored",
@@ -250,7 +250,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Flygonite",
 	},
 	cacturnemega: {
-		num: 0,
+		num: 332,
 		name: "Cacturne-Mega",
 		baseSpecies: "Cacturne",
 		forme: "Mega",
@@ -264,7 +264,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Cacturnite",
 	},
 	crawdauntmega: {
-		num: 0,
+		num: 342,
 		name: "Crawdaunt-Mega",
 		baseSpecies: "Crawdaunt",
 		forme: "Mega",
@@ -278,7 +278,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Crawdauntite",
 	},
 	miloticmega: {
-		num: 0,
+		num: 350,
 		name: "Milotic-Mega",
 		baseSpecies: "Milotic",
 		forme: "Mega",
@@ -292,7 +292,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Milotite",
 	},
 	formsunny: {
-		num: 0,
+		num: 351,
 		name: "Form-Sunny",
 		baseSpecies: "Castform",
 		forme: "Form-Sunny",
@@ -305,7 +305,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	jirachimega: {
-		num: 0,
+		num: 385,
 		name: "Jirachi-Mega",
 		baseSpecies: "Jirachi",
 		forme: "Mega",
@@ -319,7 +319,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Jirachite",
 	},
 	chatotmega: {
-		num: 0,
+		num: 441,
 		name: "Chatot-Mega",
 		baseSpecies: "Chatot",
 		forme: "Mega",
@@ -333,7 +333,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Chatotite",
 	},
 	spiritombmega: {
-		num: 0,
+		num: 442,
 		name: "Spiritomb-Mega",
 		baseSpecies: "Spiritomb",
 		forme: "Mega",
@@ -347,7 +347,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Spiritombite",
 	},
 	froslassmega: {
-		num: 0,
+		num: 478,
 		name: "Froslass-Mega",
 		baseSpecies: "Froslass",
 		forme: "Mega",
@@ -361,7 +361,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Froslassite",
 	},
 	regigigasprimal: {
-		num: 0,
+		num: 486,
 		name: "Regigigas-Primal",
 		baseSpecies: "Regigigas",
 		forme: "Primal",
@@ -375,7 +375,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Crystal Piece",
 	},
 	formeorigin: {
-		num: 0,
+		num: 487,
 		name: "Forme-Origin",
 		baseSpecies: "Giratina",
 		forme: "Forme-Origin",
@@ -388,7 +388,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	arceusprimal: {
-		num: 0,
+		num: 493,
 		name: "Arceus-Primal",
 		baseSpecies: "Arceus",
 		forme: "Primal",
@@ -402,7 +402,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Crystal Piece",
 	},
 	zebstrikamega: {
-		num: 0,
+		num: 523,
 		name: "Zebstrika-Mega",
 		baseSpecies: "Zebstrika",
 		forme: "Mega",
@@ -416,7 +416,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Zebstrikite",
 	},
 	leavannyarmored: {
-		num: 0,
+		num: 542,
 		name: "Leavanny-Armored",
 		baseSpecies: "Leavanny",
 		forme: "Armored",
@@ -429,7 +429,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	zoroarkmega: {
-		num: 0,
+		num: 571,
 		name: "Zoroark-Mega",
 		baseSpecies: "Zoroark",
 		forme: "Mega",
@@ -443,7 +443,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Zoronite",
 	},
 	gothitellemega: {
-		num: 0,
+		num: 576,
 		name: "Gothitelle-Mega",
 		baseSpecies: "Gothitelle",
 		forme: "Mega",
@@ -457,7 +457,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Gothitite",
 	},
 	reuniclusmega: {
-		num: 0,
+		num: 579,
 		name: "Reuniclus-Mega",
 		baseSpecies: "Reuniclus",
 		forme: "Mega",
@@ -471,7 +471,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Reuniclite",
 	},
 	haxorusmega: {
-		num: 0,
+		num: 612,
 		name: "Haxorus-Mega",
 		baseSpecies: "Haxorus",
 		forme: "Mega",
@@ -485,7 +485,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Haxorite",
 	},
 	cryogonalmega: {
-		num: 0,
+		num: 615,
 		name: "Cryogonal-Mega",
 		baseSpecies: "Cryogonal",
 		forme: "Mega",
@@ -499,7 +499,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Cryogonalite",
 	},
 	stunfiskmega: {
-		num: 0,
+		num: 618,
 		name: "Stunfisk-Mega",
 		baseSpecies: "Stunfisk",
 		forme: "Mega",
@@ -513,7 +513,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Stunfiskite",
 	},
 	bisharpmega: {
-		num: 0,
+		num: 625,
 		name: "Bisharp-Mega",
 		baseSpecies: "Bisharp",
 		forme: "Mega",
@@ -527,7 +527,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Bisharpite",
 	},
 	hydreigonmega: {
-		num: 0,
+		num: 635,
 		name: "Hydreigon-Mega",
 		baseSpecies: "Hydreigon",
 		forme: "Mega",
@@ -541,7 +541,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Hydreigonite",
 	},
 	zekromarmored: {
-		num: 0,
+		num: 644,
 		name: "Zekrom-Armored",
 		baseSpecies: "Zekrom",
 		forme: "Armored",
