@@ -554,7 +554,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	bulbasaurdelta: {
-		num: 0,
+		num: 1,
 		name: "Bulbasaur-Delta",
 		types: ["Fairy", "Psychic"],
 		baseStats: {hp: 45, atk: 49, def: 49, spa: 65, spd: 65, spe: 45},
@@ -566,7 +566,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	ivysaurdelta: {
-		num: 0,
+		num: 2,
 		name: "Ivysaur-Delta",
 		types: ["Fairy", "Psychic"],
 		baseStats: {hp: 60, atk: 62, def: 63, spa: 80, spd: 80, spe: 60},
@@ -579,7 +579,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	venusaurdelta: {
-		num: 0,
+		num: 3,
 		name: "Venusaur-Delta",
 		types: ["Fairy", "Psychic"],
 		baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
@@ -591,7 +591,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	venusaurdeltamega: {
-		num: 0,
+		num: 3,
 		name: "Venusaur-Delta-Mega",
 		baseSpecies: "Venusaur-Delta",
 		forme: "Mega",
@@ -605,7 +605,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Venusaurite",
 	},
 	charmanderdelta: {
-		num: 0,
+		num: 4,
 		name: "Charmander-Delta",
 		types: ["Ghost", "Dragon"],
 		baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
@@ -617,7 +617,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	charmeleondelta: {
-		num: 0,
+		num: 5,
 		name: "Charmeleon-Delta",
 		types: ["Ghost", "Dragon"],
 		baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
@@ -630,7 +630,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	charizarddelta: {
-		num: 0,
+		num: 6,
 		name: "Charizard-Delta",
 		types: ["Ghost", "Dragon"],
 		baseStats: {hp: 78, atk: 104, def: 78, spa: 159, spd: 115, spe: 100},
@@ -642,7 +642,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	charizarddeltamega: {
-		num: 0,
+		num: 6,
 		name: "Charizard-Delta-Mega",
 		baseSpecies: "Charizard-Delta",
 		forme: "Mega",
@@ -656,7 +656,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Charizardite",
 	},
 	squirtledelta: {
-		num: 0,
+		num: 7,
 		name: "Squirtle-Delta",
 		types: ["Dark", "Fighting"],
 		baseStats: {hp: 44, atk: 48, def: 65, spa: 50, spd: 64, spe: 43},
@@ -668,7 +668,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	wartortledelta: {
-		num: 0,
+		num: 8,
 		name: "Wartortle-Delta",
 		types: ["Dark", "Fighting"],
 		baseStats: {hp: 59, atk: 63, def: 80, spa: 65, spd: 80, spe: 58},
@@ -681,7 +681,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	blastoisedelta: {
-		num: 0,
+		num: 9,
 		name: "Blastoise-Delta",
 		types: ["Dark", "Fighting"],
 		baseStats: {hp: 79, atk: 103, def: 120, spa: 135, spd: 115, spe: 78},
@@ -693,7 +693,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	blastoisedeltamega: {
-		num: 0,
+		num: 9,
 		name: "Blastoise-Delta-Mega",
 		baseSpecies: "Blastoise-Delta",
 		forme: "Mega",
@@ -707,7 +707,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Blastoisinite",
 	},
 	pawniarddelta: {
-		num: 0,
+		num: 10,
 		name: "Pawniard-Delta",
 		types: ["Flying", "Fighting"],
 		baseStats: {hp: 45, atk: 85, def: 70, spa: 40, spd: 40, spe: 60},
@@ -719,7 +719,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	bisharpdelta: {
-		num: 0,
+		num: 11,
 		name: "Bisharp-Delta",
 		types: ["Flying", "Fighting"],
 		baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
@@ -731,7 +731,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	bisharpdeltamega: {
-		num: 0,
+		num: 11,
 		name: "Bisharp-Delta-Mega",
 		baseSpecies: "Bisharp-Delta",
 		forme: "Mega",
@@ -745,7 +745,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Bisharpite",
 	},
 	raltsdelta: {
-		num: 0,
+		num: 12,
 		name: "Ralts-Delta",
 		types: ["Electric", "Ice"],
 		baseStats: {hp: 28, atk: 25, def: 25, spa: 45, spd: 35, spe: 40},
@@ -757,7 +757,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	kirliadelta: {
-		num: 0,
+		num: 13,
 		name: "Kirlia-Delta",
 		types: ["Electric", "Ice"],
 		baseStats: {hp: 38, atk: 35, def: 35, spa: 65, spd: 55, spe: 50},
@@ -770,7 +770,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	gardevoirdelta: {
-		num: 0,
+		num: 14,
 		name: "Gardevoir-Delta",
 		types: ["Electric", "Ice"],
 		baseStats: {hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80},
@@ -782,7 +782,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	gardevoirdeltamega: {
-		num: 0,
+		num: 14,
 		name: "Gardevoir-Delta-Mega",
 		baseSpecies: "Gardevoir-Delta",
 		forme: "Mega",
@@ -796,7 +796,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Gardevoirite",
 	},
 	galladedelta: {
-		num: 0,
+		num: 15,
 		name: "Gallade-Delta",
 		types: ["Electric", "Ice"],
 		baseStats: {hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80},
@@ -808,7 +808,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	galladedeltamega: {
-		num: 0,
+		num: 15,
 		name: "Gallade-Delta-Mega",
 		baseSpecies: "Gallade-Delta",
 		forme: "Mega",
@@ -822,7 +822,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Galladite",
 	},
 	sunkerndelta: {
-		num: 0,
+		num: 16,
 		name: "Sunkern-Delta",
 		types: ["Fire", "Poison"],
 		baseStats: {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30},
@@ -834,7 +834,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	sunfloradelta: {
-		num: 0,
+		num: 17,
 		name: "Sunflora-Delta",
 		types: ["Fire", "Poison"],
 		baseStats: {hp: 75, atk: 75, def: 55, spa: 105, spd: 85, spe: 30},
@@ -846,7 +846,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	sunfloradeltamega: {
-		num: 0,
+		num: 17,
 		name: "Sunflora-Delta-Mega",
 		baseSpecies: "Sunflora-Delta",
 		forme: "Mega",
@@ -860,7 +860,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Sunflorite",
 	},
 	bergmitedelta: {
-		num: 0,
+		num: 18,
 		name: "Bergmite-Delta",
 		types: ["Rock"],
 		baseStats: {hp: 55, atk: 69, def: 85, spa: 32, spd: 35, spe: 28},
@@ -872,7 +872,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	avaluggdelta: {
-		num: 0,
+		num: 19,
 		name: "Avalugg-Delta",
 		types: ["Rock", "Dragon"],
 		baseStats: {hp: 95, atk: 117, def: 184, spa: 44, spd: 46, spe: 28},
@@ -884,7 +884,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	scytherdelta: {
-		num: 0,
+		num: 20,
 		name: "Scyther-Delta",
 		types: ["Ice", "Fighting"],
 		baseStats: {hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105},
@@ -896,7 +896,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	scizordelta: {
-		num: 0,
+		num: 21,
 		name: "Scizor-Delta",
 		types: ["Ice", "Fighting"],
 		baseStats: {hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65},
@@ -908,7 +908,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	scizordeltamega: {
-		num: 0,
+		num: 21,
 		name: "Scizor-Delta-Mega",
 		baseSpecies: "Scizor-Delta",
 		forme: "Mega",
@@ -922,7 +922,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Scizorite",
 	},
 	scraggydelta: {
-		num: 0,
+		num: 22,
 		name: "Scraggy-Delta",
 		types: ["Grass"],
 		baseStats: {hp: 50, atk: 75, def: 70, spa: 35, spd: 70, spe: 48},
@@ -934,7 +934,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	scraftydelta: {
-		num: 0,
+		num: 23,
 		name: "Scrafty-Delta",
 		types: ["Grass"],
 		baseStats: {hp: 65, atk: 90, def: 115, spa: 45, spd: 115, spe: 58},
@@ -946,7 +946,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	combeedelta: {
-		num: 0,
+		num: 24,
 		name: "Combee-Delta",
 		types: ["Steel", "Fire"],
 		baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
@@ -958,7 +958,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	vespiquendelta: {
-		num: 0,
+		num: 25,
 		name: "Vespiquen-Delta",
 		types: ["Steel", "Fire"],
 		baseStats: {hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40},
@@ -970,7 +970,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	koffingdelta: {
-		num: 0,
+		num: 26,
 		name: "Koffing-Delta",
 		types: ["Electric", "Flying"],
 		baseStats: {hp: 40, atk: 65, def: 95, spa: 60, spd: 45, spe: 35},
@@ -982,7 +982,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	weezingdelta: {
-		num: 0,
+		num: 27,
 		name: "Weezing-Delta",
 		types: ["Electric", "Flying"],
 		baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
@@ -994,7 +994,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	purrloindelta: {
-		num: 0,
+		num: 28,
 		name: "Purrloin-Delta",
 		types: ["Ghost", "Fairy"],
 		baseStats: {hp: 41, atk: 50, def: 37, spa: 50, spd: 37, spe: 66},
@@ -1006,7 +1006,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lieparddelta: {
-		num: 0,
+		num: 29,
 		name: "Liepard-Delta",
 		types: ["Ghost", "Fairy"],
 		baseStats: {hp: 64, atk: 88, def: 50, spa: 88, spd: 50, spe: 106},
@@ -1018,7 +1018,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	phantumpdelta: {
-		num: 0,
+		num: 30,
 		name: "Phantump-Delta",
 		types: ["Fairy"],
 		baseStats: {hp: 43, atk: 70, def: 48, spa: 50, spd: 60, spe: 38},
@@ -1030,7 +1030,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	trevenantdelta: {
-		num: 0,
+		num: 31,
 		name: "Trevenant-Delta",
 		types: ["Fairy", "Fighting"],
 		baseStats: {hp: 85, atk: 110, def: 76, spa: 65, spd: 82, spe: 56},
@@ -1042,7 +1042,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	snoruntdelta: {
-		num: 0,
+		num: 32,
 		name: "Snorunt-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 50, atk: 50, def: 50, spa: 50, spd: 50, spe: 50},
@@ -1054,7 +1054,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	glaliedelta: {
-		num: 0,
+		num: 33,
 		name: "Glalie-Delta",
 		types: ["Fire", "Rock"],
 		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
@@ -1066,7 +1066,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	glaliedeltamega: {
-		num: 0,
+		num: 33,
 		name: "Glalie-Delta-Mega",
 		baseSpecies: "Glalie-Delta",
 		forme: "Mega",
@@ -1080,7 +1080,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Glalitite",
 	},
 	froslassdelta: {
-		num: 0,
+		num: 34,
 		name: "Froslass-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110},
@@ -1092,7 +1092,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	froslassdeltamega: {
-		num: 0,
+		num: 34,
 		name: "Froslass-Delta-Mega",
 		baseSpecies: "Froslass-Delta",
 		forme: "Mega",
@@ -1106,7 +1106,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Frosslassite",
 	},
 	shinxdelta: {
-		num: 0,
+		num: 35,
 		name: "Shinx-Delta",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 45, atk: 65, def: 34, spa: 40, spd: 34, spe: 45},
@@ -1118,7 +1118,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	luxiodelta: {
-		num: 0,
+		num: 36,
 		name: "Luxio-Delta",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 60, atk: 85, def: 49, spa: 60, spd: 49, spe: 60},
@@ -1131,7 +1131,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	luxraydelta: {
-		num: 0,
+		num: 37,
 		name: "Luxray-Delta",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70},
@@ -1143,7 +1143,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	noibatdelta: {
-		num: 0,
+		num: 38,
 		name: "Noibat-Delta",
 		types: ["Grass", "Steel"],
 		baseStats: {hp: 40, atk: 30, def: 35, spa: 45, spd: 40, spe: 55},
@@ -1155,7 +1155,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	noiverndelta: {
-		num: 0,
+		num: 39,
 		name: "Noivern-Delta",
 		types: ["Grass", "Steel"],
 		baseStats: {hp: 85, atk: 70, def: 80, spa: 97, spd: 80, spe: 123},
@@ -1167,7 +1167,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	budewdelta: {
-		num: 0,
+		num: 40,
 		name: "Budew-Delta",
 		types: ["Dark", "Fairy"],
 		baseStats: {hp: 40, atk: 30, def: 35, spa: 50, spd: 70, spe: 55},
@@ -1179,7 +1179,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	roseliadelta: {
-		num: 0,
+		num: 41,
 		name: "Roselia-Delta",
 		types: ["Dark", "Fairy"],
 		baseStats: {hp: 50, atk: 60, def: 45, spa: 100, spd: 80, spe: 65},
@@ -1192,7 +1192,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	roseradedelta: {
-		num: 0,
+		num: 42,
 		name: "Roserade-Delta",
 		types: ["Dark", "Fairy"],
 		baseStats: {hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90},
@@ -1204,7 +1204,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	drifloondelta: {
-		num: 0,
+		num: 43,
 		name: "Drifloon-Delta",
 		types: ["Fire", "Flying"],
 		baseStats: {hp: 90, atk: 50, def: 34, spa: 60, spd: 44, spe: 70},
@@ -1216,7 +1216,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	drifblimdelta: {
-		num: 0,
+		num: 44,
 		name: "Drifblim-Delta",
 		types: ["Fire", "Flying"],
 		baseStats: {hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80},
@@ -1228,7 +1228,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	grimerdelta: {
-		num: 0,
+		num: 45,
 		name: "Grimer-Delta",
 		types: ["Ground"],
 		baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
@@ -1240,7 +1240,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	mukdelta: {
-		num: 0,
+		num: 46,
 		name: "Muk-Delta",
 		types: ["Ground"],
 		baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
@@ -1252,7 +1252,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	wooperdelta: {
-		num: 0,
+		num: 47,
 		name: "Wooper-Delta",
 		types: ["Grass", "Fire"],
 		baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
@@ -1264,7 +1264,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	quagsiredelta: {
-		num: 0,
+		num: 48,
 		name: "Quagsire-Delta",
 		types: ["Grass", "Fire"],
 		baseStats: {hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35},
@@ -1276,7 +1276,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	munchlaxdelta: {
-		num: 0,
+		num: 49,
 		name: "Munchlax-Delta",
 		types: ["Grass"],
 		baseStats: {hp: 135, atk: 85, def: 40, spa: 40, spd: 85, spe: 5},
@@ -1288,7 +1288,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	snorlaxdelta: {
-		num: 0,
+		num: 50,
 		name: "Snorlax-Delta",
 		types: ["Grass"],
 		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
@@ -1300,7 +1300,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	misdreavusdelta: {
-		num: 0,
+		num: 51,
 		name: "Misdreavus-Delta",
 		types: ["Ice", "Fairy"],
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 85, spd: 85, spe: 85},
@@ -1312,7 +1312,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	mismagiusdelta: {
-		num: 0,
+		num: 52,
 		name: "Mismagius-Delta",
 		types: ["Ice", "Fairy"],
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105},
@@ -1324,7 +1324,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	cyndaquildelta: {
-		num: 0,
+		num: 53,
 		name: "Cyndaquil-Delta",
 		types: ["Electric"],
 		baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
@@ -1336,7 +1336,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	quilavadelta: {
-		num: 0,
+		num: 54,
 		name: "Quilava-Delta",
 		types: ["Electric", "Steel"],
 		baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
@@ -1349,7 +1349,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	typhlosiondelta: {
-		num: 0,
+		num: 55,
 		name: "Typhlosion-Delta",
 		types: ["Electric", "Steel"],
 		baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
@@ -1361,7 +1361,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	deltatyphlosion: {
-		num: 0,
+		num: 55,
 		name: "Deltatyphlosion",
 		baseSpecies: "Typhlosion-Delta",
 		forme: "Deltatyphlosion",
@@ -1375,7 +1375,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Typhlosionite",
 	},
 	treeckodelta: {
-		num: 0,
+		num: 56,
 		name: "Treecko-Delta",
 		types: ["Normal", "Fighting"],
 		baseStats: {hp: 40, atk: 45, def: 35, spa: 65, spd: 55, spe: 70},
@@ -1387,7 +1387,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	grovyledelta: {
-		num: 0,
+		num: 57,
 		name: "Grovyle-Delta",
 		types: ["Normal", "Fighting"],
 		baseStats: {hp: 50, atk: 65, def: 45, spa: 85, spd: 65, spe: 95},
@@ -1400,7 +1400,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	sceptiledelta: {
-		num: 0,
+		num: 58,
 		name: "Sceptile-Delta",
 		types: ["Dragon", "Fighting"],
 		baseStats: {hp: 70, atk: 85, def: 65, spa: 105, spd: 85, spe: 120},
@@ -1412,7 +1412,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	torchicdelta: {
-		num: 0,
+		num: 59,
 		name: "Torchic-Delta",
 		types: ["Psychic"],
 		baseStats: {hp: 45, atk: 60, def: 40, spa: 70, spd: 50, spe: 45},
@@ -1424,7 +1424,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	combuskendelta: {
-		num: 0,
+		num: 60,
 		name: "Combusken-Delta",
 		types: ["Psychic"],
 		baseStats: {hp: 60, atk: 85, def: 60, spa: 85, spd: 60, spe: 55},
@@ -1437,7 +1437,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	blazikendelta: {
-		num: 0,
+		num: 61,
 		name: "Blaziken-Delta",
 		types: ["Psychic", "Flying"],
 		baseStats: {hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80},
@@ -1449,7 +1449,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	turtwigdelta: {
-		num: 0,
+		num: 62,
 		name: "Turtwig-Delta",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 55, atk: 68, def: 64, spa: 45, spd: 55, spe: 31},
@@ -1461,7 +1461,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	grotledelta: {
-		num: 0,
+		num: 63,
 		name: "Grotle-Delta",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 75, atk: 89, def: 85, spa: 55, spd: 65, spe: 36},
@@ -1474,7 +1474,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	torterradelta: {
-		num: 0,
+		num: 64,
 		name: "Torterra-Delta",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56},
@@ -1486,7 +1486,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	snivydelta: {
-		num: 0,
+		num: 65,
 		name: "Snivy-Delta",
 		types: ["Water"],
 		baseStats: {hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63},
@@ -1498,7 +1498,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	servinedelta: {
-		num: 0,
+		num: 66,
 		name: "Servine-Delta",
 		types: ["Water"],
 		baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 83},
@@ -1511,7 +1511,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	serperiordelta: {
-		num: 0,
+		num: 67,
 		name: "Serperior-Delta",
 		types: ["Water", "Dragon"],
 		baseStats: {hp: 75, atk: 75, def: 95, spa: 75, spd: 95, spe: 113},
@@ -1523,7 +1523,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	froakiedelta: {
-		num: 0,
+		num: 68,
 		name: "Froakie-Delta",
 		types: ["Grass"],
 		baseStats: {hp: 41, atk: 56, def: 40, spa: 62, spd: 44, spe: 71},
@@ -1535,7 +1535,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	frogadierdelta: {
-		num: 0,
+		num: 69,
 		name: "Frogadier-Delta",
 		types: ["Grass"],
 		baseStats: {hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97},
@@ -1548,7 +1548,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	greninjadelta: {
-		num: 0,
+		num: 70,
 		name: "Greninja-Delta",
 		types: ["Grass", "Fire"],
 		baseStats: {hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122},
@@ -1560,7 +1560,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	pidgeydelta: {
-		num: 0,
+		num: 71,
 		name: "Pidgey-Delta",
 		types: ["Dark", "Dragon"],
 		baseStats: {hp: 40, atk: 45, def: 40, spa: 35, spd: 35, spe: 56},
@@ -1572,7 +1572,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	pidgeottodelta: {
-		num: 0,
+		num: 72,
 		name: "Pidgeotto-Delta",
 		types: ["Dark", "Dragon"],
 		baseStats: {hp: 63, atk: 60, def: 55, spa: 50, spd: 50, spe: 71},
@@ -1585,7 +1585,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	pidgeotdelta: {
-		num: 0,
+		num: 73,
 		name: "Pidgeot-Delta",
 		types: ["Dark", "Dragon"],
 		baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101},
@@ -1597,7 +1597,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	pidgeotdeltamega: {
-		num: 0,
+		num: 73,
 		name: "Pidgeot-Delta-Mega",
 		baseSpecies: "Pidgeot-Delta",
 		forme: "Mega",
@@ -1611,7 +1611,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Pidgeotite",
 	},
 	diglettdelta: {
-		num: 0,
+		num: 74,
 		name: "Diglett-Delta",
 		types: ["Ice", "Normal"],
 		baseStats: {hp: 10, atk: 55, def: 25, spa: 35, spd: 45, spe: 95},
@@ -1623,7 +1623,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	dugtriodelta: {
-		num: 0,
+		num: 75,
 		name: "Dugtrio-Delta",
 		types: ["Ice", "Normal"],
 		baseStats: {hp: 35, atk: 80, def: 50, spa: 50, spd: 70, spe: 120},
@@ -1635,7 +1635,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	growlithedelta: {
-		num: 0,
+		num: 76,
 		name: "Growlithe-Delta",
 		types: ["Normal", "Dragon"],
 		baseStats: {hp: 55, atk: 70, def: 45, spa: 70, spd: 50, spe: 60},
@@ -1647,7 +1647,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	arcaninedelta: {
-		num: 0,
+		num: 77,
 		name: "Arcanine-Delta",
 		types: ["Normal", "Dragon"],
 		baseStats: {hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95},
@@ -1659,7 +1659,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	geodudedelta: {
-		num: 0,
+		num: 78,
 		name: "Geodude-Delta",
 		types: ["Psychic", "Rock"],
 		baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
@@ -1671,7 +1671,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	gravelerdelta: {
-		num: 0,
+		num: 79,
 		name: "Graveler-Delta",
 		types: ["Psychic", "Rock"],
 		baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
@@ -1684,7 +1684,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	golemdelta: {
-		num: 0,
+		num: 80,
 		name: "Golem-Delta",
 		types: ["Psychic", "Rock"],
 		baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
@@ -1696,7 +1696,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	tentacooldelta: {
-		num: 0,
+		num: 81,
 		name: "Tentacool-Delta",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
@@ -1708,7 +1708,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	tentacrueldelta: {
-		num: 0,
+		num: 82,
 		name: "Tentacruel-Delta",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
@@ -1720,7 +1720,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	doduodelta: {
-		num: 0,
+		num: 83,
 		name: "Doduo-Delta",
 		types: ["Psychic"],
 		baseStats: {hp: 35, atk: 85, def: 45, spa: 35, spd: 35, spe: 75},
@@ -1732,7 +1732,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	dodriodelta: {
-		num: 0,
+		num: 84,
 		name: "Dodrio-Delta",
 		types: ["Psychic"],
 		baseStats: {hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 100},
@@ -1744,7 +1744,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	tangeladelta: {
-		num: 0,
+		num: 85,
 		name: "Tangela-Delta",
 		types: ["Ground"],
 		baseStats: {hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60},
@@ -1756,7 +1756,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	tangrowthdelta: {
-		num: 0,
+		num: 86,
 		name: "Tangrowth-Delta",
 		types: ["Ground", "Fighting"],
 		baseStats: {hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50},
@@ -1768,7 +1768,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	dittodelta: {
-		num: 0,
+		num: 87,
 		name: "Ditto-Delta",
 		types: ["Water"],
 		baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
@@ -1779,7 +1779,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	kabutodelta: {
-		num: 0,
+		num: 88,
 		name: "Kabuto-Delta",
 		types: ["Bug", "Dark"],
 		baseStats: {hp: 30, atk: 80, def: 95, spa: 55, spd: 45, spe: 55},
@@ -1791,7 +1791,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	kabutopsdelta: {
-		num: 0,
+		num: 89,
 		name: "Kabutops-Delta",
 		types: ["Bug", "Dark"],
 		baseStats: {hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80},
@@ -1803,7 +1803,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	dratinidelta: {
-		num: 0,
+		num: 90,
 		name: "Dratini-Delta",
 		types: ["Water", "Electric"],
 		baseStats: {hp: 41, atk: 64, def: 45, spa: 50, spd: 50, spe: 50},
@@ -1815,7 +1815,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	dragonairdelta: {
-		num: 0,
+		num: 91,
 		name: "Dragonair-Delta",
 		types: ["Water", "Electric"],
 		baseStats: {hp: 61, atk: 84, def: 65, spa: 70, spd: 70, spe: 70},
@@ -1828,7 +1828,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	dragonitedelta: {
-		num: 0,
+		num: 92,
 		name: "Dragonite-Delta",
 		types: ["Water", "Electric"],
 		baseStats: {hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80},
@@ -1840,7 +1840,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	hoothootdelta: {
-		num: 0,
+		num: 93,
 		name: "Hoothoot-Delta",
 		types: ["Ice", "Flying"],
 		baseStats: {hp: 60, atk: 30, def: 30, spa: 36, spd: 56, spe: 50},
@@ -1852,7 +1852,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	noctowldelta: {
-		num: 0,
+		num: 94,
 		name: "Noctowl-Delta",
 		types: ["Ice", "Flying"],
 		baseStats: {hp: 100, atk: 50, def: 50, spa: 76, spd: 96, spe: 70},
@@ -1864,7 +1864,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	chinchoudelta: {
-		num: 0,
+		num: 95,
 		name: "Chinchou-Delta",
 		types: ["Ghost", "Fire"],
 		baseStats: {hp: 75, atk: 38, def: 38, spa: 56, spd: 56, spe: 67},
@@ -1876,7 +1876,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lanturndelta: {
-		num: 0,
+		num: 96,
 		name: "Lanturn-Delta",
 		types: ["Ghost", "Fire"],
 		baseStats: {hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67},
@@ -1888,7 +1888,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	pichudelta: {
-		num: 0,
+		num: 97,
 		name: "Pichu-Delta",
 		types: ["Flying", "Fairy"],
 		baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
@@ -1899,7 +1899,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	pikachudelta: {
-		num: 0,
+		num: 98,
 		name: "Pikachu-Delta",
 		types: ["Flying", "Fairy"],
 		baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
@@ -1910,7 +1910,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	raichudelta: {
-		num: 0,
+		num: 99,
 		name: "Raichu-Delta",
 		types: ["Flying", "Fairy"],
 		baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110},
@@ -1921,7 +1921,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	aipomdelta: {
-		num: 0,
+		num: 100,
 		name: "Aipom-Delta",
 		types: ["Ghost", "Normal"],
 		baseStats: {hp: 55, atk: 70, def: 55, spa: 40, spd: 55, spe: 85},
@@ -1933,7 +1933,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	ambipomdelta: {
-		num: 0,
+		num: 101,
 		name: "Ambipom-Delta",
 		types: ["Ghost", "Normal"],
 		baseStats: {hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115},
@@ -1945,7 +1945,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	yanmadelta: {
-		num: 0,
+		num: 102,
 		name: "Yanma-Delta",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 65, atk: 65, def: 45, spa: 75, spd: 45, spe: 95},
@@ -1957,7 +1957,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	yanmegadelta: {
-		num: 0,
+		num: 103,
 		name: "Yanmega-Delta",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95},
@@ -1969,7 +1969,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	girafarigdelta: {
-		num: 0,
+		num: 104,
 		name: "Girafarig-Delta",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 70, atk: 80, def: 65, spa: 90, spd: 65, spe: 85},
@@ -1980,7 +1980,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	girafarigdeltamega: {
-		num: 0,
+		num: 104,
 		name: "Girafarig-Delta-Mega",
 		baseSpecies: "Girafarig-Delta",
 		forme: "Mega",
@@ -1994,7 +1994,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Girafarigite",
 	},
 	dunsparcedelta: {
-		num: 0,
+		num: 105,
 		name: "Dunsparce-Delta",
 		types: ["Bug", "Water"],
 		baseStats: {hp: 100, atk: 70, def: 70, spa: 65, spd: 65, spe: 45},
@@ -2005,7 +2005,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	shuckledelta: {
-		num: 0,
+		num: 106,
 		name: "Shuckle-Delta",
 		types: ["Fighting", "Steel"],
 		baseStats: {hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5},
@@ -2016,7 +2016,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	remoraiddelta: {
-		num: 0,
+		num: 107,
 		name: "Remoraid-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 35, atk: 65, def: 35, spa: 65, spd: 35, spe: 65},
@@ -2028,7 +2028,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	octillerydelta: {
-		num: 0,
+		num: 108,
 		name: "Octillery-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45},
@@ -2040,7 +2040,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	elekiddelta: {
-		num: 0,
+		num: 109,
 		name: "Elekid-Delta",
 		types: ["Rock"],
 		baseStats: {hp: 45, atk: 63, def: 37, spa: 65, spd: 55, spe: 95},
@@ -2052,7 +2052,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	electabuzzdelta: {
-		num: 0,
+		num: 110,
 		name: "Electabuzz-Delta",
 		types: ["Rock"],
 		baseStats: {hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105},
@@ -2065,7 +2065,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	electiviredelta: {
-		num: 0,
+		num: 111,
 		name: "Electivire-Delta",
 		types: ["Rock", "Dragon"],
 		baseStats: {hp: 75, atk: 123, def: 67, spa: 95, spd: 85, spe: 95},
@@ -2077,7 +2077,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	magbydelta: {
-		num: 0,
+		num: 112,
 		name: "Magby-Delta",
 		types: ["Water"],
 		baseStats: {hp: 45, atk: 75, def: 37, spa: 70, spd: 55, spe: 83},
@@ -2089,7 +2089,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	magmardelta: {
-		num: 0,
+		num: 113,
 		name: "Magmar-Delta",
 		types: ["Water"],
 		baseStats: {hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93},
@@ -2102,7 +2102,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	magmortardelta: {
-		num: 0,
+		num: 114,
 		name: "Magmortar-Delta",
 		types: ["Water", "Steel"],
 		baseStats: {hp: 75, atk: 95, def: 67, spa: 125, spd: 95, spe: 83},
@@ -2114,7 +2114,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lotaddelta: {
-		num: 0,
+		num: 115,
 		name: "Lotad-Delta",
 		types: ["Psychic", "Water"],
 		baseStats: {hp: 40, atk: 30, def: 30, spa: 40, spd: 50, spe: 30},
@@ -2126,7 +2126,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lombredelta: {
-		num: 0,
+		num: 116,
 		name: "Lombre-Delta",
 		types: ["Psychic", "Water"],
 		baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
@@ -2139,7 +2139,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	ludicolodelta: {
-		num: 0,
+		num: 117,
 		name: "Ludicolo-Delta",
 		types: ["Psychic", "Water"],
 		baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
@@ -2151,7 +2151,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	seedotdelta: {
-		num: 0,
+		num: 118,
 		name: "Seedot-Delta",
 		types: ["Electric"],
 		baseStats: {hp: 40, atk: 40, def: 50, spa: 30, spd: 30, spe: 30},
@@ -2163,7 +2163,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	nuzleafdelta: {
-		num: 0,
+		num: 119,
 		name: "Nuzleaf-Delta",
 		types: ["Electric"],
 		baseStats: {hp: 70, atk: 70, def: 40, spa: 60, spd: 40, spe: 60},
@@ -2176,7 +2176,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	shiftrydelta: {
-		num: 0,
+		num: 120,
 		name: "Shiftry-Delta",
 		types: ["Electric"],
 		baseStats: {hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80},
@@ -2188,7 +2188,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	sableyedelta: {
-		num: 0,
+		num: 121,
 		name: "Sableye-Delta",
 		types: ["Fire", "Rock"],
 		baseStats: {hp: 50, atk: 75, def: 75, spa: 65, spd: 65, spe: 50},
@@ -2199,7 +2199,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	sableyedeltamega: {
-		num: 0,
+		num: 121,
 		name: "Sableye-Delta-Mega",
 		baseSpecies: "Sableye-Delta",
 		forme: "Mega",
@@ -2213,7 +2213,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Sablenite",
 	},
 	mawiledelta: {
-		num: 0,
+		num: 122,
 		name: "Mawile-Delta",
 		types: ["Grass", "Dark"],
 		baseStats: {hp: 50, atk: 85, def: 85, spa: 55, spd: 55, spe: 50},
@@ -2224,7 +2224,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	mawiledeltamega: {
-		num: 0,
+		num: 122,
 		name: "Mawile-Delta-Mega",
 		baseSpecies: "Mawile-Delta",
 		forme: "Mega",
@@ -2238,7 +2238,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Mawilite",
 	},
 	arondelta: {
-		num: 0,
+		num: 123,
 		name: "Aron-Delta",
 		types: ["Fire", "Steel"],
 		baseStats: {hp: 50, atk: 70, def: 100, spa: 40, spd: 40, spe: 30},
@@ -2250,7 +2250,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lairondelta: {
-		num: 0,
+		num: 124,
 		name: "Lairon-Delta",
 		types: ["Fire", "Steel"],
 		baseStats: {hp: 60, atk: 90, def: 140, spa: 50, spd: 50, spe: 40},
@@ -2263,7 +2263,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	aggrondelta: {
-		num: 0,
+		num: 125,
 		name: "Aggron-Delta",
 		types: ["Fire", "Steel"],
 		baseStats: {hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50},
@@ -2275,7 +2275,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	medititedelta: {
-		num: 0,
+		num: 126,
 		name: "Meditite-Delta",
 		types: ["Fairy"],
 		baseStats: {hp: 30, atk: 40, def: 55, spa: 40, spd: 55, spe: 60},
@@ -2287,7 +2287,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	medichamdelta: {
-		num: 0,
+		num: 127,
 		name: "Medicham-Delta",
 		types: ["Fairy", "Ground"],
 		baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 80},
@@ -2299,7 +2299,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	medichamdeltamega: {
-		num: 0,
+		num: 127,
 		name: "Medicham-Delta-Mega",
 		baseSpecies: "Medicham-Delta",
 		forme: "Mega",
@@ -2313,7 +2313,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Medichamite",
 	},
 	numeldelta: {
-		num: 0,
+		num: 128,
 		name: "Numel-Delta",
 		types: ["Poison"],
 		baseStats: {hp: 60, atk: 60, def: 40, spa: 65, spd: 45, spe: 35},
@@ -2325,7 +2325,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	cameruptdelta: {
-		num: 0,
+		num: 129,
 		name: "Camerupt-Delta",
 		types: ["Poison"],
 		baseStats: {hp: 70, atk: 120, def: 100, spa: 145, spd: 105, spe: 20},
@@ -2337,7 +2337,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	cameruptdeltamega: {
-		num: 0,
+		num: 129,
 		name: "Camerupt-Delta-Mega",
 		baseSpecies: "Camerupt-Delta",
 		forme: "Mega",
@@ -2351,7 +2351,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Cameruptite",
 	},
 	plusledelta: {
-		num: 0,
+		num: 130,
 		name: "Plusle-Delta",
 		types: ["Fire", "Fairy"],
 		baseStats: {hp: 60, atk: 50, def: 40, spa: 85, spd: 75, spe: 95},
@@ -2362,7 +2362,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	minundelta: {
-		num: 0,
+		num: 131,
 		name: "Minun-Delta",
 		types: ["Ice", "Fairy"],
 		baseStats: {hp: 60, atk: 40, def: 50, spa: 75, spd: 85, spe: 95},
@@ -2373,7 +2373,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	wailmerdelta: {
-		num: 0,
+		num: 132,
 		name: "Wailmer-Delta",
 		types: ["Ice", "Flying"],
 		baseStats: {hp: 130, atk: 70, def: 35, spa: 70, spd: 35, spe: 60},
@@ -2385,7 +2385,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	wailorddelta: {
-		num: 0,
+		num: 133,
 		name: "Wailord-Delta",
 		types: ["Ice", "Flying"],
 		baseStats: {hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60},
@@ -2397,7 +2397,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	feebasdelta: {
-		num: 0,
+		num: 134,
 		name: "Feebas-Delta",
 		types: ["Ghost"],
 		baseStats: {hp: 20, atk: 15, def: 20, spa: 10, spd: 55, spe: 80},
@@ -2409,7 +2409,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	miloticdelta: {
-		num: 0,
+		num: 135,
 		name: "Milotic-Delta",
 		types: ["Ghost"],
 		baseStats: {hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81},
@@ -2421,7 +2421,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	miloticdeltamega: {
-		num: 0,
+		num: 135,
 		name: "Milotic-Delta-Mega",
 		baseSpecies: "Milotic-Delta",
 		forme: "Mega",
@@ -2435,7 +2435,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Milotite",
 	},
 	clamperldelta: {
-		num: 0,
+		num: 136,
 		name: "Clamperl-Delta",
 		types: ["Dragon"],
 		baseStats: {hp: 35, atk: 65, def: 85, spa: 74, spd: 55, spe: 32},
@@ -2447,7 +2447,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	huntaildelta: {
-		num: 0,
+		num: 137,
 		name: "Huntail-Delta",
 		types: ["Dragon", "Dark"],
 		baseStats: {hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52},
@@ -2459,7 +2459,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	gorebyssdelta: {
-		num: 0,
+		num: 138,
 		name: "Gorebyss-Delta",
 		types: ["Dragon", "Fairy"],
 		baseStats: {hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52},
@@ -2471,7 +2471,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	spiderbeldumdelta: {
-		num: 0,
+		num: 139,
 		name: "(Spider)-Beldum-Delta",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
@@ -2483,7 +2483,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	spidermetangdelta: {
-		num: 0,
+		num: 140,
 		name: "(Spider)-Metang-Delta",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
@@ -2496,7 +2496,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	spidermetagrossdelta: {
-		num: 0,
+		num: 141,
 		name: "(Spider)-Metagross-Delta",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
@@ -2508,7 +2508,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	deltametagrossspider: {
-		num: 0,
+		num: 141,
 		name: "Deltametagrossspider",
 		baseSpecies: "(Spider)-Metagross-Delta",
 		forme: "Deltametagrossspider",
@@ -2522,7 +2522,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Metagrossite (spider)",
 	},
 	ruinbeldumdelta: {
-		num: 0,
+		num: 142,
 		name: "(Ruin)-Beldum-Delta",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
@@ -2534,7 +2534,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	ruinmetangdelta: {
-		num: 0,
+		num: 143,
 		name: "(Ruin)-Metang-Delta",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
@@ -2547,7 +2547,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	ruinmetagrossdelta: {
-		num: 0,
+		num: 144,
 		name: "(Ruin)-Metagross-Delta",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
@@ -2559,7 +2559,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	deltametagrossruin: {
-		num: 0,
+		num: 144,
 		name: "Deltametagrossruin",
 		baseSpecies: "(Ruin)-Metagross-Delta",
 		forme: "Deltametagrossruin",
@@ -2573,7 +2573,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Metagrossite (Ruin)",
 	},
 	bunearydelta: {
-		num: 0,
+		num: 145,
 		name: "Buneary-Delta",
 		types: ["Fighting"],
 		baseStats: {hp: 55, atk: 66, def: 44, spa: 44, spd: 56, spe: 85},
@@ -2585,7 +2585,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lopunnydelta: {
-		num: 0,
+		num: 146,
 		name: "Lopunny-Delta",
 		types: ["Fighting"],
 		baseStats: {hp: 65, atk: 136, def: 94, spa: 54, spd: 96, spe: 135},
@@ -2597,7 +2597,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lopunnydeltamega: {
-		num: 0,
+		num: 146,
 		name: "Lopunny-Delta-Mega",
 		baseSpecies: "Lopunny-Delta",
 		forme: "Mega",
@@ -2611,7 +2611,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Lopunnite",
 	},
 	rioludelta: {
-		num: 0,
+		num: 147,
 		name: "Riolu-Delta",
 		types: ["Dark"],
 		baseStats: {hp: 40, atk: 70, def: 40, spa: 35, spd: 40, spe: 60},
@@ -2623,7 +2623,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lucariodelta: {
-		num: 0,
+		num: 148,
 		name: "Lucario-Delta",
 		types: ["Dark", "Ground"],
 		baseStats: {hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90},
@@ -2635,7 +2635,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lucariodeltamega: {
-		num: 0,
+		num: 148,
 		name: "Lucario-Delta-Mega",
 		baseSpecies: "Lucario-Delta",
 		forme: "Mega",
@@ -2649,7 +2649,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Lucarionite",
 	},
 	croagunkdelta: {
-		num: 0,
+		num: 149,
 		name: "Croagunk-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 48, atk: 61, def: 40, spa: 61, spd: 40, spe: 50},
@@ -2661,7 +2661,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	toxicroakdelta: {
-		num: 0,
+		num: 150,
 		name: "Toxicroak-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85},
@@ -2673,7 +2673,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	venipededelta: {
-		num: 0,
+		num: 151,
 		name: "Venipede-Delta",
 		types: ["Rock", "Fire"],
 		baseStats: {hp: 30, atk: 45, def: 59, spa: 30, spd: 39, spe: 57},
@@ -2685,7 +2685,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	whirlipededelta: {
-		num: 0,
+		num: 152,
 		name: "Whirlipede-Delta",
 		types: ["Rock", "Fire"],
 		baseStats: {hp: 40, atk: 55, def: 99, spa: 40, spd: 79, spe: 47},
@@ -2698,7 +2698,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	scolipededelta: {
-		num: 0,
+		num: 153,
 		name: "Scolipede-Delta",
 		types: ["Rock", "Fire"],
 		baseStats: {hp: 60, atk: 100, def: 89, spa: 55, spd: 69, spe: 112},
@@ -2710,7 +2710,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	waterpetilildelta: {
-		num: 0,
+		num: 154,
 		name: "(Water)-Petilil-Delta",
 		types: ["Water", "Fire"],
 		baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
@@ -2722,7 +2722,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	waterlilligantdelta: {
-		num: 0,
+		num: 155,
 		name: "(Water)-Lilligant-Delta",
 		types: ["Water", "Fire"],
 		baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
@@ -2734,7 +2734,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	fairypetilildelta: {
-		num: 0,
+		num: 156,
 		name: "(Fairy)-Petilil-Delta",
 		types: ["Fairy", "Flying"],
 		baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
@@ -2746,7 +2746,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	fairylilligantdelta: {
-		num: 0,
+		num: 157,
 		name: "(Fairy)-Lilligant-Delta",
 		types: ["Fairy", "Flying"],
 		baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
@@ -2758,7 +2758,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	solosisdelta: {
-		num: 0,
+		num: 158,
 		name: "Solosis-Delta",
 		types: ["Ghost", "Rock"],
 		baseStats: {hp: 45, atk: 30, def: 40, spa: 105, spd: 50, spe: 20},
@@ -2770,7 +2770,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	duosiondelta: {
-		num: 0,
+		num: 159,
 		name: "Duosion-Delta",
 		types: ["Ghost", "Rock"],
 		baseStats: {hp: 65, atk: 40, def: 50, spa: 125, spd: 60, spe: 30},
@@ -2783,7 +2783,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	reuniclusdelta: {
-		num: 0,
+		num: 160,
 		name: "Reuniclus-Delta",
 		types: ["Ghost", "Rock"],
 		baseStats: {hp: 110, atk: 65, def: 75, spa: 125, spd: 85, spe: 30},
@@ -2795,7 +2795,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	darumakadelta: {
-		num: 0,
+		num: 161,
 		name: "Darumaka-Delta",
 		types: ["Dark", "Ghost"],
 		baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
@@ -2807,7 +2807,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	darmanitandelta: {
-		num: 0,
+		num: 162,
 		name: "Darmanitan-Delta",
 		types: ["Dark", "Ghost"],
 		baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
@@ -2819,7 +2819,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	maractusdelta: {
-		num: 0,
+		num: 163,
 		name: "Maractus-Delta",
 		types: ["Steel"],
 		baseStats: {hp: 75, atk: 86, def: 67, spa: 106, spd: 67, spe: 60},
@@ -2830,7 +2830,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	berrydwebbledelta: {
-		num: 0,
+		num: 164,
 		name: "(Berry)-Dwebble-Delta",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
@@ -2842,7 +2842,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	berrycrustledelta: {
-		num: 0,
+		num: 165,
 		name: "(Berry)-Crustle-Delta",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 70, atk: 95, def: 125, spa: 65, spd: 75, spe: 45},
@@ -2854,7 +2854,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	cakedwebbledelta: {
-		num: 0,
+		num: 166,
 		name: "(Cake)-Dwebble-Delta",
 		types: ["Fairy", "Normal"],
 		baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
@@ -2866,7 +2866,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	cakecrustledelta: {
-		num: 0,
+		num: 167,
 		name: "(Cake)-Crustle-Delta",
 		types: ["Fairy", "Normal"],
 		baseStats: {hp: 70, atk: 95, def: 125, spa: 65, spd: 75, spe: 45},
@@ -2878,7 +2878,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	yamaskdelta: {
-		num: 0,
+		num: 168,
 		name: "Yamask-Delta",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 38, atk: 30, def: 85, spa: 55, spd: 65, spe: 30},
@@ -2890,7 +2890,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	cofagrigusdelta: {
-		num: 0,
+		num: 169,
 		name: "Cofagrigus-Delta",
 		types: ["Steel", "Poison"],
 		baseStats: {hp: 78, atk: 50, def: 145, spa: 95, spd: 105, spe: 30},
@@ -2902,7 +2902,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	emolgadelta: {
-		num: 0,
+		num: 170,
 		name: "Emolga-Delta",
 		types: ["Fire", "Dark"],
 		baseStats: {hp: 55, atk: 75, def: 60, spa: 75, spd: 60, spe: 103},
@@ -2913,7 +2913,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	formboostiiblaze: {
-		num: 0,
+		num: 170,
 		name: "Form-Boost</i>-<i>Blaze",
 		baseSpecies: "Emolga-Delta",
 		forme: "Form-Boost</i>-<i>Blaze",
@@ -2926,7 +2926,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	karrablastdelta: {
-		num: 0,
+		num: 171,
 		name: "Karrablast-Delta",
 		types: ["Fairy"],
 		baseStats: {hp: 50, atk: 75, def: 45, spa: 40, spd: 45, spe: 60},
@@ -2938,7 +2938,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	escavalierdelta: {
-		num: 0,
+		num: 172,
 		name: "Escavalier-Delta",
 		types: ["Fairy"],
 		baseStats: {hp: 70, atk: 135, def: 105, spa: 60, spd: 105, spe: 20},
@@ -2950,7 +2950,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	foongusdelta: {
-		num: 0,
+		num: 173,
 		name: "Foongus-Delta",
 		types: ["Ghost", "Dark"],
 		baseStats: {hp: 69, atk: 55, def: 45, spa: 55, spd: 55, spe: 15},
@@ -2962,7 +2962,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	amoongussdelta: {
-		num: 0,
+		num: 174,
 		name: "Amoonguss-Delta",
 		types: ["Ghost", "Dark"],
 		baseStats: {hp: 114, atk: 85, def: 70, spa: 85, spd: 80, spe: 30},
@@ -2974,7 +2974,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	litwickdelta: {
-		num: 0,
+		num: 175,
 		name: "Litwick-Delta",
 		types: ["Fairy", "Fire"],
 		baseStats: {hp: 50, atk: 30, def: 55, spa: 65, spd: 55, spe: 20},
@@ -2986,7 +2986,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	lampentdelta: {
-		num: 0,
+		num: 176,
 		name: "Lampent-Delta",
 		types: ["Fairy", "Fire"],
 		baseStats: {hp: 60, atk: 40, def: 60, spa: 95, spd: 60, spe: 55},
@@ -2999,7 +2999,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	chandeluredelta: {
-		num: 0,
+		num: 177,
 		name: "Chandelure-Delta",
 		types: ["Fairy", "Fire"],
 		baseStats: {hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80},
@@ -3011,7 +3011,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	axewdelta: {
-		num: 0,
+		num: 178,
 		name: "Axew-Delta",
 		types: ["Water"],
 		baseStats: {hp: 46, atk: 87, def: 60, spa: 30, spd: 40, spe: 57},
@@ -3023,7 +3023,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	fraxuredelta: {
-		num: 0,
+		num: 179,
 		name: "Fraxure-Delta",
 		types: ["Water"],
 		baseStats: {hp: 66, atk: 117, def: 70, spa: 40, spd: 50, spe: 67},
@@ -3036,7 +3036,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	haxorusdelta: {
-		num: 0,
+		num: 180,
 		name: "Haxorus-Delta",
 		types: ["Water", "Steel"],
 		baseStats: {hp: 76, atk: 147, def: 90, spa: 60, spd: 70, spe: 97},
@@ -3048,7 +3048,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	golettdelta: {
-		num: 0,
+		num: 181,
 		name: "Golett-Delta",
 		types: ["Fighting", "Steel"],
 		baseStats: {hp: 59, atk: 74, def: 50, spa: 35, spd: 50, spe: 35},
@@ -3060,7 +3060,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	golurkdelta: {
-		num: 0,
+		num: 182,
 		name: "Golurk-Delta",
 		types: ["Fighting", "Steel"],
 		baseStats: {hp: 89, atk: 124, def: 80, spa: 55, spd: 80, spe: 55},
@@ -3072,7 +3072,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	heatmordelta: {
-		num: 0,
+		num: 183,
 		name: "Heatmor-Delta",
 		types: ["Poison", "Steel"],
 		baseStats: {hp: 85, atk: 97, def: 66, spa: 105, spd: 66, spe: 65},
@@ -3083,7 +3083,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	deinodelta: {
-		num: 0,
+		num: 184,
 		name: "Deino-Delta",
 		types: ["Ground", "Poison"],
 		baseStats: {hp: 52, atk: 65, def: 50, spa: 45, spd: 50, spe: 38},
@@ -3095,7 +3095,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	zweilousdelta: {
-		num: 0,
+		num: 185,
 		name: "Zweilous-Delta",
 		types: ["Ground", "Poison"],
 		baseStats: {hp: 72, atk: 85, def: 70, spa: 65, spd: 70, spe: 58},
@@ -3108,7 +3108,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	hydreigondelta: {
-		num: 0,
+		num: 186,
 		name: "Hydreigon-Delta",
 		types: ["Ground", "Poison"],
 		baseStats: {hp: 92, atk: 105, def: 90, spa: 125, spd: 90, spe: 98},
@@ -3120,7 +3120,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	larvestadelta: {
-		num: 0,
+		num: 187,
 		name: "Larvesta-Delta",
 		types: ["Dark", "Poison"],
 		baseStats: {hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60},
@@ -3132,7 +3132,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	volcaronadelta: {
-		num: 0,
+		num: 188,
 		name: "Volcarona-Delta",
 		types: ["Dark", "Poison"],
 		baseStats: {hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100},
@@ -3144,7 +3144,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	formarmored: {
-		num: 0,
+		num: 188,
 		name: "Form-Armored",
 		baseSpecies: "Volcarona-Delta",
 		forme: "Form-Armored",
@@ -3157,7 +3157,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	amauradelta: {
-		num: 0,
+		num: 189,
 		name: "Amaura-Delta",
 		types: ["Grass", "Water"],
 		baseStats: {hp: 77, atk: 59, def: 50, spa: 67, spd: 63, spe: 46},
@@ -3169,7 +3169,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	aurorusdelta: {
-		num: 0,
+		num: 190,
 		name: "Aurorus-Delta",
 		types: ["Grass", "Water"],
 		baseStats: {hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58},
@@ -3181,7 +3181,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	goomydelta: {
-		num: 0,
+		num: 191,
 		name: "Goomy-Delta",
 		types: ["Ground", "Water"],
 		baseStats: {hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40},
@@ -3193,7 +3193,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	sliggoodelta: {
-		num: 0,
+		num: 192,
 		name: "Sliggoo-Delta",
 		types: ["Ground", "Water"],
 		baseStats: {hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60},
@@ -3206,7 +3206,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	goodradelta: {
-		num: 0,
+		num: 193,
 		name: "Goodra-Delta",
 		types: ["Ground", "Water"],
 		baseStats: {hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80},
@@ -3218,7 +3218,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	regirockdelta: {
-		num: 0,
+		num: 194,
 		name: "Regirock-Delta",
 		types: ["Ground"],
 		baseStats: {hp: 80, atk: 100, def: 200, spa: 50, spd: 100, spe: 50},
@@ -3229,7 +3229,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	regicedelta: {
-		num: 0,
+		num: 195,
 		name: "Regice-Delta",
 		types: ["Water"],
 		baseStats: {hp: 80, atk: 50, def: 100, spa: 100, spd: 200, spe: 50},
@@ -3240,7 +3240,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	registeeldelta: {
-		num: 0,
+		num: 196,
 		name: "Registeel-Delta",
 		types: ["Fire"],
 		baseStats: {hp: 80, atk: 75, def: 150, spa: 75, spd: 150, spe: 50},
@@ -3251,7 +3251,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	meloettadelta: {
-		num: 0,
+		num: 197,
 		name: "Meloetta-Delta",
 		types: ["Dark", "Fairy"],
 		baseStats: {hp: 100, atk: 128, def: 90, spa: 77, spd: 77, spe: 128},
@@ -3262,7 +3262,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	formemagician: {
-		num: 0,
+		num: 197,
 		name: "Forme-Magician",
 		baseSpecies: "Meloetta-Delta",
 		forme: "Forme-Magician",
@@ -3275,7 +3275,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	hoopadelta: {
-		num: 0,
+		num: 198,
 		name: "Hoopa-Delta",
 		types: ["Flying"],
 		baseStats: {hp: 80, atk: 110, def: 60, spa: 150, spd: 130, spe: 70},
@@ -3286,7 +3286,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	unleashedhoopadelta: {
-		num: 0,
+		num: 198,
 		name: "Unleashed-Hoopa-Delta",
 		baseSpecies: "Hoopa-Delta",
 		forme: "Unleashed-Hoopa-Delta",
@@ -3299,7 +3299,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 	},
 	ufi: {
-		num: 0,
+		num: 198,
 		name: "Ufi",
 		types: ["Psychic", "Electric"],
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
