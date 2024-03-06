@@ -28,6 +28,14 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Pressure", H: "Water Absorb"},
 	},
+	litwick: {
+		inherit: true,
+		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Shadow Tag"},
+	},
+	lampent: {
+		inherit: true,
+		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Shadow Tag"},
+	},
 	chandelure: {
 		inherit: true,
 		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Shadow Tag"},
@@ -63,6 +71,42 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	lycanrocmidnight: {
 		inherit: true,
 		abilities: {0: "Keen Eye", 1: "Vital Spirit"},
+	},
+	flygon: {
+		inherit: true,
+		abilities: {0: "Levitate", H: "Dry Skin"},
+	},
+	talonflame: {
+		inherit: true,
+		abilities: {0: "Big Pecks", H: "Gale Wings"},
+	},
+	mewtwo: {
+		inherit: true,
+		abilities: {0: "Pressure", H: "Immunity"},
+	},
+	darkrai: {
+		inherit: true,
+		abilities: {0: "Bad Dreams", H: "White Smoke"},
+	},
+	kyurem: {
+		inherit: true,
+		abilities: {0: "Pressure", H: "Ice Body"},
+	},
+	zekrom: {
+		inherit: true,
+		abilities: {0: "Teravolt", H: "Volt Absorb"},
+	},
+	reshiram: {
+		inherit: true,
+		abilities: {0: "Turboblaze", H: "Flare Boost"},
+	},
+	hydreigon: {
+		inherit: true,
+		abilities: {0: "Levitate", H: "Hustle"},
+	},
+	genesect: {
+		inherit: true,
+		abilities: {0: "Download", H: "Motor Drive"},
 	},
 	...Dex.deepClone(require('../gen9infinitefusion/pokedex').Pokedex)
 };
