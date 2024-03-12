@@ -405,4 +405,19 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 4,
 		num: 0,
 	},
+	cleansweep: {
+		onBeforeSwitchIn(pokemon) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'livewire', 'permafrost', 'hotcoals', 'stickyweb', 'gmaxsteelsurge'];
+			this.prng.shuffle(sideConditions);
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Clean Sweep', '[of] ' + pokemon);
+					return;
+				}
+			}
+		},
+		name: "Clean Sweep",
+		rating: 4,
+		num: 0,
+	},
 };
