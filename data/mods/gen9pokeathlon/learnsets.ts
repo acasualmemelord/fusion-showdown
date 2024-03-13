@@ -1937,7 +1937,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			fairywind: ["9M"],
 			drainingkiss: ["9M"],
 			dazzlinggleam: ["9M"],
-			moonblat: ["9M"],
+			moonblast: ["9M"],
 			substitute: ["9M"],
 			pollenpuff: ["9M"],
 			sandattack: ["9M"],
