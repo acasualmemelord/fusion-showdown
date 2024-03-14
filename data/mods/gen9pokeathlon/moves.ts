@@ -428,4 +428,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Steel",
 		contestType: "Beautiful",
 	},
+	sirensong: {
+		num: 0,
+		accuracy: 80,
+		basePower: 120,
+		category: "Special",
+		name: "Siren Song",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1},
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Fairy', type);
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Normal",
+		contestType: "Cool",
+	},
 };

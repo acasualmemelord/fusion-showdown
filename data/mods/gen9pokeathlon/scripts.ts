@@ -106,6 +106,7 @@ const PoADex: {[k: string]: number} = {
 	"braskeptic": 6021,
 	"maggony": 6022,
 	"sweepdol": 6023,
+	"paldemaria": 6024,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
