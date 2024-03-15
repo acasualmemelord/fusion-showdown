@@ -441,6 +441,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return typeMod + this.dex.getEffectiveness('Fairy', type);
 		},
 		secondary: null,
+		shortDesc: "This move combines Fairy in its type effectiveness against the target. Hits adjacent foes.",
 		target: "allAdjacentFoes",
 		type: "Normal",
 		contestType: "Cool",

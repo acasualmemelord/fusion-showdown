@@ -2044,7 +2044,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			raindance: ["9M"],
 			rest: ["9M"],
 			reflect: ["9M"],
-			runaway: ["9M"],
 			sing: ["9M"],
 			substitute: ["9M"],
 			sweetkiss: ["9M"],
