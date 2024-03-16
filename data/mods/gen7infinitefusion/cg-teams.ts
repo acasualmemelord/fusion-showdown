@@ -33,8 +33,8 @@
  *   - Tracking type coverage to make it more likely that a moveset can hit every type
  */
 
-import {Dex, PRNG, SQL} from '../../sim';
-import {EventMethods} from '../sim/dex-conditions';
+import {Dex, PRNG, SQL} from '../../../sim';
+import {EventMethods} from '../../../sim/dex-conditions';
 import {
 	ABILITY_MOVE_BONUSES,
 	ABILITY_MOVE_TYPE_BONUSES,
@@ -104,7 +104,6 @@ export default class TeamGenerator {
 	readonly TOP_SPEED = 300;
 
 	constructor(format: Format | string, seed: PRNG | PRNGSeed | null) {
-		console.log("hi");
 		this.dex = Dex.forFormat(format);
 		this.format = Dex.formats.get(format);
 		this.teamSize = this.format.ruleTable?.maxTeamSize || 6;
@@ -112,7 +111,7 @@ export default class TeamGenerator {
 		this.itemPool = this.dex.items.all().filter(i => i.exists && i.isNonstandard !== 'Past' && !i.isPokeball);
 		this.specialItems = {};
 		for (const i of this.itemPool) {
-			if (i.itemUser && !i.isNonstandard) {
+			if (i.itemUser && !i.megaStone && !i.isNonstandard) {
 				for (const user of i.itemUser) {
 					if (Dex.species.get(user).requiredItems?.[0] !== i.name) this.specialItems[user] = i.id;
 				}
@@ -154,10 +153,10 @@ export default class TeamGenerator {
 	}
 
 	protected makeSet(species: Species, teamStats: TeamStats): PokemonSet {
-		const abilityPool = Object.values(species.abilities);
-		const abilityWeights = abilityPool.map(a => this.getAbilityWeight(this.dex.abilities.get(a)));
-		const ability = this.weightedRandomPick(abilityPool, abilityWeights);
 		const level = this.forceLevel || TeamGenerator.getLevel(species);
+		const abilityPool = Object.values(species.abilities);
+		const abilityWeights = abilityPool.map(a => this.getAbilityWeight(this.dex.abilities.get(a), species, level));
+		const ability = this.weightedRandomPick(abilityPool, abilityWeights);
 
 		const moves: Move[] = [];
 
@@ -246,6 +245,7 @@ export default class TeamGenerator {
 				const pairedMoveIndex = movePool.indexOf(pairedMove);
 				if (pairedMoveIndex > -1) movePool.splice(pairedMoveIndex, 1);
 			}
+			console.log("");
 		}
 
 		let item = '';
@@ -282,13 +282,7 @@ export default class TeamGenerator {
 			spe: 31,
 		};
 
-		// For Tera Type, we just pick a random type if it's got Tera Blast, Revelation Dance, or no attacking moves,
-		// and the type of one of its attacking moves otherwise (so it can take advantage of the boosts).
-		// Pokemon with 3 or more attack types and Pokemon with both Tera Blast and Contrary can also get Stellar type
-		// but Pokemon with Adaptability never get Stellar because Tera Stellar makes Adaptability have no effect
-		// Ogerpon's formes are forced to the Tera type that matches their forme
-		// Terapagos is forced to Stellar type
-		// Pokemon with Black Sludge don't generally want to tera to a type other than Poison
+		/*
 		const hasTeraBlast = moves.some(m => m.id === 'terablast');
 		const hasRevelationDance = moves.some(m => m.id === 'revelationdance');
 		let teraType;
@@ -308,8 +302,7 @@ export default class TeamGenerator {
 				if (!noStellar) types.push('Stellar');
 			}
 			teraType = this.prng.sample(types);
-		}
-
+		}*/
 		return {
 			name: species.name,
 			species: species.name,
@@ -321,7 +314,6 @@ export default class TeamGenerator {
 			evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 			ivs,
 			level,
-			teraType,
 			shiny: this.prng.randomChance(1, 1024),
 			happiness: 255,
 		};
@@ -357,7 +349,19 @@ export default class TeamGenerator {
 	/**
 	 * @returns A weighting for the Pokémon's ability.
 	 */
-	protected getAbilityWeight(ability: Ability): number {
+	protected getAbilityWeight(ability: Ability, species: Species, level: number): number {
+		console.log(species);
+		const adjustedStats: StatsTable = {
+			hp: species.baseStats.hp * level / 100 + level,
+			atk: species.baseStats.atk * level * level / 10000,
+			def: species.baseStats.def * level / 100,
+			spa: species.baseStats.spa * level * level / 10000,
+			spd: species.baseStats.spd * level / 100,
+			spe: species.baseStats.spe * level / 100,
+		};
+		//discourage atk boosting abilities on low atk mons
+		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability.name) &&
+		   adjustedStats.atk < adjustedStats.spa) return ability.rating > 2 ? ability.rating - 2 : 0;
 		return ability.rating + 1; // Some ability ratings are -1
 	}
 
@@ -379,10 +383,6 @@ export default class TeamGenerator {
 		if (!move.exists) return 0;
 		// this is NOT doubles, so there will be no adjacent ally
 		if (move.target === 'adjacentAlly') return 0;
-
-		// There's an argument to be made for using Terapagos-Stellar's stats instead
-		// but the important thing is to not use Terapagos-Base's stats since it never battles in that forme
-		if (ability === 'Tera Shift') species = this.dex.species.get('Terapagos-Terastal');
 
 		// Attack and Special Attack are scaled by level^2 because in addition to stats themselves being scaled by level,
 		// damage dealt by attacks is also scaled by the user's level
@@ -464,7 +464,8 @@ export default class TeamGenerator {
 
 			// don't need 2 healing moves
 			if (move.heal && movesSoFar.some(m => m.heal)) weight *= 0.5;
-
+			
+			console.log(species + " " + move + ": " + weight);
 			return weight;
 		}
 
@@ -486,14 +487,17 @@ export default class TeamGenerator {
 		if (accuracy < 100) {
 			if (ability === 'Compound Eyes') accuracy = Math.min(100, Math.round(accuracy * 1.3));
 			if (ability === 'Victory Star') accuracy = Math.min(100, Math.round(accuracy * 1.1));
+			
+			//highly discourage very inaccurate moves
+			if(accuracy < 70) accuracy /= 2; 
 		}
 		accuracy /= 100;
 
 		const moveType = TeamGenerator.moveType(move, species);
 
 		let powerEstimate = basePower * baseStat * accuracy;
-		// STAB
-		if (species.types.includes(moveType)) powerEstimate *= ability === 'Adaptability' ? 2 : 1.5;
+		// STAB moves are boosted to hell lol
+		if (species.types.includes(moveType)) powerEstimate *= ability === 'Adaptability' ? 10 : 7.5;
 		if (ability === 'Technician' && move.basePower <= 60) powerEstimate *= 1.5;
 		if (ability === 'Sheer Force' && (move.secondary || move.secondaries)) powerEstimate *= 1.3;
 		const numberOfHits = Array.isArray(move.multihit) ?
@@ -528,8 +532,12 @@ export default class TeamGenerator {
 		// semi-hardcoded move weights that depend on having control over the item
 		if (!this.specialItems[species.name] && !species.requiredItem) {
 			if (move.id === 'acrobatics') weight *= 1.75;
-			if (move.id === 'facade') weight *= 1.5;
+			if (move.id === 'facade' && ['guts', 'toxicboost', 'poisonheal', 'magicguard'].includes(ability)) weight *= 1.5;
+			else weight *= 0.2;
 		}
+		
+		//discourage special moves on atk boosting abilities.
+		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability) && move.category === "Special") weight *= 0.2;
 
 		// priority is more useful when you're slower
 		// except Upper Hand, which is anti-priority and thus better on faster Pokemon
@@ -565,9 +573,6 @@ export default class TeamGenerator {
 				for (const secondary of secondaries) {
 					if (secondary.status) {
 						weight *= TeamGenerator.statusWeight(secondary.status, secondaryChance, slownessRating);
-						if (ability === 'Poison Puppeteer' && ['psn', 'tox'].includes(secondary.status)) {
-							weight *= TeamGenerator.statusWeight('confusion', secondaryChance);
-						}
 					}
 					if (secondary.volatileStatus) {
 						weight *= TeamGenerator.statusWeight(secondary.volatileStatus, secondaryChance, slownessRating);
@@ -587,13 +592,17 @@ export default class TeamGenerator {
 		if (move.self?.volatileStatus) weight *= 0.8;
 
 		// downweight moves if we already have an attacking move of the same type
-		if (movesSoFar.some(m => m.category !== 'Status' && m.type === moveType && m.basePower >= 60)) weight *= 0.3;
+		if (movesSoFar.some(m => m.category !== 'Status' && m.type === moveType)) weight *= 0.1;
 
 		if (move.selfdestruct) weight *= 0.3;
+		/*
 		if (move.recoil && ability !== 'Rock Head' && ability !== 'Magic Guard') {
 			weight *= 1 - (move.recoil[0] / move.recoil[1]);
 			if (ability === 'Reckless') weight *= 1.2;
-		}
+		}*/
+		
+		// pivoting moves
+		if (move.selfSwitch && ((!hasPhysicalSetup && !species.types.includes('Bug')) && !hasSpecialSetup)) weight *= 1.5;
 		if (move.hasCrashDamage && ability !== 'Magic Guard') {
 			weight *= 1 - 0.75 * (1.2 - accuracy);
 			if (ability === 'Reckless') weight *= 1.2;
@@ -621,9 +630,7 @@ export default class TeamGenerator {
 			weight *= 1 + (drainedFraction * 0.5);
 		}
 
-		// Oricorio should rarely get Tera Blast, as Revelation Dance is strictly better
-		// Tera Blast is also bad on species with forced Tera types, a.k.a. Ogerpon and Terapagos
-		if (move.id === 'terablast' && (species.baseSpecies === 'Oricorio' || species.forceTeraType)) weight *= 0.5;
+		console.log(species + " " + move + ": " + weight);
 
 		return weight;
 	}
@@ -650,7 +657,7 @@ export default class TeamGenerator {
 
 		switch (status) {
 		case 'brn': return 2;
-		case 'frz': return 5;
+		case 'frz': return 2;
 		// paralysis is especially valuable on slow pokemon that can become faster than an opponent by paralyzing it
 		// but some pokemon are so slow that most paralyzed pokemon would still outspeed them anyway
 		case 'par': return slownessRating && slownessRating > 0.25 ? 2 + slownessRating : 2;

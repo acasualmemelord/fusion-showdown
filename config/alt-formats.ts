@@ -17,6 +17,16 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 7] Computer-Generated Teams",
+		desc: `Teams generated automatically based on heuristics (rules), with levels based on previous success/failure in battle. ` +
+			`Not affiliated with Random Battles formats. Some sets will by nature be worse than others, but you can report egregiously bad sets ` +
+			`with <a href="https://forms.gle/DYwQN5qGVegz3YU38">this form</a>.`,
+
+		mod: 'gen7infinitefusion',
+		team: 'computerGenerated',
+		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
+	},
+	{
 		name: "[Gen 7] IF Dex OU",
 		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
 
