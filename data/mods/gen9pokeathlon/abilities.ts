@@ -429,7 +429,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					success = true;
 				}
 			}
-			this.field.clearTerrain();
 			return success;
 		},
 		name: "Clean Sweep",

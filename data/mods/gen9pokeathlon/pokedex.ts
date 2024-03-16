@@ -564,7 +564,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		num: 6024,
 		name: "Paldemaria",
 		types: ["Water", "Fairy"],
-		baseStats: {hp: 90, atk: 59, def: 70, spa: 110, spd: 100, spe: 106},
+		baseStats: {hp: 90, atk: 59, def: 75, spa: 110, spd: 100, spe: 106},
 		abilities: {0: "Liquid Voice", 1:"Regenerator", H:"Hospitality"},
 		heightm: 1.8,
 		weightkg: 60,
