@@ -40,6 +40,7 @@ import {
 	ABILITY_MOVE_TYPE_BONUSES,
 	HARDCODED_MOVE_WEIGHTS,
 	MOVE_PAIRINGS,
+	TYPE_PAIRINGS,
 	TARGET_HP_BASED_MOVES,
 	WEIGHT_BASED_MOVES,
 } from './cg-team-data';
@@ -245,7 +246,7 @@ export default class TeamGenerator {
 				const pairedMoveIndex = movePool.indexOf(pairedMove);
 				if (pairedMoveIndex > -1) movePool.splice(pairedMoveIndex, 1);
 			}
-			console.log("");
+			console.log("\n" + species + ": " + moves + "\n");
 		}
 
 		let item = '';
@@ -350,7 +351,6 @@ export default class TeamGenerator {
 	 * @returns A weighting for the Pokémon's ability.
 	 */
 	protected getAbilityWeight(ability: Ability, species: Species, level: number): number {
-		console.log(species);
 		const adjustedStats: StatsTable = {
 			hp: species.baseStats.hp * level / 100 + level,
 			atk: species.baseStats.atk * level * level / 10000,
@@ -438,13 +438,13 @@ export default class TeamGenerator {
 				if (adjustedStats.def >= 80 || adjustedStats.spd >= 80 || adjustedStats.hp >= 80) {
 					switch (move.volatileStatus) {
 					case 'endure':
-						weight *= 3;
+						weight *= 1.1;
 						break;
 					case 'protect': case 'kingsshield': case 'silktrap':
-						weight *= 4;
+						weight *= 2.5;
 						break;
 					case 'banefulbunker': case 'burningbulwark': case 'spikyshield':
-						weight *= 5;
+						weight *= 3;
 						break;
 					default:
 						break;
@@ -454,6 +454,75 @@ export default class TeamGenerator {
 
 			// Hardcoded boosts
 			if (move.id in HARDCODED_MOVE_WEIGHTS) weight *= HARDCODED_MOVE_WEIGHTS[move.id];
+			
+			//encourage weather setting if the mon fits and delete it otherwise
+			if (move.id === 'sunnyday') {
+				let boosted = false;
+				if (species.types.includes("Fire")) {
+					weight *= 1.25;
+					boosted = true;
+				}
+				if (ability === 'Solar Power') {
+					weight *= 2;
+					boosted = true;
+				}
+				if (ability === 'Chlorophyll') {
+					weight *= 4;
+					boosted = true;
+				}
+				if (!boosted) weight = 0;
+			}
+			
+			if (move.id === 'raindance') {
+				let boosted = false;
+				if (species.types.includes("Water")) {
+					weight *= 1.25;
+					boosted = true;
+				}
+				if (ability === 'Rain Dish' || ability === 'Dry Skin') {
+					weight *= 2;
+					boosted = true;
+				}
+				if (ability === 'Swift Swim') {
+					weight *= 4;
+					boosted = true;
+				}
+				if (!boosted) weight = 0;
+			}
+			
+			if (move.id === 'sandstorm') {
+				let boosted = false;
+				if (species.types.includes("Rock")) {
+					weight *= 1.25;
+					boosted = true;
+				}
+				if (ability === 'Sand Veil' || ability === 'Sand Force') {
+					weight *= 2;
+					boosted = true;
+				}
+				if (ability === 'Sand Rush') {
+					weight *= 4;
+					boosted = true;
+				}
+				if (!boosted) weight = 0;
+			}
+			
+			if (move.id === 'hail') {
+				let boosted = false;
+				if (species.types.includes("Ice") || movesSoFar.includes("Blizzard")) {
+					weight *= 1.25;
+					boosted = true;
+				}
+				if (ability === 'Ice Body') {
+					weight *= 2;
+					boosted = true;
+				}
+				if (ability === 'Slush Rush') {
+					weight *= 4;
+					boosted = true;
+				}
+				if (!boosted) weight = 0;
+			}
 
 			// Pokémon with high Attack and Special Attack stats shouldn't have too many status moves,
 			// but on bulkier Pokémon it's more likely to be worth it.
@@ -469,6 +538,7 @@ export default class TeamGenerator {
 			return weight;
 		}
 
+		
 		let basePower = move.basePower;
 		// For Grass Knot and friends, let's just assume they average out to around 60 base power.
 		// Same with Crush Grip and Hard Press
@@ -489,7 +559,7 @@ export default class TeamGenerator {
 			if (ability === 'Victory Star') accuracy = Math.min(100, Math.round(accuracy * 1.1));
 			
 			//highly discourage very inaccurate moves
-			if(accuracy < 70) accuracy /= 2; 
+			if(accuracy < 70) accuracy /= 4; 
 		}
 		accuracy /= 100;
 
@@ -528,6 +598,9 @@ export default class TeamGenerator {
 		);
 
 		let weight = powerEstimate * abilityBonus;
+		//exponential function that roughly puts 40 at 0.18, 60 at 0.37, 90 at 1.06, 100 at 1.51, 110 at 2.15, and 120 at 3.07
+		const weightedBP = 0.044 * Math.pow(1.036, move.basePower);
+		weight *= weightedBP;
 		if (move.id in HARDCODED_MOVE_WEIGHTS) weight *= HARDCODED_MOVE_WEIGHTS[move.id];
 		// semi-hardcoded move weights that depend on having control over the item
 		if (!this.specialItems[species.name] && !species.requiredItem) {
@@ -536,8 +609,12 @@ export default class TeamGenerator {
 			else weight *= 0.2;
 		}
 		
-		//discourage special moves on atk boosting abilities.
+		//discourage special moves on atk boosting abilities
 		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability) && move.category === "Special") weight *= 0.2;
+		
+		//encourage move synergies
+		console.log(moveType + " " + TYPE_PAIRINGS[moveType]);
+		if(movesSoFar.some(m => m.category !== 'Status' && m.type === TYPE_PAIRINGS[moveType])) weight *= 2.5;
 
 		// priority is more useful when you're slower
 		// except Upper Hand, which is anti-priority and thus better on faster Pokemon
@@ -546,7 +623,7 @@ export default class TeamGenerator {
 		if (move.priority < 0 || move.id === 'upperhand') weight *= Math.min((1 / adjustedStats.spe) * 25, 1);
 
 		// flags
-		if (move.flags.charge || (move.flags.recharge && ability !== 'Truant')) weight *= 0.5;
+		if (move.flags.charge || (move.flags.recharge && ability !== 'Truant')) weight *= 0.1;
 		if (move.flags.contact) {
 			if (ability === 'Tough Claws') weight *= 1.3;
 			if (ability === 'Unseen Fist') weight *= 1.1;
@@ -589,12 +666,12 @@ export default class TeamGenerator {
 		if (move.id === 'alluringvoice') weight *= TeamGenerator.statusWeight('confusion', 0.2 * slownessRating);
 
 		// self-inflicted confusion or locking yourself in
-		if (move.self?.volatileStatus) weight *= 0.8;
+		if (move.self?.volatileStatus) weight *= 0.4;
 
 		// downweight moves if we already have an attacking move of the same type
 		if (movesSoFar.some(m => m.category !== 'Status' && m.type === moveType)) weight *= 0.1;
 
-		if (move.selfdestruct) weight *= 0.3;
+		if (move.selfdestruct) weight *= 0.01;
 		/*
 		if (move.recoil && ability !== 'Rock Head' && ability !== 'Magic Guard') {
 			weight *= 1 - (move.recoil[0] / move.recoil[1]);
@@ -714,9 +791,14 @@ export default class TeamGenerator {
 		]) {
 			if (!boosts || chance === 0) continue;
 			const statusMod = move.category === 'Status' ? 1 : 0.5;
-
-			if (boosts.atk && physicalIsRelevant) weight += chance * boosts.atk * abilityMod * 2 * statusMod;
-			if (boosts.spa && specialIsRelevant) weight += chance * boosts.spa * abilityMod * 2 * statusMod;
+			
+			if (move.category === 'Status') {
+				if (boosts.atk && physicalIsRelevant) weight += chance * Math.pow(boosts.atk, 2) * abilityMod;
+				if (boosts.spa && specialIsRelevant) weight += chance * Math.pow(boosts.spa, 2) * abilityMod;
+			} else {
+				if (boosts.atk && physicalIsRelevant) weight += chance * boosts.atk * abilityMod;
+				if (boosts.spa && specialIsRelevant) weight += chance * boosts.spa * abilityMod;
+			}
 
 			// TODO: should these scale by base stat magnitude instead of using ternaries?
 			// defense/special defense boost is less useful if we have some bulk to start with
@@ -731,7 +813,7 @@ export default class TeamGenerator {
 			}
 		}
 
-		return weight >= 0 ? 1 + weight : 1 / (1 - weight);
+		return weight >= 0 ? 0.5 + weight : 0.5 / (1 - weight);
 	}
 
 	/**
@@ -754,7 +836,7 @@ export default class TeamGenerator {
 			averageNumberOfDebuffs += chance * numBoosts;
 		}
 
-		return 1 + (0.5 * averageNumberOfDebuffs);
+		return 0.5 + (0.5 * averageNumberOfDebuffs);
 	}
 
 	/**
