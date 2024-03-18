@@ -112,7 +112,7 @@ export default class TeamGenerator {
 		this.itemPool = this.dex.items.all().filter(i => i.exists && i.isNonstandard !== 'Past' && !i.isPokeball);
 		this.specialItems = {};
 		for (const i of this.itemPool) {
-			if (i.itemUser && !i.megaStone && !i.isNonstandard) {
+			if (i.itemUser && !i.megaStone && !i.zMove && !i.isNonstandard) {
 				for (const user of i.itemUser) {
 					if (Dex.species.get(user).requiredItems?.[0] !== i.name) this.specialItems[user] = i.id;
 				}
@@ -359,9 +359,10 @@ export default class TeamGenerator {
 			spd: species.baseStats.spd * level / 100,
 			spe: species.baseStats.spe * level / 100,
 		};
+		//doubles abilities
+		if(['Healer', 'Friend Guard', 'Symbiosis'].includes(ability.name)) return 0;
 		//discourage atk boosting abilities on low atk mons
-		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability.name) &&
-		   adjustedStats.atk < adjustedStats.spa) return ability.rating > 2 ? ability.rating - 2 : 0;
+		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability.name) && adjustedStats.atk < adjustedStats.spa) return ability.rating > 2 ? ability.rating - 2 : 0;
 		return ability.rating + 1; // Some ability ratings are -1
 	}
 
@@ -399,8 +400,13 @@ export default class TeamGenerator {
 			// The initial value of this weight determines how valuable status moves are vs. attacking moves.
 			// You can raise it to make random status moves more valuable or lower it and increase multipliers
 			// to make only CERTAIN status moves valuable.
-			let weight = 2400;
+			let weight = 1600;
 
+			//healing is better on bulky pokemon
+			const avgDef = (adjustedStats.def + adjustedStats.spd) / 2;
+			const avgOff = (adjustedStats.atk + adjustedStats.spa) / 2;
+			if (move.heal && avgDef >= avgOff) weight *= 2;
+			
 			// inflicts status
 			if (move.status) weight *= TeamGenerator.statusWeight(move.status) * 2;
 
@@ -527,12 +533,12 @@ export default class TeamGenerator {
 			// Pokémon with high Attack and Special Attack stats shouldn't have too many status moves,
 			// but on bulkier Pokémon it's more likely to be worth it.
 			const goodAttacker = adjustedStats.atk > 65 || adjustedStats.spa > 65;
-			if (goodAttacker && movesSoFar.filter(m => m.category !== 'Status').length < 2) {
-				weight *= 0.3;
+			if (goodAttacker && (movesSoFar.filter(m => m.category !== 'Status').length < 2 || move.id === 'rest')) {
+				weight *= 0.1;
 			}
 
 			// don't need 2 healing moves
-			if (move.heal && movesSoFar.some(m => m.heal)) weight *= 0.5;
+			if (move.heal && movesSoFar.some(m => m.heal)) weight *= 0.2;
 			
 			console.log(species + " " + move + ": " + weight);
 			return weight;
@@ -557,15 +563,13 @@ export default class TeamGenerator {
 		if (accuracy < 100) {
 			if (ability === 'Compound Eyes') accuracy = Math.min(100, Math.round(accuracy * 1.3));
 			if (ability === 'Victory Star') accuracy = Math.min(100, Math.round(accuracy * 1.1));
-			
-			//highly discourage very inaccurate moves
-			if(accuracy < 70) accuracy /= 4; 
+			if(accuracy < 70) accuracy /= 4;
 		}
 		accuracy /= 100;
 
 		const moveType = TeamGenerator.moveType(move, species);
 
-		let powerEstimate = basePower * baseStat * accuracy;
+		let powerEstimate = basePower * baseStat * accuracy * accuracy;
 		// STAB moves are boosted to hell lol
 		if (species.types.includes(moveType)) powerEstimate *= ability === 'Adaptability' ? 10 : 7.5;
 		if (ability === 'Technician' && move.basePower <= 60) powerEstimate *= 1.5;
@@ -588,9 +592,9 @@ export default class TeamGenerator {
 		const hasSpecialSetup = movesSoFar.some(m => m.boosts?.spa || m.self?.boosts?.spa || m.selfBoost?.boosts?.spa);
 		const hasPhysicalSetup = movesSoFar.some(m => m.boosts?.atk || m.self?.boosts?.atk || m.selfBoost?.boosts?.atk);
 		if (move.category === 'Physical' && !['bodypress', 'foulplay'].includes(move.id) && hasSpecialSetup) {
-			powerEstimate *= 0.7;
+			powerEstimate *= 0.3;
 		}
-		if (move.category === 'Special' && hasPhysicalSetup) powerEstimate *= 0.7;
+		if (move.category === 'Special' && hasPhysicalSetup) powerEstimate *= 0.3;
 
 		const abilityBonus = (
 			((ABILITY_MOVE_BONUSES[ability] || {})[move.id] || 1) *
@@ -609,12 +613,20 @@ export default class TeamGenerator {
 			else weight *= 0.2;
 		}
 		
+		//multiply by designated attacking stat by other stat to encourage using higher stat
+		if(move.category === 'Physical') {
+			weight *= Math.pow((adjustedStats.atk / adjustedStats.spa), 2);
+		}
+		else {
+			weight *= Math.pow((adjustedStats.spa / adjustedStats.atk), 2);
+		}
+		
 		//discourage special moves on atk boosting abilities
 		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability) && move.category === "Special") weight *= 0.2;
 		
 		//encourage move synergies
-		console.log(moveType + " " + TYPE_PAIRINGS[moveType]);
-		if(movesSoFar.some(m => m.category !== 'Status' && m.type === TYPE_PAIRINGS[moveType])) weight *= 2.5;
+		//console.log(moveType + " " + JSON.stringify(TYPE_PAIRINGS[moveType]));
+		if(movesSoFar.some(m => m.category !== 'Status' && TYPE_PAIRINGS[moveType].hasOwnProperty(m.type))) weight *= 2.5;
 
 		// priority is more useful when you're slower
 		// except Upper Hand, which is anti-priority and thus better on faster Pokemon
@@ -669,9 +681,9 @@ export default class TeamGenerator {
 		if (move.self?.volatileStatus) weight *= 0.4;
 
 		// downweight moves if we already have an attacking move of the same type
-		if (movesSoFar.some(m => m.category !== 'Status' && m.type === moveType)) weight *= 0.1;
+		if (movesSoFar.some(m => m.category !== 'Status' && m.type === moveType)) weight *= 0.025;
 
-		if (move.selfdestruct) weight *= 0.01;
+		if (move.selfdestruct) weight *= 0.0001 / slownessRating;
 		/*
 		if (move.recoil && ability !== 'Rock Head' && ability !== 'Magic Guard') {
 			weight *= 1 - (move.recoil[0] / move.recoil[1]);
@@ -701,6 +713,9 @@ export default class TeamGenerator {
 			weight *= 1 + 20 * Math.pow(0.25, teamStats.hazardRemovers);
 			teamStats.hazardRemovers++;
 		}
+		
+		if (['reflect', 'lightscreen'].includes(move.id) && ability === 'Prankster') weight *= 3;
+		if (['blizzard', 'auroraveil'].includes(move.id) && ability === 'Snow Warning') weight *= 3;
 
 		if (move.drain) {
 			const drainedFraction = move.drain[0] / move.drain[1];
@@ -739,7 +754,7 @@ export default class TeamGenerator {
 		// but some pokemon are so slow that most paralyzed pokemon would still outspeed them anyway
 		case 'par': return slownessRating && slownessRating > 0.25 ? 2 + slownessRating : 2;
 		case 'psn': return 1.75;
-		case 'tox': return 4;
+		case 'tox': return 2;
 		case 'slp': return 4;
 		case 'confusion': return 1.5;
 		case 'healblock': return 1.75;
@@ -780,6 +795,9 @@ export default class TeamGenerator {
 		const abilityMod = ability === 'Simple' ? 2 : ability === 'Contrary' ? -1 : 1;
 		const bodyPressMod = movesSoFar.some(m => m.id === 'bodyPress') ? 2 : 1;
 		const electroBallMod = movesSoFar.some(m => m.id === 'electroball') ? 2 : 1;
+		const hasSpecialSetup = movesSoFar.some(m => m.boosts?.spa || m.self?.boosts?.spa || m.selfBoost?.boosts?.spa);
+		const hasPhysicalSetup = movesSoFar.some(m => m.boosts?.atk || m.self?.boosts?.atk || m.selfBoost?.boosts?.atk);
+		const hasSpeedSetup = movesSoFar.some(m => m.boosts?.atk || m.self?.boosts?.spe || m.selfBoost?.boosts?.spe);
 		for (const {chance, boosts} of [
 			{chance: 1, boosts: move.boosts},
 			{chance: 1, boosts: move.self?.boosts},
@@ -793,19 +811,21 @@ export default class TeamGenerator {
 			const statusMod = move.category === 'Status' ? 1 : 0.5;
 			
 			if (move.category === 'Status') {
-				if (boosts.atk && physicalIsRelevant) weight += chance * Math.pow(boosts.atk, 2) * abilityMod;
-				if (boosts.spa && specialIsRelevant) weight += chance * Math.pow(boosts.spa, 2) * abilityMod;
+				if (boosts.atk && physicalIsRelevant && !hasPhysicalSetup) weight += chance * Math.pow(boosts.atk, 2) * abilityMod;
+				if (boosts.spa && specialIsRelevant && !hasSpecialSetup) weight += chance * Math.pow(boosts.spa, 2) * abilityMod;
+				if (boosts.spe && specialIsRelevant && !hasSpeedSetup) weight += chance * Math.pow(boosts.spe, 2) * abilityMod;
 			} else {
-				if (boosts.atk && physicalIsRelevant) weight += chance * boosts.atk * abilityMod;
-				if (boosts.spa && specialIsRelevant) weight += chance * boosts.spa * abilityMod;
+				if (boosts.atk && physicalIsRelevant) weight += chance * boosts.atk * abilityMod / 2;
+				if (boosts.spa && specialIsRelevant) weight += chance * boosts.spa * abilityMod / 2;
+				if (boosts.spe && specialIsRelevant) weight += chance * boosts.spe * abilityMod / 2;
 			}
 
 			// TODO: should these scale by base stat magnitude instead of using ternaries?
-			// defense/special defense boost is less useful if we have some bulk to start with
+			// defense/special defense boost is less useful if we have no bulk to start with
 			if (boosts.def) {
-				weight += chance * boosts.def * abilityMod * bodyPressMod * (adjustedStats.def > 60 ? 0.5 : 1) * statusMod;
+				weight += chance * boosts.def * abilityMod * bodyPressMod * (adjustedStats.def > 60 ? 1 : 0.2) * statusMod;
 			}
-			if (boosts.spd) weight += chance * boosts.spd * abilityMod * (adjustedStats.spd > 60 ? 0.5 : 1) * statusMod;
+			if (boosts.spd) weight += chance * boosts.spd * abilityMod * (adjustedStats.spd > 60 ? 1 : 0.2) * statusMod;
 
 			// speed boost is less useful for fast pokemon
 			if (boosts.spe) {
@@ -835,8 +855,8 @@ export default class TeamGenerator {
 			const numBoosts = Object.values(boosts).filter(x => x < 0).length;
 			averageNumberOfDebuffs += chance * numBoosts;
 		}
-
-		return 0.5 + (0.5 * averageNumberOfDebuffs);
+		
+		return 0.5 + (0.5 * averageNumberOfDebuffs) * (move.category === 'Status') ? 0.1 : 1;
 	}
 
 	/**
@@ -855,6 +875,8 @@ export default class TeamGenerator {
 		};
 
 		let weight;
+		const avgDef = (adjustedStats.def + adjustedStats.spd) / 2;
+		const avgOff = (adjustedStats.atk + adjustedStats.spa) / 2;
 		switch (item.id) {
 		// Choice Items
 		case 'choiceband':
@@ -863,23 +885,20 @@ export default class TeamGenerator {
 			return moves.every(x => x.category === 'Special') ? 50 : 0;
 		case 'choicescarf':
 			if (moves.some(x => x.category === 'Status' || x.secondary?.self?.boosts?.spe)) return 0;
+			if (species.id === 'ditto') return 100;
 			if (adjustedStats.spe > 50 && adjustedStats.spe < 120) return 50;
 			return 10;
 
 		// Generally Decent Items
 		case 'lifeorb':
+			if (ability === 'Sheer Force') return 100;
+			if (ability === 'Magic Guard' && avgOff > avgDef) return 100;
 			return moves.filter(x => x.category !== 'Status' && !x.damage && !x.damageCallback).length * 8;
 		case 'focussash':
 			if (ability === 'Sturdy') return 0;
 			// frail
 			if (adjustedStats.hp < 65 && adjustedStats.def < 65 && adjustedStats.spd < 65) return 35;
-			return 10;
-		case 'heavydutyboots':
-			switch (this.dex.getEffectiveness('Rock', species)) {
-			case 1: return 30; // super effective
-			case 0: return 10; // neutral
-			}
-			return 5; // not very effective/other
+			return 1;
 		case 'assaultvest':
 			if (moves.some(x => x.category === 'Status')) return 0;
 			return 30;
@@ -901,7 +920,7 @@ export default class TeamGenerator {
 
 		// status
 		case 'flameorb':
-			weight = ability === 'Guts' && !species.types.includes('Fire') ? 30 : 0;
+			weight = ability === 'Guts' && !species.types.includes('Fire') ? 50 : 0;
 			if (moves.some(m => m.id === 'facade')) weight *= 2;
 			return weight;
 		case 'toxicorb':
@@ -917,17 +936,13 @@ export default class TeamGenerator {
 		case 'leftovers':
 			return moves.some(m => m.stallingMove) ? 40 : 20;
 		case 'blacksludge':
-			// Even poison types don't really like Black Sludge in Gen 9 because it discourages them from terastallizing
-			// to a type other than Poison, and thus reveals their Tera type when it activates
-			return species.types.includes('Poison') ? moves.some(m => m.stallingMove) ? 20 : 10 : 0;
+			return species.types.includes('Poison') ? moves.some(m => m.stallingMove) ? 40 : 20 : 0;
 
 		// berries
-		case 'sitrusberry': case 'magoberry':
-			return 20;
-
-		case 'throatspray':
-			if (moves.some(m => m.flags.sound) && moves.some(m => m.category === 'Special')) return 30;
-			return 0;
+		case 'sitrusberry': 
+			return ability === 'Harvest' ? 50 : 5;
+		case 'iapapaberry':
+			return ['Harvest', 'Gluttony'].includes(ability) ? 40 : 5;
 
 		default:
 			// probably not a very good item

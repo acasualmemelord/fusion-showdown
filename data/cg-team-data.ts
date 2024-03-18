@@ -30,25 +30,25 @@ export const ABILITY_MOVE_TYPE_BONUSES: {[abilityID: string]: {[typeID: string]:
 	drought: {Fire: 1.4, Water: 0.6},
 };
 
-export const TYPE_PAIRINGS: {[typeID: string]: {[typeID: string]}} = {
+export const TYPE_PAIRINGS: {[typeID: string]: {[typeID: string]: number}} = {
 	Bug: {},
-	Dark: {Fighting, Normal},
+	Dark: {Fighting: 2, Normal: 1},
 	Dragon: {},
-	Electric: {Fairy, Ground, Ice},
-	Fairy: {Dark, Electric, Fire, Psychic, Water},
-	Fighting: {Bug, Dark, Dragon, Fairy, Flying, Ghost, Grass, Ice, Normal, Poison, Psychic, Rock, Steel},
-	Fire: {Bug, Dragon, Electric, Fairy, Flying, Grass, Ground, Ice, Psychic, Rock, Steel, Water},
-	Flying: {Fighting, Ground, Water},
-	Ghost: {Normal, Psychic},
-	Grass: {Electric, Fire, Ice, Water},
-	Ground: {Bug, Dragon, Fairy, Fire, Flying, Grass, Ice, Normal, Poison, Psychic, Rock, Steel, Water},
-	Ice: {Electric, Fighting, Fire, Grass, Ground, Rock, Water},
+	Electric: {Fairy: 1, Ground: 1, Ice: 2},
+	Fairy: {Dark: 1, Electric: 1, Fire: 1, Psychic: 1, Water: 1},
+	Fighting: {Bug: 1, Dark: 2, Dragon: 1, Fairy: 1, Flying: 1, Ghost: 2, Grass: 1, Ice: 2, Normal: 1, Poison: 1, Psychic: 1, Rock: 1, Steel: 1},
+	Fire: {Bug: 1, Dragon: 1, Electric: 1, Fairy: 1, Flying: 1, Grass: 1, Ground: 1, Ice: 1, Psychic: 1, Rock: 1, Steel: 1, Water: 1},
+	Flying: {Fighting: 1, Ground: 1, Water: 1},
+	Ghost: {Normal: 1, Psychic: 1},
+	Grass: {Electric: 1, Fire: 1, Ice: 1, Water: 1},
+	Ground: {Bug: 1, Dragon: 2, Fairy: 2, Fire: 1, Flying: 1, Grass: 1, Ice: 2, Normal: 1, Poison: 1, Psychic: 1, Rock: 2, Steel: 1, Water: 1},
+	Ice: {Electric: 2, Fighting: 2, Fire: 1, Grass: 1, Ground: 1, Rock: 1, Water: 2},
 	Normal: {},
-	Poison: {Dark, Dragon, Fighting},
-	Psychic: {Fighting},
-	Rock: {Fairy, Fighting, Grass, Ground, Ice},
-	Steel: {Dark, Dragon, Fighting},
-	Water: {Electric, Fairy, Fire, Grass, Ice},
+	Poison: {Dark: 1, Dragon: 1, Fighting: 1},
+	Psychic: {Fighting: 1},
+	Rock: {Fairy: 1, Fighting: 1, Grass: 1, Ground: 1, Ice: 1},
+	Steel: {Dark: 1, Dragon: 1, Fighting: 1},
+	Water: {Electric: 1, Fairy: 1, Fire: 1, Grass: 1, Ice: 1},
 };
 // For moves whose quality isn't obvious from data
 // USE SPARINGLY!
