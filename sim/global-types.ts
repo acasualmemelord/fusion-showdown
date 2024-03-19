@@ -560,6 +560,7 @@ namespace RandomTeamsTypes {
 		ability: string;
 		shiny: boolean;
 		level: number;
+		fusion?: string;
 		happiness: number;
 		evs: SparseStatsTable;
 		ivs: SparseStatsTable;
