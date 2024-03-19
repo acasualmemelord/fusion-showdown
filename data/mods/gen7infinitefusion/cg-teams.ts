@@ -147,7 +147,9 @@ export default class TeamGenerator {
 			if (haveRoomToReject && !isGoodFit) continue;
 
 			speciesPool = speciesPool.filter(s => s.baseSpecies !== species.baseSpecies);
-			team.push(this.makeSet(species, teamStats));
+			let hi = this.makeSet(species, teamStats);
+			console.log(hi);
+			team.push(hi);
 		}
 
 		return team;
@@ -315,6 +317,7 @@ export default class TeamGenerator {
 			evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 			ivs,
 			level,
+			fusion: 'Regigigas',
 			shiny: this.prng.randomChance(1, 1024),
 			happiness: 255,
 		};
@@ -625,6 +628,7 @@ export default class TeamGenerator {
 		if(['Hustle', 'Guts', 'Toxic Boost', 'Moxie', 'Anger Point', 'Flower Gift'].includes(ability) && move.category === "Special") weight *= 0.2;
 		
 		//encourage move synergies
+		//console.log(TYPE_PAIRINGS);
 		//console.log(moveType + " " + JSON.stringify(TYPE_PAIRINGS[moveType]));
 		if(movesSoFar.some(m => m.category !== 'Status' && TYPE_PAIRINGS[moveType].hasOwnProperty(m.type))) weight *= 2.5;
 
