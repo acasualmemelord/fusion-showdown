@@ -92,7 +92,6 @@ export const treasures: {[k: string]: string} = {
 };
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {
-	vaporization: InsgAbilities.vaporization,
 	consumerexchange: {
 		onSourceDamagingHit(damage, target, source, move) {
 			if (this.effectState.exchange !== false) {
@@ -447,6 +446,27 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		name: "Starfall",
 		shortDesc: "Clears one random hazard on switch-in.",
 		rating: 4,
+		num: 0,
+	},
+	vaporization: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				this.add('-immune', target, '[from] ability: Vaporization');
+				return null;
+			}
+		},
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of this.getAllActive()) {
+				if (!target || !target.hp) continue;
+				if (target.hasType('Water')) {
+					this.damage(target.maxhp / 8, target, pokemon);
+				}
+			}
+		},
+		name: "Vaporization",
+		flags: {breakable: 1},
+		rating: 3.5,
 		num: 0,
 	},
 };
