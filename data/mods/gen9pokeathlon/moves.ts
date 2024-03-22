@@ -2,11 +2,20 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// Mods
 	payday: {
 		inherit: true,
-		sideCondition: 'payday',
-		condition: {
-			onSideStart(side, source) {
-				this.add('-sidestart', side, 'move: Pay Day');
-			},
+		onHit(target, source, move) {
+			source.side.addSideCondition(this.dex.conditions.get('scatteredcoins'));
+		},
+	},
+	makeitrain: {
+		inherit: true,
+		onHit(target, source, move) {
+			source.side.addSideCondition(this.dex.conditions.get('scatteredcoins'));
+		},
+	},
+	gmaxgoldrush: {
+		inherit: true,
+		onHit(target, source, move) {
+			source.side.addSideCondition(this.dex.conditions.get('scatteredcoins'));
 		},
 	},
 	leechseed: {
@@ -275,7 +284,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
 		target: "normal",
-		type: "Rock",
+		type: "Fire",
 		contestType: "Beautiful",
 	},
 	bulwark: {
@@ -547,13 +556,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		onBasePower(basePower, pokemon, target) {
-			if (pokemon.side.getSideCondition('Pay Day')) {
+			if (pokemon.side.getSideCondition('scatteredcoins')) {
 				this.add('-activate', pokemon, 'move: Currency Flow');
 				return this.chainModify(1.5);
 			}
 		},
 		onAfterHit(source, target, move) {
-			source.side.removeSideCondition('Pay Day');
+			target.side.removeSideCondition('scatteredcoins');
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
