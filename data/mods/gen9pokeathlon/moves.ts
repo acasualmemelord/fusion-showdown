@@ -206,7 +206,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 80,
 		category: "Special",
 		name: "Desert Tempest",
-		shortDesc: "Summons sandstorm. 1.2x damage if user is holding a Smooth Rock.",
+		shortDesc: "Summons Sandstorm. 1.2x damage if user is holding a Smooth Rock.",
 		pp: 15,
 		priority: 0,
 		onBasePower(basePower, pokemon, target) {
@@ -216,6 +216,52 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		},
 		onHit(source) {
 			this.field.setWeather('sandstorm');
+		},
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+		contestType: "Beautiful",
+	},
+	subzerostorm: {
+		num: 0,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Subzero Storm",
+		shortDesc: "Summons Hail. 1.2x damage if user is holding an Icy Rock.",
+		pp: 15,
+		priority: 0,
+		onBasePower(basePower, pokemon, target) {
+			if (pokemon.item === "icyrock") {
+				return this.chainModify(1.2);
+			}
+		},
+		onHit(source) {
+			this.field.setWeather('snow');
+		},
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+		contestType: "Beautiful",
+	},
+	fierymaelstrom: {
+		num: 0,
+		accuracy: 90,
+		basePower: 80,
+		category: "Special",
+		name: "Fiery Maelstrom",
+		shortDesc: "Summons Sun. 1.2x damage if user is holding a Heat Rock.",
+		pp: 15,
+		priority: 0,
+		onBasePower(basePower, pokemon, target) {
+			if (pokemon.item === "heatrock") {
+				return this.chainModify(1.2);
+			}
+		},
+		onHit(source) {
+			this.field.setWeather('sunnyday');
 		},
 		flags: {protect: 1, mirror: 1},
 		secondary: null,
@@ -445,5 +491,41 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		target: "allAdjacentFoes",
 		type: "Normal",
 		contestType: "Cool",
+	},
+	mindwipe: {
+		num: 0,
+		accuracy: 95,
+		basePower: 90,
+		category: "Special",
+		name: "Mindwipe",
+		desc: "Has a 20% chance to confuse the target.",
+		shortDesc: "20% chance to confuse the target.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Clever",
+	},
+	twingust: {
+		num: 0,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Twin Gust",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. In Double Battles, this move attempts to hit the targeted Pokemon and its ally once each. If hitting one of these Pokemon would be prevented by immunity, protection, semi-invulnerability, an Ability, or accuracy, it attempts to hit the other Pokemon twice instead. If this move is redirected, it hits that target twice.",
+		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, noparentalbond: 1},
+		multihit: 2,
+		smartTarget: true,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
 	},
 };

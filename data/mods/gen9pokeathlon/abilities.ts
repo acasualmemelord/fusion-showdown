@@ -1,3 +1,6 @@
+const {Dex} = require('../../../sim/dex');
+const InsgAbilities = Dex.deepClone(require('../gen9insurgence/abilities').Abilities);
+
 export const treasures: {[k: string]: string} = {
 	abilityshield: 'klutz',
 	absorbbulb: 'waterabsorb',
@@ -89,6 +92,7 @@ export const treasures: {[k: string]: string} = {
 };
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	vaporization: {...InsgAbilities.vaporization},
 	consumerexchange: {
 		onSourceDamagingHit(damage, target, source, move) {
 			if (this.effectState.exchange !== false) {
@@ -406,33 +410,42 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	cleansweep: {
-		onStart(source) {
+		onStart(pokemon) {
 			let success = false;
-			const removeTarget = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
-			];
-			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
-			];
-			for (const target of source.adjacentFoes()) {
-				for (const targetCondition of removeTarget) {
-					if (target.side.removeSideCondition(targetCondition)) {
-						if (!removeAll.includes(targetCondition)) continue;
-						this.add('-sideend', target.side, this.dex.conditions.get(targetCondition).name, '[from] ability: Clean Sweep', '[of] ' + source);
+			for (const active of this.getAllActive()) {
+				if (active.removeVolatile('substitute')) success = true;
+			}
+			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			const sides = [pokemon.side, ...pokemon.side.foeSidesWithConditions()];
+			for (const side of sides) {
+				for (const sideCondition of removeAll) {
+					if (side.removeSideCondition(sideCondition)) {
+						this.add('-sideend', side, this.dex.conditions.get(sideCondition).name);
 						success = true;
 					}
 				}
 			}
-			for (const sideCondition of removeAll) {
-				if (source.side.removeSideCondition(sideCondition)) {
-					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] ability: Clean Sweep', '[of] ' + source);
-					success = true;
-				}
-			}
+			if (success) this.add('-activate', pokemon, 'ability: Clean Sweep');
 			return success;
 		},
 		name: "Clean Sweep",
 		shortDesc: "This Pokemon clears all hazards on switch-in.",
+		rating: 4,
+		num: 0,
+	},
+	starfall: {
+		onBeforeSwitchIn(pokemon) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'livewire', 'permafrost', 'hotcoals', 'stickyweb', 'gmaxsteelsurge'];
+			this.prng.shuffle(sideConditions);
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] ability: Starfall', '[of] ' + pokemon);
+					return;
+				}
+			}
+		},
+		name: "Starfall",
+		shortDesc: "Clears one random hazard on switch-in.",
 		rating: 4,
 		num: 0,
 	},
