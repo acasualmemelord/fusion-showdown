@@ -92,7 +92,7 @@ export const treasures: {[k: string]: string} = {
 };
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {
-	vaporization: {...InsgAbilities.vaporization},
+	//vaporization: {...InsgAbilities.vaporization},
 	consumerexchange: {
 		onSourceDamagingHit(damage, target, source, move) {
 			if (this.effectState.exchange !== false) {
