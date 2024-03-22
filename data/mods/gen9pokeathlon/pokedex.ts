@@ -411,6 +411,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Black",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	wrighvern: {
 		num: 6018,
@@ -423,6 +426,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Purple",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	meditao: {
 		num: 6019,
