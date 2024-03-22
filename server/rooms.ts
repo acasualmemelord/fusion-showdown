@@ -2007,7 +2007,7 @@ export class GameRoom extends BasicRoom {
 	 * That's why this function requires a connection. For details, see the top
 	 * comment inside this function.
 	 */
-	async uploadReplay(user?: User, connection?: Connection, options?: 'forpunishment' | 'silent') {
+	async uploadReplay(user?: User, connection?: Connection, options?: 'forpunishment' | 'silent' | 'auto') {
 		// The reason we don't upload directly to the loginserver, unlike every
 		// other interaction with the loginserver, is because it takes so much
 		// bandwidth that it can get identified as a DoS attack by PHP, Apache, or
@@ -2211,10 +2211,6 @@ export const Rooms = {
 			room.setPrivate(room.parent.settings.isPrivate || false);
 		} else {
 			game.checkPrivacySettings(options);
-		}
-
-		for (const player of players) {
-			FS('config/chat-plugins/usage.txt').appendSync(`${Date.now()},${options.format},${options.challengeType},${options.rated}:${player.battleSettings.team}\n`);
 		}
 
 		for (const player of players) {
