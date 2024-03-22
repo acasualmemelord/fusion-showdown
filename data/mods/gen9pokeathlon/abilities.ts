@@ -465,6 +465,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 		name: "Vaporization",
+		shortDesc: "Vaporizes Water-Type attacks and damages water types.",
 		flags: {breakable: 1},
 		rating: 3.5,
 		num: 0,
