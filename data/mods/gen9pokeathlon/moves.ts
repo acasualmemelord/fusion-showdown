@@ -1,5 +1,14 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
 	// Mods
+	payday: {
+		inherit: true,
+		sideCondition: 'payday',
+		condition: {
+			onSideStart(side, source) {
+				this.add('-sidestart', side, 'move: Pay Day');
+			},
+		},
+	},
 	leechseed: {
 		inherit: true,
 		onTryImmunity(target) {
@@ -527,5 +536,29 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Flying",
+	},
+	currencyflow: {
+		num: 0,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Currency Flow",
+		shortDesc: "1.5x damage if coins are scattered.",
+		pp: 10,
+		priority: 0,
+		onBasePower(basePower, pokemon, target) {
+			if (pokemon.side.getSideCondition('Pay Day')) {
+				this.add('-activate', pokemon, 'move: Currency Flow');
+				return this.chainModify(1.5);
+			}
+		},
+		onAfterHit(source, target, move) {
+			source.side.removeSideCondition('Pay Day');
+		},
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Ground",
+		contestType: "Beautiful",
 	},
 };
