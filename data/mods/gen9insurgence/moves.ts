@@ -121,7 +121,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Dragonify",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1, powder: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1},
 		onHit(target) {
 			if (target.getTypes().join() === 'Dragon' || !target.setType('Dragon')) return false;
 			this.add('-start', target, 'typechange', 'Dragon');
@@ -240,7 +240,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		name: "Medusa Ray",
 		pp: 20,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1, powder: 1},
+		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1},
 		onHit(target) {
 			if (target.getTypes().join() === 'Rock' || !target.setType('Rock')) return false;
 			this.add('-start', target, 'typechange', 'Rock');
