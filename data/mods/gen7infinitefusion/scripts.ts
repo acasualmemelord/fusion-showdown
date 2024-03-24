@@ -493,6 +493,7 @@ export const Scripts: ModdedBattleScriptsData = {
 		for (const i in this.data.Pokedex) {
 			if (i in IFDex) {
 				this.data.Pokedex[i].num = IFDex[i];
+				this.data.Pokedex[i].gen = 7;
 				this.data.Pokedex[i].isNonstandard = null;
 			} else {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
