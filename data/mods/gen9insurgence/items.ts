@@ -683,9 +683,9 @@ export const Items: {[k: string]: ModdedItemData} = {
 	deltametagrossitespider: {
 		name: "Delta Metagrossite (Spider)",
 		spritenum: 0,
-		megaStone: "Metagross-Delta-Mega-Spider",
-		megaEvolves: "(Spider)-Metagross-Delta",
-		itemUser: ["(Spider)-Metagross-Delta"],
+		megaStone: "Metagross-Delta-Spider-Mega",
+		megaEvolves: "Metagross-Delta-Spider",
+		itemUser: ["Metagross-Delta-Spider"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
@@ -695,9 +695,9 @@ export const Items: {[k: string]: ModdedItemData} = {
 	deltametagrossiteruin: {
 		name: "Delta Metagrossite (Ruin)",
 		spritenum: 0,
-		megaStone: "Deltametagrossruin",
-		megaEvolves: "(Ruin)-Metagross-Delta",
-		itemUser: ["(Ruin)-Metagross-Delta"],
+		megaStone: "Metagross-Delta-Ruin-Mega",
+		megaEvolves: "Metagross-Delta-Ruin",
+		itemUser: ["Metagross-Delta-Ruin"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;

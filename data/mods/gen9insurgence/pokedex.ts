@@ -13,6 +13,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crystal Piece",
+		tier: "AG",
+		natDexTier: "AG",
 	},
 	giratinaprimal: {
 		num: 487,
@@ -27,6 +29,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crystal Piece",
+		tier: "AG",
+		natDexTier: "AG",
 	},
 	arceusprimal: {
 		num: 493,
@@ -41,6 +45,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crystal Piece",
+		tier: "AG",
+		natDexTier: "AG",
 	},
 	
 	// Armored Formes
@@ -58,6 +64,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tags: ["Insurgence"],
 		requiredItem: "Mewtwo Armor",
+		tier: "Uber",
+		natDexTier: "Uber",
 	},
 	tyranitararmor: {
 		num: 248,
@@ -72,6 +80,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tags: ["Insurgence"],
 		requiredItem: "Tyranitar Armor",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	flygonarmor: {
 		num: 330,
@@ -86,6 +96,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tags: ["Insurgence"],
 		requiredItem: "Flygon Armor",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	leavannyarmor: {
 		num: 542,
@@ -100,6 +112,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tags: ["Insurgence"],
 		requiredItem: "Leavanny Armor",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	zekromarmor: {
 		num: 644,
@@ -115,6 +129,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tags: ["Insurgence"],
 		requiredItem: "Zekrom Armor",
+		tier: "Uber",
+		natDexTier: "Uber",
 	},
 	volcaronadeltaarmor: {
 		num: 637,
@@ -129,6 +145,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tags: ["Insurgence"],
 		requiredItem: "Volcarona-Delta Armor",
+		tier: "Uber",
+		natDexTier: "Uber",
 	},
 
 	// Vanilla Megas
@@ -145,6 +163,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Flygonite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	poliwrathmega: {
 		num: 62,
@@ -159,6 +179,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Poliwrathite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	marowakmega: {
 		num: 105,
@@ -173,6 +195,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Marowakite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	eeveemega: {
 		num: 133,
@@ -187,6 +211,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Eevite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	mewtwoshadow: {
 		num: 150,
@@ -200,6 +226,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 122.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	meganiummega: {
 		num: 154,
@@ -214,6 +242,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Meganiumite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	typhlosionmega: {
 		num: 157,
@@ -228,6 +258,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Typhlosionite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	feraligatrmega: {
 		num: 160,
@@ -242,6 +274,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Feraligatite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sudowoodomega: {
 		num: 185,
@@ -256,6 +290,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Sudowoodite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	politoedmega: {
 		num: 186,
@@ -270,6 +306,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Politoedite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	malesunfloramega: {
 		num: 192,
@@ -284,6 +322,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Sunflorite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	girafarigmega: {
 		num: 203,
@@ -298,6 +338,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Etigirafarigite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	magcargomega: {
 		num: 219,
@@ -312,6 +354,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Magcargonite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	donphanmega: {
 		num: 232,
@@ -326,6 +370,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Donphanite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	miltankmega: {
 		num: 241,
@@ -340,6 +386,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Miltankite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	shiftrymega: {
 		num: 275,
@@ -354,6 +402,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Shiftrite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	cacturnemega: {
 		num: 332,
@@ -368,6 +418,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Cacturnite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	crawdauntmega: {
 		num: 342,
@@ -382,6 +434,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crawdauntite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	miloticmega: {
 		num: 350,
@@ -396,6 +450,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Milotite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	jirachimega: {
 		num: 385,
@@ -410,6 +466,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Jirachite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	chatotmega: {
 		num: 441,
@@ -424,6 +482,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Chatotite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	spiritombmega: {
 		num: 442,
@@ -438,6 +498,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Spiritombite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	froslassmega: {
 		num: 478,
@@ -452,6 +514,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Froslassite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	zebstrikamega: {
 		num: 523,
@@ -466,6 +530,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Zebstrikite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	zoroarkmega: {
 		num: 571,
@@ -480,6 +546,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Zoronite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	gothitellemega: {
 		num: 576,
@@ -494,6 +562,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Gothitite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	reuniclusmega: {
 		num: 579,
@@ -508,6 +578,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Reuniclite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	haxorusmega: {
 		num: 612,
@@ -522,6 +594,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Haxorite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	cryogonalmega: {
 		num: 615,
@@ -536,6 +610,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Cryogonalite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	stunfiskmega: {
 		num: 618,
@@ -550,6 +626,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Stunfiskite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	bisharpmega: {
 		num: 625,
@@ -564,6 +642,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Bisharpite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	hydreigonmega: {
 		num: 635,
@@ -578,6 +658,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Hydreigonite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 
 	// Delta Formes
@@ -592,6 +674,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Ivysaur-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	ivysaurdelta: {
 		num: 2,
@@ -605,6 +688,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Bulbasaur-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	venusaurdelta: {
 		num: 3,
@@ -617,6 +701,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Ivysaur-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	venusaurdeltamega: {
 		num: 3,
@@ -631,6 +717,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Venusaurite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	charmanderdelta: {
 		num: 4,
@@ -643,6 +731,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Charmeleon-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	charmeleondelta: {
 		num: 5,
@@ -656,6 +745,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Charmander-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	charizarddelta: {
 		num: 6,
@@ -668,6 +758,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Charmeleon-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	charizarddeltamega: {
 		num: 6,
@@ -682,6 +774,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Charizardite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	squirtledelta: {
 		num: 7,
@@ -694,6 +788,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Wartortle-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	wartortledelta: {
 		num: 8,
@@ -707,6 +802,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Squirtle-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	blastoisedelta: {
 		num: 9,
@@ -719,6 +815,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Wartortle-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	blastoisedeltamega: {
 		num: 9,
@@ -733,6 +831,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Blastoisinite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	pawniarddelta: {
 		num: 624,
@@ -745,6 +845,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Bisharp-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	bisharpdelta: {
 		num: 625,
@@ -757,6 +858,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Pawniard-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	bisharpdeltamega: {
 		num: 625,
@@ -771,6 +874,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Bisharpite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	raltsdelta: {
 		num: 280,
@@ -783,6 +888,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Kirlia-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	kirliadelta: {
 		num: 281,
@@ -796,6 +902,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Ralts-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	gardevoirdelta: {
 		num: 282,
@@ -808,6 +915,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Kirlia-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	gardevoirdeltamega: {
 		num: 282,
@@ -822,6 +931,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Gardevoirite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	galladedelta: {
 		num: 475,
@@ -834,6 +945,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Kirlia-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	galladedeltamega: {
 		num: 475,
@@ -848,6 +961,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Galladite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sunkerndelta: {
 		num: 191,
@@ -860,6 +975,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Sunflora-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	sunfloradelta: {
 		num: 192,
@@ -872,6 +988,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Sunkern-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sunfloradeltamega: {
 		num: 192,
@@ -886,6 +1004,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Sunflorite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	bergmitedelta: {
 		num: 712,
@@ -898,6 +1018,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Avalugg-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	avaluggdelta: {
 		num: 713,
@@ -910,6 +1031,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Bergmite-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	scytherdelta: {
 		num: 123,
@@ -922,6 +1045,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Scizor-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	scizordelta: {
 		num: 212,
@@ -934,6 +1059,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Scyther-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	scizordeltamega: {
 		num: 212,
@@ -948,6 +1075,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Scizorite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	scraggydelta: {
 		num: 559,
@@ -960,6 +1089,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Scrafty-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	scraftydelta: {
 		num: 560,
@@ -972,6 +1102,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Scraggy-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	combeedelta: {
 		num: 415,
@@ -984,6 +1116,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Vespiquen-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	vespiquendelta: {
 		num: 416,
@@ -996,6 +1129,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Combee-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	koffingdelta: {
 		num: 109,
@@ -1008,6 +1143,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Weezing-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	weezingdelta: {
 		num: 110,
@@ -1020,6 +1156,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Koffing-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	purrloindelta: {
 		num: 509,
@@ -1032,6 +1170,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Liepard-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lieparddelta: {
 		num: 510,
@@ -1044,6 +1183,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Purrloin-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	phantumpdelta: {
 		num: 708,
@@ -1056,6 +1197,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Trevenant-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	trevenantdelta: {
 		num: 709,
@@ -1068,6 +1210,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Phantump-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	snoruntdelta: {
 		num: 361,
@@ -1080,6 +1224,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Glalie-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	glaliedelta: {
 		num: 362,
@@ -1092,6 +1237,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Snorunt-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	glaliedeltamega: {
 		num: 362,
@@ -1106,6 +1253,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Glalitite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	froslassdelta: {
 		num: 478,
@@ -1118,6 +1267,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Snorunt-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	froslassdeltamega: {
 		num: 478,
@@ -1132,6 +1283,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Froslassite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	shinxdelta: {
 		num: 403,
@@ -1144,6 +1297,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Luxio-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	luxiodelta: {
 		num: 404,
@@ -1157,6 +1311,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Shinx-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	luxraydelta: {
 		num: 405,
@@ -1169,6 +1324,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Luxio-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	noibatdelta: {
 		num: 714,
@@ -1181,6 +1338,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Noivern-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	noiverndelta: {
 		num: 715,
@@ -1193,6 +1351,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Noibat-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	budewdelta: {
 		num: 406,
@@ -1205,6 +1365,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Roselia-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	roseliadelta: {
 		num: 315,
@@ -1218,6 +1379,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Budew-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	roseradedelta: {
 		num: 407,
@@ -1230,6 +1392,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Roselia-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	drifloondelta: {
 		num: 425,
@@ -1242,6 +1406,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Drifblim-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	drifblimdelta: {
 		num: 426,
@@ -1254,6 +1419,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Drifloon-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	grimerdelta: {
 		num: 88,
@@ -1266,6 +1433,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Muk-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	mukdelta: {
 		num: 89,
@@ -1278,6 +1446,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Grimer-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	wooperdelta: {
 		num: 194,
@@ -1290,6 +1460,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Quagsire-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	quagsiredelta: {
 		num: 195,
@@ -1302,6 +1473,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Wooper-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	munchlaxdelta: {
 		num: 446,
@@ -1314,6 +1487,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Snorlax-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	snorlaxdelta: {
 		num: 143,
@@ -1326,6 +1500,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Munchlax-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	misdreavusdelta: {
 		num: 200,
@@ -1338,6 +1514,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Mismagius-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	mismagiusdelta: {
 		num: 429,
@@ -1350,6 +1527,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Misdreavus-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	cyndaquildelta: {
 		num: 155,
@@ -1362,6 +1541,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Quilava-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	quilavadelta: {
 		num: 156,
@@ -1375,6 +1555,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Cyndaquil-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	typhlosiondelta: {
 		num: 157,
@@ -1387,20 +1568,25 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Quilava-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	deltatyphlosion: {
+	typhlosiondeltamega: {
 		num: 157,
-		name: "Deltatyphlosion",
+		name: "Typhlosion-Delta-Mega",
 		baseSpecies: "Typhlosion-Delta",
-		forme: "Deltatyphlosion",
+		forme: "Mega",
 		types: ["Electric", "Steel"],
-		baseStats: {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0},
+		baseStats: {hp: 78, atk: 89, def: 88, spa: 159, spd: 110, spe: 110},
 		abilities: {0: "Supercell"},
 		heightm: 1.7,
 		weightkg: 159.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Typhlosionite",
+		cosmeticFormes: ["Typhlosion-Delta-Mega-Active"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	treeckodelta: {
 		num: 252,
@@ -1413,6 +1599,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Grovyle-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	grovyledelta: {
 		num: 253,
@@ -1426,6 +1613,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Treecko-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	sceptiledelta: {
 		num: 254,
@@ -1438,6 +1626,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Grovyle-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	torchicdelta: {
 		num: 255,
@@ -1450,6 +1640,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Combusken-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	combuskendelta: {
 		num: 256,
@@ -1463,6 +1654,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Torchic-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	blazikendelta: {
 		num: 257,
@@ -1475,6 +1667,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Combusken-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	turtwigdelta: {
 		num: 387,
@@ -1487,6 +1681,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Grotle-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	grotledelta: {
 		num: 388,
@@ -1500,6 +1695,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Turtwig-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	torterradelta: {
 		num: 389,
@@ -1512,6 +1708,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Grotle-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	snivydelta: {
 		num: 495,
@@ -1524,6 +1722,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Servine-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	servinedelta: {
 		num: 496,
@@ -1537,6 +1736,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Snivy-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	serperiordelta: {
 		num: 497,
@@ -1549,6 +1749,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Servine-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	froakiedelta: {
 		num: 656,
@@ -1561,6 +1763,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Frogadier-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	frogadierdelta: {
 		num: 657,
@@ -1574,6 +1777,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Froakie-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	greninjadelta: {
 		num: 658,
@@ -1586,6 +1790,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Frogadier-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	pidgeydelta: {
 		num: 16,
@@ -1598,6 +1804,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Pidgeotto-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	pidgeottodelta: {
 		num: 17,
@@ -1611,6 +1818,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Pidgey-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	pidgeotdelta: {
 		num: 18,
@@ -1623,6 +1831,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Pidgeotto-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	pidgeotdeltamega: {
 		num: 18,
@@ -1637,6 +1847,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Pidgeotite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	diglettdelta: {
 		num: 50,
@@ -1649,6 +1861,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Dugtrio-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	dugtriodelta: {
 		num: 51,
@@ -1661,6 +1874,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Diglett-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	growlithedelta: {
 		num: 58,
@@ -1673,6 +1888,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Arcanine-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	arcaninedelta: {
 		num: 59,
@@ -1685,6 +1901,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Growlithe-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	geodudedelta: {
 		num: 74,
@@ -1697,6 +1915,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Graveler-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	gravelerdelta: {
 		num: 75,
@@ -1710,6 +1929,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Geodude-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	golemdelta: {
 		num: 76,
@@ -1722,6 +1942,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Graveler-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	tentacooldelta: {
 		num: 72,
@@ -1734,6 +1956,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Tentacruel-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	tentacrueldelta: {
 		num: 73,
@@ -1746,6 +1969,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Tentacool-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	doduodelta: {
 		num: 84,
@@ -1758,6 +1983,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Dodrio-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	dodriodelta: {
 		num: 85,
@@ -1770,6 +1996,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Doduo-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	tangeladelta: {
 		num: 114,
@@ -1782,6 +2010,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Tangrowth-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	tangrowthdelta: {
 		num: 465,
@@ -1794,6 +2023,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Tangela-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	dittodelta: {
 		num: 132,
@@ -1805,6 +2036,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 4.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	kabutodelta: {
 		num: 140,
@@ -1817,6 +2050,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Kabutops-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	kabutopsdelta: {
 		num: 141,
@@ -1829,6 +2063,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Kabuto-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	dratinidelta: {
 		num: 147,
@@ -1841,6 +2077,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Dragonair-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	dragonairdelta: {
 		num: 148,
@@ -1854,6 +2091,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Dratini-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	dragonitedelta: {
 		num: 149,
@@ -1866,6 +2104,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Dragonair-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	hoothootdelta: {
 		num: 163,
@@ -1878,6 +2118,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Noctowl-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	noctowldelta: {
 		num: 164,
@@ -1890,6 +2131,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Hoothoot-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	chinchoudelta: {
 		num: 170,
@@ -1902,6 +2145,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Lanturn-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lanturndelta: {
 		num: 171,
@@ -1914,6 +2158,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Chinchou-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	pichudelta: {
 		num: 172,
@@ -1925,6 +2171,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 2.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	pikachudelta: {
 		num: 25,
@@ -1936,6 +2183,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 6.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	raichudelta: {
 		num: 26,
@@ -1947,6 +2196,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 30.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	aipomdelta: {
 		num: 190,
@@ -1959,6 +2210,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Ambipom-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	ambipomdelta: {
 		num: 424,
@@ -1971,6 +2223,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Aipom-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	yanmadelta: {
 		num: 193,
@@ -1983,6 +2237,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Yanmega-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	yanmegadelta: {
 		num: 469,
@@ -1995,6 +2250,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Yanma-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	girafarigdelta: {
 		num: 203,
@@ -2006,6 +2263,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 83.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	girafarigdeltamega: {
 		num: 203,
@@ -2020,6 +2279,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Girafarigite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	dunsparcedelta: {
 		num: 206,
@@ -2031,6 +2292,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 14.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	shuckledelta: {
 		num: 213,
@@ -2042,6 +2305,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 41.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	remoraiddelta: {
 		num: 223,
@@ -2054,6 +2319,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Octillery-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	octillerydelta: {
 		num: 224,
@@ -2066,6 +2332,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Remoraid-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	elekiddelta: {
 		num: 239,
@@ -2078,6 +2346,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Electabuzz-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	electabuzzdelta: {
 		num: 125,
@@ -2091,6 +2360,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Elekid-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	electiviredelta: {
 		num: 466,
@@ -2103,6 +2373,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Electabuzz-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	magbydelta: {
 		num: 240,
@@ -2115,6 +2387,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Magmar-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	magmardelta: {
 		num: 126,
@@ -2128,6 +2401,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Magby-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	magmortardelta: {
 		num: 467,
@@ -2140,6 +2414,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Magmar-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	lotaddelta: {
 		num: 270,
@@ -2152,6 +2428,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Lombre-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lombredelta: {
 		num: 271,
@@ -2165,6 +2442,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Lotad-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	ludicolodelta: {
 		num: 272,
@@ -2177,6 +2455,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Lombre-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	seedotdelta: {
 		num: 273,
@@ -2189,6 +2469,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Nuzleaf-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	nuzleafdelta: {
 		num: 274,
@@ -2202,6 +2483,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Seedot-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	shiftrydelta: {
 		num: 275,
@@ -2214,6 +2496,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Nuzleaf-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sableyedelta: {
 		num: 302,
@@ -2225,6 +2509,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 11.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sableyedeltamega: {
 		num: 302,
@@ -2239,6 +2525,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Sablenite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	mawiledelta: {
 		num: 303,
@@ -2250,6 +2538,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 11.5,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	mawiledeltamega: {
 		num: 303,
@@ -2264,6 +2554,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Mawilite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	arondelta: {
 		num: 304,
@@ -2276,6 +2568,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Lairon-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lairondelta: {
 		num: 305,
@@ -2289,6 +2582,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Aron-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	aggrondelta: {
 		num: 306,
@@ -2301,6 +2595,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Lairon-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	medititedelta: {
 		num: 307,
@@ -2313,6 +2609,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Medicham-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	medichamdelta: {
 		num: 308,
@@ -2325,6 +2622,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Meditite-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	medichamdeltamega: {
 		num: 308,
@@ -2339,6 +2638,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Medichamite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	numeldelta: {
 		num: 322,
@@ -2351,6 +2652,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Camerupt-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	cameruptdelta: {
 		num: 323,
@@ -2363,6 +2665,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Numel-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	cameruptdeltamega: {
 		num: 323,
@@ -2377,6 +2681,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Cameruptite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	plusledelta: {
 		num: 311,
@@ -2388,6 +2694,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 4.2,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	minundelta: {
 		num: 312,
@@ -2399,6 +2707,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 4.2,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	wailmerdelta: {
 		num: 320,
@@ -2411,6 +2721,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Wailord-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	wailorddelta: {
 		num: 321,
@@ -2423,6 +2734,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Wailmer-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	feebasdelta: {
 		num: 349,
@@ -2435,6 +2748,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Milotic-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	miloticdelta: {
 		num: 350,
@@ -2447,6 +2761,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Feebas-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	miloticdeltamega: {
 		num: 350,
@@ -2461,6 +2777,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Milotite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	clamperldelta: {
 		num: 366,
@@ -2473,6 +2791,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Huntail-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	huntaildelta: {
 		num: 367,
@@ -2485,6 +2804,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Clamperl-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	gorebyssdelta: {
 		num: 368,
@@ -2497,49 +2818,55 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Clamperl-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	spiderbeldumdelta: {
-		num: 0,
-		name: "(Spider)-Beldum-Delta",
+	beldumdeltaspider: {
+		num: 374,
+		name: "Beldum-Delta-Spider",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
 		abilities: {0: "Poison Touch", 1: "Immunity", H: "Poison Heal"},
 		heightm: 0.6,
 		weightkg: 47.6,
-		evos: ["(Spider)-Metang-Delta"],
+		evos: ["Metang-Delta-Spider"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
-	spidermetangdelta: {
-		num: 0,
-		name: "(Spider)-Metang-Delta",
+	metangdeltaspider: {
+		num: 375,
+		name: "Metang-Delta-Spider",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
 		abilities: {0: "Poison Touch", 1: "Immunity", H: "Poison Heal"},
 		heightm: 1.2,
 		weightkg: 101.3,
-		evos: ["(Spider)-Metagross-Delta"],
-		prevo: "(Spider)-Beldum-Delta",
+		evos: ["Metagross-Delta-Spider"],
+		prevo: "Beldum-Delta-Spider",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
-	spidermetagrossdelta: {
-		num: 0,
-		name: "(Spider)-Metagross-Delta",
+	metagrossdeltaspider: {
+		num: 376,
+		name: "Metagross-Delta-Spider",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
 		abilities: {0: "Poison Touch", 1: "Immunity", H: "Poison Heal"},
 		heightm: 1.5,
 		weightkg: 225.0,
-		prevo: "(Spider)-Metang-Delta",
+		prevo: "Metang-Delta-Spider",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	deltametagrossspider: {
-		num: 0,
-		name: "Deltametagrossspider",
-		baseSpecies: "(Spider)-Metagross-Delta",
-		forme: "Deltametagrossspider",
+	metagrossdeltaspidermega: {
+		num: 376,
+		name: "Metagross-Delta-Spider-Mega",
+		baseSpecies: "Metagross-Delta-Spider",
+		forme: "Mega",
 		types: ["Ground", "Bug"],
 		baseStats: {hp: 80, atk: 145, def: 150, spa: 105, spd: 110, spe: 110},
 		abilities: {0: "Mold Breaker"},
@@ -2547,50 +2874,56 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 225.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Delta Metagrossite (spider)",
+		requiredItem: "Delta Metagrossite (Spider)",
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	ruinbeldumdelta: {
-		num: 0,
-		name: "(Ruin)-Beldum-Delta",
+	beldumdeltaruin: {
+		num: 374,
+		name: "Beldum-Delta-Ruin",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
 		abilities: {0: "Sturdy", H: "Rock Head"},
 		heightm: 0.6,
 		weightkg: 95.2,
-		evos: ["(Ruin)-Metang-Delta"],
+		evos: ["Metang-Delta-Ruin"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
-	ruinmetangdelta: {
-		num: 0,
-		name: "(Ruin)-Metang-Delta",
+	metangdeltaruin: {
+		num: 375,
+		name: "Metang-Delta-Ruin",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
 		abilities: {0: "Sturdy", H: "Rock Head"},
 		heightm: 1.2,
 		weightkg: 202.5,
-		evos: ["(Ruin)-Metagross-Delta"],
-		prevo: "(Ruin)-Beldum-Delta",
+		evos: ["Metagross-Delta-Ruin"],
+		prevo: "Beldum-Delta-Ruin",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
-	ruinmetagrossdelta: {
-		num: 0,
-		name: "(Ruin)-Metagross-Delta",
+	metagrossdeltaruin: {
+		num: 376,
+		name: "Metagross-Delta-Ruin",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
 		abilities: {0: "Sturdy", H: "Rock Head"},
 		heightm: 1.6,
 		weightkg: 550.0,
-		prevo: "(Ruin)-Metang-Delta",
+		prevo: "Metang-Delta-Ruin",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	deltametagrossruin: {
-		num: 0,
-		name: "Deltametagrossruin",
-		baseSpecies: "(Ruin)-Metagross-Delta",
-		forme: "Deltametagrossruin",
+	metagrossdeltaruinmega: {
+		num: 376,
+		name: "Metagross-Delta-Ruin-Mega",
+		baseSpecies: "Metagross-Delta-Ruin",
+		forme: "Mega",
 		types: ["Grass", "Rock"],
 		baseStats: {hp: 80, atk: 145, def: 150, spa: 105, spd: 110, spe: 110},
 		abilities: {0: "Rock Head"},
@@ -2599,6 +2932,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Metagrossite (Ruin)",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	bunearydelta: {
 		num: 427,
@@ -2611,6 +2946,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Lopunny-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lopunnydelta: {
 		num: 428,
@@ -2623,6 +2959,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Buneary-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	lopunnydeltamega: {
 		num: 428,
@@ -2637,6 +2975,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Lopunnite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	rioludelta: {
 		num: 447,
@@ -2649,6 +2989,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Lucario-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lucariodelta: {
 		num: 448,
@@ -2661,6 +3002,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Riolu-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	lucariodeltamega: {
 		num: 448,
@@ -2675,6 +3018,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Delta Lucarionite",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	croagunkdelta: {
 		num: 453,
@@ -2687,6 +3032,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Toxicroak-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	toxicroakdelta: {
 		num: 454,
@@ -2699,6 +3045,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Croagunk-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	venipededelta: {
 		num: 543,
@@ -2711,6 +3059,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Whirlipede-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	whirlipededelta: {
 		num: 544,
@@ -2724,6 +3073,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Venipede-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	scolipededelta: {
 		num: 545,
@@ -2736,54 +3086,62 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Whirlipede-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	waterpetilildelta: {
-		num: 0,
-		name: "(Water)-Petilil-Delta",
+	petilildeltawater: {
+		num: 548,
+		name: "Petilil-Delta-Water",
 		types: ["Water", "Fire"],
 		baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
 		abilities: {0: "Storm Drain", 1: "Flash Fire", H: "Regenerator"},
 		heightm: 0.5,
 		weightkg: 6.6,
-		evos: ["(Water)-Lilligant-Delta"],
+		evos: ["Lilligant-Delta-Water"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
-	waterlilligantdelta: {
-		num: 0,
-		name: "(Water)-Lilligant-Delta",
+	lilligantdeltawater: {
+		num: 549,
+		name: "Lilligant-Delta-Water",
 		types: ["Water", "Fire"],
 		baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
 		abilities: {0: "Storm Drain", 1: "Flash Fire", H: "Regenerator"},
 		heightm: 1.1,
 		weightkg: 16.3,
-		prevo: "(Water)-Petilil-Delta",
+		prevo: "Petilil-Delta-Water",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	fairypetilildelta: {
-		num: 0,
-		name: "(Fairy)-Petilil-Delta",
+	petilildeltafairy: {
+		num: 548,
+		name: "Petilil-Delta-Fairy",
 		types: ["Fairy", "Flying"],
 		baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
 		abilities: {0: "Serene Grace", 1: "Synchronize", H: "Healer"},
 		heightm: 0.508,
 		weightkg: 6.62,
-		evos: ["(Fairy)-Lilligant-Delta"],
+		evos: ["Lilligant-Delta-Fairy"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
-	fairylilligantdelta: {
-		num: 0,
-		name: "(Fairy)-Lilligant-Delta",
+	lilligantdeltafairy: {
+		num: 549,
+		name: "Lilligant-Delta-Fairy",
 		types: ["Fairy", "Flying"],
 		baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
 		abilities: {0: "Serene Grace", 1: "Synchronize", H: "Healer"},
 		heightm: 1.1,
 		weightkg: 16.3,
-		prevo: "(Fairy)-Petilil-Delta",
+		prevo: "Petilil-Delta-Fairy",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	solosisdelta: {
 		num: 577,
@@ -2796,6 +3154,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Duosion-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	duosiondelta: {
 		num: 578,
@@ -2809,6 +3168,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Solosis-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	reuniclusdelta: {
 		num: 579,
@@ -2821,6 +3181,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Duosion-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	darumakadelta: {
 		num: 554,
@@ -2833,6 +3195,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Darmanitan-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	darmanitandelta: {
 		num: 555,
@@ -2845,6 +3208,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Darumaka-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	maractusdelta: {
 		num: 556,
@@ -2856,54 +3221,62 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 56.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	berrydwebbledelta: {
-		num: 0,
-		name: "(Berry)-Dwebble-Delta",
+	dwebbledeltaberry: {
+		num: 557,
+		name: "Dwebble-Delta-Berry",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
 		abilities: {0: "Harvest", 1: "Leaf Guard", H: "Chlorophyll"},
 		heightm: 0.3,
 		weightkg: 10.6,
-		evos: ["(Berry)-Crustle-Delta"],
+		evos: ["Crustle-Delta-Berry"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
-	berrycrustledelta: {
-		num: 0,
-		name: "(Berry)-Crustle-Delta",
+	crustledeltaberry: {
+		num: 558,
+		name: "Crustle-Delta-Berry",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 70, atk: 95, def: 125, spa: 65, spd: 75, spe: 45},
 		abilities: {0: "Harvest", 1: "Leaf Guard", H: "Chlorophyll"},
 		heightm: 1.4,
 		weightkg: 150.0,
-		prevo: "(Berry)-Dwebble-Delta",
+		prevo: "Dwebble-Delta-Berry",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
-	cakedwebbledelta: {
-		num: 0,
-		name: "(Cake)-Dwebble-Delta",
+	dwebbledeltacake: {
+		num: 557,
+		name: "Dwebble-Delta-Cake",
 		types: ["Fairy", "Normal"],
 		baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
 		abilities: {0: "Own Tempo", 1: "Scrappy", H: "Simple"},
 		heightm: 0.3,
 		weightkg: 7.8,
-		evos: ["(Cake)-Crustle-Delta"],
+		evos: ["Crustle-Delta-Cake"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
-	cakecrustledelta: {
-		num: 0,
-		name: "(Cake)-Crustle-Delta",
+	cakecrustledeltacake: {
+		num: 558,
+		name: "Crustle-Delta-Cake",
 		types: ["Fairy", "Normal"],
 		baseStats: {hp: 70, atk: 95, def: 125, spa: 65, spd: 75, spe: 45},
 		abilities: {0: "Own Tempo", 1: "Scrappy", H: "Simple"},
 		heightm: 1.4,
 		weightkg: 100.0,
-		prevo: "(Cake)-Dwebble-Delta",
+		prevo: "Dwebble-Delta-Cake",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	yamaskdelta: {
 		num: 562,
@@ -2916,6 +3289,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Cofagrigus-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	cofagrigusdelta: {
 		num: 563,
@@ -2928,6 +3302,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Yamask-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	emolgadelta: {
 		num: 587,
@@ -2939,6 +3315,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 5.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	karrablastdelta: {
 		num: 588,
@@ -2951,6 +3329,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Escavalier-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	escavalierdelta: {
 		num: 589,
@@ -2963,6 +3342,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Karrablast-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	foongusdelta: {
 		num: 590,
@@ -2975,6 +3356,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Amoonguss-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	amoongussdelta: {
 		num: 591,
@@ -2987,6 +3369,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Foongus-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	litwickdelta: {
 		num: 607,
@@ -2999,6 +3383,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Lampent-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	lampentdelta: {
 		num: 608,
@@ -3012,6 +3397,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Litwick-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	chandeluredelta: {
 		num: 609,
@@ -3024,6 +3410,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Lampent-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	axewdelta: {
 		num: 610,
@@ -3036,6 +3424,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Fraxure-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	fraxuredelta: {
 		num: 611,
@@ -3049,6 +3438,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Axew-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	haxorusdelta: {
 		num: 612,
@@ -3061,6 +3451,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Fraxure-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	golettdelta: {
 		num: 622,
@@ -3073,6 +3465,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Golurk-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	golurkdelta: {
 		num: 623,
@@ -3085,6 +3478,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Golett-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	heatmordelta: {
 		num: 631,
@@ -3096,6 +3491,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 116.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	deinodelta: {
 		num: 633,
@@ -3108,6 +3505,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Zweilous-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	zweilousdelta: {
 		num: 634,
@@ -3121,6 +3519,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Deino-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	hydreigondelta: {
 		num: 635,
@@ -3133,6 +3532,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Zweilous-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	larvestadelta: {
 		num: 636,
@@ -3145,6 +3546,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Volcarona-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	volcaronadelta: {
 		num: 637,
@@ -3157,6 +3559,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Larvesta-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	amauradelta: {
 		num: 698,
@@ -3169,6 +3573,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Aurorus-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	aurorusdelta: {
 		num: 699,
@@ -3181,6 +3586,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Amaura-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	goomydelta: {
 		num: 704,
@@ -3193,6 +3600,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		evos: ["Sliggoo-Delta"],
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "LC",
 	},
 	sliggoodelta: {
 		num: 705,
@@ -3206,6 +3614,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Goomy-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "NFE",
 	},
 	goodradelta: {
 		num: 706,
@@ -3218,6 +3627,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Sliggoo-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	regirockdelta: {
 		num: 377,
@@ -3229,6 +3640,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 230.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	regicedelta: {
 		num: 378,
@@ -3240,6 +3653,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 175.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	registeeldelta: {
 		num: 379,
@@ -3251,6 +3666,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 205.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	meloettadelta: {
 		num: 648,
@@ -3264,6 +3681,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 6.5,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	meloettadeltamagician: {
 		num: 648,
@@ -3280,6 +3699,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		requiredMove: "Relic Song",
 		battleOnly: "Meloetta-Delta",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	hoopadelta: {
 		num: 720,
@@ -3291,6 +3712,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 9.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	hoopadeltaunleashed: {
 		num: 720,
@@ -3304,6 +3727,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 490.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	ufi: {
 		num: 6001,
@@ -3315,5 +3740,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 9.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
+		tier: "OU",
+		natDexTier: "OU",
 	},
 };
