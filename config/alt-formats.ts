@@ -276,6 +276,17 @@ export const Formats: FormatList = [
 		// no restrictions, for serious (other than team preview)
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
+
+	{
+		section: "Insurgence: National Dex",
+		column: 3,
+	},
+	{
+		name: "[Gen 9] Insurgence NatDex AG",
+
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex'],
+	},
 	{
 		name: "[Gen 9] Insurgence Custom Game",
 
