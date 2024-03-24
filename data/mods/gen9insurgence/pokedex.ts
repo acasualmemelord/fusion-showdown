@@ -3264,7 +3264,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "LC",
 	},
-	cakecrustledeltacake: {
+	crustledeltacake: {
 		num: 558,
 		name: "Crustle-Delta-Cake",
 		types: ["Fairy", "Normal"],

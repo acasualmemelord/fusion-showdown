@@ -7,7 +7,7 @@ const eeveelutions: {[k: string]: string} = {
 	"Psychic": "espeon",
 	"Ice": "glaceon",
 	"Electric": "jolteon",
-	"Normal": "eevee",
+	"Normal": "eeveemega",
 };
 
 const eeveeabilities: {[k: string]: string} = {
@@ -19,7 +19,7 @@ const eeveeabilities: {[k: string]: string} = {
 	"espeon": "magicbounce",
 	"glaceon": "snowcloak",
 	"jolteon": "voltabsorb",
-	"eevee": "proteanmaxima",
+	"eeveemega": "proteanmaxima",
 };
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {

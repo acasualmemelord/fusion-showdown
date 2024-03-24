@@ -495,7 +495,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.data.Pokedex[i].num = IFDex[i];
 				this.data.Pokedex[i].isNonstandard = null;
 			} else {
-				this.data.Pokedex[i].num = 0;
+				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
 			}
 		}

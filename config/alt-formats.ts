@@ -288,6 +288,14 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex'],
 	},
 	{
+		name: "[Gen 6] Insurgence Dex AG",
+		desc: "Pok&eacute;mon can fuse with other Pok&eacute;mon!",
+
+		mod: 'gen6insurgence',
+		ruleset: ['Standard', 'Swagger Clause'],
+		banlist: ['Uber', 'Arena Trap', 'Shadow Tag', 'Soul Dew', 'Baton Pass'],
+	},
+	{
 		name: "[Gen 9] Insurgence Custom Game",
 
 		mod: 'gen9insurgence',
