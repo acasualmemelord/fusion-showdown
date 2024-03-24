@@ -494,7 +494,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (i in IFDex) {
 				this.data.Pokedex[i].num = IFDex[i];
 				this.data.Pokedex[i].gen = 7;
-				this.data.Pokedex[i].isNonstandard = null;
+				delete this.data.Pokedex[i].isNonstandard;
 			} else {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
