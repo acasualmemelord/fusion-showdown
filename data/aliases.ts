@@ -1857,4 +1857,6 @@ export const Aliases: {[alias: string]: string} = {
 	zugadoon: "Blacephalon",
 	merutan: "Meltan",
 	merumetaru: "Melmetal",
+
+	snorlaxdeltawinter: "Snorlax",
 };
