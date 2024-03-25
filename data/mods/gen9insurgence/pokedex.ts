@@ -1593,8 +1593,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	typhlosiondeltamegaactive: {
 		num: 157,
 		name: "Typhlosion-Delta-Mega-Active",
-		baseSpecies: "Typhlosion-Delta",
-		forme: "Mega-Active",
+		baseSpecies: "Typhlosion-Delta-Mega",
+		forme: "Active",
 		types: ["Electric", "Steel"],
 		baseStats: {hp: 78, atk: 89, def: 88, spa: 159, spd: 110, spe: 110},
 		abilities: {0: "Supercell"},
@@ -1602,7 +1602,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 159.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Delta Typhlosionite",
+		requiredAbility: "Supercell",
+		battleOnly: "Typhlosion-Delta-Mega",
 		tier: "Illegal",
 	},
 	treeckodelta: {
