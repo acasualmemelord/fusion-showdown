@@ -1858,5 +1858,8 @@ export const Aliases: {[alias: string]: string} = {
 	merutan: "Meltan",
 	merumetaru: "Melmetal",
 
-	snorlaxdeltawinter: "Snorlax",
+	snorlaxdeltawinter: "Snorlax-Delta",
+	snorlaxdeltasummer: "Snorlax-Delta",
+	snorlaxdeltaautumn: "Snorlax-Delta",
+	snorlaxdeltasakura: "Snorlax-Delta",
 };
