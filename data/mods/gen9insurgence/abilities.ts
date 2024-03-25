@@ -86,7 +86,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.category === 'Status' || move.type !== 'Fire') return;
 			this.boost({spa: 1, atk: 1, spe: 1}, pokemon);
 			if (pokemon.species.id === 'emolgadelta') {
-				pokemon.formeChange('Emolga-Delta-Fired');
+				pokemon.formeChange('emolgadeltafired');
 			}
 		},
 		onDamagingHit(damage, target, source, move) {
