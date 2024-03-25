@@ -496,10 +496,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		onWeatherChange(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Typhlosion-Delta' || pokemon.transformed || !pokemon.isActive) return;
-			if (['newmoon', 'raindance', 'primordialsea'].includes(pokemon.effectiveWeather()) && pokemon.species.id !== 'typloshiondeltamegaactive') {
-				pokemon.formeChange('typloshiondeltamegaactive', this.effect, false, '[msg]');
-			} else if (pokemon.species.id === 'typloshiondeltamegaactive') {
-				pokemon.formeChange('typloshiondeltamega', this.effect, false, '[msg]');
+			if (['newmoon', 'raindance', 'primordialsea'].includes(pokemon.effectiveWeather()) && pokemon.species.id !== 'typhlosiondeltamegaactive') {
+				pokemon.formeChange('typhlosiondeltamegaactive', this.effect, false, '[msg]');
+			} else if (pokemon.species.id === 'typhlosiondeltamegaactive') {
+				pokemon.formeChange('typhlosiondeltamega', this.effect, false, '[msg]');
 			}
 		},
 		onModifySpAPriority: 5,
