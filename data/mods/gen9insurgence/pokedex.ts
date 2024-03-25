@@ -1604,6 +1604,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		requiredAbility: "Supercell",
 		battleOnly: "Typhlosion-Delta-Mega",
+		tier: "Illegal",
 	},
 	treeckodelta: {
 		num: 252,
