@@ -1862,4 +1862,15 @@ export const Aliases: {[alias: string]: string} = {
 	snorlaxdeltasummer: "Snorlax-Delta",
 	snorlaxdeltaautumn: "Snorlax-Delta",
 	snorlaxdeltasakura: "Snorlax-Delta",
+
+	mukdeltawater: "Muk-Delta",
+	mukdeltagrass: "Muk-Delta",
+	mukdeltafire: "Muk-Delta",
+	mukdeltapsychic: "Muk-Delta",
+	mukdeltanormal: "Muk-Delta",
+	mukdeltadark: "Muk-Delta",
+
+	typhlosiondeltamegaactive: "Typhlosion-Delta-Mega-Active",
+
+	emolgadeltafired: "Emolga-Delta",
 };

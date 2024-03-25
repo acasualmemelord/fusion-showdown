@@ -587,7 +587,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	deltatyphlosionite: {
 		name: "Delta Typhlosionite",
 		spritenum: 0,
-		megaStone: "Deltatyphlosion",
+		megaStone: "Typhlosion-Delta-Mega",
 		megaEvolves: "Typhlosion-Delta",
 		itemUser: ["Typhlosion-Delta"],
 		onTakeItem(item, source) {
