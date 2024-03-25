@@ -495,7 +495,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
 		},
 		onWeatherChange(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Typhlosion-Delta' || pokemon.transformed || pokemon.isActive) return;
+			if (pokemon.baseSpecies.baseSpecies !== 'Typhlosion-Delta' || pokemon.transformed || !pokemon.isActive) return;
 			if (['newmoon', 'raindance', 'primordialsea'].includes(pokemon.effectiveWeather()) && pokemon.species.id !== 'typloshiondeltamegaactive') {
 				pokemon.formeChange('typloshiondeltamegaactive', this.effect, false, '[msg]');
 			} else if (pokemon.species.id === 'typloshiondeltamegaactive') {

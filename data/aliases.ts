@@ -1869,8 +1869,4 @@ export const Aliases: {[alias: string]: string} = {
 	mukdeltapsychic: "Muk-Delta",
 	mukdeltanormal: "Muk-Delta",
 	mukdeltadark: "Muk-Delta",
-
-	typhlosiondeltamegaactive: "Typhlosion-Delta-Mega-Active",
-
-	emolgadeltafired: "Emolga-Delta",
 };
