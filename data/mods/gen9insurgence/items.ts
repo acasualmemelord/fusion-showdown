@@ -191,7 +191,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	sunflorite: {
 		name: "Sunflorite",
 		spritenum: 0,
-		megaStone: "(Male)-Sunflora-Mega",
+		megaStone: "Sunflora-Mega-M",
 		megaEvolves: "Sunflora",
 		itemUser: ["Sunflora"],
 		onTakeItem(item, source) {

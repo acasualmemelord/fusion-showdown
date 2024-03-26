@@ -247,9 +247,39 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 4,
 		num: 0,
 	},
-
-	//lernean
-
+	lernean: {
+		onUpdate(pokemon) {
+			if (!pokemon.species.id.startsWith('hydreigonmega') || !pokemon.hp || pokemon.transformed) return;
+			const formeOrder = ['hydreigonmeganine', 'hydreigonmegaeight', 'hydreigonmegaseven', 'hydreigonmegasix', 'hydreigonmega'];
+			const targetForme = Math.ceil((pokemon.hp/pokemon.maxhp) * 5) - 1;
+			if (formeOrder.indexOf(pokemon.species.id) > targetForme) {
+				pokemon.formeChange(formeOrder[targetForme], this.effect, true);
+			}
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!pokemon.species.id.startsWith('hydreigonmega')) return;
+			if (move.category === "Status" || !move.basePower) return;
+			if (move.secondaries) {
+				delete move.secondaries;
+				// Technically not a secondary effect, but it is negated
+				delete move.self;
+				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
+			}
+			const formes = ['hydreigonmega', 'hydreigonmegasix', 'hydreigonmegaseven', 'hydreigonmegaeight', 'hydreigonmeganine'];
+			move.multihit = 5 + formes.indexOf(pokemon.species.id);
+		},
+		onBasePower(basePower, pokemon, target, move) {
+			if (!pokemon.species.id.startsWith('hydreigonmega')) return;
+			const formes = ['hydreigonmega', 'hydreigonmegasix', 'hydreigonmegaseven', 'hydreigonmegaeight', 'hydreigonmeganine'];
+			let nhits = 5 + formes.indexOf(pokemon.species.id);
+			return this.chainModify((1.15 + (0.075 * (nhits - 5)))/nhits);
+		},
+		flags: {},
+		name: "Lernean",
+		shortDesc: "Grows heads when it loses HP. Moves become multihit.",
+		rating: 4.5,
+		num: 0,
+	},
 	noctem: {
 		onStart(source) {
 			this.field.setWeather('newmoon');

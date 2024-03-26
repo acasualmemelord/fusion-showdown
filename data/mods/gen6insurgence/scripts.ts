@@ -557,13 +557,16 @@ const InsgDex: {[k: string]: number} = {
 	"palkia": 484,
 	"heatran": 485,
 	"regigigas": 486,
+	"regigigasprimal": 486,
 	"giratina": 487,
+	"giratinaprimal": 487,
 	"cresselia": 488,
 	"phione": 489,
 	"manaphy": 490,
 	"darkrai": 491,
 	"shaymin": 492,
 	"arceus": 493,
+	"arceusprimal": 493,
 	"victini": 494,
 	"snivy": 495,
 	"servine": 496,
@@ -1042,6 +1045,26 @@ export const Scripts: ModdedBattleScriptsData = {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
 			}
+		}
+	},
+	actions: {
+		canMegaEvo(pokemon: Pokemon) {
+			const species = pokemon.baseSpecies;
+			const altForme = species.otherFormes && this.dex.species.get(species.otherFormes[0]);
+			const item = pokemon.getItem();
+			// Mega Rayquaza
+			if ((this.battle.gen <= 7 || this.battle.ruleTable.has('+pokemontag:past')) &&
+				altForme?.isMega && altForme?.requiredMove &&
+				pokemon.baseMoves.includes(toID(altForme.requiredMove)) && !item.zMove) {
+				return altForme.name;
+			}
+			// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
+			if (item.megaEvolves === species.baseSpecies && item.megaStone !== species.name) {
+				// Mega Sunfloras
+				if (species.id === 'sunflora' && pokemon.gender === 'F') return 'Sunflora-Mega-F';
+				return item.megaStone;
+			}
+			return null;
 		}
 	},
 	pokemon: {

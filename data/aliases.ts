@@ -1871,4 +1871,9 @@ export const Aliases: {[alias: string]: string} = {
 	mukdeltadark: "Muk-Delta",
 
 	typhlosiondeltamegaactive: "Typhlosion-Delta-Mega",
+
+	hydreigonmegasix: "Hydreigon-Mega",
+	hydreigonmegaseven: "Hydreigon-Mega",
+	hydreigonmegaeight: "Hydreigon-Mega",
+	hydreigonmeganine: "Hydreigon-Mega",
 };
