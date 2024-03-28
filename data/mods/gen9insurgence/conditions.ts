@@ -1,4 +1,36 @@
 export const Conditions: {[k: string]: ModdedConditionData} = {
+	wish: {
+		name: 'Wish',
+		duration: 2,
+		onStart(pokemon, source) {
+			this.effectState.hp = source.maxhp / 2;
+		},
+		onResidualOrder: 4,
+		onEnd(target) {
+			if (target && !target.fainted) {
+				const damage = this.heal(this.effectState.hp, target, target);
+				if (damage) {
+					this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+				}
+			}
+		},
+	},
+	orbitalwish: {
+		name: 'Orbital Wish',
+		duration: 4,
+		onStart(pokemon, source) {
+			this.effectState.hp = source.maxhp / 2;
+		},
+		onResidualOrder: 4,
+		onEnd(target) {
+			if (target && !target.fainted) {
+				const damage = this.heal(this.effectState.hp, target, target, this.dex.getActiveMove('Wish'));
+				if (damage) {
+					this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+				}
+			}
+		},
+	},
 	hail: {
 		inherit: true,
 		onWeather(target) {

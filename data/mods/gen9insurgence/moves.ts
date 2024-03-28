@@ -2,31 +2,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	// Modded
 	wish: {
 		inherit: true,
-		condition: {
-			duration: 2,
-			onStart(pokemon, source) {
-				this.effectState.hp = source.maxhp / 2;
-			},
-			durationCallback(target, source, effect) {
-				return target.hasAbility('periodicorbit') ? 4 : 2;
-			},
-			onResidual(target, source, effect) {
-				if (target && !target.fainted && this.effectState.duration === 2)  {
-					const damage = this.heal(this.effectState.hp, target, target);
-					if (damage) {
-						this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
-					}
-				}
-			},
-			onResidualOrder: 4,
-			onEnd(target) {
-				if (target && !target.fainted) {
-					const damage = this.heal(this.effectState.hp, target, target);
-					if (damage) {
-						this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
-					}
-				}
-			},
+		condition: {},
+		onTry(source) {
+			if (source.hasAbility('periodicorbit')) {
+				return !!source.side.addSlotCondition(source, 'orbitalwish');
+			}
 		},
 	},
 

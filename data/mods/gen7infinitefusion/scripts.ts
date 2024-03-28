@@ -484,6 +484,10 @@ const IFDex: {[k: string]: number} = {
 	"rockruff": 463,
 	"lycanroc": 464,
 	"lycanrocmidnight": 465,
+	"meloetta": 466,
+	"meloettapirouette": 467,
+	"cresselia": 468,
+	"bruxish": 469,
 };
 
 export const Scripts: ModdedBattleScriptsData = {

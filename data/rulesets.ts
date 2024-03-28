@@ -2814,6 +2814,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 				problems.push(...this.validateForme(reverse_set));
 				let problem = this.checkSpecies(reverse_set, fusion, tierSpecies, setHas);
 				if (problem) problems.push(problem);
+				[reverse_set.species, reverse_set.fusion] = [reverse_set.fusion, reverse_set.species];
+				set = Dex.deepClone(reverse_set);
 
 				// NatDex check
 				if (this.format.ruleset.includes('Standard NatDex')) {
