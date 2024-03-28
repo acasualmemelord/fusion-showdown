@@ -111,6 +111,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	meloettapirouette: {
 		inherit: true,
 		battleOnly: null,
+		requiredMove: null,
 	},
 	...Dex.deepClone(require('../gen9infinitefusion/pokedex').Pokedex)
 };
