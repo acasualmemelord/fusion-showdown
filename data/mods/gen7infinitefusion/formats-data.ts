@@ -2424,4 +2424,24 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 		doublesTier: "(DUU)",
 	},
+	meloetta: {
+		inherit: true,
+		tier: "OU",
+		doublesTier: "DOU",
+	},
+	meloettapirouette: {
+		inherit: true,
+		tier: "OU",
+		doublesTier: "DOU",
+	},
+	cresselia: {
+		inherit: true,
+		tier: "OU",
+		doublesTier: "DOU",
+	},
+	bruxish: {
+		inherit: true,
+		tier: "OU",
+		doublesTier: "DOU",
+	},
 };
