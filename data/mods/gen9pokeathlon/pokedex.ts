@@ -725,7 +725,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	drifbozu: {
 		num: 6031,
-		name: "Drifblim",
+		name: "Drifbozu",
 		types: ["Ghost", "Water"],
 		baseStats: {hp: 150, atk: 34, def: 60, spa: 74, spd: 70, spe: 120},
 		abilities: {0: "Natural Cure", 1: "Cursed Body", H: "Flare Boost"},
