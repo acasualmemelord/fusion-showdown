@@ -2501,5 +2501,5 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			wonderroom: ["9M"],
 		},
 	},
-	pandiz: flattenLearnset(baseLearnsets.spinda,[],['bulkup','closecombat','earthquake','cometpunch','swordsdance','acrobatic','chillingwater','slackoff','playrough','shadowsneak','taunt','yawn','amnesia','faketears','feint','pounce','slam','torment','confusion','spark','minimize']),
+	pandiz: flattenLearnset(baseLearnsets.spinda,[],['bulkup','closecombat','earthquake','cometpunch','swordsdance','acrobatics','chillingwater','slackoff','playrough','shadowsneak','taunt','yawn','amnesia','faketears','feint','pounce','slam','torment','confusion','spark','minimize']),
 };
