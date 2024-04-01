@@ -114,6 +114,7 @@ const PoADex: {[k: string]: number} = {
 	"sweepdol": 6027,
 	"paldemaria": 6028,
 	"monetoad": 6029,
+	"pandiz": 6030,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
