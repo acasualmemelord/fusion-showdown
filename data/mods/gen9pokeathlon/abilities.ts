@@ -470,4 +470,23 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		rating: 3.5,
 		num: 0,
 	},
+	zealousflock: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (!source.getVolatile('zealousflock')) source.addVolatile('zealousflock');
+		},
+		condition: {
+			onStart(pokemon, source) {
+				this.add('-start', pokemon, 'Zealous Flock', '[of] ' + source);
+			},
+			onResidualOrder: 12,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / 16);
+			},
+		},
+		name: "Zealous Flock",
+		shortDesc: "Attacker loses 1/16 HP every turn after directly damaging holder.",
+		rating: 4,
+		num: 0,
+	},
 };

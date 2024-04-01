@@ -2426,8 +2426,8 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	meloetta: {
 		inherit: true,
-		tier: "OU",
-		doublesTier: "DOU",
+		tier: "UU",
+		doublesTier: "DUU",
 	},
 	meloettapirouette: {
 		inherit: true,
@@ -2441,7 +2441,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	bruxish: {
 		inherit: true,
-		tier: "OU",
+		tier: "NU",
 		doublesTier: "DOU",
 	},
 };
