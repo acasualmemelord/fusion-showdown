@@ -355,7 +355,7 @@ export class Pokemon {
 		if (displayedSpeciesName === 'Greninja-Bond') displayedSpeciesName = 'Greninja';
 		this.details = displayedSpeciesName + (this.level === 100 ? '' : ', L' + this.level) +
 			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') + 
-			(this.fusion ? ', fusion: ' + this.fusion + (this.set.altsprite ? ', alt: ' + this.set.altsprite : ''): '');
+			(this.set.fusion ? ', fusion: ' + this.set.fusion : '') + (this.set.altsprite ? ', alt: ' + this.set.altsprite : '');
 
 		this.status = '';
 		this.statusState = {};
@@ -1401,7 +1401,7 @@ export class Pokemon {
 			this.baseSpecies = rawSpecies;
 			this.details = species.name + (this.level === 100 ? '' : ', L' + this.level) +
 				(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
-					(this.fusion ? ', fusion: ' + this.fusion + (this.set.altsprite ? ', alt: ' + this.set.altsprite : ''): '');
+					(this.set.fusion ? ', fusion: ' + this.set.fusion : '') + (this.set.altsprite ? ', alt: ' + this.set.altsprite : '');
 			let details = (this.illusion || this).details;
 			if (this.terastallized) details += `, tera:${this.terastallized}`;
 			this.battle.add('detailschange', this, details);
