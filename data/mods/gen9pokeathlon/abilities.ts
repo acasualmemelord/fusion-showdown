@@ -485,7 +485,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			},
 		},
 		name: "Zealous Flock",
-		shortDesc: "Attacker loses 1/16 HP every turn after directly damaging holder.",
+		shortDesc: "If the User is hit by an attack, the attacker loses 1/16 HP per turn until switched out.",
 		rating: 4,
 		num: 0,
 	},
