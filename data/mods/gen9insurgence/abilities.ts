@@ -406,8 +406,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	phototroph: {
-		onWeather(target, source, effect) {
-			if ((effect.id === 'sunnyday' || effect.id === 'desolateland') && !target.hasItem('utilityumbrella')) {
+		onResidual(target, source, effect) {
+			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
 				this.heal(target.baseMaxhp / 8);
 			} else {
 				this.heal(target.baseMaxhp / 16);
