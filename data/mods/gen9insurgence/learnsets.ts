@@ -11,7 +11,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	beedrill: {inherit: true, learnset: {...baseLearnsets.beedrill.learnset, corrode: ["6M"], jetstream: ["6M"]}},
 	ekans: {inherit: true, learnset: {...baseLearnsets.ekans.learnset, corrode: ["6M"], darkmatter: ["6M"]}},
 	arbok: {inherit: true, learnset: {...baseLearnsets.arbok.learnset, corrode: ["6M"], darkmatter: ["6M"]}},
-	nidoran: {inherit: true, learnset: {...baseLearnsets.nidoran.learnset, corrode: ["6M"], permafrost: ["6M"]}},
+	nidoranm: {inherit: true, learnset: {...baseLearnsets.nidoranm.learnset, corrode: ["6M"], permafrost: ["6M"]}},
 	nidoranf: {inherit: true, learnset: {...baseLearnsets.nidoranf.learnset, corrode: ["6M"], permafrost: ["6M"]}},
 	nidorino: {inherit: true, learnset: {...baseLearnsets.nidorino.learnset, corrode: ["6M"], permafrost: ["6M"]}},
 	nidorina: {inherit: true, learnset: {...baseLearnsets.nidorina.learnset, corrode: ["6M"], permafrost: ["6M"]}},
