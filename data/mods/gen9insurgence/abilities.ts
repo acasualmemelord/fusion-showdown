@@ -23,6 +23,58 @@ const eeveeabilities: {[k: string]: string} = {
 };
 
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	// Modded
+	baddreams: {
+		inherit: true,
+		onResidual(pokemon) {
+			if (!pokemon.hp) return;
+			for (const target of pokemon.foes()) {
+				if (target.status === 'slp' || target.hasAbility('comatose')) {
+					this.damage(target.baseMaxhp / (target.effectiveWeather() === 'newmoon' ? 4 : 8), target, pokemon);
+				}
+			}
+		},
+	},
+	pressure: {
+		inherit: true,
+		onDeductPP(target, source) {
+			if (target.isAlly(source)) return;
+			return target.effectiveWeather() === 'newmoon' ? 2 : 1;
+		},
+	},
+	illuminate: {
+		inherit: true,
+		onTryBoost(boost, target, source, effect) {},
+		onModifyMove(move) {},
+		onModifyAccuracyPriority: -1,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather('newmoon')) {
+				this.debug('Illuminate - decreasing accuracy');
+				return this.chainModify([3277, 4096]);
+			}
+		},
+	},
+	fairyaura: {
+		inherit: true,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Fairy') return;
+			if (!move.auraBooster?.hasAbility('Fairy Aura')) move.auraBooster = this.effectState.target;
+			if (move.auraBooster !== this.effectState.target) return;
+			return this.chainModify([source.effectiveWeather() === 'newmoon' ? 4096 : (move.hasAuraBreak ? 3072 : 5448), 4096]);
+		},
+	},
+	darkaura: {
+		inherit: true,
+		onAnyBasePower(basePower, source, target, move) {
+			if (target === source || move.category === 'Status' || move.type !== 'Dark') return;
+			if (!move.auraBooster?.hasAbility('Dark Aura')) move.auraBooster = this.effectState.target;
+			if (move.auraBooster !== this.effectState.target) return;
+			return this.chainModify([source.effectiveWeather() === 'newmoon' ? 6827 : (move.hasAuraBreak ? 3072 : 5448), 4096]);
+		},
+	},
+
+	// Additions
 	absolution: {
 		onModifySpAPriority: 5,
 		onModifySpA(spa, pokemon) {

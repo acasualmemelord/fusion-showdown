@@ -9,6 +9,301 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	phantomforce: {
+		inherit: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (attacker.effectiveWeather() === 'newmoon') {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+	},
+	shadowforce: {
+		inherit: true,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (attacker.effectiveWeather() === 'newmoon') {
+				this.attrLastMove('[still]');
+				this.addMove('-anim', attacker, move.name, defender);
+				return;
+			}
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+	},
+	weatherball: {
+		inherit: true,
+		onModifyType(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.type = 'Fire';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Water';
+				break;
+			case 'sandstorm':
+				move.type = 'Rock';
+				break;
+			case 'hail':
+			case 'snow':
+				move.type = 'Ice';
+				break;
+			case 'newmoon':
+				move.type = 'Dark';
+				break;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.basePower *= 2;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.basePower *= 2;
+				break;
+			case 'sandstorm':
+				move.basePower *= 2;
+				break;
+			case 'hail':
+			case 'snow':
+				move.basePower *= 2;
+				break;
+			case 'newmoon':
+				move.basePower *= 2;
+				break;
+			}
+			this.debug('BP: ' + move.basePower);
+		},
+	},
+	synthesis: {
+		inherit: true,
+		onHit(pokemon) {
+			let factor = 0.5;
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				factor = 0.667;
+				break;
+			case 'newmoon':
+				factor = 0.333;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+			case 'sandstorm':
+			case 'hail':
+			case 'snow':
+				factor = 0.25;
+				break;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+	},
+	morningsun: {
+		inherit: true,
+		onHit(pokemon) {
+			let factor = 0.5;
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				factor = 0.667;
+				break;
+			case 'newmoon':
+				factor = 0.333;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+			case 'sandstorm':
+			case 'hail':
+			case 'snow':
+				factor = 0.25;
+				break;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+	},
+	moonlight: {
+		inherit: true,
+		onHit(pokemon) {
+			let factor = 0.5;
+			switch (pokemon.effectiveWeather()) {
+			case 'newmoon':
+			case 'sunnyday':
+			case 'desolateland':
+				factor = 0.667;
+				break;
+			case 'raindance':
+			case 'primordialsea':
+			case 'sandstorm':
+			case 'hail':
+			case 'snow':
+				factor = 0.25;
+				break;
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+	},
+	solarbeam: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target) {
+			const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snow'];
+			if (weakWeathers.includes(pokemon.effectiveWeather())) {
+				this.debug('weakened by weather');
+				return this.chainModify(0.5);
+			} else if (pokemon.effectiveWeather() === 'newmoon') return this.chainModify(0.3);
+		},
+	},
+	surf: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target) {
+			if (pokemon.effectiveWeather() === 'newmoon') return this.chainModify(1.5);
+		},
+	},
+	honeclaws: {
+		inherit: true,
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.effectiveWeather() === 'newmoon') move.boosts = {atk: 2, accuracy: 2};
+		},
+	},
+	geomancy: {
+		inherit: true,
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.effectiveWeather() === 'newmoon') move.boosts = {spa: 1, spd: 1, spe: 1};
+		},
+	},
+	nightmare: {
+		inherit: true,
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				if (pokemon.status !== 'slp' && !pokemon.hasAbility('comatose')) {
+					return false;
+				}
+				this.add('-start', pokemon, 'Nightmare');
+			},
+			onResidualOrder: 11,
+			onResidual(pokemon) {
+				if (pokemon.effectiveWeather() === 'newmoon') this.damage(pokemon.baseMaxhp / 2);
+				else this.damage(pokemon.baseMaxhp / 4);
+			},
+		},
+	},
+	flash: {
+		inherit: true,
+		onModifyMove(move, pokemon, target) {
+			if (pokemon.effectiveWeather() === 'newmoon') move.boosts = {accuracy: -2};
+		},
+	},
+	reflect: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('lightclay')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Physical') {
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('Reflect weaken');
+						if (this.field.isWeather('newmoon')) {
+							if (this.activePerHalf > 1) return this.chainModify([8, 15]);
+							return this.chainModify(0.4);
+						} else {
+							if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+							return this.chainModify(0.5);
+						}
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'Reflect');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 1,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'Reflect');
+			},
+		},
+	},
+	lightscreen: {
+		inherit: true,
+		condition: {
+			duration: 5,
+			durationCallback(target, source, effect) {
+				if (source?.hasItem('lightclay')) {
+					return 8;
+				}
+				return 5;
+			},
+			onAnyModifyDamage(damage, source, target, move) {
+				if (target !== source && this.effectState.target.hasAlly(target) && this.getCategory(move) === 'Special') {
+					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
+						this.debug('Light Screen weaken');
+						if (this.field.isWeather('newmoon')) {
+							if (this.activePerHalf > 1) return this.chainModify([8, 15]);
+							return this.chainModify(0.4);
+						} else {
+							if (this.activePerHalf > 1) return this.chainModify([2732, 4096]);
+							return this.chainModify(0.5);
+						}
+					}
+				}
+			},
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Light Screen');
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 2,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Light Screen');
+			},
+		},
+	},
 
 	// Additions
 	achillesheel: {
