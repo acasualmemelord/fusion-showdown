@@ -36,7 +36,7 @@ const InsgDex: {[k: string]: number} = {
 	"nidoranf": 29,
 	"nidorina": 30,
 	"nidoqueen": 31,
-	"nidoran": 32,
+	"nidoranm": 32,
 	"nidorino": 33,
 	"nidoking": 34,
 	"clefairy": 35,
