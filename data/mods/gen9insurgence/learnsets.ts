@@ -26,7 +26,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	venomoth: {inherit: true, learnset: {...baseLearnsets.venomoth.learnset, corrode: ["6M"], jetstream: ["6M"]}},
 	bellsprout: {inherit: true, learnset: {...baseLearnsets.bellsprout.learnset, corrode: ["6M"]}},
 	weepinbell: {inherit: true, learnset: {...baseLearnsets.weepinbell.learnset, corrode: ["6M"]}},
-	victreebell: {inherit: true, learnset: {...baseLearnsets.victreebell.learnset, corrode: ["6M"]}},
+	victreebel: {inherit: true, learnset: {...baseLearnsets.victreebel.learnset, corrode: ["6M"]}},
 	tentacool: {inherit: true, learnset: {...baseLearnsets.tentacool.learnset, corrode: ["6M"], permafrost: ["6M"]}},
 	tentacruel: {inherit: true, learnset: {...baseLearnsets.tentacruel.learnset, corrode: ["6M"], permafrost: ["6M"]}},
 	grimer: {inherit: true, learnset: {...baseLearnsets.grimer.learnset, corrode: ["6M"], wildfire: ["6M"]}},
