@@ -150,6 +150,38 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		natDexTier: "Uber",
 	},
 
+	// Castformes
+	castformsandy: {
+		num: 351,
+		name: "Castform-Snowy",
+		baseSpecies: "Castform",
+		forme: "Snowy",
+		types: ["Rock"],
+		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Forecast"},
+		heightm: 0.3,
+		weightkg: 0.8,
+		color: "Gray",
+		eggGroups: ["Fairy", "Amorphous"],
+		requiredAbility: "Forecast",
+		battleOnly: "Castform",
+	},
+	castformcloudy: {
+		num: 351,
+		name: "Castform-Snowy",
+		baseSpecies: "Castform",
+		forme: "Snowy",
+		types: ["Dark"],
+		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
+		abilities: {0: "Forecast"},
+		heightm: 0.3,
+		weightkg: 0.8,
+		color: "Black",
+		eggGroups: ["Fairy", "Amorphous"],
+		requiredAbility: "Forecast",
+		battleOnly: "Castform",
+	},
+
 	// Vanilla Megas
 	flygonmega: {
 		num: 330,
