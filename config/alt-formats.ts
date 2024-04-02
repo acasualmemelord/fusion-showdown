@@ -277,59 +277,52 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 
-	// {
-	// 	section: "Insurgence: Regional Dex",
-	// 	column: 3,
-	// },
-	// {
-	// 	name: "[Gen 6] Insurgence Dex OU",
+	{
+		section: "Insurgence: Regional Dex",
+		column: 3,
+	},
+	{
+		name: "[Gen 6] Insurgence Dex OU",
 
-	// 	mod: 'gen6insurgence',
-	// 	ruleset: ['Standard', 'Swagger Clause'],
-	// 	banlist: ['AG', 'Uber', 'Arena Trap', 'Shadow Tag', 'Soul Dew', 'Baton Pass'],
-	// },
-	// {
-	// 	name: "[Gen 6] Insurgence Dex AG",
+		mod: 'gen6insurgence',
+		ruleset: ['Standard', 'Swagger Clause'],
+		banlist: ['AG', 'Uber', 'Arena Trap', 'Shadow Tag', 'Soul Dew', 'Baton Pass'],
+	},
+	{
+		name: "[Gen 6] Insurgence Dex AG",
 
-	// 	mod: 'gen6insurgence',
-	// 	ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
-	// },
-	// {
-	// 	name: "[Gen 6] Insg Dex Doubles AG",
-		
-	// 	gameType: "doubles",
-	// 	mod: 'gen6insurgence',
-	// 	ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
-	// },
+		mod: 'gen6insurgence',
+		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
+	},
 
-	// {
-	// 	section: "Insurgence: National Dex",
-	// 	column: 3,
-	// },
-	// {
-	// 	name: "[Gen 9] Insurgence NatDex AG",
+	{
+		section: "Insurgence: National Dex",
+		column: 3,
+	},
+	{
+		name: "[Gen 9] Insurgence NatDex AG",
 
-	// 	mod: 'gen9insurgence',
-	// 	ruleset: ['Standard NatDex'],
-	// },
-	// {
-	// 	name: "[Gen 9] Insurgence NatDex OU",
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex'],
+	},
+	{
+		name: "[Gen 9] Insurgence NatDex OU",
 
-	// 	mod: 'gen9insurgence',
-	// 	ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
-	// 	banlist: [
-	// 		'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
-	// 		'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
-	// 	],
-	// },
-	// {
-	// 	name: "[Gen 9] Insurgence Custom Game",
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
+		banlist: [
+			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
+		],
+	},
+	{
+		name: "[Gen 9] Insurgence Custom Game",
 
-	// 	mod: 'gen9insurgence',
-	// 	searchShow: false,
-	// 	debug: true,
-	// 	battle: {trunc: Math.trunc},
-	// 	// no restrictions, for serious (other than team preview)
-	// 	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
-	// },
+		mod: 'gen9insurgence',
+		searchShow: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		// no restrictions, for serious (other than team preview)
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
 ];
