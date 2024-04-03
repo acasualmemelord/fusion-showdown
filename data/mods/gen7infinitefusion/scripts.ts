@@ -488,6 +488,7 @@ const IFDex: {[k: string]: number} = {
 	"meloettapirouette": 467,
 	"cresselia": 468,
 	"bruxish": 469,
+	"necrozmaultra": 470,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
