@@ -118,7 +118,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
 				let details = (this.illusion || this).details;
 				if (this.terastallized) details += `, tera:${this.terastallized}`;
-				this.battle.add('detailschange', this, details);
+				if (!this.illusion) this.battle.add('detailschange', this, details);
 				if (!source) {
 					// Tera forme
 					// Ogerpon/Terapagos text goes here
@@ -135,8 +135,18 @@ export const Scripts: ModdedBattleScriptsData = {
 							this.battle.add('-primal', this, species.requiredItem);
 						}
 					} else {
-						this.battle.add('-mega', this, apparentSpecies, species.requiredItem);
-						this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+						if (this.illusion) {
+							if (this.illusion.canMegaEvo) {
+								const illusionDetails = this.illusion.setSpecies(this.battle.dex.species.get(this.illusion.canMegaEvo), source).name + 
+									(this.level === 100 ? '' : ', L' + this.level) + (this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.shiny ? ', shiny' : '');
+								this.battle.add('detailschange', this, illusionDetails);
+								this.battle.add('-mega', this, this.illusion.species.name, this.illusion.species.requiredItem);
+								this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+							}
+						} else {
+							this.battle.add('-mega', this, apparentSpecies, species.requiredItem);
+							this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+						}
 					}
 				} else if (source.effectType === 'Status') {
 					// Shaymin-Sky -> Shaymin

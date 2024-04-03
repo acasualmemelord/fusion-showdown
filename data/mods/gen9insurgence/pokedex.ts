@@ -36,8 +36,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Aura Break", 1: "Power Construct"},
 	},
+	rayquazamega: {
+		inherit: true,
+		tier: "Uber",
+	},
 
-	
 	// Primal Formes
 	regigigasprimal: {
 		num: 486,
@@ -52,8 +55,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crystal Piece",
-		tier: "AG",
+		tier: "Uber",
 		natDexTier: "AG",
+		doublesTier: "DUber",
 	},
 	giratinaprimal: {
 		num: 487,
@@ -68,8 +72,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crystal Piece",
-		tier: "AG",
+		tier: "Uber",
 		natDexTier: "AG",
+		doublesTier: "DUber",
 	},
 	arceusprimal: {
 		num: 493,
@@ -84,7 +89,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Crystal Piece",
-		tier: "AG",
+		tier: "Uber",
 		natDexTier: "AG",
 		doublesTier: "DUber",
 	},
