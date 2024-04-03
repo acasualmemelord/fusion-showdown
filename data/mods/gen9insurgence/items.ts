@@ -52,6 +52,22 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 
 	// Additions
+	trickrock: {
+		name: "Trick Rock",
+		spritenum: 0,
+		fling: {
+			basePower: 60,
+		},
+		num: 0,
+	},
+	darkrock: {
+		name: "Dark Rock",
+		spritenum: 0,
+		fling: {
+			basePower: 60,
+		},
+		num: 0,
+	},
 	crystalpiece: {
 		name: "Crystal Piece",
 		spritenum: 0,
