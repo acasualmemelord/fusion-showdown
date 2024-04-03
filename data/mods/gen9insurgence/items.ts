@@ -54,6 +54,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	// Additions
 	trickrock: {
 		name: "Trick Rock",
+		desc: "Holder's use of Trick Room lasts 8 turns instead of 5.",
 		spritenum: -1,
 		fling: {
 			basePower: 60,
@@ -62,6 +63,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	darkrock: {
 		name: "Dark Rock",
+		desc: "Holder's use of New Moon lasts 8 turns instead of 5.",
 		spritenum: -1,
 		fling: {
 			basePower: 60,
@@ -70,6 +72,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	crystalpiece: {
 		name: "Crystal Piece",
+		desc: "If held by Giratina/Arceus/Regigigas, this item triggers its Primal Reversion.",
 		spritenum: -1,
 		itemUser: ["Arceus", "Giratina", "Regigigas"],
 		onSwitchIn(pokemon) {
@@ -89,6 +92,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	crystalfragment: {
 		name: "Crystal Fragment",
+		desc: "If held by a Delta Metagross Ruin, this item allows it to Crystallize in battle.",
 		spritenum: -1,
 		megaStone: "Metagross-Delta-Ruin-Crystal",
 		megaEvolves: "Metagross-Delta-Ruin",
@@ -101,6 +105,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	flygonarmor: {
 		name: "Flygon Armor",
+		desc: "If held by a Flygon, this item changes its forme to Armored.",
 		spritenum: -1,
 		onTakeItem(item, pokemon, source) {
 			return !((source && source.baseSpecies.baseSpecies === 'Flygon') || pokemon.baseSpecies.baseSpecies === 'Flygon');
@@ -111,6 +116,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	leavannyarmor: {
 		name: "Leavanny Armor",
+		desc: "If held by a Leavanny, this item changes its forme to Armored.",
 		spritenum: -1,
 		onTakeItem(item, pokemon, source) {
 			return !((source && source.baseSpecies.baseSpecies === 'Leavanny') || pokemon.baseSpecies.baseSpecies === 'Leavanny');
@@ -121,6 +127,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	mewtwoarmor: {
 		name: "Mewtwo Armor",
+		desc: "If held by a Mewtwo, this item changes its forme to Armored.",
 		spritenum: -1,
 		onTakeItem(item, pokemon, source) {
 			return !((source && source.baseSpecies.baseSpecies === 'Mewtwo') || pokemon.baseSpecies.baseSpecies === 'Mewtwo');
@@ -131,6 +138,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	tyranitararmor: {
 		name: "Tyranitar Armor",
+		desc: "If held by a Tyranitar, this item changes its forme to Armored.",
 		spritenum: -1,
 		onTakeItem(item, pokemon, source) {
 			return !((source && source.baseSpecies.baseSpecies === 'Tyranitar') || pokemon.baseSpecies.baseSpecies === 'Tyranitar');
@@ -141,6 +149,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	volcaronadeltaarmor: {
 		name: "Volcarona-Delta Armor",
+		desc: "If held by a Volcarona-Delta, this item changes its forme to Armored.",
 		spritenum: -1,
 		onTakeItem(item, pokemon, source) {
 			return !((source && source.baseSpecies.baseSpecies === 'Volcarona-Delta') || pokemon.baseSpecies.baseSpecies === 'Volcarona-Delta');
@@ -151,6 +160,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	zekromarmor: {
 		name: "Zekrom Armor",
+		desc: "If held by a Zekrom, this item changes its forme to Armored.",
 		spritenum: -1,
 		onTakeItem(item, pokemon, source) {
 			return !((source && source.baseSpecies.baseSpecies === 'Zekrom') || pokemon.baseSpecies.baseSpecies === 'Zekrom');
@@ -163,6 +173,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	// Mega Stones
 	poliwrathite: {
 		name: "Poliwrathite",
+		desc: "If held by a Poliwrath, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Poliwrath-Mega",
 		megaEvolves: "Poliwrath",
@@ -175,6 +186,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	marowakite: {
 		name: "Marowakite",
+		desc: "If held by a Marowak, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Marowak-Mega",
 		megaEvolves: "Marowak",
@@ -187,6 +199,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	eevite: {
 		name: "Eevite",
+		desc: "If held by a Eevee, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Eevee-Mega",
 		megaEvolves: "Eevee",
@@ -197,20 +210,9 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		num: 0,
 	},
-	mewtwonitex: {
-		name: "Mewtwonite X",
-		spritenum: -1,
-		megaStone: "Mewtwo-Shadow",
-		megaEvolves: "Mewtwo",
-		itemUser: ["Mewtwo"],
-		onTakeItem(item, source) {
-			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
-			return true;
-		},
-		num: 0,
-	},
 	meganiumite: {
 		name: "Meganiumite",
+		desc: "If held by a Meganium, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Meganium-Mega",
 		megaEvolves: "Meganium",
@@ -223,6 +225,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	typhlosionite: {
 		name: "Typhlosionite",
+		desc: "If held by a Typhlosion, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Typhlosion-Mega",
 		megaEvolves: "Typhlosion",
@@ -235,6 +238,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	feraligatite: {
 		name: "Feraligatite",
+		desc: "If held by a Feraligatr, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Feraligatr-Mega",
 		megaEvolves: "Feraligatr",
@@ -247,6 +251,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	sudowoodite: {
 		name: "Sudowoodite",
+		desc: "If held by a Sudowoodo, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Sudowoodo-Mega",
 		megaEvolves: "Sudowoodo",
@@ -259,6 +264,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	politoedite: {
 		name: "Politoedite",
+		desc: "If held by a Politoed, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Politoed-Mega",
 		megaEvolves: "Politoed",
@@ -271,6 +277,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	sunflorite: {
 		name: "Sunflorite",
+		desc: "If held by a Sunflora, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Sunflora-Mega-M",
 		megaEvolves: "Sunflora",
@@ -283,6 +290,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	etigirafarigite: {
 		name: "Etigirafarigite",
+		desc: "If held by a Girafarig, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Girafarig-Mega",
 		megaEvolves: "Girafarig",
@@ -295,6 +303,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	magcargonite: {
 		name: "Magcargonite",
+		desc: "If held by a Magcargo, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Magcargo-Mega",
 		megaEvolves: "Magcargo",
@@ -307,6 +316,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	donphanite: {
 		name: "Donphanite",
+		desc: "If held by a Donphan, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Donphan-Mega",
 		megaEvolves: "Donphan",
@@ -319,6 +329,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	miltankite: {
 		name: "Miltankite",
+		desc: "If held by a Miltank, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Miltank-Mega",
 		megaEvolves: "Miltank",
@@ -331,6 +342,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	shiftrite: {
 		name: "Shiftrite",
+		desc: "If held by a Shiftry, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Shiftry-Mega",
 		megaEvolves: "Shiftry",
@@ -343,6 +355,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	flygonite: {
 		name: "Flygonite",
+		desc: "If held by a Flygon, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Flygon-Mega",
 		megaEvolves: "Flygon",
@@ -355,6 +368,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	cacturnite: {
 		name: "Cacturnite",
+		desc: "If held by a Cacturne, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Cacturne-Mega",
 		megaEvolves: "Cacturne",
@@ -367,6 +381,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	crawdauntite: {
 		name: "Crawdauntite",
+		desc: "If held by a Crawdaunt, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Crawdaunt-Mega",
 		megaEvolves: "Crawdaunt",
@@ -379,6 +394,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	milotite: {
 		name: "Milotite",
+		desc: "If held by a Milotic, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Milotic-Mega",
 		megaEvolves: "Milotic",
@@ -391,6 +407,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	jirachite: {
 		name: "Jirachite",
+		desc: "If held by a Jirachi, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Jirachi-Mega",
 		megaEvolves: "Jirachi",
@@ -403,6 +420,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	chatotite: {
 		name: "Chatotite",
+		desc: "If held by a Chatot, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Chatot-Mega",
 		megaEvolves: "Chatot",
@@ -415,6 +433,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	spiritombite: {
 		name: "Spiritombite",
+		desc: "If held by a Spiritomb, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Spiritomb-Mega",
 		megaEvolves: "Spiritomb",
@@ -427,6 +446,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	froslassite: {
 		name: "Froslassite",
+		desc: "If held by a Froslass, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Froslass-Mega",
 		megaEvolves: "Froslass",
@@ -439,6 +459,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	zebstrikite: {
 		name: "Zebstrikite",
+		desc: "If held by a Zebstrika, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Zebstrika-Mega",
 		megaEvolves: "Zebstrika",
@@ -451,6 +472,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	zoronite: {
 		name: "Zoronite",
+		desc: "If held by a Zoroark, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Zoroark-Mega",
 		megaEvolves: "Zoroark",
@@ -463,6 +485,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	gothitite: {
 		name: "Gothitite",
+		desc: "If held by a Gothitelle, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Gothitelle-Mega",
 		megaEvolves: "Gothitelle",
@@ -475,6 +498,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	reuniclite: {
 		name: "Reuniclite",
+		desc: "If held by a Reuniclus, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Reuniclus-Mega",
 		megaEvolves: "Reuniclus",
@@ -487,6 +511,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	haxorite: {
 		name: "Haxorite",
+		desc: "If held by a Haxorus, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Haxorus-Mega",
 		megaEvolves: "Haxorus",
@@ -499,6 +524,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	cryogonalite: {
 		name: "Cryogonalite",
+		desc: "If held by a Cryogonal, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Cryogonal-Mega",
 		megaEvolves: "Cryogonal",
@@ -511,6 +537,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	stunfiskite: {
 		name: "Stunfiskite",
+		desc: "If held by a Stunfisk, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Stunfisk-Mega",
 		megaEvolves: "Stunfisk",
@@ -523,6 +550,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	bisharpite: {
 		name: "Bisharpite",
+		desc: "If held by a Bisharp, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Bisharp-Mega",
 		megaEvolves: "Bisharp",
@@ -535,6 +563,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	hydreigonite: {
 		name: "Hydreigonite",
+		desc: "If held by a Hydreigon, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Hydreigon-Mega",
 		megaEvolves: "Hydreigon",
@@ -547,6 +576,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltavenusaurite: {
 		name: "Delta Venusaurite",
+		desc: "If held by a Delta Venusaur, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Venusaur-Delta-Mega",
 		megaEvolves: "Venusaur-Delta",
@@ -559,6 +589,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltacharizardite: {
 		name: "Delta Charizardite",
+		desc: "If held by a Delta Charizard, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Charizard-Delta-Mega",
 		megaEvolves: "Charizard-Delta",
@@ -571,6 +602,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltablastoisinite: {
 		name: "Delta Blastoisinite",
+		desc: "If held by a Delta Blastoise, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Blastoise-Delta-Mega",
 		megaEvolves: "Blastoise-Delta",
@@ -583,6 +615,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltabisharpite: {
 		name: "Delta Bisharpite",
+		desc: "If held by a Delta Bisharp, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Bisharp-Delta-Mega",
 		megaEvolves: "Bisharp-Delta",
@@ -595,6 +628,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltagardevoirite: {
 		name: "Delta Gardevoirite",
+		desc: "If held by a Delta Gardevoir, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Gardevoir-Delta-Mega",
 		megaEvolves: "Gardevoir-Delta",
@@ -607,6 +641,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltagalladite: {
 		name: "Delta Galladite",
+		desc: "If held by a Delta Gallade, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Gallade-Delta-Mega",
 		megaEvolves: "Gallade-Delta",
@@ -619,6 +654,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltasunflorite: {
 		name: "Delta Sunflorite",
+		desc: "If held by a Delta Sunflora, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Sunflora-Delta-Mega",
 		megaEvolves: "Sunflora-Delta",
@@ -631,6 +667,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltascizorite: {
 		name: "Delta Scizorite",
+		desc: "If held by a Delta Scizor, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Scizor-Delta-Mega",
 		megaEvolves: "Scizor-Delta",
@@ -643,6 +680,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltaglalitite: {
 		name: "Delta Glalitite",
+		desc: "If held by a Delta Glalie, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Glalie-Delta-Mega",
 		megaEvolves: "Glalie-Delta",
@@ -655,6 +693,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltafroslassite: {
 		name: "Delta Froslassite",
+		desc: "If held by a Delta Froslass, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Froslass-Delta-Mega",
 		megaEvolves: "Froslass-Delta",
@@ -667,6 +706,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltatyphlosionite: {
 		name: "Delta Typhlosionite",
+		desc: "If held by a Delta Typhlosion, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Typhlosion-Delta-Mega",
 		megaEvolves: "Typhlosion-Delta",
@@ -679,6 +719,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltapidgeotite: {
 		name: "Delta Pidgeotite",
+		desc: "If held by a Delta Pidgeot, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Pidgeot-Delta-Mega",
 		megaEvolves: "Pidgeot-Delta",
@@ -690,7 +731,8 @@ export const Items: {[k: string]: ModdedItemData} = {
 		num: 0,
 	},
 	deltagirafarigite: {
-		name: "Delta Girafarigite",
+		name: "Delta Etigirafarigite",
+		desc: "If held by a Delta Girafarig, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Girafarig-Delta-Mega",
 		megaEvolves: "Girafarig-Delta",
@@ -703,6 +745,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltasablenite: {
 		name: "Delta Sablenite",
+		desc: "If held by a Delta Sableye, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Sableye-Delta-Mega",
 		megaEvolves: "Sableye-Delta",
@@ -715,6 +758,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltamawilite: {
 		name: "Delta Mawilite",
+		desc: "If held by a Delta Mawile, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Mawile-Delta-Mega",
 		megaEvolves: "Mawile-Delta",
@@ -727,6 +771,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltamedichamite: {
 		name: "Delta Medichamite",
+		desc: "If held by a Delta Medicham, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Medicham-Delta-Mega",
 		megaEvolves: "Medicham-Delta",
@@ -739,6 +784,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltacameruptite: {
 		name: "Delta Cameruptite",
+		desc: "If held by a Delta Camerupt, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Camerupt-Delta-Mega",
 		megaEvolves: "Camerupt-Delta",
@@ -751,6 +797,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltamilotite: {
 		name: "Delta Milotite",
+		desc: "If held by a Delta Milotic, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Milotic-Delta-Mega",
 		megaEvolves: "Milotic-Delta",
@@ -763,6 +810,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltametagrossitespider: {
 		name: "Delta Metagrossite (Spider)",
+		desc: "If held by a Delta Metagross Spider, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Metagross-Delta-Spider-Mega",
 		megaEvolves: "Metagross-Delta-Spider",
@@ -775,6 +823,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltametagrossiteruin: {
 		name: "Delta Metagrossite (Ruin)",
+		desc: "If held by a Delta Metagross Ruin, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Metagross-Delta-Ruin-Mega",
 		megaEvolves: "Metagross-Delta-Ruin",
@@ -787,6 +836,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltalopunnite: {
 		name: "Delta Lopunnite",
+		desc: "If held by a Delta Lopunny, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Lopunny-Delta-Mega",
 		megaEvolves: "Lopunny-Delta",
@@ -799,6 +849,7 @@ export const Items: {[k: string]: ModdedItemData} = {
 	},
 	deltalucarionite: {
 		name: "Delta Lucarionite",
+		desc: "If held by a Delta Lucario, this item allows it to Mega Evolve in battle.",
 		spritenum: -1,
 		megaStone: "Lucario-Delta-Mega",
 		megaEvolves: "Lucario-Delta",

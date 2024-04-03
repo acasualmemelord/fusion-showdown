@@ -2471,7 +2471,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 83.0,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Delta Girafarigite",
+		requiredItem: "Delta Etigirafarigite",
 		tier: "RU",
 		natDexTier: "RU",
 		doublesTier: "(DUU)",

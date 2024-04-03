@@ -640,6 +640,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 45,
 		category: "Physical",
 		name: "Crystal Rush",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
 		pp: 30,
 		priority: 1,
 		flags: {protect: 1, mirror: 1, metronome: 1},
@@ -657,6 +659,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 150,
 		category: "Special",
 		name: "Dark Matter",
+		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
+		shortDesc: "User cannot move next turn.",
 		pp: 5,
 		priority: 0,
 		flags: {recharge: 1, protect: 1, mirror: 1, metronome: 1},
@@ -674,6 +678,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Dragonify",
+		desc: "Causes the target to become a Dragon type. Fails if the target is an Arceus, or if the target is already purely Dragon type.",
+		shortDesc: "Changes the target's type to Dragon.",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1},
@@ -691,6 +697,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 40,
 		category: "Physical",
 		name: "Draco Jet",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
 		pp: 30,
 		priority: 1,
 		flags: {protect: 1, mirror: 1, metronome: 1},
@@ -705,6 +713,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 105,
 		category: "Special",
 		name: "Drakon Voice",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect. Hits adjacent foes.",
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1, metronome: 1},
@@ -719,6 +729,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Jet Stream",
+		desc: "For 2 turns, the user and its party members have their Priority increased by 1. Fails if this move is already in effect for the user's side.",
+		shortDesc: "For 2 turns, allies' get +1 Priority.",
 		pp: 15,
 		priority: 0,
 		flags: {snatch: 1, metronome: 1, wind: 1},
@@ -760,6 +772,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Livewire",
+		desc: "Sets up a hazard on the opposing side of the field, with a chance to paralyze each opposing Pokemon that switches in, unless it is a Flying-type Pokemon or has the Levitate Ability. Can be used up to five times before failing. Chance of paralysis is X/5 where X is the number of layers, chance is doubled in rain. Can be removed from the opposing side if any opposing Pokemon uses Mortal Spin, Rapid Spin, or Defog successfully, is hit by Defog, or a grounded Electric or Ground type Pokemon switches in. Safeguard prevents the opposing party from being paralyzed on switch-in, but a substitute does not.",
+		shortDesc: "Can paralyze grounded foes on switch-in. Max 5 layers.",
 		pp: 20,
 		priority: 0,
 		flags: {reflectable: 1, nonsky: 1, metronome: 1, mustpressure: 1},
@@ -801,6 +815,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 120,
 		category: "Special",
 		name: "Lunar Cannon",
+		desc: "This attack charges on the first turn and executes on the second. If the user is holding a Power Herb or the weather is New Moon, the move completes in one turn.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in new moon.",
 		pp: 10,
 		priority: 0,
 		flags: {charge: 1, protect: 1, mirror: 1, metronome: 1, nosleeptalk: 1, failinstruct: 1},
@@ -831,6 +847,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Medusa Ray",
+		desc: "Causes the target to become a Rock type. Fails if the target is an Arceus, or if the target is already purely Rock type.",
+		shortDesc: "Changes the target's type to Rock.",
 		pp: 20,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, allyanim: 1, metronome: 1},
@@ -851,6 +869,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Nanorepair",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up. Defense is boosted by +1.",
+		shortDesc: "User heals 50% of its max HP; gets +1 Def.",
 		pp: 5,
 		priority: 0,
 		flags: {snatch: 1, heal: 1, metronome: 1},
@@ -868,6 +888,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "New Moon",
+		desc: "For 5 turns, the weather becomes New Moon. The damage of Ghost/Dark-type attacks is multiplied by 1.35 and the damage of Fairy-type attacks is multiplied by 0.75 during the effect. Lasts for 8 turns if the user is holding Dark Rock. Fails if the current weather is New Moon.",
+		shortDesc: "For 5 turns, darkness powers Ghost/Dark moves.",
 		pp: 5,
 		priority: 0,
 		flags: {metronome: 1},
@@ -884,6 +906,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Permafrost",
+		desc: "Sets up a hazard on the opposing side of the field, with a chance to freeze each opposing Pokemon that switches in, unless it is a Flying-type Pokemon or has the Levitate Ability. Can be used up to five times before failing. Chance of freeze is X/10 where X is the number of layers, chance is doubled in hail/snow. Can be removed from the opposing side if any opposing Pokemon uses Mortal Spin, Rapid Spin, or Defog successfully, is hit by Defog, or a grounded Ice or Fire type Pokemon switches in. Safeguard prevents the opposing party from being frozen on switch-in, but a substitute does not.",
+		shortDesc: "Can freeze grounded foes on switch-in. Max 5 layers.",
 		pp: 20,
 		priority: 0,
 		flags: {reflectable: 1, nonsky: 1, metronome: 1, mustpressure: 1},
@@ -925,6 +949,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Retrograde",
+		shortDesc: "Reverts Mega Evolved Pokémon back to their base form.",
 		pp: 30,
 		priority: 0,
 		flags: {},
@@ -942,6 +967,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Spirit Away",
+		desc: "This attack takes the target into the air with the user on the first turn and executes on the second. The user and the target cannot make a move between turns, but the target can select a move to use. Fails on the first turn if the target is an ally, if the target has a substitute, or if the target is using Bounce, Dig, Dive, Fly, Phantom Force, Shadow Force, or Sky Drop.",
+		shortDesc: "User and foe fly up turn 1. Damages on turn 2.",
 		pp: 10,
 		priority: 0,
 		flags: {
@@ -969,18 +996,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onTryHit(target, source, move) {
 			if (source.removeVolatile(move.id)) {
 				if (target !== source.volatiles['twoturnmove'].source) return false;
-
-				if (target.hasType('Flying')) {
-					this.add('-immune', target);
-					return null;
-				}
 			} else {
 				if (target.volatiles['substitute'] || target.isAlly(source)) {
 					return false;
-				}
-				if (target.getWeight() >= 2000) {
-					this.add('-fail', target, 'move: Spirit Away', '[heavy]');
-					return null;
 				}
 
 				this.add('-prepare', source, move.name, target);
@@ -1022,22 +1040,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (source === this.effectState.target && target === this.effectState.source) {
 					return;
 				}
-				if (['gust', 'twister', 'skyuppercut', 'thunder', 'hurricane', 'smackdown', 'thousandarrows'].includes(move.id)) {
-					return;
-				}
 				return false;
-			},
-			onAnyBasePower(basePower, target, source, move) {
-				if (target !== this.effectState.target && target !== this.effectState.source) {
-					return;
-				}
-				if (source === this.effectState.target && target === this.effectState.source) {
-					return;
-				}
-				if (move.id === 'gust' || move.id === 'twister') {
-					this.debug('BP doubled on midair target');
-					return this.chainModify(2);
-				}
 			},
 			onFaint(target) {
 				if (target.volatiles['skydrop'] && target.volatiles['twoturnmove'].source) {
@@ -1056,6 +1059,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Wildfire",
+		desc: "Burns the foe. If it is a Grass-type Pokemon, burns all Pokemon in their party weak to fire.",
+		shortDesc: "Burns the target & possibly target's team.",
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, reflectable: 1, mirror: 1, metronome: 1},
@@ -1081,6 +1086,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 40,
 		category: "Special",
 		name: "Wormhole",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
 		pp: 10,
 		priority: 1,
 		flags: {protect: 1, mirror: 1, metronome: 1},
@@ -1095,6 +1102,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 90,
 		category: "Physical",
 		name: "Zombie Strike",
+		shortDesc: "No additional effect.",
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},

@@ -381,7 +381,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 0,
 		category: "Status",
 		name: "Pack In",
-		desc: "The user restores 1/2 of its maximum HP, rounded half up. Defense is boost by +1 if Hail or Snow is active.",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up. Defense is boosted by +1 if Hail or Snow is active.",
 		shortDesc: "User heals 50% of its max HP. +1 Def in Hail/Snow.",
 		pp: 5,
 		priority: 0,
