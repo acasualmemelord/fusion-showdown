@@ -9,6 +9,64 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	futuresight: {
+		inherit: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			if (source.hasAbility('periodicorbit')) {
+				if (!target.side.addSlotCondition(target, 'orbitalfuturemove')) return false;
+			}
+			const futureMoveData = {
+				duration: 3,
+				move: 'futuresight',
+				source: source,
+				moveData: {
+					id: 'futuresight',
+					name: "Future Sight",
+					accuracy: 100,
+					basePower: 120,
+					category: "Special",
+					priority: 0,
+					flags: {allyanim: 1, metronome: 1, futuremove: 1},
+					ignoreImmunity: false,
+					effectType: 'Move',
+					type: 'Psychic',
+				},
+			};
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], futureMoveData);
+			Object.assign(target.side.slotConditions[target.position]['orbitalfuturemove'],{...futureMoveData, duration: 5});
+			this.add('-start', source, 'move: Future Sight');
+			return this.NOT_FAIL;
+		},
+	},
+	doomdesire: {
+		inherit: true,
+		onTry(source, target) {
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
+			if (source.hasAbility('periodicorbit')) {
+				if (!target.side.addSlotCondition(target, 'orbitalfuturemove')) return false;
+			}
+			const futureMoveData = {
+				move: 'doomdesire',
+				source: source,
+				moveData: {
+					id: 'doomdesire',
+					name: "Doom Desire",
+					accuracy: 100,
+					basePower: 140,
+					category: "Special",
+					priority: 0,
+					flags: {metronome: 1, futuremove: 1},
+					effectType: 'Move',
+					type: 'Steel',
+				},
+			};
+			Object.assign(target.side.slotConditions[target.position]['futuremove'], futureMoveData);
+			Object.assign(target.side.slotConditions[target.position]['orbitalfuturemove'],{...futureMoveData, duration: 5});
+			this.add('-start', source, 'Doom Desire');
+			return this.NOT_FAIL;
+		},
+	},
 	phantomforce: {
 		inherit: true,
 		onTryMove(attacker, defender, move) {
