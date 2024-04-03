@@ -86,6 +86,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Crystal Piece",
 		tier: "AG",
 		natDexTier: "AG",
+		doublesTier: "DUber",
 	},
 	
 	// Armored Formes
@@ -105,6 +106,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Mewtwo Armor",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	tyranitararmor: {
 		num: 248,
@@ -121,6 +123,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Tyranitar Armor",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	flygonarmor: {
 		num: 330,
@@ -138,6 +141,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		changesFrom: "Flygon",
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	leavannyarmor: {
 		num: 542,
@@ -154,6 +158,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Leavanny Armor",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	zekromarmor: {
 		num: 644,
@@ -171,6 +176,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Zekrom Armor",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	volcaronadeltaarmor: {
 		num: 637,
@@ -187,6 +193,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Volcarona-Delta Armor",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 
 	// Castformes
@@ -237,6 +244,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Flygonite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	poliwrathmega: {
 		num: 62,
@@ -253,6 +261,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Poliwrathite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	marowakmega: {
 		num: 105,
@@ -269,6 +278,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Marowakite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	eeveemega: {
 		num: 133,
@@ -285,6 +295,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Eevite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	mewtwoshadow: {
 		num: 150,
@@ -300,6 +311,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	meganiummega: {
 		num: 154,
@@ -316,6 +328,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Meganiumite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	typhlosionmega: {
 		num: 157,
@@ -332,6 +345,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Typhlosionite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	feraligatrmega: {
 		num: 160,
@@ -348,6 +362,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Feraligatite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	sudowoodomega: {
 		num: 185,
@@ -364,6 +379,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Sudowoodite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	politoedmega: {
 		num: 186,
@@ -380,6 +396,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Politoedite",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	sunfloramegam: {
 		num: 192,
@@ -397,6 +414,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Sunflorite",
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	sunfloramegaf: {
 		num: 192,
@@ -414,6 +432,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Sunflorite",
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	girafarigmega: {
 		num: 203,
@@ -430,6 +449,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Etigirafarigite",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	magcargomega: {
 		num: 219,
@@ -446,6 +466,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Magcargonite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	donphanmega: {
 		num: 232,
@@ -462,6 +483,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Donphanite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	miltankmega: {
 		num: 241,
@@ -478,6 +500,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Miltankite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	shiftrymega: {
 		num: 275,
@@ -494,6 +517,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Shiftrite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	cacturnemega: {
 		num: 332,
@@ -510,6 +534,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Cacturnite",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	crawdauntmega: {
 		num: 342,
@@ -526,6 +551,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Crawdauntite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	miloticmega: {
 		num: 350,
@@ -542,6 +568,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Milotite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	jirachimega: {
 		num: 385,
@@ -558,6 +585,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Jirachite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	chatotmega: {
 		num: 441,
@@ -574,6 +602,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Chatotite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	spiritombmega: {
 		num: 442,
@@ -590,6 +619,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Spiritombite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	froslassmega: {
 		num: 478,
@@ -606,6 +636,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Froslassite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	zebstrikamega: {
 		num: 523,
@@ -622,6 +653,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Zebstrikite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	zoroarkmega: {
 		num: 571,
@@ -638,6 +670,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Zoronite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	gothitellemega: {
 		num: 576,
@@ -654,6 +687,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Gothitite",
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	reuniclusmega: {
 		num: 579,
@@ -670,6 +704,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Reuniclite",
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	haxorusmega: {
 		num: 612,
@@ -686,6 +721,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Haxorite",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	cryogonalmega: {
 		num: 615,
@@ -702,6 +738,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Cryogonalite",
 		tier: "Uber",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	stunfiskmega: {
 		num: 618,
@@ -718,6 +755,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Stunfiskite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	bisharpmega: {
 		num: 625,
@@ -734,6 +772,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Bisharpite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	hydreigonmega: {
 		num: 635,
@@ -751,6 +790,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		cosmeticFormes: ["Hydreigon-Mega-Six", "Hydreigon-Mega-Seven", "Hydreigon-Mega-Eight", "Hydreigon-Mega-Nine",],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 
 	// Delta Formes
@@ -794,6 +834,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	venusaurdeltamega: {
 		num: 3,
@@ -810,6 +851,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Venusaurite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	charmanderdelta: {
 		num: 4,
@@ -851,6 +893,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	charizarddeltamega: {
 		num: 6,
@@ -867,6 +910,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Charizardite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	squirtledelta: {
 		num: 7,
@@ -908,6 +952,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	blastoisedeltamega: {
 		num: 9,
@@ -924,6 +969,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Blastoisinite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	pawniarddelta: {
 		num: 624,
@@ -951,6 +997,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	bisharpdeltamega: {
 		num: 625,
@@ -967,6 +1014,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Bisharpite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	raltsdelta: {
 		num: 280,
@@ -1008,6 +1056,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	gardevoirdeltamega: {
 		num: 282,
@@ -1024,6 +1073,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Gardevoirite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	galladedelta: {
 		num: 475,
@@ -1038,6 +1088,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	galladedeltamega: {
 		num: 475,
@@ -1054,6 +1105,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Galladite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	sunkerndelta: {
 		num: 191,
@@ -1081,6 +1133,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	sunfloradeltamega: {
 		num: 192,
@@ -1097,6 +1150,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Sunflorite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	bergmitedelta: {
 		num: 712,
@@ -1124,6 +1178,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	scytherdelta: {
 		num: 123,
@@ -1138,6 +1193,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	scizordelta: {
 		num: 212,
@@ -1152,6 +1208,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	scizordeltamega: {
 		num: 212,
@@ -1168,6 +1225,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Scizorite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	scraggydelta: {
 		num: 559,
@@ -1195,6 +1253,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	combeedelta: {
 		num: 415,
@@ -1222,6 +1281,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	koffingdelta: {
 		num: 109,
@@ -1249,6 +1309,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	purrloindelta: {
 		num: 509,
@@ -1276,6 +1337,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	phantumpdelta: {
 		num: 708,
@@ -1303,6 +1365,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	snoruntdelta: {
 		num: 361,
@@ -1330,6 +1393,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	glaliedeltamega: {
 		num: 362,
@@ -1346,6 +1410,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Glalitite",
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	froslassdelta: {
 		num: 478,
@@ -1360,6 +1425,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	froslassdeltamega: {
 		num: 478,
@@ -1376,6 +1442,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Froslassite",
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	shinxdelta: {
 		num: 403,
@@ -1417,6 +1484,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	noibatdelta: {
 		num: 714,
@@ -1444,6 +1512,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	budewdelta: {
 		num: 406,
@@ -1485,6 +1554,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	drifloondelta: {
 		num: 425,
@@ -1512,6 +1582,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	grimerdelta: {
 		num: 88,
@@ -1540,6 +1611,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		cosmeticFormes: ["Muk-Delta-Water", "Muk-Delta-Grass", "Muk-Delta-Fire", "Muk-Delta-Dark", "Muk-Delta-Normal", "Muk-Delta-Psychic"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	wooperdelta: {
 		num: 194,
@@ -1567,6 +1639,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	munchlaxdelta: {
 		num: 446,
@@ -1595,6 +1668,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		cosmeticFormes: ["Snorlax-Delta-Summer", "Snorlax-Delta-Winter", "Snorlax-Delta-Sakura", "Snorlax-Delta-Autumn"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	misdreavusdelta: {
 		num: 200,
@@ -1622,6 +1696,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	cyndaquildelta: {
 		num: 155,
@@ -1663,6 +1738,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	typhlosiondeltamega: {
 		num: 157,
@@ -1680,6 +1756,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		cosmeticFormes: ["Typhlosion-Delta-Mega-Active"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	treeckodelta: {
 		num: 252,
@@ -1721,6 +1798,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	torchicdelta: {
 		num: 255,
@@ -1762,6 +1840,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	turtwigdelta: {
 		num: 387,
@@ -1803,6 +1882,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	snivydelta: {
 		num: 495,
@@ -1844,6 +1924,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	froakiedelta: {
 		num: 656,
@@ -1885,6 +1966,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	pidgeydelta: {
 		num: 16,
@@ -1926,6 +2008,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	pidgeotdeltamega: {
 		num: 18,
@@ -1942,6 +2025,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Pidgeotite",
 		tier: "OU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	diglettdelta: {
 		num: 50,
@@ -1969,6 +2053,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	growlithedelta: {
 		num: 58,
@@ -1996,6 +2081,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	geodudedelta: {
 		num: 74,
@@ -2037,6 +2123,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	tentacooldelta: {
 		num: 72,
@@ -2064,6 +2151,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	doduodelta: {
 		num: 84,
@@ -2091,6 +2179,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	tangeladelta: {
 		num: 114,
@@ -2118,6 +2207,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	dittodelta: {
 		num: 132,
@@ -2131,6 +2221,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	kabutodelta: {
 		num: 140,
@@ -2158,6 +2249,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	dratinidelta: {
 		num: 147,
@@ -2199,6 +2291,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	hoothootdelta: {
 		num: 163,
@@ -2226,6 +2319,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	chinchoudelta: {
 		num: 170,
@@ -2253,6 +2347,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	pichudelta: {
 		num: 172,
@@ -2278,6 +2373,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	raichudelta: {
 		num: 26,
@@ -2291,6 +2387,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	aipomdelta: {
 		num: 190,
@@ -2318,6 +2415,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	yanmadelta: {
 		num: 193,
@@ -2345,6 +2443,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	girafarigdelta: {
 		num: 203,
@@ -2358,6 +2457,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	girafarigdeltamega: {
 		num: 203,
@@ -2374,6 +2474,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Girafarigite",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	dunsparcedelta: {
 		num: 206,
@@ -2387,6 +2488,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	shuckledelta: {
 		num: 213,
@@ -2400,6 +2502,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	remoraiddelta: {
 		num: 223,
@@ -2427,6 +2530,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	elekiddelta: {
 		num: 239,
@@ -2468,6 +2572,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	magbydelta: {
 		num: 240,
@@ -2509,6 +2614,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	lotaddelta: {
 		num: 270,
@@ -2550,6 +2656,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	seedotdelta: {
 		num: 273,
@@ -2591,6 +2698,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	sableyedelta: {
 		num: 302,
@@ -2604,6 +2712,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	sableyedeltamega: {
 		num: 302,
@@ -2620,6 +2729,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Sablenite",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	mawiledelta: {
 		num: 303,
@@ -2633,6 +2743,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	mawiledeltamega: {
 		num: 303,
@@ -2649,6 +2760,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Mawilite",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	arondelta: {
 		num: 304,
@@ -2690,6 +2802,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	medititedelta: {
 		num: 307,
@@ -2717,6 +2830,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	medichamdeltamega: {
 		num: 308,
@@ -2733,6 +2847,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Medichamite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	numeldelta: {
 		num: 322,
@@ -2760,6 +2875,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	cameruptdeltamega: {
 		num: 323,
@@ -2776,6 +2892,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Cameruptite",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	plusledelta: {
 		num: 311,
@@ -2789,6 +2906,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	minundelta: {
 		num: 312,
@@ -2802,6 +2920,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	wailmerdelta: {
 		num: 320,
@@ -2829,6 +2948,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	feebasdelta: {
 		num: 349,
@@ -2856,6 +2976,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	miloticdeltamega: {
 		num: 350,
@@ -2872,6 +2993,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Milotite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	clamperldelta: {
 		num: 366,
@@ -2899,6 +3021,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	gorebyssdelta: {
 		num: 368,
@@ -2913,6 +3036,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	beldumdeltaspider: {
 		num: 374,
@@ -2941,6 +3065,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	metagrossdeltaspider: {
 		num: 376,
@@ -2955,6 +3080,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	metagrossdeltaspidermega: {
 		num: 376,
@@ -2971,6 +3097,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Metagrossite (Spider)",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	beldumdeltaruin: {
 		num: 374,
@@ -3012,6 +3139,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	metagrossdeltaruinmega: {
 		num: 376,
@@ -3028,6 +3156,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Metagrossite (Ruin)",
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	bunearydelta: {
 		num: 427,
@@ -3055,6 +3184,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	lopunnydeltamega: {
 		num: 428,
@@ -3071,6 +3201,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Lopunnite",
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	rioludelta: {
 		num: 447,
@@ -3098,6 +3229,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	lucariodeltamega: {
 		num: 448,
@@ -3114,6 +3246,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		requiredItem: "Delta Lucarionite",
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	croagunkdelta: {
 		num: 453,
@@ -3141,6 +3274,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	venipededelta: {
 		num: 543,
@@ -3182,6 +3316,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	petilildeltawater: {
 		num: 548,
@@ -3209,6 +3344,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	petilildeltafairy: {
 		num: 548,
@@ -3236,6 +3372,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	solosisdelta: {
 		num: 577,
@@ -3277,6 +3414,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	darumakadelta: {
 		num: 554,
@@ -3304,6 +3442,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	maractusdelta: {
 		num: 556,
@@ -3317,6 +3456,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	dwebbledeltaberry: {
 		num: 557,
@@ -3344,6 +3484,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	dwebbledeltacake: {
 		num: 557,
@@ -3371,6 +3512,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	yamaskdelta: {
 		num: 562,
@@ -3398,6 +3540,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	emolgadelta: {
 		num: 587,
@@ -3411,6 +3554,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	emolgadeltafired: {
 		num: 587,
@@ -3453,6 +3597,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	foongusdelta: {
 		num: 590,
@@ -3480,6 +3625,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	litwickdelta: {
 		num: 607,
@@ -3521,6 +3667,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	axewdelta: {
 		num: 610,
@@ -3562,6 +3709,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	golettdelta: {
 		num: 622,
@@ -3589,6 +3737,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	heatmordelta: {
 		num: 631,
@@ -3602,6 +3751,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	deinodelta: {
 		num: 633,
@@ -3643,6 +3793,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	larvestadelta: {
 		num: 636,
@@ -3670,6 +3821,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	amauradelta: {
 		num: 698,
@@ -3697,6 +3849,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	goomydelta: {
 		num: 704,
@@ -3738,6 +3891,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	regirockdelta: {
 		num: 377,
@@ -3751,6 +3905,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	regicedelta: {
 		num: 378,
@@ -3764,6 +3919,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	registeeldelta: {
 		num: 379,
@@ -3777,6 +3933,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "OU",
+		doublesTier: "DOU",
 	},
 	meloettadelta: {
 		num: 648,
@@ -3792,6 +3949,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	meloettadeltamagician: {
 		num: 648,
@@ -3810,6 +3968,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		battleOnly: "Meloetta-Delta",
 		tier: "RU",
 		natDexTier: "RU",
+		doublesTier: "(DUU)",
 	},
 	hoopadelta: {
 		num: 720,
@@ -3823,6 +3982,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "UU",
 		natDexTier: "UU",
+		doublesTier: "DUU",
 	},
 	hoopadeltaunleashed: {
 		num: 720,
@@ -3838,6 +3998,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	ufi: {
 		num: 6001,
@@ -3851,5 +4012,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		tier: "Uber",
 		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 };

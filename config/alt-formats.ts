@@ -206,7 +206,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Insurgence: Doubles",
-		column: 3,
+		column: 2,
 	},
 	{
 		name: "[Gen 6] Insg Dex Doubles AG",
@@ -226,6 +226,16 @@ export const Formats: FormatList = [
 	{
 		section: "Insurgence: Extras",
 		column: 2,
+	},
+	{
+		name: "[Gen 9] Insurgence FFA",
+
+		mod: 'gen9insurgence',
+		gameType: 'freeforall',
+		rated: false,
+		ruleset: [
+			'Standard NatDex',
+		],
 	},
 	{
 		name: "[Gen 9] Insurgence Custom Game",
@@ -318,7 +328,6 @@ export const Formats: FormatList = [
 		rated: false,
 		ruleset: [
 			'Standard NatDex', '+CAP', '+item:crucibellite', '+item:vilevial',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
 		],
 	},
 	{
