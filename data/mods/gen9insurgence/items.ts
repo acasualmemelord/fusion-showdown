@@ -1,4 +1,57 @@
 export const Items: {[k: string]: ModdedItemData} = {
+	// Modded
+	deepseascale: {
+		inherit: true,
+		onModifySpD(spd, pokemon) {
+			if (['Clamperl', 'Clamperl-Delta'].includes(pokemon.baseSpecies.name)) {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Clamperl", "Clamperl-Delta"],
+	},
+	deepseatooth: {
+		inherit: true,
+		onModifySpA(spa, pokemon) {
+			if (['Clamperl', 'Clamperl-Delta'].includes(pokemon.baseSpecies.name)) {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Clamperl", "Clamperl-Delta"],
+	},
+	lightball: {
+		inherit: true,
+		onModifyAtk(atk, pokemon) {
+			if (['Pikachu', 'Pikachu-Delta'].includes(pokemon.baseSpecies.baseSpecies)) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpA(spa, pokemon) {
+			if (['Pikachu', 'Pikachu-Delta'].includes(pokemon.baseSpecies.baseSpecies)) {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Pikachu", "Pikachu-Cosplay", "Pikachu-Rock-Star", "Pikachu-Belle", "Pikachu-Pop-Star", "Pikachu-PhD", "Pikachu-Libre", "Pikachu-Original", "Pikachu-Hoenn", "Pikachu-Sinnoh", "Pikachu-Unova", "Pikachu-Kalos", "Pikachu-Alola", "Pikachu-Partner", "Pikachu-Starter", "Pikachu-World", "Pikachu-Delta"],
+	},
+	metalpowder: {
+		inherit: true,
+		onModifyDef(def, pokemon) {
+			if (['Ditto', 'Ditto-Delta'].includes(pokemon.species.name) && !pokemon.transformed) {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Ditto", "Ditto-Delta"],
+	},
+	quickpowder: {
+		inherit: true,
+		onModifySpe(spe, pokemon) {
+			if (['Ditto', 'Ditto-Delta'].includes(pokemon.species.name) && !pokemon.transformed) {
+				return this.chainModify(2);
+			}
+		},
+		itemUser: ["Ditto", "Ditto-Delta"],
+	},
+
+	// Additions
 	crystalpiece: {
 		name: "Crystal Piece",
 		spritenum: 0,

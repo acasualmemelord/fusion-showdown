@@ -165,9 +165,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			let factor = 0.5;
 			switch (pokemon.effectiveWeather()) {
 			case 'newmoon':
+				factor = 0.667;
+				break;
 			case 'sunnyday':
 			case 'desolateland':
-				factor = 0.667;
+				factor = 0.333;
 				break;
 			case 'raindance':
 			case 'primordialsea':

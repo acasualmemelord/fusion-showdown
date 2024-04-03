@@ -39,6 +39,20 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			this.damage(target.baseMaxhp / (sleet ? 5 : 16));
 		},
 	},
+	arceus: {
+		inherit: true,
+		onType(types, pokemon) {
+			if (pokemon.transformed || pokemon.ability !== 'multitype') return types;
+			let type: string | undefined = 'Normal';
+			if (pokemon.ability === 'multitype') {
+				type = pokemon.getItem().onPlate;
+				if (!type) {
+					type = 'Normal';
+				}
+			}
+			return [type];
+		},
+	},
 	newmoon: {
 		name: 'NewMoon',
 		effectType: 'Weather',

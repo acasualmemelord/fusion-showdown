@@ -1,4 +1,43 @@
 export const Pokedex: {[k: string]: ModdedSpeciesData} = {
+	// Modded
+	delibird: {
+		inherit: true,
+		abilities: {0: "Vital Spirit", 1: "Hustle", H: "Winter Joy"},
+	},
+	whismur: {
+		inherit: true,
+		abilities: {0: "Soundproof", 1: "Amplifier", H: "Rattled"},
+	},
+	exploud: {
+		inherit: true,
+		abilities: {0: "Soundproof", 1: "Amplifier", H: "Scrappy"},
+	},
+	lunatone: {
+		inherit: true,
+		abilities: {0: "Levitate", H: "Noctem"},
+	},
+	solrock: {
+		inherit: true,
+		abilities: {0: "Levitate", H: "Drought"},
+	},
+	spiritomb: {
+		inherit: true,
+		abilities: {0: "Pressure", H: "Noctem"},
+	},
+	darkrai: {
+		inherit: true,
+		abilities: {0: "Bad Dreams", H: "Absolution"},
+	},
+	arceus: {
+		inherit: true,
+		abilities: {0: "Multitype", H: "Protean"},
+	},
+	zygarde: {
+		inherit: true,
+		abilities: {0: "Aura Break", 1: "Power Construct"},
+	},
+
+	
 	// Primal Formes
 	regigigasprimal: {
 		num: 486,
