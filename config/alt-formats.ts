@@ -188,12 +188,6 @@ export const Formats: FormatList = [
 		column: 2,
 	},
 	{
-		name: "[Gen 9] Ins National Dex AG",
-
-		mod: 'gen9insurgence',
-		ruleset: ['Standard NatDex'],
-	},
-	{
 		name: "[Gen 9] Ins National Dex OU",
 
 		mod: 'gen9insurgence',
@@ -202,6 +196,12 @@ export const Formats: FormatList = [
 			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
 			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
 		],
+	},
+	{
+		name: "[Gen 9] Ins National Dex AG",
+
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex'],
 	},
 
 	{
@@ -224,7 +224,7 @@ export const Formats: FormatList = [
 	},
 
 	{
-		section: "Insurgence: Extras",
+		section: "Insurgence: Extra",
 		column: 2,
 	},
 	{
