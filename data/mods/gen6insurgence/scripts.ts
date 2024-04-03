@@ -1038,13 +1038,13 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen6',
 	init() {
 		for (const i in this.data.Pokedex) {
+			if (!cantLearnTM.includes(i) && i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
+				this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
+			}
 			if (i in InsgDex) {
 				this.data.Pokedex[i].num = InsgDex[i];
 				this.data.Pokedex[i].gen = 6;
 				delete this.data.Pokedex[i].isNonstandard;
-				if (!cantLearnTM.includes(i) && i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
-					this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
-				}
 			} else {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
