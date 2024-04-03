@@ -317,7 +317,7 @@ export default class TeamGenerator {
 			evs: {hp: 84, atk: 84, def: 84, spa: 84, spd: 84, spe: 84},
 			ivs,
 			level,
-			fusion: 'Regigigas',
+			fusion: 'regigigas',
 			shiny: this.prng.randomChance(1, 1024),
 			happiness: 255,
 		};
