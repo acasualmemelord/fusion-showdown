@@ -1,3 +1,4 @@
+const cantLearnTM = ['beldum', 'blipbug', 'burmy', 'cascoon', 'caterpie', 'combee', 'cosmoem', 'cosmog', 'ditto', 'kakuna', 'kricketot', 'magikarp', 'metapod', 'scatterbug', 'silcoon', 'smeargle', 'tynamo', 'unown', 'weedle', 'wobbuffet', 'wurmple', 'wynaut'];
 const InsgDex: {[k: string]: number} = {
 	"bulbasaur": 1,
 	"ivysaur": 2,
@@ -1041,6 +1042,9 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.data.Pokedex[i].num = InsgDex[i];
 				this.data.Pokedex[i].gen = 6;
 				delete this.data.Pokedex[i].isNonstandard;
+				if (!cantLearnTM.includes(i) && this.modData('Learnsets', i).learnset) {
+					this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
+				}
 			} else {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";

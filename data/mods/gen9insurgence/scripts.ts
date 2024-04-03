@@ -1,5 +1,14 @@
+const cantLearnTM = ['beldum', 'blipbug', 'burmy', 'cascoon', 'caterpie', 'combee', 'cosmoem', 'cosmog', 'ditto', 'kakuna', 'kricketot', 'magikarp', 'metapod', 'scatterbug', 'silcoon', 'smeargle', 'tynamo', 'unown', 'weedle', 'wobbuffet', 'wurmple', 'wynaut'];
+
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen9',
+	init() {
+		for (const i in this.data.Pokedex) {
+			if (!cantLearnTM.includes(i) && this.modData('Learnsets', i).learnset) {
+					this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
+			}
+		}
+	},
 	actions: {
 		canMegaEvo(pokemon: Pokemon) {
 			const species = pokemon.baseSpecies;
