@@ -6,8 +6,6 @@ export const Scripts: ModdedBattleScriptsData = {
 		for (const i in this.data.Pokedex) {
 			if (!cantLearnTM.includes(i) && i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
 					this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
-			} else {
-				console.log(i);
 			}
 		}
 	},
