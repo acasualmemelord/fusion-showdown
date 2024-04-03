@@ -492,8 +492,8 @@ const IFDex: {[k: string]: number} = {
 };
 
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'gen7',
 	gen: 7,
+	inherit: 'gen7',
 	init() {
 		for (const i in this.data.Pokedex) {
 			if (i in IFDex) {

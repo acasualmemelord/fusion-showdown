@@ -166,8 +166,81 @@ export const Formats: FormatList = [
 	},
 
 	{
-		section: "Pokéathlon: Regional Dex",
+		section: "Insurgence: Regional Dex",
 		column: 2,
+	},
+	{
+		name: "[Gen 6] Insurgence Dex OU",
+
+		mod: 'gen6insurgence',
+		ruleset: ['Standard', 'Swagger Clause'],
+		banlist: ['AG', 'Uber', 'Arena Trap', 'Shadow Tag', 'Soul Dew', 'Baton Pass'],
+	},
+	{
+		name: "[Gen 6] Insurgence Dex AG",
+
+		mod: 'gen6insurgence',
+		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+
+	{
+		section: "Insurgence: National Dex",
+		column: 2,
+	},
+	{
+		name: "[Gen 9] Insurgence NatDex AG",
+
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex'],
+	},
+	{
+		name: "[Gen 9] Insurgence NatDex OU",
+
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
+		banlist: [
+			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
+			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
+		],
+	},
+
+	{
+		section: "Insurgence: Doubles",
+		column: 3,
+	},
+	{
+		name: "[Gen 6] Insg Dex Doubles AG",
+
+		mod: 'gen6insurgence',
+		gameType: 'doubles',
+		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: "[Gen 9] Insg NatDex Doubles AG",
+
+		mod: 'gen9insurgence',
+		gameType: 'doubles',
+		ruleset: ['Standard NatDex'],
+	},
+
+	{
+		section: "Insurgence: Extras",
+		column: 2,
+	},
+	{
+		name: "[Gen 9] Insurgence Custom Game",
+
+		mod: 'gen9insurgence',
+		searchShow: false,
+		debug: true,
+		battle: {trunc: Math.trunc},
+		// no restrictions, for serious (other than team preview)
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+
+	{
+		section: "Pokéathlon: Regional Dex",
+		column: 3,
 	},
 	{
 		name: "[Gen 9] PoA Random Battle",
@@ -195,7 +268,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Pokéathlon: National Dex",
-		column: 2,
+		column: 3,
 	},
 	{
 		name: "[Gen 9] PoA National Dex OU",
@@ -216,7 +289,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Pokéathlon: Doubles",
-		column: 2,
+		column: 3,
 	},
 	{
 		name: "[Gen 9] PoA Dex Doubles AG",
@@ -235,25 +308,7 @@ export const Formats: FormatList = [
 
 	{
 		section: "Pokéathlon: Extras",
-		column: 2,
-	},
-	{
-		name: "[Gen 9] PoA Fusions Dex AG",
-
-		mod: 'gen9pokeathlon',
-		ruleset: [
-			'Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Misc', '!Obtainable Abilities', 'Species Reveal Clause',
-		],
-	},
-	{
-		name: "[Gen 9] PoA Fusions NatDex AG",
-
-		mod: 'gen9pokeathlon',
-		ruleset: [
-			'Standard NatDex', '+CAP', '+item:crucibellite', '+item:vilevial',
-			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
-		],
+		column: 3,
 	},
 	{
 		name: "[Gen 9] PoA Free-for-all",
@@ -270,55 +325,6 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PoA Custom Game",
 
 		mod: 'gen9pokeathlon',
-		searchShow: false,
-		debug: true,
-		battle: {trunc: Math.trunc},
-		// no restrictions, for serious (other than team preview)
-		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
-	},
-
-	{
-		section: "Insurgence: Regional Dex",
-		column: 3,
-	},
-	{
-		name: "[Gen 6] Insurgence Dex OU",
-
-		mod: 'gen6insurgence',
-		ruleset: ['Standard', 'Swagger Clause'],
-		banlist: ['AG', 'Uber', 'Arena Trap', 'Shadow Tag', 'Soul Dew', 'Baton Pass'],
-	},
-	{
-		name: "[Gen 6] Insurgence Dex AG",
-
-		mod: 'gen6insurgence',
-		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
-	},
-
-	{
-		section: "Insurgence: National Dex",
-		column: 3,
-	},
-	{
-		name: "[Gen 9] Insurgence NatDex AG",
-
-		mod: 'gen9insurgence',
-		ruleset: ['Standard NatDex'],
-	},
-	{
-		name: "[Gen 9] Insurgence NatDex OU",
-
-		mod: 'gen9insurgence',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
-		banlist: [
-			'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock',
-			'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects', 'Shed Tail',
-		],
-	},
-	{
-		name: "[Gen 9] Insurgence Custom Game",
-
-		mod: 'gen9insurgence',
 		searchShow: false,
 		debug: true,
 		battle: {trunc: Math.trunc},

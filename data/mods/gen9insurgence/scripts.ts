@@ -1,6 +1,7 @@
 const cantLearnTM = ['beldum', 'blipbug', 'burmy', 'cascoon', 'caterpie', 'combee', 'cosmoem', 'cosmog', 'ditto', 'kakuna', 'kricketot', 'magikarp', 'metapod', 'scatterbug', 'silcoon', 'smeargle', 'tynamo', 'unown', 'weedle', 'wobbuffet', 'wurmple', 'wynaut'];
 
 export const Scripts: ModdedBattleScriptsData = {
+	gen: 9,
 	inherit: 'gen9',
 	init() {
 		for (const i in this.data.Pokedex) {
