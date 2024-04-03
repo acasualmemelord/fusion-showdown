@@ -1042,7 +1042,7 @@ export const Scripts: ModdedBattleScriptsData = {
 				this.data.Pokedex[i].num = InsgDex[i];
 				this.data.Pokedex[i].gen = 6;
 				delete this.data.Pokedex[i].isNonstandard;
-				if (!cantLearnTM.includes(i) && this.modData('Learnsets', i) && this.modData('Learnsets', i).learnset) {
+				if (!cantLearnTM.includes(i) && i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
 					this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
 				}
 			} else {
