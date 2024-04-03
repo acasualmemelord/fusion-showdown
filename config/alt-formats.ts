@@ -170,14 +170,14 @@ export const Formats: FormatList = [
 		column: 2,
 	},
 	{
-		name: "[Gen 6] Insurgence Dex OU",
+		name: "[Gen 6] Ins Dex OU",
 
 		mod: 'gen6insurgence',
 		ruleset: ['Standard', 'Swagger Clause'],
 		banlist: ['AG', 'Uber', 'Arena Trap', 'Shadow Tag', 'Soul Dew', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 6] Insurgence Dex AG",
+		name: "[Gen 6] Ins Dex AG",
 
 		mod: 'gen6insurgence',
 		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
@@ -188,13 +188,13 @@ export const Formats: FormatList = [
 		column: 2,
 	},
 	{
-		name: "[Gen 9] Insurgence NatDex AG",
+		name: "[Gen 9] Ins National Dex AG",
 
 		mod: 'gen9insurgence',
 		ruleset: ['Standard NatDex'],
 	},
 	{
-		name: "[Gen 9] Insurgence NatDex OU",
+		name: "[Gen 9] Ins National Dex OU",
 
 		mod: 'gen9insurgence',
 		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
@@ -209,14 +209,14 @@ export const Formats: FormatList = [
 		column: 2,
 	},
 	{
-		name: "[Gen 6] Insg Dex Doubles AG",
+		name: "[Gen 6] Ins Dex Doubles AG",
 
 		mod: 'gen6insurgence',
 		gameType: 'doubles',
 		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
-		name: "[Gen 9] Insg NatDex Doubles AG",
+		name: "[Gen 9] Ins NatDex Doubles AG",
 
 		mod: 'gen9insurgence',
 		gameType: 'doubles',
@@ -228,7 +228,7 @@ export const Formats: FormatList = [
 		column: 2,
 	},
 	{
-		name: "[Gen 9] Insurgence FFA",
+		name: "[Gen 9] Ins Free-For-All",
 
 		mod: 'gen9insurgence',
 		gameType: 'freeforall',
@@ -238,7 +238,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Insurgence Custom Game",
+		name: "[Gen 9] Ins Custom Game",
 
 		mod: 'gen9insurgence',
 		searchShow: false,
