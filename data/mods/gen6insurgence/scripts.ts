@@ -973,6 +973,7 @@ const InsgDex: {[k: string]: number} = {
 	"beldumdeltaruin": 868,
 	"metangdeltaruin": 869,
 	"metagrossdeltaruin": 870,
+	"metagrossdeltaruincrystal": 870,
 	"metagrossdeltaruinmega": 870,
 	"bunearydelta": 871,
 	"lopunnydelta": 872,

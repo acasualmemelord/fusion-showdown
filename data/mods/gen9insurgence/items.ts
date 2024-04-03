@@ -71,6 +71,18 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		num: 0,
 	},
+	crystalfragment: {
+		name: "Crystal Fragment",
+		spritenum: 0,
+		megaStone: "Metagross-Delta-Ruin-Crystal",
+		megaEvolves: "Metagross-Delta-Ruin",
+		itemUser: ["Metagross-Delta-Ruin"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 0,
+	},
 	flygonarmor: {
 		name: "Flygon Armor",
 		spritenum: 0,
