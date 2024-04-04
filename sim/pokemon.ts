@@ -313,6 +313,7 @@ export class Pokemon {
 
 		this.name = set.name.substr(0, 200);
 		this.fullname = this.side.id + ': ' + this.name;
+		this.fusion = this.battle.format.ruleset.includes('Infinite Fusion Mod') ? this.set.fusion : undefined;
 
 		set.level = this.battle.clampIntRange(set.adjustLevel || set.level || 100, 1, 9999);
 		this.level = set.level;
@@ -354,8 +355,8 @@ export class Pokemon {
 		let displayedSpeciesName = this.species.name;
 		if (displayedSpeciesName === 'Greninja-Bond') displayedSpeciesName = 'Greninja';
 		this.details = displayedSpeciesName + (this.level === 100 ? '' : ', L' + this.level) +
-			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
-			(this.set.fusion ? ', fusion: ' + this.set.fusion : '') + (this.set.altsprite ? ', alt: ' + this.set.altsprite : '');
+			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') + 
+			(this.fusion ? ', fusion: ' + this.fusion + (this.set.altsprite ? ', alt: ' + this.set.altsprite : '') : '');
 
 		this.status = '';
 		this.statusState = {};
@@ -414,7 +415,6 @@ export class Pokemon {
 		this.maybeDisabled = false;
 
 		this.illusion = null;
-		this.fusion = this.set.fusion;
 		this.transformed = false;
 
 		this.fainted = false;
@@ -1400,7 +1400,8 @@ export class Pokemon {
 		if (isPermanent) {
 			this.baseSpecies = rawSpecies;
 			this.details = species.name + (this.level === 100 ? '' : ', L' + this.level) +
-				(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
+				(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '') +
+					(this.fusion ? ', fusion: ' + this.fusion + (this.set.altsprite ? ', alt: ' + this.set.altsprite : '') : '');
 			let details = (this.illusion || this).details;
 			if (this.terastallized) details += `, tera:${this.terastallized}`;
 			this.battle.add('detailschange', this, details);

@@ -995,7 +995,7 @@
     "rabbicicle": [
         {
             "ability": "fluffy",
-            "item": "sitrusberry",
+            "item": "aguavberry",
             "moves": [
                 "bellydrum",
                 "iceshard",
@@ -1660,6 +1660,418 @@
                 "leechlife"
             ],
             "teraType": "water"
+        }
+    ],
+    "enteisupra": [
+        {
+            "ability": "snowwarning",
+            "item": "lightclay",
+            "moves": [
+                "auroraveil",
+                "uturn",
+                "blizzard",
+                "slackoff"
+            ],
+            "teraType": "ice"
+        },
+        {
+            "ability": "furcoat",
+            "item": "leftovers",
+            "moves": [
+                "swordsdance",
+                "slackoff",
+                "extremespeed",
+                "iciclecrash"
+            ],
+            "teraType": "ice"
+        },
+        {
+            "ability": "adaptability",
+            "item": "nevermeltice",
+            "moves": [
+                "swordsdance",
+                "iceshard",
+                "icespinner",
+                "slackoff"
+            ],
+            "teraType": "ice"
+        },
+        {
+            "ability": "snowwarning",
+            "item": "assaultvest",
+            "moves": [
+                "uturn",
+                "ironhead",
+                "knockoff",
+                "icespinner"
+            ],
+            "teraType": "ice"
+        },
+        {
+            "ability": "furcoat",
+            "item": "leftovers",
+            "moves": [
+                "bulkup",
+                "slackoff",
+                "iciclecrash",
+                "earthquake"
+            ],
+            "teraType": "ice"
+        }
+    ],
+    "monetoad": [
+        {
+            "ability": "pickup",
+            "item": "leftovers",
+            "moves": [
+                "speedswap",
+                "currencyflow",
+                "knockoff",
+                "uturn"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "pickup",
+            "item": "assaultvest",
+            "moves": [
+                "payday",
+                "currencyflow",
+                "knockoff",
+                "uturn"
+            ],
+            "teraType": "ground"
+        },
+        {
+            "ability": "pickup",
+            "item": "sitrusberry",
+            "moves": [
+                "partingshot",
+                "currencyflow",
+                "knockoff",
+                "aromatherapy"
+            ],
+            "teraType": "ground"
+        }
+    ],
+    "paldemaria": [
+        {
+            "ability": "liquidvoice",
+            "item": "choicescarf",
+            "moves": [
+                "sirensong",
+                "moonblast",
+                "icebeam",
+                "flipturn"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "regenerator",
+            "item": "assaultvest",
+            "moves": [
+                "moonblast",
+                "scald",
+                "flipturn",
+                "drainingkiss"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "liquidvoice",
+            "item": "lifeorb",
+            "moves": [
+                "drainingkiss",
+                "icebeam",
+                "scald",
+                "calmmind"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "regenerator",
+            "item": "leftovers",
+            "moves": [
+                "healbell",
+                "wish",
+                "scald",
+                "flipturn"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "regenerator",
+            "item": "aguavberry",
+            "moves": [
+                "yawn",
+                "wish",
+                "flipturn",
+                "sirensong"
+            ],
+            "teraType": "water"
+        }
+    ],
+    "staruhz": [
+        {
+            "ability": "naturalcure",
+            "item": "choicespecs",
+            "moves": [
+                "hydropump",
+                "mindwipe",
+                "thunderbolt",
+                "flipturn"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "naturalcure",
+            "item": "choicescarf",
+            "moves": [
+                "hydropump",
+                "mindwipe",
+                "thunderbolt",
+                "flipturn"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "starfall",
+            "item": "leftovers",
+            "moves": [
+                "recover",
+                "thunderwave",
+                "flipturn",
+                "scald"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "starfall",
+            "item": "heavydutyboots",
+            "moves": [
+                "flipturn",
+                "toxic",
+                "rapidspin",
+                "mindwipe"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "analytic",
+            "item": "powerherb",
+            "moves": [
+                "meteorbeam",
+                "scald",
+                "psyshock",
+                "thunderbolt"
+            ],
+            "teraType": "water"
+        },
+        {
+            "ability": "analytic",
+            "item": "focussash",
+            "moves": [
+                "trickroom",
+                "hydropump",
+                "futuresight",
+                "teleport"
+            ],
+            "teraType": "water"
+        }
+    ],
+    "suicunesupra": [
+        {
+            "ability": "drought",
+            "item": "heavydutyboots",
+            "moves": [
+                "morningsun",
+                "lavaplume",
+                "earthpower",
+                "darkpulse"
+            ],
+            "teraType": "fire"
+        },
+        {
+            "ability": "adaptability",
+            "item": "heatrock",
+            "moves": [
+                "fierymaelstrom",
+                "overheat",
+                "earthpower",
+                "morningsun"
+            ],
+            "teraType": "fire"
+        },
+        {
+            "ability": "vaporization",
+            "item": "heavydutyboots",
+            "moves": [
+                "firelash",
+                "earthquake",
+                "rockslide",
+                "morningsun"
+            ],
+            "teraType": "fire"
+        }
+    ],
+    "sweepdol": [
+        {
+            "ability": "cleansweep",
+            "item": "sitrusberry",
+            "moves": [
+                "tidyup",
+                "uturn",
+                "moonblast",
+                "moonlight"
+            ],
+            "teraType": "grass"
+        },
+        {
+            "ability": "cleansweep",
+            "item": "leftovers",
+            "moves": [
+                "uturn",
+                "moonblast",
+                "aromatherapy",
+                "sleeppowder"
+            ],
+            "teraType": "grass"
+        },
+        {
+            "ability": "cleansweep",
+            "item": "lightclay",
+            "moves": [
+                "reflect",
+                "lightscreen",
+                "uturn",
+                "moonblast"
+            ],
+            "teraType": "grass"
+        },
+        {
+            "ability": "infiltrator",
+            "item": "focussash",
+            "moves": [
+                "sleeppowder",
+                "tidyup",
+                "energyball",
+                "moonblast"
+            ],
+            "teraType": "grass"
+        }
+    ],
+    "toxice": [
+        {
+            "ability": "levitate",
+            "item": "blacksludge",
+            "moves": [
+                "stealthrock",
+                "firelash",
+                "iceshard",
+                "poisonjab"
+            ],
+            "teraType": "poison"
+        },
+        {
+            "ability": "levitate",
+            "item": "blacksludge",
+            "moves": [
+                "toxic",
+                "stealthrock",
+                "icespinner",
+                "poisonjab"
+            ],
+            "teraType": "poison"
+        },
+        {
+            "ability": "flashfire",
+            "item": "assaultvest",
+            "moves": [
+                "firelash",
+                "iceshard",
+                "poisonjab",
+                "pursuit"
+            ],
+            "teraType": "poison"
+        },
+        {
+            "ability": "levitate",
+            "item": "blacksludge",
+            "moves": [
+                "defog",
+                "willowisp",
+                "firelash",
+                "poisonjab"
+            ],
+            "teraType": "poison"
+        }
+    ],
+    "wrighvern": [
+        {
+            "ability": "technician",
+            "item": "heavydutyboots",
+            "moves": [
+                "twingust",
+                "dracometeor",
+                "uturn",
+                "roost"
+            ],
+            "teraType": "dragon"
+        },
+        {
+            "ability": "technician",
+            "item": "choicespecs",
+            "moves": [
+                "twingust",
+                "dracometeor",
+                "hiddenpowerfire",
+                "uturn"
+            ],
+            "teraType": "dragon"
+        },
+        {
+            "ability": "windrider",
+            "item": "sitrusberry",
+            "moves": [
+                "tailwind",
+                "acrobatics",
+                "dragonclaw",
+                "uturn"
+            ],
+            "teraType": "dragon"
+        },
+        {
+            "ability": "opportunist",
+            "item": "leftovers",
+            "moves": [
+                "substitute",
+                "roost",
+                "twingust",
+                "dragonbreath"
+            ],
+            "teraType": "dragon"
+        },
+        {
+            "ability": "windrider",
+            "item": "weaknesspolicy",
+            "moves": [
+                "tailwind",
+                "acrobatics",
+                "dragonclaw",
+                "roost"
+            ],
+            "teraType": "dragon"
+        },
+        {
+            "ability": "windrider",
+            "item": "heavydutyboots",
+            "moves": [
+                "thunderwave",
+                "twingust",
+                "dragontail",
+                "uturn"
+            ],
+            "teraType": "dragon"
         }
     ]
 }

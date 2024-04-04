@@ -19991,6 +19991,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		onModifyType(move, pokemon) {
 			if (pokemon.species.name === 'Terapagos-Stellar') {
 				move.type = 'Stellar';
+				if (pokemon.terastallized && pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) {
+					move.category = 'Physical';
+				}
 			}
 		},
 		onModifyMove(move, pokemon) {
@@ -20988,7 +20991,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 3,
 		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
-		onTryHit(target, pokemon) {
+		onTry(source, target) {
 			const action = this.queue.willMove(target);
 			const move = action?.choice === 'move' ? action.move : null;
 			if (!move || move.priority <= 0.1 || move.category === 'Status') {

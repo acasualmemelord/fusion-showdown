@@ -83,39 +83,51 @@ const PoADex: {[k: string]: number} = {
 	"eyespy": 6008,
 	"icyall": 6009,
 	"ironeverlasting": 6010,
+	"squice": 6011,
+	"toxice": 6012,
 	"golisopodshogun": 768,
 	"tinkatonrhinian": 959,
-	"regimyo": 6011,
-	"jovianshk": 6012,
-	"lunachi": 6013,
-	"ockthane": 6014,
+	"regimyo": 6013,
+	"jovianshk": 6014,
+	"lunachi": 6015,
+	"ockthane": 6016,
 	"incineroarolulian": 727,
 	"raikousupra": 243,
+	"enteisupra": 244,
+	"suicunesupra": 245,
 	"heatransupra": 485,
-	"mosster": 6015,
-	"barrimander": 6016,
-	"meditao": 6017,
+	"mosster": 6017,
+	"barrimander": 6018,
+	"staruhz": 6019,
+	"wrighvern": 6020,
+	"meditao": 6021,
 	"electrodemega": 101,
 	"florgesmega": 671,
-	"bewitwing": 6018,
-	"eidolburgh": 6019,
+	"pandiz": 6022,
+	"bewitwing": 6023,
+	"eidolburgh": 6024,
 	"snorlaxfrost": 143,
 	"snorlaxfrostmega": 143,
 	"heracrosssubarctic": 214,
-	"sirentom": 6020,
-	"braskeptic": 6021,
-	"maggony": 6022,
-	"sweepdol": 6023,
-	"paldemaria": 6024,
+	"sirentom": 6025,
+	"braskeptic": 6026,
+	"maggony": 6027,
+	"sweepdol": 6028,
+	"paldemaria": 6029,
+	"monetoad": 6030,
+	"drifloonkitakami": 425,
+	"drifbozu": 6031,
+	"nestitan": 6032,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'basefusion',
+	gen: 9,
+	inherit: 'gen9',
 	init() {
 		for (const i in this.data.Pokedex) {
 			if (i in PoADex) {
 				this.data.Pokedex[i].num = PoADex[i];
-				this.data.Pokedex[i].isNonstandard = null;
+				delete this.data.Pokedex[i].isNonstandard;
 			} else {
 				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";

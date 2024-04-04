@@ -25,4 +25,11 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 			}
 		},
 	},
+	scatteredcoins: {
+		name: 'Scattered Coins',
+		noCopy: true,
+		onSideStart(target, source, sourceEffect) {
+			this.add('-sidestart', target, 'move: Scattered Coins');
+		},
+	},
 };

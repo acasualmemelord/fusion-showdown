@@ -484,18 +484,24 @@ const IFDex: {[k: string]: number} = {
 	"rockruff": 463,
 	"lycanroc": 464,
 	"lycanrocmidnight": 465,
+	"meloetta": 466,
+	"meloettapirouette": 467,
+	"cresselia": 468,
+	"bruxish": 469,
+	"necrozmaultra": 470,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'gen7',
 	gen: 7,
+	inherit: 'gen7',
 	init() {
 		for (const i in this.data.Pokedex) {
 			if (i in IFDex) {
 				this.data.Pokedex[i].num = IFDex[i];
-				this.data.Pokedex[i].isNonstandard = null;
+				this.data.Pokedex[i].gen = 7;
+				delete this.data.Pokedex[i].isNonstandard;
 			} else {
-				this.data.Pokedex[i].num = 0;
+				if (this.data.Pokedex[i].num > 0) this.data.Pokedex[i].num *= -1;
 				this.data.Pokedex[i].isNonstandard = "Unobtainable";
 			}
 		}
