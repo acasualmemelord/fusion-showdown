@@ -588,8 +588,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Jirachite",
-		tier: "OU",
-		natDexTier: "UU",
+		tier: "Uber",
+		natDexTier: "OU",
 		doublesTier: "DUU",
 	},
 	chatotmega: {
@@ -742,8 +742,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Cryogonalite",
 		tier: "Uber",
-		natDexTier: "OU",
-		doublesTier: "DOU",
+		natDexTier: "Uber",
+		doublesTier: "DUber",
 	},
 	stunfiskmega: {
 		num: 618,
@@ -759,7 +759,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Stunfiskite",
 		tier: "OU",
-		natDexTier: "UU",
+		natDexTier: "OU",
 		doublesTier: "DUU",
 	},
 	bisharpmega: {
@@ -1843,7 +1843,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		prevo: "Combusken-Delta",
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
-		tier: "UU",
+		tier: "OU",
 		natDexTier: "UU",
 		doublesTier: "DUU",
 	},
@@ -3971,7 +3971,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
 		tier: "OU",
-		natDexTier: "UU",
+		natDexTier: "OU",
 		doublesTier: "DUU",
 	},
 	meloettadeltamagician: {
