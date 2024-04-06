@@ -709,7 +709,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	drakonvoice: {
 		num: 0,
-		accuracy: 100,
+		accuracy: 85,
 		basePower: 105,
 		category: "Special",
 		name: "Drakon Voice",

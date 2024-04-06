@@ -204,7 +204,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	// Castformes
 	castformsandy: {
 		num: 351,
-		name: "Castform-Snowy",
+		name: "Castform-Sandy",
 		baseSpecies: "Castform",
 		forme: "Snowy",
 		types: ["Rock"],
@@ -219,7 +219,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 	},
 	castformcloudy: {
 		num: 351,
-		name: "Castform-Snowy",
+		name: "Castform-Cloudy",
 		baseSpecies: "Castform",
 		forme: "Snowy",
 		types: ["Dark"],

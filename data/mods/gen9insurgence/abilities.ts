@@ -118,7 +118,23 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.chainModify([source.effectiveWeather() === 'newmoon' ? 6827 : (move.hasAuraBreak ? 3072 : 5448), 4096]);
 		},
 	},
-
+	flowergift: {
+		inherit: true,
+		onAllyModifyAtkPriority: 3,
+		onAllyModifyAtk(atk, pokemon) {
+			if (['Noivern-Delta', 'Cherrim'].includes(this.effectState.target.baseSpecies.baseSpecies)) return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAllyModifySpDPriority: 4,
+		onAllyModifySpD(spd, pokemon) {
+			if (['Noivern-Delta', 'Cherrim'].includes(this.effectState.target.baseSpecies.baseSpecies)) return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	// Additions
 	absolution: {
 		onModifySpAPriority: 5,
