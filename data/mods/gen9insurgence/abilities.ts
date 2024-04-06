@@ -434,6 +434,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(target, source, effect) {
 			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
 				this.heal(target.baseMaxhp / 8);
+			} else if (['raindance', 'primordialsea', 'newmoon'].includes(target.effectiveWeather())){
+				return;
 			} else {
 				this.heal(target.baseMaxhp / 16);
 			}
