@@ -178,7 +178,7 @@ export const Formats: FormatList = [
 			'AG', 'Uber',
 			'ability:arenatrap', 'ability:shadowtag',
 			'item:souldew',
-			'move:batonpass', 'move:permafrost'
+			'move:batonpass', 'move:permafrost', 'move:livewire',
 		],
 	},
 	{
@@ -201,7 +201,7 @@ export const Formats: FormatList = [
 			'ND Uber', 'ND AG',
 			'ability:arenatrap', 'ability:moody', 'ability:powerconstruct', 'ability:shadowtag',
 			'item:kingsrock', 'item:quickclaw', 'item:razorfang',
-			'move:assist', 'move:batonpass', 'move:lastrespects', 'move:shedtail',
+			'move:assist', 'move:batonpass', 'move:lastrespects', 'move:shedtail', 'move:permafrost', 'move:livewire',
 		],
 	},
 	{
