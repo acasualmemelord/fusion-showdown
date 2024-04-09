@@ -403,10 +403,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			let success = false;
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({evasion: -1});
 			const removeTarget = [
-				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge',
+				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge',
 			];
 			const removeAll = [
-				'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge',
+				'spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge',
 			];
 			for (const targetCondition of removeTarget) {
 				if (target.side.removeSideCondition(targetCondition)) {
@@ -432,7 +432,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
@@ -448,7 +448,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Mortal Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Mortal Spin', '[of] ' + pokemon);
@@ -467,7 +467,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -483,7 +483,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
 					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
@@ -502,7 +502,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			for (const active of this.getAllActive()) {
 				if (active.removeVolatile('substitute')) success = true;
 			}
-			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
+			const removeAll = ['spikes', 'toxicspikes', 'stealthrock', 'hotcoals', 'stickyweb', 'permafrost', 'livewire', 'gmaxsteelsurge'];
 			const sides = [pokemon.side, ...pokemon.side.foeSidesWithConditions()];
 			for (const side of sides) {
 				for (const sideCondition of removeAll) {
@@ -520,7 +520,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		onHitField(target, source) {
 			const sideConditions = [
-				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'permafrost', 'livewire', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
+				'mist', 'lightscreen', 'reflect', 'spikes', 'safeguard', 'tailwind', 'toxicspikes', 'stealthrock', 'hotcoals', 'permafrost', 'livewire', 'waterpledge', 'firepledge', 'grasspledge', 'stickyweb', 'auroraveil', 'gmaxsteelsurge', 'gmaxcannonade', 'gmaxvinelash', 'gmaxwildfire',
 			];
 			let success = false;
 			if (this.gameType === "freeforall") {
@@ -721,6 +721,33 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: null,
 		target: "allAdjacentFoes",
 		type: "Dragon",
+		contestType: "Cool",
+	},
+	hotcoals: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Hot Coals",
+		pp: 20,
+		priority: 0,
+		flags: {reflectable: 1, metronome: 1, mustpressure: 1},
+		sideCondition: 'hotcoals',
+		condition: {
+			// this is a side condition
+			onSideStart(side) {
+				this.add('-sidestart', side, 'move: Hot Coals');
+			},
+			onEntryHazard(pokemon) {
+				if (pokemon.hasItem('heavydutyboots')) return;
+				const typeMod = this.clampIntRange(pokemon.runEffectiveness(this.dex.getActiveMove('hotcoals')), -6, 6);
+				this.damage(pokemon.maxhp * Math.pow(2, typeMod) / 8);
+			},
+		},
+		secondary: null,
+		target: "foeSide",
+		type: "Fire",
+		zMove: {boost: {def: 1}},
 		contestType: "Cool",
 	},
 	jetstream: {

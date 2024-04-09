@@ -269,7 +269,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	foundry: {
-		//add fire type stealth rock
+		onTryMovePriority: -2,
+		onTryMove(pokemon, target, move) {
+			if (move.id === 'stealthrock') {
+				this.actions.useMove('hotcoals', pokemon, target);
+				return null;
+			}
+		},
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
 			const noModifyType = [
