@@ -477,7 +477,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		condition: {
 			onStart(pokemon, source) {
-				this.add('-activate', pokemon, 'ability: Zealous Flock');
 				this.add('-start', pokemon, 'Zealous Flock', '[of] ' + source);
 			},
 			onResidualOrder: 12,
