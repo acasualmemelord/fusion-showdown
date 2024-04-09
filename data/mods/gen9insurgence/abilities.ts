@@ -218,8 +218,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	chlorofury: {
+		onStart(pokemon) {
+			pokemon.addVolatile('chlorofury');
+		},
 		condition: {
-			duration: 2,
+			duration: 3,
 			onStart(pokemon) {
 				if (pokemon.side.totalFainted) {
 					this.boost({spe: 1, spa: pokemon.side.totalFainted}, pokemon);
