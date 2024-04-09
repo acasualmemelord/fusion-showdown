@@ -1,4 +1,6 @@
 const cantLearnTM = ['beldum', 'blipbug', 'burmy', 'cascoon', 'caterpie', 'combee', 'cosmoem', 'cosmog', 'ditto', 'kakuna', 'kricketot', 'magikarp', 'metapod', 'scatterbug', 'silcoon', 'smeargle', 'tynamo', 'unown', 'weedle', 'wobbuffet', 'wurmple', 'wynaut'];
+const availableTMs = ['honeclaws', 'dragonclaw', 'bulldoze', 'calmmind', 'roar', 'toxic', 'hail', 'bulkup', 'dragonpulse', 'hiddenpower', 'sunnyday', 'taunt', 'icebeam', 'blizzard', 'hyperbeam', 'lightscreen', 'protect', 'raindance', 'snatch', 'safeguard', 'frustration', 'solarbeam', 'irontail', 'thunderbolt', 'thunder', 'earthquake', 'return', 'dig', 'psychic', 'shadowball', 'brickbreak', 'doubleteam', 'reflect', 'sludgewave', 'flamethrower', 'sludgebomb', 'sandstorm', 'fireblast', 'rocktomb', 'aerialace', 'torment', 'facade', 'flamecharge', 'rest', 'attract', 'thief', 'lowsweep', 'scald', 'recycle', 'overheat', 'roost', 'focusblast', 'energyball', 'falseswipe', 'brine', 'fling', 'chargebeam', 'psyshock', 'skillswap', 'dragontail', 'willowisp', 'newmoon', 'embargo', 'explosion', 'shadowclaw', 'payback', 'retaliate', 'gigaimpact', 'rockpolish', 'jetstream', 'stoneedge', 'psychup', 'thunderwave', 'gyroball', 'swordsdance', 'venoshock', 'wildcharge', 'drainpunch', 'voltswitch', 'rockslide', 'xscissor', 'livewire', 'shockwave', 'poisonjab', 'dreameater', 'grassknot', 'swagger', 'poweruppunch', 'uturn', 'substitute', 'flashcannon', 'trickroom', 'dracojet', 'smackdown', 'sleeptalk', 'steelwing', 'frostbreath', 'acrobatics', 'darkpulse', 'dazzlinggleam', 'achillesheel', 'avalanche', 'silverwind', 'lunarcannon', 'incinerate', 'skydrop', 'allyswitch', 'echoedvoice', 'round', 'captivate', 'permafrost', 'snarl', 'corrode', 'confide', 'pluck', 'dragonify', 'quash', 'wildfire', 'darkmatter', 'infestation', 'spikes', 'secretpower', 'strugglebug', 'rockclimb', 'flash', 'rocksmash', 'workup', 'naturepower', 'telekinesis', 'cut', 'fly', 'surf', 'strength', 'waterfall', 'dive']
+const availableTutors = ['drillrun', 'earthpower', 'ancientpower', 'mudslap', 'rollout', 'gunkshot', 'acid', 'bounce', 'heatwave', 'skyattack', 'tailwind', 'icywind', 'aircutter', 'ominouswind', 'bind', 'snore', 'covet', 'superfang', 'endeavor', 'lastresort', 'block', 'roleplay', 'gastroacid', 'worryseed', 'afteryou', 'helpinghand', 'swift', 'endure', 'doubleedge', 'batonpass', 'celebrate', 'happyhour', 'holdhands', 'holdback', 'bodyslam', 'metronome', 'mimic', 'fakeout', 'healbell', 'softboiled', 'morningsun', 'wish', 'uproar', 'hypervoice', 'boomburst', 'selfdestruct', 'waterpulse', 'aquatail', 'octazooka', 'whirlpool', 'defog', 'ironhead', 'magnetrise', 'irondefense', 'meteormash', 'zapcannon', 'electroball', 'shiftgear', 'bugbite', 'signalbeam', 'electroweb', 'furycutter', 'stringshot', 'megahorn', 'zenheadbutt', 'trick', 'magiccoat', 'magicroom', 'wonderroom', 'gravity', 'hypnosis', 'stealthrock', 'painsplit', 'spite', 'ominouswind', 'gigadrain', 'seedbomb', 'synthesis', 'bulletseed', 'dracometeor', 'dualchop', 'outrage', 'twister', 'knockoff', 'foulplay', 'suckerpunch', 'nastyplot', 'lowkick', 'thunderpunch', 'firepunch', 'icepunch', 'superpower', 'focuspunch', 'vacuumwave', 'highjumpkick', 'aurasphere', 'seismictoss', 'blazekick', 'counter', 'megakick', 'megapunch', 'dynamicpunch']
 const InsgDex: {[k: string]: number} = {
 	"bulbasaur": 1,
 	"ivysaur": 2,
@@ -1053,6 +1055,32 @@ export const Scripts: ModdedBattleScriptsData = {
 		for (const i in this.data.Pokedex) {
 			if (!cantLearnTM.includes(i) && i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
 				this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
+				for (var tm of availableTMs) {
+					if (tm in this.modData('Learnsets', i).learnset) {
+						if (
+							this.modData('Learnsets', i).learnset[tm].includes("1M") ||
+							this.modData('Learnsets', i).learnset[tm].includes("2M") ||
+							this.modData('Learnsets', i).learnset[tm].includes("3M") ||
+							this.modData('Learnsets', i).learnset[tm].includes("4M") ||
+							this.modData('Learnsets', i).learnset[tm].includes("5M")
+						) {
+							this.modData('Learnsets', i).learnset[tm].push("6M");
+						}
+					}
+				}
+				for (var tutor of availableTutors) {
+					if (tutor in this.modData('Learnsets', i).learnset) {
+						if (
+							this.modData('Learnsets', i).learnset[tutor].includes("1T") ||
+							this.modData('Learnsets', i).learnset[tutor].includes("2T") ||
+							this.modData('Learnsets', i).learnset[tutor].includes("3T") ||
+							this.modData('Learnsets', i).learnset[tutor].includes("4T") ||
+							this.modData('Learnsets', i).learnset[tutor].includes("5T")
+						) {
+							this.modData('Learnsets', i).learnset[tutor].push("6T");
+						}
+					}
+				}
 			}
 			if (i in InsgDex) {
 				this.data.Pokedex[i].num = InsgDex[i];

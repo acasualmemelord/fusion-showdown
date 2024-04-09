@@ -578,6 +578,25 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-activate', source, 'move: Court Change');
 		},
 	},
+	relicsong: {
+		inherit: true,
+		onHit(target, pokemon, move) {
+			if (['Meloetta', 'Meloetta-Delta'].includes(pokemon.baseSpecies.baseSpecies) && !pokemon.transformed) {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.willChangeForme) {
+				let meloettaForme = '';
+				if (pokemon.baseSpecies.baseSpecies === 'Meloetta') {
+					meloettaForme = pokemon.species.id === 'meloettapirouette' ? '' : '-Pirouette';
+				} if (pokemon.baseSpecies.baseSpecies === 'Meloetta-Delta') {
+					meloettaForme = pokemon.species.id === 'meloettadeltamagician' ? '-Delta' : '-Delta-Magician';
+				}
+				pokemon.formeChange('Meloetta' + meloettaForme, this.effect, false, '[msg]');
+			}
+		},
+	},
 
 	// Additions
 	achillesheel: {

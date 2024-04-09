@@ -3989,8 +3989,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		weightkg: 6.5,
 		tags: ["Insurgence"],
 		eggGroups: ["Undiscovered"],
-		requiredMove: "Relic Song",
-		battleOnly: "Meloetta-Delta",
 		tier: "RU",
 		natDexTier: "RU",
 		doublesTier: "(DUU)",

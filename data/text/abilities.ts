@@ -2268,7 +2268,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	zealousflock: {
 		name: "Zealous Flock",
 		
-		start: "  [SOURCE]’s flock became enraged!",
-		damage: "  [POKEMON] was attacked by the flock!",
+		start: "  [POKEMON]’s flock became enraged!",
+		damage: "  [SOURCE] was attacked by the flock!",
 	},
 };
