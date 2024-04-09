@@ -45,10 +45,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	futuresight: {
 		inherit: true,
 		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			if (source.hasAbility('periodicorbit')) {
-				if (!target.side.addSlotCondition(target, 'orbitalfuturemove')) return false;
-			}
 			const futureMoveData = {
 				duration: 3,
 				move: 'futuresight',
@@ -66,8 +62,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					type: 'Psychic',
 				},
 			};
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], futureMoveData);
-			Object.assign(target.side.slotConditions[target.position]['orbitalfuturemove'],{...futureMoveData, duration: 5});
+			if (source.hasAbility('periodicorbit')) {
+				if (!target.side.addSlotCondition(target, 'orbitalfuturemove')) return false;
+				Object.assign(target.side.slotConditions[target.position]['orbitalfuturemove'],{...futureMoveData, duration: 5});
+			}
 			this.add('-start', source, 'move: Future Sight');
 			return this.NOT_FAIL;
 		},
@@ -75,10 +75,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	doomdesire: {
 		inherit: true,
 		onTry(source, target) {
-			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
-			if (source.hasAbility('periodicorbit')) {
-				if (!target.side.addSlotCondition(target, 'orbitalfuturemove')) return false;
-			}
 			const futureMoveData = {
 				move: 'doomdesire',
 				source: source,
@@ -94,8 +90,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 					type: 'Steel',
 				},
 			};
+			if (!target.side.addSlotCondition(target, 'futuremove')) return false;
 			Object.assign(target.side.slotConditions[target.position]['futuremove'], futureMoveData);
-			Object.assign(target.side.slotConditions[target.position]['orbitalfuturemove'],{...futureMoveData, duration: 5});
+			if (source.hasAbility('periodicorbit')) {
+				if (!target.side.addSlotCondition(target, 'orbitalfuturemove')) return false;
+				Object.assign(target.side.slotConditions[target.position]['orbitalfuturemove'],{...futureMoveData, duration: 5});
+			}
 			this.add('-start', source, 'Doom Desire');
 			return this.NOT_FAIL;
 		},
