@@ -74,6 +74,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		flags: {},
 		name: "Foundry",
+		desc: "This Pokemon's Rock-type moves become Fire-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type. Stealth Rock sets a Fire-type variant instead.",
+		shortDesc: "This Pokemon's Rock-type moves become Fire type and have 1.3x power.",
 		rating: 4,
 		num: 0,
 	},
