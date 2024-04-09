@@ -118,6 +118,7 @@ const PoADex: {[k: string]: number} = {
 	"drifloonkitakami": 425,
 	"drifbozu": 6031,
 	"nestitan": 6032,
+	"loxicant": 6033,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
