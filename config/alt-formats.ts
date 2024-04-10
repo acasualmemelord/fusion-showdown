@@ -173,7 +173,7 @@ export const Formats: FormatList = [
 		name: "[Gen 6] Ins Dex OU",
 
 		mod: 'gen6insurgence',
-		ruleset: ['Standard', 'Swagger Clause', 'Max Level = 120', 'Default Level = 120'],
+		ruleset: ['Standard', 'Swagger Clause', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
 		banlist: [
 			'AG', 'Uber',
 			'ability:arenatrap', 'ability:shadowtag',
@@ -185,7 +185,7 @@ export const Formats: FormatList = [
 		name: "[Gen 6] Ins Dex AG",
 
 		mod: 'gen6insurgence',
-		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Max Level = 120', 'Default Level = 120'],
+		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
 	},
 
 	{
@@ -196,7 +196,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Ins National Dex OU",
 
 		mod: 'gen9insurgence',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Max Level = 120', 'Default Level = 120'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
 		banlist: [
 			'ND Uber', 'ND AG',
 			'ability:arenatrap', 'ability:moody', 'ability:powerconstruct', 'ability:shadowtag',
@@ -208,7 +208,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Ins National Dex AG",
 
 		mod: 'gen9insurgence',
-		ruleset: ['Standard NatDex', 'Max Level = 120', 'Default Level = 120'],
+		ruleset: ['Standard NatDex', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
 	},
 
 	{
@@ -220,14 +220,14 @@ export const Formats: FormatList = [
 
 		mod: 'gen6insurgence',
 		gameType: 'doubles',
-		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Max Level = 120', 'Default Level = 120'],
+		ruleset: ['Obtainable', 'Team Preview', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
 	},
 	{
 		name: "[Gen 9] Ins NatDex Doubles AG",
 
 		mod: 'gen9insurgence',
 		gameType: 'doubles',
-		ruleset: ['Standard NatDex', 'Max Level = 120', 'Default Level = 120'],
+		ruleset: ['Standard NatDex', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
 	},
 
 	{
@@ -241,7 +241,7 @@ export const Formats: FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		ruleset: [
-			'Standard NatDex', 'Max Level = 120', 'Default Level = 120',
+			'Standard NatDex', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod',
 		],
 	},
 	{
@@ -252,7 +252,7 @@ export const Formats: FormatList = [
 		debug: true,
 		battle: {trunc: Math.trunc},
 		// no restrictions, for serious (other than team preview)
-		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120'],
+		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 120', 'Overflow Stat Mod'],
 	},
 
 	{

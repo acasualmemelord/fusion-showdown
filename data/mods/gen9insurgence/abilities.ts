@@ -530,7 +530,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			const move = this.dex.getActiveMove(action.move.id);
 			if (move.type in eeveelutions && pokemon.species.id !== eeveelutions[move.type]) {
 				if (pokemon.species.id !== eeveelutions["Normal"]) {
-					pokemon.removeVolatile('ability:' + eeveelutions[pokemon.species.types[0]][1])
+					pokemon.removeVolatile('ability:' + eeveelutions[pokemon.species.types[0]])
 				}
 				pokemon.formeChange(eeveelutions[move.type], this.dex.abilities.get('Protean Maxima'), true);
 				pokemon.addVolatile('ability:' + eeveeabilities[pokemon.species.id]);
