@@ -131,7 +131,7 @@ export const Formats: FormatList = [
 	},
 
 	{
-		section: "Infinite Fusion: Extra",
+		section: "Infinite Fusion: Extras",
 	},
 	{
 		name: "[Gen 9] IF Free-for-all",
@@ -231,7 +231,7 @@ export const Formats: FormatList = [
 	},
 
 	{
-		section: "Insurgence: Extra",
+		section: "Insurgence: Extras",
 		column: 2,
 	},
 	{

@@ -633,4 +633,29 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Steel",
 		contestType: "Clever",
 	},
+	jumpship: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Jump Ship",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1, metronome: 1},
+		heal: [1, 2],
+		onHit(target, pokemon, move) {
+			if (pokemon.baseSpecies.baseSpecies === 'Manacra' && !pokemon.transformed) {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.willChangeForme) {
+				const manacraForme = pokemon.species.id === 'manacraplated' ? '' : '-Plated';
+				pokemon.formeChange('Manacra' + manacraForme, this.effect, false, '[msg]');
+			}
+		},
+		target: "allAdjacentFoes",
+		type: "Normal",
+		contestType: "Beautiful",
+	},
 };
