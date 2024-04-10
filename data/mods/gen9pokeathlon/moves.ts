@@ -654,8 +654,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				pokemon.formeChange('Manacra' + manacraForme, this.effect, false, '[msg]');
 			}
 		},
-		target: "allAdjacentFoes",
-		type: "Normal",
+		target: "self",
+		type: "Ghost",
 		contestType: "Beautiful",
 	},
 };
