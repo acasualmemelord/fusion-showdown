@@ -804,8 +804,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		color: "Brown",
 		tags: ["Pokeathlon"],
 		eggGroups: ["Amorphous", "Mineral"],
-		requiredMove: "Jump Ship",
-		battleOnly: "Manacra",
 		tier: "OU",
 		natDexTier: "OU",
 		doublesTier: "DOU",
