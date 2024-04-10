@@ -136,11 +136,16 @@ export const Scripts: ModdedBattleScriptsData = {
 						}
 					} else {
 						if (this.illusion) {
-							if (this.illusion.canMegaEvo) {
-								const illusionDetails = this.illusion.setSpecies(this.battle.dex.species.get(this.illusion.canMegaEvo), source).name + 
+							const allowedItems = this.battle.dex.items.all().filter(item => ((!item.isNonstandard || ['Unobtainable', 'Past'].includes(item.isNonstandard)) && item.exists));
+							let megaForme;
+							for (var item of allowedItems) {
+								if (item.megaEvolves === this.illusion.species.name) megaForme = this.battle.dex.species.get(item.megaStone);
+							}
+							if (megaForme) {
+								const illusionDetails = this.illusion.setSpecies(megaForme, source).name + 
 									(this.level === 100 ? '' : ', L' + this.level) + (this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.shiny ? ', shiny' : '');
 								this.battle.add('detailschange', this, illusionDetails);
-								this.battle.add('-mega', this, this.illusion.species.name, this.illusion.species.requiredItem);
+								this.battle.add('-mega', this, megaForme.name, megaForme.requiredItem);
 								this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
 							}
 						} else {
@@ -162,6 +167,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (isPermanent && (!source || !['disguise', 'iceface', 'proteanmaxima'].includes(source.id))) {
 				if (this.illusion) {
 					this.ability = ''; // Don't allow Illusion to wear off
+					this.addVolatile('ability:illusion');
 				}
 				// Ogerpon's forme change doesn't override permanent abilities
 				if (source || !this.getAbility().flags['cantsuppress']) this.setAbility(species.abilities['0'], null, true);

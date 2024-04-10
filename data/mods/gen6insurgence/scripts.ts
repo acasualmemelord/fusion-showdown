@@ -1200,7 +1200,7 @@ export const Scripts: ModdedBattleScriptsData = {
 					(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
 				let details = (this.illusion || this).details;
 				if (this.terastallized) details += `, tera:${this.terastallized}`;
-				this.battle.add('detailschange', this, details);
+				if (!this.illusion) this.battle.add('detailschange', this, details);
 				if (!source) {
 					// Tera forme
 					// Ogerpon/Terapagos text goes here
@@ -1217,8 +1217,23 @@ export const Scripts: ModdedBattleScriptsData = {
 							this.battle.add('-primal', this, species.requiredItem);
 						}
 					} else {
-						this.battle.add('-mega', this, apparentSpecies, species.requiredItem);
-						this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+						if (this.illusion) {
+							const allowedItems = this.battle.dex.items.all().filter(item => ((!item.isNonstandard || ['Unobtainable', 'Past'].includes(item.isNonstandard)) && item.exists));
+							let megaForme;
+							for (var item of allowedItems) {
+								if (item.megaEvolves === this.illusion.species.name) megaForme = this.battle.dex.species.get(item.megaStone);
+							}
+							if (megaForme) {
+								const illusionDetails = this.illusion.setSpecies(megaForme, source).name + 
+									(this.level === 100 ? '' : ', L' + this.level) + (this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.shiny ? ', shiny' : '');
+								this.battle.add('detailschange', this, illusionDetails);
+								this.battle.add('-mega', this, megaForme.name, megaForme.requiredItem);
+								this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+							}
+						} else {
+							this.battle.add('-mega', this, apparentSpecies, species.requiredItem);
+							this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
+						}
 					}
 				} else if (source.effectType === 'Status') {
 					// Shaymin-Sky -> Shaymin
@@ -1234,6 +1249,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (isPermanent && (!source || !['disguise', 'iceface', 'proteanmaxima'].includes(source.id))) {
 				if (this.illusion) {
 					this.ability = ''; // Don't allow Illusion to wear off
+					this.addVolatile('ability:illusion');
 				}
 				// Ogerpon's forme change doesn't override permanent abilities
 				if (source || !this.getAbility().flags['cantsuppress']) this.setAbility(species.abilities['0'], null, true);
