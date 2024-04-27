@@ -68,10 +68,6 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		abilities: {0: "Levitate", H: "Stench"},
 	},
-	lycanrocmidnight: {
-		inherit: true,
-		abilities: {0: "Keen Eye", 1: "Vital Spirit"},
-	},
 	flygon: {
 		inherit: true,
 		abilities: {0: "Levitate", H: "Dry Skin"},
