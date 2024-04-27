@@ -2946,7 +2946,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			sleeptalk: ["9M"],
 			spikes: ["9M"],
 			spikyshield: ["9M"],
-			stealbeam: ["9M"],
+			steelbeam: ["9M"],
 			steelroller: ["9M"],
 			substitute: ["9M"],
 			swagger: ["9M"],
