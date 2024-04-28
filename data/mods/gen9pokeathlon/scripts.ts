@@ -122,6 +122,8 @@ const PoADex: {[k: string]: number} = {
 	"manacra": 6034,
 	"manacraplated": 6034,
 	"feidan": 6035,
+	"porygon2rhinian": 6036,
+	"porygonzrhinian": 6037,
 };
 
 export const Scripts: ModdedBattleScriptsData = {
