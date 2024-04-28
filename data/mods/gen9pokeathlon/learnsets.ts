@@ -2963,7 +2963,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 		learnset: {
 			terablast: ["9M"],
 			achillesheel: ["6M"],
-			custommove: ["6M"],
 			rest: ["6M"],
 			protect: ["6M"],
 			endure: ["6M"],
@@ -3010,7 +3009,6 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 		learnset: {
 			terablast: ["9M"],
 			achillesheel: ["6M"],
-			custommove: ["6M"],
 			rest: ["6M"],
 			protect: ["6M"],
 			endure: ["6M"],
