@@ -262,6 +262,12 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] Ins NatDex Draft",
+
+		mod: 'gen9insurgence',
+		ruleset: ['Standard NatDex', 'Tera Type Preview', 'Swagger Clause', 'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod', 'Max Level = 120', 'Default Level = 120', 'Overflow Stat Mod'],
+	},
+	{
 		name: "[Gen 9] Ins Custom Game",
 
 		mod: 'gen9insurgence',
