@@ -730,6 +730,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	unleafed: {
+		onStart(pokemon) {
+			pokemon.addVolatile('unleafed');
+		},
 		condition: {
 			duration: 0,
 			durationCallback(pokemon) {
