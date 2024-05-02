@@ -1,3 +1,4 @@
+const learnsetAdditions: AnyObject = require('./learnset-additions.json');
 const cantLearnTM = ['beldum', 'blipbug', 'burmy', 'cascoon', 'caterpie', 'combee', 'cosmoem', 'cosmog', 'ditto', 'kakuna', 'kricketot', 'magikarp', 'metapod', 'scatterbug', 'silcoon', 'smeargle', 'tynamo', 'unown', 'weedle', 'wobbuffet', 'wurmple', 'wynaut'];
 
 export const Scripts: ModdedBattleScriptsData = {
@@ -5,8 +6,15 @@ export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen9',
 	init() {
 		for (const i in this.data.Pokedex) {
-			if (!cantLearnTM.includes(i) && i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
+			if (i in this.data.Learnsets && this.modData('Learnsets', i).learnset) {
+				if (!cantLearnTM.includes(i)) {
 					this.modData('Learnsets', i).learnset.achillesheel = ["6M"];
+				}
+				if (i in learnsetAdditions) {
+					for (var move of learnsetAdditions[i]) {
+						this.modData('Learnsets', i).learnset[move] = ["9M"];
+					}
+				}
 			}
 		}
 	},
