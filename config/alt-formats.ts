@@ -165,7 +165,10 @@ export const Formats: FormatList = [
 		name: "[Gen 9] IF NatDex Draft",
 
 		mod: 'gen9infinitefusion',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod'],
+		ruleset: [
+			'Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Sleep Clause Mod',
+			'Infinite Fusion Mod', 'IF Move Legality', '!Obtainable Abilities', '!Obtainable Misc', 'Species Reveal Clause', '!Nickname Clause',
+		],
 	},
 	{
 		name: "[Gen 9] IF Custom Game",
