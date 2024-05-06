@@ -570,4 +570,121 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Ground",
 		contestType: "Beautiful",
 	},
+	rocketgrab: {
+		num: 0,
+		accuracy: 95,
+		basePower: 90,
+		category: "Physical",
+		name: "Rocket Grab",
+		desc: "If an opposing Pokemon switches out this turn, this move hits that Pokemon before it leaves the field, even if it was not the original target. If the user moves after an opponent using Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch, but not Baton Pass, it will hit that opponent before it leaves the field. Switch is cancelled if the user hits an opponent switching out, and the user's turn is over; if an opponent faints from this, the replacement Pokemon does not become active until the end of the turn. Can't be used twice in a row.",
+		shortDesc: "If a foe is switching out, cancels it.",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, cantusetwice: 1},
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('rocketgrab', pokemon);
+				const data = side.getSideConditionData('rocketgrab');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onTryHit(target, pokemon) {
+			target.side.removeSideCondition('pursuit');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp || pokemon.hasType('Ghost')) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Rocket Grab');
+						pokemon.addVolatile('preventswitch');
+						alreadyAdded = true;
+					}
+					// Run through each action in queue to check if the Pursuit user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('rocketgrab', source, source.getLocOf(pokemon));
+				}
+			},
+			onSwitchOut(pokemon) {
+				if (pokemon.getVolatile('preventswitch')) {
+					pokemon.removeVolatile('preventswitch');
+					return false;
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Clever",
+	},
+	jumpship: {
+		num: 0,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Jump Ship",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, heal: 1, metronome: 1},
+		heal: [1, 2],
+		onHit(target, pokemon, move) {
+			if (pokemon.baseSpecies.baseSpecies === 'Manacra' && !pokemon.transformed) {
+				move.willChangeForme = true;
+			}
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (move.willChangeForme) {
+				const manacraForme = pokemon.species.id === 'manacraplated' ? '' : '-Plated';
+				pokemon.formeChange('Manacra' + manacraForme, this.effect, false, '[msg]');
+			}
+		},
+		target: "self",
+		type: "Ghost",
+		contestType: "Beautiful",
+	},
+	moltenglaze: {
+		num: 0,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Molten Glaze",
+		desc: "Hits both foes. Until the target switches out, the effectiveness of Fire-type moves is doubled against it.",
+		shortDesc: "Hits both foes. Makes foes weaker to fire.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		volatileStatus: 'tarshot',
+		condition: {
+			onStart(pokemon) {
+				if (pokemon.terastallized) return false;
+				this.add('-start', pokemon, 'Molten Glaze');
+			},
+			onEffectivenessPriority: -2,
+			onEffectiveness(typeMod, target, type, move) {
+				if (move.type !== 'Fire') return;
+				if (!target) return;
+				if (type !== target.getTypes()[0]) return;
+				return typeMod + 1;
+			},
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fire",
+	},
 };
