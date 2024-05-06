@@ -669,7 +669,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, defrost: 1},
-		volatileStatus: 'tarshot',
+		volatileStatus: 'moltenglaze',
 		condition: {
 			onStart(pokemon) {
 				if (pokemon.terastallized) return false;

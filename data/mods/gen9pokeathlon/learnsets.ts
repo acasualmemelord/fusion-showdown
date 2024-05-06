@@ -3198,7 +3198,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			zapcannon: ["9M"],
 			teleport: ["9M"],
 			explosion: ["9M"],
-			eruptions: ["9M"],
+			eruption: ["9M"],
 		},
 	},
 };
