@@ -658,4 +658,33 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		type: "Ghost",
 		contestType: "Beautiful",
 	},
+	moltenglaze: {
+		num: 0,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Molten Glaze",
+		desc: "Hits both foes. Until the target switches out, the effectiveness of Fire-type moves is doubled against it.",
+		shortDesc: "Hits both foes. Makes foes weaker to fire.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		volatileStatus: 'moltenglaze',
+		condition: {
+			onStart(pokemon) {
+				if (pokemon.terastallized) return false;
+				this.add('-start', pokemon, 'Molten Glaze');
+			},
+			onEffectivenessPriority: -2,
+			onEffectiveness(typeMod, target, type, move) {
+				if (move.type !== 'Fire') return;
+				if (!target) return;
+				if (type !== target.getTypes()[0]) return;
+				return typeMod + 1;
+			},
+		},
+		secondary: null,
+		target: "allAdjacentFoes",
+		type: "Fire",
+	},
 };
