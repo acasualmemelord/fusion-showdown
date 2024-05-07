@@ -1,4 +1,5 @@
-7th of May 2024
+**7th of May 2024**
+
 - All IF Dex formats other than IF Dex Draft have Gen 5 weather mechanics (permanent weather if set by an ability)
 - Triple fusions in IF Dex now have the correct learnset
 - Disguise now resets on switch out in IF Dex (to match in-game mechanics)
