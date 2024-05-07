@@ -638,7 +638,7 @@ export const Teams = new class Teams {
 
 	getGenerator(format: Format | string, seed: PRNG | PRNGSeed | null = null) {
 		let TeamGenerator;
-		if (toID(format).includes('gen7computergeneratedteams')) {
+		if (toID(format).includes('gen9computergeneratedteams')) {
 			TeamGenerator = require(Dex.forFormat(format).dataDir + '/cg-teams').default;
 		} else if (toID(format).includes('gen7randomdoublesbattle')) {
 			TeamGenerator = require(Dex.forFormat(format).dataDir + '/random-doubles-teams').default;

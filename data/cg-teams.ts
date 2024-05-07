@@ -33,7 +33,7 @@
  *   - Tracking type coverage to make it more likely that a moveset can hit every type
  */
 
-import {Dex, PRNG, SQL} from '../../sim';
+import {Dex, PRNG, SQL} from '../sim';
 import {EventMethods} from '../sim/dex-conditions';
 import {
 	ABILITY_MOVE_BONUSES,
@@ -57,7 +57,6 @@ const levelOverride: {[speciesID: string]: number} = {};
 export let levelUpdateInterval: NodeJS.Timeout | null = null;
 
 async function updateLevels(database: SQL.DatabaseManager) {
-	/*
 	const updateSpecies = await database.prepare(
 		'UPDATE gen9computergeneratedteams SET wins = 0, losses = 0, level = ? WHERE species_id = ?'
 	);
@@ -78,17 +77,14 @@ async function updateLevels(database: SQL.DatabaseManager) {
 
 		levelOverride[species_id] = level;
 	}
-	*/
 }
 
 if (global.Config && Config.usesqlite && Config.usesqliteleveling) {
-	/*
 	const database = SQL(module, {file: './databases/battlestats.db'});
 
 	// update every 2 hours
 	void updateLevels(database);
 	levelUpdateInterval = setInterval(() => void updateLevels(database), 1000 * 60 * 60 * 2);
-	*/
 }
 
 export default class TeamGenerator {
@@ -104,7 +100,6 @@ export default class TeamGenerator {
 	readonly TOP_SPEED = 300;
 
 	constructor(format: Format | string, seed: PRNG | PRNGSeed | null) {
-		console.log("hi");
 		this.dex = Dex.forFormat(format);
 		this.format = Dex.formats.get(format);
 		this.teamSize = this.format.ruleTable?.maxTeamSize || 6;
