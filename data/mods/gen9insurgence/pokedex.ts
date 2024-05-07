@@ -40,6 +40,38 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		tier: "Uber",
 	},
+	vaporeon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	jolteon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	flareon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	leafeon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	glaceon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	espeon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	umbreon: {
+		inherit: true,
+		prevo: undefined,
+	},
+	sylveon: {
+		inherit: true,
+		prevo: undefined,
+	},
 
 	// Primal Formes
 	regigigasprimal: {
