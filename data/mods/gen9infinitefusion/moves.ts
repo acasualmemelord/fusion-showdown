@@ -170,4 +170,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return null;
 		},
 	},
+	destinybond: {
+		inherit: true,
+		onPrepareHit(pokemon) {
+			if(this.dex.gen <= 7) pokemon.removeVolatile('destinybond');
+		},
+	},
 };

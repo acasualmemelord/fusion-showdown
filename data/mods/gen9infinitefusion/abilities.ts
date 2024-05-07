@@ -56,6 +56,15 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				this.effectState.fusionBusted = false;
 			}
 		},
+		onSwitchOut(pokemon) {
+			if (this.dex.gen > 7) return;
+			if (this.effectState.busted) {
+				this.effectState.busted = false;
+				this.effectState.fusionBusted = undefined;
+				const speciesid = pokemon.species.id === 'mimikyubustedtotem' ? 'Mimikyu-Totem' : 'Mimikyu';
+				pokemon.formeChange(speciesid, this.effect, true);
+			}
+		},
 		flags: {
 			failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1,
 			breakable: 1, notransform: 1,

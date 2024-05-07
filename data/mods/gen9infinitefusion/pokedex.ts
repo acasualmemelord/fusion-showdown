@@ -15,6 +15,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} = {
 		inherit: true,
 		types: ["Grass", "Ghost"],
 	},
+	necrozmaultra: {
+		inherit: true,
+		requiredItem: null,
+		battleOnly: null,
+	},
 	bulbmantle: {
 		num: 6001,
 		name: "Bulbmantle",
