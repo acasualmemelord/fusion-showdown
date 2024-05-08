@@ -473,7 +473,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	zealousflock: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
-			if (!source.getVolatile('zealousflock')) source.addVolatile('zealousflock');
+			if (!source.getVolatile('zealousflock')) source.addVolatile('zealousflock', target);
 		},
 		condition: {
 			onStart(pokemon, source) {

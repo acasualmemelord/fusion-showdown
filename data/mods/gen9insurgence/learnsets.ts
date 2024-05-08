@@ -113,7 +113,7 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	heatran: {inherit: true, learnset: {...baseLearnsets.heatran.learnset, darkmatter: ["6M"], dracojet: ["6M"], dragonify: ["6M"], wildfire: ["6M"]}},
 	giratina: {inherit: true, learnset: {...baseLearnsets.giratina.learnset, darkmatter: ["6M"], dracojet: ["6M"], dragonify: ["6M"], lunarcannon: ["6M"], newmoon: ["6M"]}},
 	darkrai: {inherit: true, learnset: {...baseLearnsets.darkrai.learnset, darkmatter: ["6M"], lunarcannon: ["6M"], newmoon: ["6M"], permafrost: ["6M"]}},
-	arceus: {inherit: true, learnset: {...baseLearnsets.arceus.learnset, darkmatter: ["6M"], dracojet: ["6M"], dragonify: ["6M"], jetstream: ["6M"], lunarcannon: ["6M"], permafrost: ["6M"], wildfire: ["6M"], dazzlinggleam: ["6M"]}},
+	arceus: {inherit: true, learnset: {...baseLearnsets.arceus.learnset, darkmatter: ["6M"], dracojet: ["6M"], dragonify: ["6M"], jetstream: ["6M"], lunarcannon: ["6M"], permafrost: ["6M"], wildfire: ["6M"], dazzlinggleam: ["6M"]}, eventOnly: false},
 	purrloin: {inherit: true, learnset: {...baseLearnsets.purrloin.learnset, darkmatter: ["6M"]}},
 	liepard: {inherit: true, learnset: {...baseLearnsets.liepard.learnset, darkmatter: ["6M"], lunarcannon: ["6M"]}},
 	sandile: {inherit: true, learnset: {...baseLearnsets.sandile.learnset, darkmatter: ["6M"]}},
@@ -619,6 +619,74 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			dazzlinggleam: ["6T"],
 			gigaimpact: ["6T"]
 		}
+	},
+	arceusbug: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusdark: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusdragon: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceuselectric: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusfairy: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusfighting: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusfire: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusflying: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusghost: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusgrass: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusground: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusice: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceuspoison: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceuspsychic: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceusrock: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceussteel: {
+		inherit: true,
+		eventOnly: false,
+	},
+	arceuswater: {
+		inherit: true,
+		eventOnly: false,
 	},
 
 	// New Learnsets

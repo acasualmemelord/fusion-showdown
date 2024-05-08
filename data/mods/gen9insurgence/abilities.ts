@@ -118,6 +118,52 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			return this.chainModify([source.effectiveWeather() === 'newmoon' ? 6827 : (move.hasAuraBreak ? 3072 : 5448), 4096]);
 		},
 	},
+	flowergift: {
+		inherit: true,
+		onAllyModifyAtkPriority: 3,
+		onAllyModifyAtk(atk, pokemon) {
+			if (['Noivern-Delta', 'Cherrim'].includes(this.effectState.target.baseSpecies.baseSpecies)) return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAllyModifySpDPriority: 4,
+		onAllyModifySpD(spd, pokemon) {
+			if (['Noivern-Delta', 'Cherrim'].includes(this.effectState.target.baseSpecies.baseSpecies)) return;
+			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	trace: {
+		inherit: true,
+		onStart(pokemon) {
+			// n.b. only affects Hackmons
+			// interaction with No Ability is complicated: https://www.smogon.com/forums/threads/pokemon-sun-moon-battle-mechanics-research.3586701/page-76#post-7790209
+			if (pokemon.adjacentFoes().some(foeActive => foeActive.ability === 'noability')) {
+				this.effectState.gaveUp = true;
+			}
+			// interaction with Ability Shield is similar to No Ability
+			if (pokemon.hasItem('Ability Shield')) {
+				if (!pokemon.illusion) this.add('-block', pokemon, 'item: Ability Shield');
+				this.effectState.gaveUp = true;
+			}
+		},
+		onUpdate(pokemon) {
+			if (!pokemon.isStarted || this.effectState.gaveUp) return;
+
+			const possibleTargets = pokemon.adjacentFoes().filter(
+				target => !target.getAbility().flags['notrace'] && target.ability !== 'noability'
+			);
+			if (!possibleTargets.length) return;
+
+			const target = this.sample(possibleTargets);
+			const ability = target.getAbility();
+			if (pokemon.setAbility(ability) && !pokemon.illusion) {
+				this.add('-ability', pokemon, ability, '[from] ability: Trace', '[of] ' + target);
+			}
+		},
+	},
 
 	// Additions
 	absolution: {
@@ -202,8 +248,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	chlorofury: {
+		onStart(pokemon) {
+			pokemon.addVolatile('chlorofury');
+		},
 		condition: {
-			duration: 2,
+			duration: 3,
 			onStart(pokemon) {
 				if (pokemon.side.totalFainted) {
 					this.boost({spe: 1, spa: pokemon.side.totalFainted}, pokemon);
@@ -250,7 +299,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	foundry: {
-		//add fire type stealth rock
+		onTryMovePriority: -2,
+		onTryMove(pokemon, target, move) {
+			if (move.id === 'stealthrock') {
+				this.actions.useMove('hotcoals', pokemon, target);
+				return null;
+			}
+		},
 		onModifyTypePriority: -1,
 		onModifyType(move, pokemon) {
 			const noModifyType = [
@@ -268,6 +323,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		flags: {},
 		name: "Foundry",
+		desc: "This Pokemon's Rock-type moves become Fire-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type. Stealth Rock sets a Fire-type variant instead.",
+		shortDesc: "This Pokemon's Rock-type moves become Fire type and have 1.2x power.",
 		rating: 4,
 		num: 0,
 	},
@@ -434,6 +491,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onResidual(target, source, effect) {
 			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
 				this.heal(target.baseMaxhp / 8);
+			} else if (['raindance', 'primordialsea', 'newmoon'].includes(target.effectiveWeather())){
+				return;
 			} else {
 				this.heal(target.baseMaxhp / 16);
 			}
@@ -471,7 +530,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			const move = this.dex.getActiveMove(action.move.id);
 			if (move.type in eeveelutions && pokemon.species.id !== eeveelutions[move.type]) {
 				if (pokemon.species.id !== eeveelutions["Normal"]) {
-					pokemon.removeVolatile('ability:' + eeveelutions[pokemon.species.types[0]][1])
+					pokemon.removeVolatile('ability:' + eeveelutions[pokemon.species.types[0]])
 				}
 				pokemon.formeChange(eeveelutions[move.type], this.dex.abilities.get('Protean Maxima'), true);
 				pokemon.addVolatile('ability:' + eeveeabilities[pokemon.species.id]);
@@ -671,6 +730,9 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		num: 0,
 	},
 	unleafed: {
+		onStart(pokemon) {
+			pokemon.addVolatile('unleafed');
+		},
 		condition: {
 			duration: 0,
 			durationCallback(pokemon) {

@@ -24,5 +24,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	destinybond: {
+		inherit: true,
+		onPrepareHit(pokemon) {
+			pokemon.removeVolatile('destinybond');
+		},
+	},
 	...Dex.deepClone(require('../gen9infinitefusion/moves').Moves),
 };

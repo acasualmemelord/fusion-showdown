@@ -1,4 +1,6 @@
 const {Dex} = require('../../../sim/dex');
+const {combineLearnsets} = require('../gen9infinitefusion/learnsets');
+
 export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 	bulbasaur: {
 		learnset: {
@@ -31884,5 +31886,161 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} = {
 			zenheadbutt: ["7T"],
 		},
 	},
-	...Dex.deepClone(require('../gen9infinitefusion/learnsets').Learnsets)
 };
+
+Learnsets.bulbmantle = combineLearnsets
+(
+	Learnsets.bulbasaur,
+	Learnsets.charmander,
+	Learnsets.squirtle,
+);
+Learnsets.ivymelortle = combineLearnsets
+(
+	Learnsets.bulbasaur,
+	Learnsets.charmander,
+	Learnsets.squirtle,
+	Learnsets.ivysaur,
+	Learnsets.charmeleon,
+	Learnsets.wartortle,
+);
+Learnsets.venustoizard = combineLearnsets
+(
+	Learnsets.bulbasaur,
+	Learnsets.charmander,
+	Learnsets.squirtle,
+	Learnsets.ivysaur,
+	Learnsets.charmeleon,
+	Learnsets.wartortle,
+	Learnsets.venusaur,
+	Learnsets.charizard,
+	Learnsets.blastoise,
+);
+Learnsets.totoritaquil = combineLearnsets
+(
+	Learnsets.totodile,
+	Learnsets.chikorita,
+	Learnsets.cyndaquil,
+);
+Learnsets.baylavanaw = combineLearnsets
+(
+	Learnsets.totodile,
+	Learnsets.chikorita,
+	Learnsets.cyndaquil,
+	Learnsets.bayleef,
+	Learnsets.quilava,
+	Learnsets.croconaw,
+);
+Learnsets.megaligasion = combineLearnsets
+(
+	Learnsets.totodile,
+	Learnsets.chikorita,
+	Learnsets.cyndaquil,
+	Learnsets.bayleef,
+	Learnsets.quilava,
+	Learnsets.croconaw,
+	Learnsets.meganium,
+	Learnsets.feraligatr,
+	Learnsets.typhlosion,
+);
+Learnsets.torkipcko = combineLearnsets
+(
+	Learnsets.torchic,
+	Learnsets.mudkip,
+	Learnsets.treecko,
+);
+Learnsets.gromarshken = combineLearnsets
+(
+	Learnsets.torchic,
+	Learnsets.mudkip,
+	Learnsets.treecko,
+	Learnsets.grovyle,
+	Learnsets.marshtomp,
+	Learnsets.combusken,
+);
+Learnsets.swamptiliken = combineLearnsets
+(
+	Learnsets.torchic,
+	Learnsets.mudkip,
+	Learnsets.treecko,
+	Learnsets.grovyle,
+	Learnsets.marshtomp,
+	Learnsets.combusken,
+	Learnsets.swampert,
+	Learnsets.sceptile,
+	Learnsets.blaziken,
+);
+Learnsets.turcharlup = combineLearnsets
+(
+	Learnsets.turtwig,
+	Learnsets.chimchar,
+	Learnsets.piplup,
+);
+Learnsets.prinfernotle = combineLearnsets
+(
+	Learnsets.turtwig,
+	Learnsets.chimchar,
+	Learnsets.piplup,
+	Learnsets.prinplup,
+	Learnsets.monferno,
+	Learnsets.grotle,
+);
+Learnsets.torterneon = combineLearnsets
+(
+	Learnsets.turtwig,
+	Learnsets.chimchar,
+	Learnsets.piplup,
+	Learnsets.prinplup,
+	Learnsets.monferno,
+	Learnsets.grotle,
+	Learnsets.torterra,
+	Learnsets.infernape,
+	Learnsets.empoleon,
+);
+Learnsets.zapmolticuno = combineLearnsets
+(
+	Learnsets.zapdos,
+	Learnsets.moltres,
+	Learnsets.articuno,
+);
+Learnsets.enraicune = combineLearnsets
+(
+	Learnsets.entei,
+	Learnsets.raikou,
+	Learnsets.suicune,
+);
+Learnsets.kyodonquaza = combineLearnsets
+(
+	Learnsets.kyogre,
+	Learnsets.groudon,
+	Learnsets.rayquaza,
+);
+Learnsets.paldiatina = combineLearnsets
+(
+	Learnsets.palkia,
+	Learnsets.dialga,
+	Learnsets.giratina,
+);
+Learnsets.zekyushiram = combineLearnsets
+(
+	Learnsets.zekrom,
+	Learnsets.kyurem,
+	Learnsets.reshiram,
+);
+Learnsets.celemewchi = combineLearnsets
+(
+	Learnsets.celebi,
+	Learnsets.mew,
+	Learnsets.jirachi,
+);
+Learnsets.regitrio = combineLearnsets
+(
+	Learnsets.registeel,
+	Learnsets.regirock,
+	Learnsets.regice,
+);
+Learnsets.deosectwo = combineLearnsets
+(
+	Learnsets.deoxys,
+	Learnsets.genesect,
+	Learnsets.mewtwo,
+);

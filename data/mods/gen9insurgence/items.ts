@@ -860,4 +860,30 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		num: 0,
 	},
+	steelixitefire: {
+		name: "Steelixite Fire",
+		desc: "If held by a Steelix, this item allows it to Mega Evolve in battle.",
+		spritenum: -1,
+		megaStone: "Steelix-Mega-F",
+		megaEvolves: "Steelix",
+		itemUser: ["Steelix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 0,
+	},
+	shadowmewtwonitex: {
+		name: "Shadow Mewtwonite X",
+		desc: "If held by a Mewtwo-Shadow, this item allows it to Mega Evolve in battle.",
+		spritenum: -1,
+		megaStone: "Mewtwo-Shadow-Mega-X",
+		megaEvolves: "Mewtwo-Shadow",
+		itemUser: ["Mewtwo-Shadow"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 0,
+	},
 };
